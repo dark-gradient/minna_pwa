@@ -27,6 +27,7 @@
       <button data-view="home" class="nav-btn active">Practice</button>
       <button data-view="lessons" class="nav-btn">Lessons</button>
       <button data-view="kaiwa" class="nav-btn">会話 Kaiwa</button>
+      <button data-view="review" class="nav-btn">Review</button>
     </nav>
     <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">◐</button>
   </header>
@@ -130,6 +131,40 @@
     <section id="kaiwaView" class="view">
       <div class="page-head"><div><div class="eyebrow">会話 • CONVERSATION</div><h1>Kaiwa library</h1><p>Kept separate from the regular vocabulary pool.</p></div></div>
       <div id="kaiwaGrid" class="kaiwa-grid"></div>
+    </section>
+    <section id="reviewView" class="view">
+      <div class="page-head" style="margin-bottom: 20px;">
+        <div>
+          <div class="eyebrow">WRONG ANSWERS</div>
+          <h1>Review</h1>
+        </div>
+        <div id="wrongStats" class="big-number"></div>
+      </div>
+      
+      <div class="panel setup" style="margin-bottom: 40px;" id="reviewSetupPanel">
+        <div class="section-head"><div><span class="kicker">PRACTICE</span><h2>Practice Wrong Answers</h2></div><span id="wrongPoolCount" class="count-pill"></span></div>
+        <div class="controls-grid" style="grid-template-columns: repeat(4, 1fr);">
+          <label>Scope
+            <select id="reviewScopeMode">
+              <option value="lesson">Single lesson</option>
+              <option value="range">Lesson range</option>
+              <option value="all">All wrong answers</option>
+            </select>
+          </label>
+          <label id="reviewLessonFromWrap">Lesson
+            <select id="reviewLessonFrom"></select>
+          </label>
+          <label id="reviewLessonToWrap" class="hidden">To lesson
+            <select id="reviewLessonTo"></select>
+          </label>
+          <button id="startReviewBtn" class="primary-btn" style="margin-top:auto; height:44px;">Start Review →</button>
+        </div>
+        <div style="text-align:right; margin-top:10px;">
+          <button id="clearWrongBtn" class="secondary-btn compact" style="color:var(--red); border-color:var(--red2);">Clear Wrong Answers</button>
+        </div>
+      </div>
+
+      <div id="wrongListContainer"></div>
     </section>
   </main>
 

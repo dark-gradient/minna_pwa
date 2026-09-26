@@ -16,31 +16,38 @@ async function loadData(){
   ]);
   init();
 }
+function getWrongData() { return JSON.parse(localStorage.getItem("mnn-wrong-v2")) || {}; }
+function saveWrongData(data) { localStorage.setItem("mnn-wrong-v2", JSON.stringify(data)); }
+function clearWrongData() { if(confirm("Clear all saved wrong answers?")){ localStorage.removeItem("mnn-wrong-v2"); renderReview(); updateReviewPoolCount(); } }
+
 function init(){
   const opts=lessons.map(n=>`<option value="${n}">Lesson ${n}</option>`).join("");
   $("lessonFrom").innerHTML=opts;$("lessonTo").innerHTML=opts;
   $("lessonFrom").value=1;$("lessonTo").value=5;
+  $("reviewLessonFrom").innerHTML=opts;$("reviewLessonTo").innerHTML=opts;
+  $("reviewLessonFrom").value=1;$("reviewLessonTo").value=5;
+  
   document.querySelectorAll(".nav-btn").forEach(b=>b.onclick=()=>showView(b.dataset.view));
   ["scopeMode","lessonFrom","lessonTo"].forEach(id=>$(id).addEventListener("change",updatePoolCount));
+  ["reviewScopeMode","reviewLessonFrom","reviewLessonTo"].forEach(id=>$(id).addEventListener("change",updateReviewPoolCount));
+  
   $("startBtn").onclick=startPractice;
+  $("startReviewBtn").onclick=startReviewPractice;
+  $("clearWrongBtn").onclick=clearWrongData;
   $("nextBtn").onclick=grade;
   $("themeBtn").onclick=toggleTheme;
-  renderLessons();renderKaiwa();updatePoolCount();
+  renderLessons();renderKaiwa();updatePoolCount();updateReviewPoolCount();
   const saved=localStorage.getItem("mnn-theme"); if(saved)document.documentElement.dataset.theme=saved;
 }
 function reviewWrongAnswers() {
-  const wrongIds = JSON.parse(localStorage.getItem("mnn-wrong")) || [];
-  if (!wrongIds.length) { alert("No wrong answers to review!"); return; }
-  state.pool = lessons.flatMap(n=>(VOCAB[n]||[]).map((v,i)=>({...v,lesson:+n,id:`${n}-${i}`}))).filter(v => wrongIds.includes(v.id));
-  state.queue=shuffle(state.pool);state.index=0;state.score=0;state.history=[];
-  $("quizScope").textContent="Reviewing Wrong Answers";
-  showView("quiz");nextQuestion();
+  showView("review");
 }
 function showView(view){
-  const map={home:"homeView",quiz:"quizView",lessons:"lessonsView",lessonDetail:"lessonDetailView",kaiwa:"kaiwaView"};
+  const map={home:"homeView",quiz:"quizView",lessons:"lessonsView",lessonDetail:"lessonDetailView",kaiwa:"kaiwaView",review:"reviewView"};
   Object.values(map).forEach(id=>$(id).classList.remove("active"));
   $(map[view]).classList.add("active"); state.view=view;
   document.querySelectorAll(".nav-btn").forEach(b=>b.classList.toggle("active",b.dataset.view===view));
+  if(view==="review") renderReview();
   window.scrollTo({top:0,behavior:"smooth"});
 }
 function poolForScope(){
@@ -114,13 +121,6 @@ function selectOption(idx) {
   const selected = state.currentOptions[idx];
   const isCorrect = selected.id === state.current.id;
   state.lastCorrect = isCorrect;
-  if(!isCorrect) {
-    let wrongAnswers = JSON.parse(localStorage.getItem("mnn-wrong")) || [];
-    if (!wrongAnswers.includes(state.current.id)) {
-      wrongAnswers.push(state.current.id);
-      localStorage.setItem("mnn-wrong", JSON.stringify(wrongAnswers));
-    }
-  }
   state.currentOptions.forEach((opt, i) => {
     const btn = $("opt"+i);
     btn.disabled = true;
@@ -130,7 +130,12 @@ function selectOption(idx) {
   $("nextAction").classList.remove("hidden");
 }
 function grade(){
-  if(state.lastCorrect) state.score++;
+  if (state.lastCorrect) {
+    state.score++;
+    markCorrect(state.current.id);
+  } else {
+    markWrong(state.current.id);
+  }
   state.history.push({id:state.current.id,known:state.lastCorrect});
   state.index++;
   nextQuestion();
@@ -175,6 +180,69 @@ function toggleTheme(){
   const dark=document.documentElement.dataset.theme==="dark";
   document.documentElement.dataset.theme=dark?"":"dark";
   localStorage.setItem("mnn-theme",dark?"":"dark");
+}
+function markWrong(id) {
+  let data = getWrongData();
+  if(!data[id]) data[id] = { wrongCount: 0, correctStreak: 0 };
+  data[id].wrongCount++;
+  data[id].correctStreak = 0;
+  data[id].lastIncorrect = Date.now();
+  data[id].lastPracticed = Date.now();
+  saveWrongData(data);
+}
+function markCorrect(id) {
+  let data = getWrongData();
+  if(data[id]) {
+    data[id].correctStreak++;
+    data[id].lastPracticed = Date.now();
+    if(data[id].correctStreak >= 2) {
+      delete data[id];
+    }
+    saveWrongData(data);
+  }
+}
+function poolForReviewScope(){
+  const mode=$("reviewScopeMode").value;
+  let nums=[];
+  if(mode==="lesson")nums=[$("reviewLessonFrom").value];
+  else if(mode==="range"){let a=+$("reviewLessonFrom").value,b=+$("reviewLessonTo").value;if(a>b)[a,b]=[b,a];for(let i=a;i<=b;i++)nums.push(i)}
+  else nums=lessons;
+  const wrongData = getWrongData();
+  return nums.flatMap(n=>(VOCAB[n]||[]).map((v,i)=>({...v,lesson:+n,id:`${n}-${i}`}))).filter(v => wrongData[v.id]);
+}
+function updateReviewPoolCount(){
+  const mode=$("reviewScopeMode").value;
+  $("reviewLessonToWrap").classList.toggle("hidden",mode!=="range");
+  $("wrongPoolCount").textContent=`${poolForReviewScope().length} words`;
+}
+function startReviewPractice(){
+  state.pool=poolForReviewScope();
+  if(!state.pool.length){ alert("No wrong answers for this selection!"); return; }
+  const size=$("sessionSize").value==="all"?state.pool.length:+$("sessionSize").value;
+  state.queue=shuffle(state.pool).slice(0,size);state.index=0;state.score=0;state.history=[];
+  $("quizScope").textContent="Reviewing Wrong Answers";
+  showView("quiz");nextQuestion();
+}
+function renderReview(){
+  const data = getWrongData();
+  const ids = Object.keys(data);
+  const total = ids.length;
+  $("wrongStats").innerHTML = `<div style="font-size: 14px; color: var(--muted); line-height: 1.4;">${total} words<br>${new Set(ids.map(id => id.split('-')[0])).size} lessons affected</div>`;
+  if(total === 0) {
+    $("wrongListContainer").innerHTML = `<div class="quiz-card" style="min-height: auto; padding: 30px;"><div style="font-size: 24px; font-weight: 800; font-family: 'Noto Sans JP'; color: var(--muted);">まだ間違いはありません</div><p style="color: var(--muted);">No wrong answers yet. Words you answer incorrectly will appear here for review.</p><button class="secondary-btn" onclick="showView('home')" style="margin-top: 15px;">Back to Practice</button></div>`;
+    $("reviewSetupPanel").style.display = "none";
+    return;
+  }
+  $("reviewSetupPanel").style.display = "block";
+  let html = "";
+  for(let n of lessons) {
+    const wrongInLesson = (VOCAB[n]||[]).map((v,i)=>({...v,lesson:+n,id:`${n}-${i}`})).filter(v => data[v.id]);
+    if(wrongInLesson.length > 0) {
+      html += `<div style="margin-bottom: 30px;"><div class="eyebrow" style="margin-bottom: 10px;">Lesson ${n}</div>`;
+      html += `<div class="vocab-table">` + wrongInLesson.map(v => `<div class="vocab-row"><div style="display:flex; flex-direction:column; gap:4px;"><span class="vocab-jp">${escapeHtml(v.kanji && v.kanji !== "—" ? v.kanji + " (" + v.jp + ")" : v.jp)}</span><span style="font-size:11px; color:var(--red); font-weight:700;">Wrong ${data[v.id].wrongCount}×${data[v.id].correctStreak > 0 ? ` (1 correct)`: ''}</span></div><span class="vocab-en">${escapeHtml(v.en)}</span></div>`).join("") + `</div></div>`;
+    }
+  }
+  $("wrongListContainer").innerHTML = html;
 }
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
 loadData();
