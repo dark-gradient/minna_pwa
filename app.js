@@ -352,13 +352,14 @@ function executeTeacherStep() {
         if (lessonSpeechStage === "STOPPED") return;
         lessonSpeechStage = "ENGLISH";
         executeTeacherStep();
-      }, 1000);
+      }, 700);
     };
     utterance.onerror = () => stopLesson();
     speechSynthesis.speak(utterance);
     
   } else if (lessonSpeechStage === "ENGLISH") {
-    const utterance = new SpeechSynthesisUtterance(word.en);
+    const englishText = word.en.replace(/\s*\/\s*/g, " or ");
+    const utterance = new SpeechSynthesisUtterance(englishText);
     utterance.lang = "en-US";
     utterance.rate = isSlow ? 0.8 : 1.0;
     const voice = getEnVoice();
@@ -372,7 +373,7 @@ function executeTeacherStep() {
         lessonSpeechIndex++;
         lessonSpeechStage = "JAPANESE";
         executeTeacherStep();
-      }, 1400);
+      }, 1100);
     };
     utterance.onerror = () => stopLesson();
     speechSynthesis.speak(utterance);
