@@ -95,15 +95,25 @@
       <div class="quiz-card">
         <div class="quiz-label" id="quizDirection"></div>
         <div id="question" class="question"></div>
-        <div id="answer" class="answer hidden"></div>
-        <div class="answer-actions">
-          <button id="revealBtn" class="secondary-btn">Show answer</button>
-          <button id="knownBtn" class="primary-btn hidden">I knew it ✓</button>
-          <button id="againBtn" class="secondary-btn hidden">Again ↻</button>
+        <div id="mcqGrid" class="mcq-grid"></div>
+        <div class="answer-actions hidden" id="nextAction" style="justify-content:center">
+          <button id="nextBtn" class="primary-btn">Next →</button>
         </div>
         <div id="lessonTag" class="lesson-tag"></div>
       </div>
       <div class="quiz-tip">Tip: say the answer aloud before revealing it.</div>
+    </section>
+
+    <section id="resultsView" class="view">
+      <div class="page-head"><div><div class="eyebrow">SESSION COMPLETE</div><h1>Results</h1></div></div>
+      <div class="quiz-card" style="min-height: auto;">
+        <div id="resultsSummary" style="font-size: 16px; line-height: 1.8;"></div>
+        <div class="answer-actions" style="justify-content:center; gap: 16px; margin-top: 30px;">
+          <button class="secondary-btn" onclick="showView('home')">Back to Practice</button>
+          <button class="secondary-btn" onclick="startPractice()">Practice Again</button>
+          <button class="primary-btn" onclick="reviewWrongAnswers()">Review Wrong Answers</button>
+        </div>
+      </div>
     </section>
 
     <section id="lessonsView" class="view">

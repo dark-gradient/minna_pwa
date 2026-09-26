@@ -23,12 +23,18 @@ function init(){
   document.querySelectorAll(".nav-btn").forEach(b=>b.onclick=()=>showView(b.dataset.view));
   ["scopeMode","lessonFrom","lessonTo"].forEach(id=>$(id).addEventListener("change",updatePoolCount));
   $("startBtn").onclick=startPractice;
-  $("revealBtn").onclick=reveal;
-  $("knownBtn").onclick=()=>grade(true);
-  $("againBtn").onclick=()=>grade(false);
+  $("nextBtn").onclick=grade;
   $("themeBtn").onclick=toggleTheme;
   renderLessons();renderKaiwa();updatePoolCount();
   const saved=localStorage.getItem("mnn-theme"); if(saved)document.documentElement.dataset.theme=saved;
+}
+function reviewWrongAnswers() {
+  const wrongIds = JSON.parse(localStorage.getItem("mnn-wrong")) || [];
+  if (!wrongIds.length) { alert("No wrong answers to review!"); return; }
+  state.pool = lessons.flatMap(n=>(VOCAB[n]||[]).map((v,i)=>({...v,lesson:+n,id:`${n}-${i}`}))).filter(v => wrongIds.includes(v.id));
+  state.queue=shuffle(state.pool);state.index=0;state.score=0;state.history=[];
+  $("quizScope").textContent="Reviewing Wrong Answers";
+  showView("quiz");nextQuestion();
 }
 function showView(view){
   const map={home:"homeView",quiz:"quizView",lessons:"lessonsView",lessonDetail:"lessonDetailView",kaiwa:"kaiwaView"};
@@ -70,25 +76,77 @@ function nextQuestion(){
   state.current=state.queue[state.index];
   const dir=$("direction").value==="mixed"?(Math.random()<.5?"jp-en":"en-jp"):$("direction").value;
   state.current.dir=dir;
-  $("question").textContent=dir==="jp-en"?(state.current.kanji && state.current.kanji !== "—" ? state.current.kanji + " (" + state.current.jp + ")" : state.current.jp):state.current.en;
-  $("answer").textContent=dir==="jp-en"?state.current.en:(state.current.kanji && state.current.kanji !== "—" ? state.current.kanji + " (" + state.current.jp + ")" : state.current.jp);
-  $("answer").classList.add("hidden");$("revealBtn").classList.remove("hidden");
-  $("knownBtn").classList.add("hidden");$("againBtn").classList.add("hidden");
+  const isJpEn = dir==="jp-en";
+  $("question").textContent=isJpEn?(state.current.kanji && state.current.kanji !== "—" ? state.current.kanji + " (" + state.current.jp + ")" : state.current.jp):state.current.en;
+  
+  let options = [state.current];
+  let distractorPool = state.pool.filter(v => v.id !== state.current.id && v.lesson === state.current.lesson);
+  if (distractorPool.length < 3) {
+      const extra = state.pool.filter(v => v.id !== state.current.id && !distractorPool.includes(v));
+      distractorPool.push(...extra);
+  }
+  if (distractorPool.length < 3) {
+      const allVocab = lessons.flatMap(n=>(VOCAB[n]||[]).map((v,i)=>({...v,lesson:+n,id:`${n}-${i}`})));
+      const extra = allVocab.filter(v => v.id !== state.current.id && !distractorPool.includes(v));
+      distractorPool.push(...extra);
+  }
+  options.push(...shuffle(distractorPool).slice(0, 3));
+  options = shuffle(options);
+  state.currentOptions = options;
+  state.answered = false;
+  
+  $("mcqGrid").innerHTML = options.map((opt, i) => {
+    let text = isJpEn ? opt.en : (opt.kanji && opt.kanji !== "—" ? opt.kanji + " (" + opt.jp + ")" : opt.jp);
+    return `<button class="mcq-option" id="opt${i}" onclick="selectOption(${i})">${escapeHtml(text)}</button>`;
+  }).join("");
+  
+  $("mcqGrid").classList.remove("hidden");
+  $("nextAction").classList.add("hidden");
+  
   $("lessonTag").textContent=`Lesson ${state.current.lesson} · ${lessonNames[state.current.lesson]}`;
-  $("quizDirection").textContent=dir==="jp-en"?"Japanese → English":"English → Japanese";
+  $("quizDirection").textContent=isJpEn?"Japanese → English":"English → Japanese";
   $("quizProgress").textContent=`${state.index+1} / ${state.queue.length}`;
   $("progressBar").style.width=`${(state.index/state.queue.length)*100}%`;
 }
-function reveal(){$("answer").classList.remove("hidden");$("revealBtn").classList.add("hidden");$("knownBtn").classList.remove("hidden");$("againBtn").classList.remove("hidden")}
-function grade(known){if(known)state.score++;state.history.push({id:state.current.id,known});state.index++;nextQuestion()}
+function selectOption(idx) {
+  if (state.answered) return;
+  state.answered = true;
+  const selected = state.currentOptions[idx];
+  const isCorrect = selected.id === state.current.id;
+  state.lastCorrect = isCorrect;
+  if(!isCorrect) {
+    let wrongAnswers = JSON.parse(localStorage.getItem("mnn-wrong")) || [];
+    if (!wrongAnswers.includes(state.current.id)) {
+      wrongAnswers.push(state.current.id);
+      localStorage.setItem("mnn-wrong", JSON.stringify(wrongAnswers));
+    }
+  }
+  state.currentOptions.forEach((opt, i) => {
+    const btn = $("opt"+i);
+    btn.disabled = true;
+    if (opt.id === state.current.id) btn.classList.add("correct");
+    else if (i === idx && !isCorrect) btn.classList.add("incorrect");
+  });
+  $("nextAction").classList.remove("hidden");
+}
+function grade(){
+  if(state.lastCorrect) state.score++;
+  state.history.push({id:state.current.id,known:state.lastCorrect});
+  state.index++;
+  nextQuestion();
+}
 function finishQuiz(){
   $("progressBar").style.width="100%";
-  $("quizDirection").textContent="Practice complete";
-  $("question").textContent=`${state.score} / ${state.queue.length}`;
-  $("answer").classList.remove("hidden");$("answer").textContent="もう一度？ Keep going?";
-  $("revealBtn").classList.add("hidden");$("knownBtn").classList.add("hidden");$("againBtn").classList.add("hidden");
-  $("lessonTag").textContent=state.score===state.queue.length?"完璧！ Perfect session.":"いい練習でした。 Nice practice.";
   $("quizProgress").textContent="Done";
+  showView("resultsView");
+  const wrongCount = state.history.filter(h => !h.known).length;
+  const acc = Math.round((state.score / state.queue.length) * 100);
+  $("resultsSummary").innerHTML = `
+    <div class="big-number">${state.score} / ${state.queue.length}</div>
+    <p>Accuracy: ${acc}%</p>
+    <p>Correct: ${state.score} | Incorrect: ${wrongCount}</p>
+    <p>${wrongCount} questions added to Wrong Answers.</p>
+  `;
 }
 function quickStart(n){
   $("scopeMode").value="lesson";$("lessonFrom").value=n;updatePoolCount();startPractice();
