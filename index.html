@@ -118,6 +118,19 @@
 
     <section id="lessonDetailView" class="view">
       <div class="quiz-top"><button class="back-btn" onclick="showView('lessons')">← Lessons</button><button id="detailPractice" class="primary-btn compact">Practice lesson →</button></div>
+      <div class="controls-grid" style="margin-top:0; grid-template-columns: auto 1fr;">
+        <label>Pronunciation
+          <select id="speechRate" onchange="saveSpeechRate()">
+            <option value="1.0">Normal</option>
+            <option value="0.7">Slow</option>
+          </select>
+        </label>
+        <div style="display:flex; gap:10px; align-items:flex-end; flex-wrap:wrap;">
+          <button class="secondary-btn" onclick="playLesson()"><span style="font-size:16px;margin-right:5px;">🔊</span> Play lesson</button>
+          <button class="secondary-btn" onclick="pauseLesson()">⏸ Pause</button>
+          <button class="secondary-btn" onclick="stopLesson()">■ Stop</button>
+        </div>
+      </div>
       <div id="detailHeader" class="detail-header"></div>
       <div id="vocabTable" class="vocab-table"></div>
     </section>

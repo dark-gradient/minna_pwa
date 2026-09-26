@@ -164,9 +164,11 @@ function renderLessons(){
       <h3>${lessonNames[n]}</h3><p>${VOCAB[n].length} vocabulary entries</p>
     </button>`).join("");
 }
+let currentLessonWords = [];
 function openLesson(n){
+  currentLessonWords = VOCAB[n] || [];
   $("detailHeader").innerHTML=`<div class="eyebrow">LESSON ${String(n).padStart(2,"0")}</div><h1>${lessonNames[n]}</h1><p>${VOCAB[n].length} vocabulary entries • separate from Kaiwa.</p>`;
-  $("vocabTable").innerHTML=VOCAB[n].map(v=>`<div class="vocab-row"><span class="vocab-jp">${escapeHtml(v.kanji && v.kanji !== "—" ? v.kanji + " (" + v.jp + ")" : v.jp)}</span><span class="vocab-en">${escapeHtml(v.en)}</span></div>`).join("");
+  $("vocabTable").innerHTML=VOCAB[n].map(v=>`<div class="vocab-row" style="align-items: center;"><div style="display:flex; align-items:center; gap:12px;"><button class="speaker-btn" aria-label="Pronounce ${escapeHtml(v.jp)}" onclick="pronounceWord('${escapeHtml(v.jp.replace(/'/g, "\\'"))}', this)" style="border:none;background:var(--surface2);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">🔊</button><span class="vocab-jp">${escapeHtml(v.kanji && v.kanji !== "—" ? v.kanji + " (" + v.jp + ")" : v.jp)}</span></div><span class="vocab-en">${escapeHtml(v.en)}</span></div>`).join("");
   $("detailPractice").onclick=()=>{ $("scopeMode").value="lesson";$("lessonFrom").value=n;updatePoolCount();startPractice(); };
   showView("lessonDetail");
 }
@@ -245,4 +247,85 @@ function renderReview(){
   $("wrongListContainer").innerHTML = html;
 }
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+// Speech Synthesis
+let lessonSpeechQueue = [];
+let currentSpeakerBtn = null;
+
+function getJpVoice() {
+  const voices = speechSynthesis.getVoices();
+  return voices.find(v => v.lang === "ja-JP" || v.lang === "ja") || null;
+}
+function saveSpeechRate() {
+  localStorage.setItem("mnn-speech-rate", $("speechRate").value);
+}
+function loadSpeechRate() {
+  const r = localStorage.getItem("mnn-speech-rate");
+  if(r && $("speechRate")) $("speechRate").value = r;
+}
+function resetSpeakerBtn() {
+  if (currentSpeakerBtn) {
+    currentSpeakerBtn.textContent = "🔊";
+    currentSpeakerBtn = null;
+  }
+}
+function pronounceWord(text, btn) {
+  if (!window.speechSynthesis) {
+    alert("Japanese pronunciation is unavailable on this device.");
+    return;
+  }
+  speechSynthesis.cancel();
+  resetSpeakerBtn();
+  lessonSpeechQueue = []; // stop lesson play if individual word clicked
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "ja-JP";
+  utterance.rate = parseFloat($("speechRate").value || "1.0");
+  const voice = getJpVoice();
+  if (voice) utterance.voice = voice;
+  
+  if (btn) {
+    currentSpeakerBtn = btn;
+    btn.textContent = "🔉";
+    utterance.onend = resetSpeakerBtn;
+    utterance.onerror = resetSpeakerBtn;
+  }
+  speechSynthesis.speak(utterance);
+}
+function playLesson() {
+  if (!window.speechSynthesis) {
+    alert("Japanese pronunciation is unavailable on this device.");
+    return;
+  }
+  if (speechSynthesis.paused) {
+    speechSynthesis.resume();
+    return;
+  }
+  speechSynthesis.cancel();
+  resetSpeakerBtn();
+  lessonSpeechQueue = [...currentLessonWords];
+  speakNextLessonWord();
+}
+function speakNextLessonWord() {
+  if (lessonSpeechQueue.length === 0) return;
+  const word = lessonSpeechQueue.shift();
+  const utterance = new SpeechSynthesisUtterance(word.jp);
+  utterance.lang = "ja-JP";
+  utterance.rate = parseFloat($("speechRate").value || "1.0");
+  const voice = getJpVoice();
+  if (voice) utterance.voice = voice;
+  utterance.onend = () => speakNextLessonWord();
+  speechSynthesis.speak(utterance);
+}
+function pauseLesson() {
+  if (window.speechSynthesis) speechSynthesis.pause();
+}
+function stopLesson() {
+  if (window.speechSynthesis) {
+    speechSynthesis.cancel();
+    lessonSpeechQueue = [];
+    resetSpeakerBtn();
+  }
+}
+if (window.speechSynthesis) speechSynthesis.onvoiceschanged = getJpVoice;
+document.addEventListener("DOMContentLoaded", loadSpeechRate);
+
 loadData();
