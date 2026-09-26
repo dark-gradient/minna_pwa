@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#b74336">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Minna Kotoba">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<title>みんなのことば — Minna Vocabulary Trainer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand" onclick="showView('home')">
+      <div class="brand-mark">日</div>
+      <div><div class="brand-jp">みんなのことば</div><div class="brand-en">MINNA VOCAB TRAINER</div></div>
+    </div>
+    <nav>
+      <button data-view="home" class="nav-btn active">Practice</button>
+      <button data-view="lessons" class="nav-btn">Lessons</button>
+      <button data-view="kaiwa" class="nav-btn">会話 Kaiwa</button>
+    </nav>
+    <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">◐</button>
+  </header>
+
+  <main>
+    <section id="homeView" class="view active">
+      <div class="hero">
+        <div>
+          <div class="eyebrow">日本語 • DAILY PRACTICE</div>
+          <h1>Learn it. Recall it.<br><span>使ってみよう。</span></h1>
+          <p>Random vocabulary practice from the uploaded source. Choose one lesson, a range, or everything available.</p>
+        </div>
+        <div class="hero-seal"><span>語</span><small>ごい</small></div>
+      </div>
+
+      <div class="panel setup">
+        <div class="section-head"><div><span class="kicker">01</span><h2>Choose your practice</h2></div><span id="poolCount" class="count-pill"></span></div>
+        <div class="controls-grid">
+          <label>Scope
+            <select id="scopeMode">
+              <option value="lesson">Single lesson</option>
+              <option value="range">Lesson range</option>
+              <option value="all">All available lessons</option>
+            </select>
+          </label>
+          <label id="lessonFromWrap">Lesson
+            <select id="lessonFrom"></select>
+          </label>
+          <label id="lessonToWrap" class="hidden">To lesson
+            <select id="lessonTo"></select>
+          </label>
+          <label>Question direction
+            <select id="direction">
+              <option value="mixed">Mixed — Japanese ↔ English</option>
+              <option value="jp-en">Japanese → English</option>
+              <option value="en-jp">English → Japanese</option>
+            </select>
+          </label>
+          <label>Session size
+            <select id="sessionSize">
+              <option value="10">10 questions</option>
+              <option value="20" selected>20 questions</option>
+              <option value="30">30 questions</option>
+              <option value="all">All in pool</option>
+            </select>
+          </label>
+        </div>
+        <button id="startBtn" class="primary-btn">Start practice <span>→</span></button>
+      </div>
+
+      <div class="quick-grid">
+        <button class="quick-card" onclick="quickStart(1)"><span>01</span><strong>Lesson 1</strong><small>Self introductions</small></button>
+        <button class="quick-card" onclick="quickStart(5)"><span>05</span><strong>Lesson 5</strong><small>Travel & dates</small></button>
+        <button class="quick-card" onclick="quickStart(10)"><span>10</span><strong>Lesson 10</strong><small>Places & position</small></button>
+        <button class="quick-card" onclick="quickStart(20)"><span>20</span><strong>Lesson 20</strong><small>Plain-style vocabulary</small></button>
+      </div>
+
+      <div class="source-note">
+        <span>出典</span>
+        <div><strong>Source status:</strong> the uploaded PDF contains vocabulary through <strong>Lesson 20</strong>. Lessons 21–25 are not present in this upload, so they are intentionally not invented or added.</div>
+      </div>
+    </section>
+
+    <section id="quizView" class="view">
+      <div class="quiz-top">
+        <button class="back-btn" onclick="showView('home')">← Setup</button>
+        <div class="quiz-meta"><span id="quizScope"></span><span id="quizProgress"></span></div>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <div class="quiz-card">
+        <div class="quiz-label" id="quizDirection"></div>
+        <div id="question" class="question"></div>
+        <div id="answer" class="answer hidden"></div>
+        <div class="answer-actions">
+          <button id="revealBtn" class="secondary-btn">Show answer</button>
+          <button id="knownBtn" class="primary-btn hidden">I knew it ✓</button>
+          <button id="againBtn" class="secondary-btn hidden">Again ↻</button>
+        </div>
+        <div id="lessonTag" class="lesson-tag"></div>
+      </div>
+      <div class="quiz-tip">Tip: say the answer aloud before revealing it.</div>
+    </section>
+
+    <section id="lessonsView" class="view">
+      <div class="page-head"><div><div class="eyebrow">LESSON INDEX</div><h1>Vocabulary by lesson</h1></div><div id="totalVocab" class="big-number"></div></div>
+      <div id="lessonGrid" class="lesson-grid"></div>
+    </section>
+
+    <section id="lessonDetailView" class="view">
+      <div class="quiz-top"><button class="back-btn" onclick="showView('lessons')">← Lessons</button><button id="detailPractice" class="primary-btn compact">Practice lesson →</button></div>
+      <div id="detailHeader" class="detail-header"></div>
+      <div id="vocabTable" class="vocab-table"></div>
+    </section>
+
+    <section id="kaiwaView" class="view">
+      <div class="page-head"><div><div class="eyebrow">会話 • CONVERSATION</div><h1>Kaiwa library</h1><p>Kept separate from the regular vocabulary pool.</p></div></div>
+      <div id="kaiwaGrid" class="kaiwa-grid"></div>
+    </section>
+  </main>
+
+  <footer>みんなのことば <span>•</span> Minna Vocabulary Trainer <span>•</span> local practice app</footer>
+</div>
+<script src="app.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+}
+</script>
+</body>
+</html>

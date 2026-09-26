@@ -1,0 +1,866 @@
+{
+  "1": {
+    "title": "How do you do?",
+    "lines": [
+      {
+        "speaker": "Sato",
+        "text": "Good morning."
+      },
+      {
+        "speaker": "Yamada",
+        "text": "Good morning. Ms. Sato, this is Mr. Mike Miller."
+      },
+      {
+        "speaker": "Miller",
+        "text": "How do you do? I am Mike Miller. I am from the United States of America. Nice to meet you."
+      },
+      {
+        "speaker": "Sato",
+        "text": "I am Sato Keiko. Nice to meet you."
+      }
+    ]
+  },
+  "2": {
+    "title": "This is just a token",
+    "lines": [
+      {
+        "speaker": "Yamada",
+        "text": "Yes. Who is it?"
+      },
+      {
+        "speaker": "Santos",
+        "text": "I am Santos from (apartment) 408."
+      },
+      {
+        "speaker": "Santos",
+        "text": "Hello. I am Santos. How do you do? It is nice to meet you."
+      },
+      {
+        "speaker": "Yamada",
+        "text": "The pleasure's mine."
+      },
+      {
+        "speaker": "Santos",
+        "text": "Er, this is a little something..."
+      },
+      {
+        "speaker": "Yamada",
+        "text": "Oh, thank you. What is it?"
+      },
+      {
+        "speaker": "Santos",
+        "text": "It's coffee. Please."
+      },
+      {
+        "speaker": "Yamada",
+        "text": "Thank you very much."
+      }
+    ]
+  },
+  "3": {
+    "title": "I'll take it",
+    "lines": [
+      {
+        "speaker": "Maria",
+        "text": "Excuse me. Where is the wine department?"
+      },
+      {
+        "speaker": "Sales clerk A",
+        "text": "It is in the first basement."
+      },
+      {
+        "speaker": "Maria",
+        "text": "Thanks."
+      },
+      {
+        "speaker": "Maria",
+        "text": "Excuse me. Could you show me that wine?"
+      },
+      {
+        "speaker": "Sales clerk B",
+        "text": "Certainly. Here you are."
+      },
+      {
+        "speaker": "Maria",
+        "text": "Is this French wine?"
+      },
+      {
+        "speaker": "Sales clerk B",
+        "text": "No, it's Italian."
+      },
+      {
+        "speaker": "Maria",
+        "text": "How much is it?"
+      },
+      {
+        "speaker": "Sales clerk B",
+        "text": "2,500 yen."
+      },
+      {
+        "speaker": "Maria",
+        "text": "Well, I'll take it."
+      }
+    ]
+  },
+  "4": {
+    "title": "What are your opening hours?",
+    "lines": [
+      {
+        "speaker": "104",
+        "text": "Hello, this is Ishida of the 104 Service."
+      },
+      {
+        "speaker": "Karina",
+        "text": "Could you tell me the phone number of the Yamato Art Museum, please?"
+      },
+      {
+        "speaker": "104",
+        "text": "The Yamato Art Museum? Certainly."
+      },
+      {
+        "speaker": "Tape",
+        "text": "The number you are inquiring about is 0797-38-5432."
+      },
+      {
+        "speaker": "Museum staff member",
+        "text": "Hello, Yamato Art Museum."
+      },
+      {
+        "speaker": "Karina",
+        "text": "Excuse me. What are your opening hours?"
+      },
+      {
+        "speaker": "Staff",
+        "text": "We are open from nine to four."
+      },
+      {
+        "speaker": "Karina",
+        "text": "Which day of the week are you closed?"
+      },
+      {
+        "speaker": "Staff",
+        "text": "We are closed on Mondays."
+      },
+      {
+        "speaker": "Karina",
+        "text": "Thank you very much."
+      }
+    ]
+  },
+  "5": {
+    "title": "Does this train go to Koshien?",
+    "lines": [
+      {
+        "speaker": "Santos",
+        "text": "Excuse me. How much is it to Koshien?"
+      },
+      {
+        "speaker": "Woman",
+        "text": "It's 350 yen."
+      },
+      {
+        "speaker": "Santos",
+        "text": "350 yen? Thank you very much."
+      },
+      {
+        "speaker": "Woman",
+        "text": "You're welcome."
+      },
+      {
+        "speaker": "Santos",
+        "text": "Excuse me. What platform is it for Koshien?"
+      },
+      {
+        "speaker": "Station employee",
+        "text": "No. 5."
+      },
+      {
+        "speaker": "Santos",
+        "text": "Thanks."
+      },
+      {
+        "speaker": "Santos",
+        "text": "Excuse me. Does this train go to Koshien?"
+      },
+      {
+        "speaker": "Man",
+        "text": "No, it doesn't. The next “local train” does."
+      },
+      {
+        "speaker": "Santos",
+        "text": "Thank you very much."
+      }
+    ]
+  },
+  "6": {
+    "title": "Won't you join us?",
+    "lines": [
+      {
+        "speaker": "Sato",
+        "text": "Mr. Miller."
+      },
+      {
+        "speaker": "Miller",
+        "text": "Yes?"
+      },
+      {
+        "speaker": "Sato",
+        "text": "I'm going to enjoy cherry-blossom viewing with my friends tomorrow. Won't you join us, Mr. Miller?"
+      },
+      {
+        "speaker": "Miller",
+        "text": "That sounds nice. Where will you go?"
+      },
+      {
+        "speaker": "Sato",
+        "text": "Osakajo-Koen."
+      },
+      {
+        "speaker": "Miller",
+        "text": "What time?"
+      },
+      {
+        "speaker": "Sato",
+        "text": "At ten o'clock. Let's meet at Osakajo-Koen Station."
+      },
+      {
+        "speaker": "Miller",
+        "text": "OK."
+      },
+      {
+        "speaker": "Sato",
+        "text": "Well, see you tomorrow."
+      }
+    ]
+  },
+  "7": {
+    "title": "Hello",
+    "lines": [
+      {
+        "speaker": "Jose Santos",
+        "text": "Hello."
+      },
+      {
+        "speaker": "Yamada Ichiro",
+        "text": "Hello. Please come in."
+      },
+      {
+        "speaker": "Jose Santos",
+        "text": "Thank you."
+      },
+      {
+        "speaker": "Yamada Tomoko",
+        "text": "How about a cup of coffee?"
+      },
+      {
+        "speaker": "Maria Santos",
+        "text": "Thank you."
+      },
+      {
+        "speaker": "Yamada Tomoko",
+        "text": "Here you are."
+      },
+      {
+        "speaker": "Maria Santos",
+        "text": "Thank you. This spoon is nice, isn't it?"
+      },
+      {
+        "speaker": "Yamada Tomoko",
+        "text": "Yes, it is. Someone in my company gave it to me. It's a souvenir of her trip to Europe."
+      }
+    ]
+  },
+  "8": {
+    "title": "It's almost time to leave",
+    "lines": [
+      {
+        "speaker": "Yamada Ichiro",
+        "text": "Have you got accustomed to living in Japan, Maria?"
+      },
+      {
+        "speaker": "Maria Santos",
+        "text": "Yes, I have. I enjoy it every day."
+      },
+      {
+        "speaker": "Yamada Ichiro",
+        "text": "Really? Mr. Santos, how is your work?"
+      },
+      {
+        "speaker": "Jose Santos",
+        "text": "Well, it's busy, but interesting."
+      },
+      {
+        "speaker": "Yamada Tomoko",
+        "text": "Would you like another cup of coffee?"
+      },
+      {
+        "speaker": "Maria Santos",
+        "text": "No, thank you."
+      },
+      {
+        "speaker": "Jose Santos",
+        "text": "Oh, it's eight o'clock now. We must be going."
+      },
+      {
+        "speaker": "Yamada Ichiro",
+        "text": "You must?"
+      },
+      {
+        "speaker": "Maria Santos",
+        "text": "Thank you for everything today."
+      },
+      {
+        "speaker": "Yamada Tomoko",
+        "text": "Our pleasure. Please come again."
+      }
+    ]
+  },
+  "9": {
+    "title": "That's too bad",
+    "lines": [
+      {
+        "speaker": "Miller",
+        "text": "Hello. This is Miller."
+      },
+      {
+        "speaker": "Kimura",
+        "text": "It's you, Mr. Miller. Good evening. How are you?"
+      },
+      {
+        "speaker": "Miller",
+        "text": "Fine. Thank you. Well, Ms. Kimura. How would you like to go to a concert by Seiji Ozawa?"
+      },
+      {
+        "speaker": "Kimura",
+        "text": "That sounds nice. When will it be?"
+      },
+      {
+        "speaker": "Miller",
+        "text": "It's on Friday night of next week."
+      },
+      {
+        "speaker": "Kimura",
+        "text": "Friday? Friday's a bit difficult."
+      },
+      {
+        "speaker": "Miller",
+        "text": "So you can't come?"
+      },
+      {
+        "speaker": "Kimura",
+        "text": "I have arranged to meet a friend on Friday night."
+      },
+      {
+        "speaker": "Miller",
+        "text": "You have. I'm sorry to hear that."
+      },
+      {
+        "speaker": "Kimura",
+        "text": "I am, too. Please invite me again some other time."
+      }
+    ]
+  },
+  "10": {
+    "title": "Do you have chili sauce in this store?",
+    "lines": [
+      {
+        "speaker": "Miller",
+        "text": "Excuse me. Where is Yunyu-ya Store?"
+      },
+      {
+        "speaker": "Woman",
+        "text": "Yunyu-ya Store? You see that white building over there? The store is in that building."
+      },
+      {
+        "speaker": "Miller",
+        "text": "I see. Thank you."
+      },
+      {
+        "speaker": "Woman",
+        "text": "Not at all."
+      },
+      {
+        "speaker": "Miller",
+        "text": "Excuse me, do you have chili sauce?"
+      },
+      {
+        "speaker": "Shop assistant",
+        "text": "Yes. There is a spice corner on the right-hand side at the back. Chili sauce is on the second rack from the bottom."
+      },
+      {
+        "speaker": "Miller",
+        "text": "I see. Thanks."
+      }
+    ]
+  },
+  "11": {
+    "title": "Please send this by sea mail",
+    "lines": [
+      {
+        "speaker": "Janitor",
+        "text": "Nice weather, isn't it? Are you going out?"
+      },
+      {
+        "speaker": "Wang",
+        "text": "Yes, I am going to the post office."
+      },
+      {
+        "speaker": "Janitor",
+        "text": "Really? See you later."
+      },
+      {
+        "speaker": "Wang",
+        "text": "See you."
+      },
+      {
+        "speaker": "Wang",
+        "text": "I would like to send this by special delivery."
+      },
+      {
+        "speaker": "Post office clerk",
+        "text": "Sure. To Australia? That's 370 yen."
+      },
+      {
+        "speaker": "Wang",
+        "text": "And also this parcel."
+      },
+      {
+        "speaker": "Post office clerk",
+        "text": "By sea mail or airmail?"
+      },
+      {
+        "speaker": "Wang",
+        "text": "How much is sea mail?"
+      },
+      {
+        "speaker": "Post office clerk",
+        "text": "500 yen."
+      },
+      {
+        "speaker": "Wang",
+        "text": "How long will it take?"
+      },
+      {
+        "speaker": "Post office clerk",
+        "text": "It will take about one month."
+      },
+      {
+        "speaker": "Wang",
+        "text": "Well, please send it by sea mail."
+      }
+    ]
+  },
+  "12": {
+    "title": "How was the Festival?",
+    "lines": [
+      {
+        "speaker": "Miller",
+        "text": "Hello. (I'm home.)"
+      },
+      {
+        "speaker": "Janitor",
+        "text": "Hello. (Welcome home.)"
+      },
+      {
+        "speaker": "Miller",
+        "text": "This is a souvenir from Kyoto. How was the Gion Festival?"
+      },
+      {
+        "speaker": "Janitor",
+        "text": "Thank you. The Gion Festival is the most famous of all the festivals in Kyoto."
+      },
+      {
+        "speaker": "Miller",
+        "text": "It was very interesting. There were a lot of foreign visitors."
+      },
+      {
+        "speaker": "Miller",
+        "text": "Is that so?"
+      },
+      {
+        "speaker": "Janitor",
+        "text": "Did you take photos?"
+      },
+      {
+        "speaker": "Miller",
+        "text": "Yes, I took about a hundred photos."
+      },
+      {
+        "speaker": "Janitor",
+        "text": "Amazing!"
+      },
+      {
+        "speaker": "Miller",
+        "text": "Yes. But it made me a bit tired."
+      }
+    ]
+  },
+  "13": {
+    "title": "Charge us separately",
+    "lines": [
+      {
+        "speaker": "Yamada",
+        "text": "Why, it's already twelve. Shall we go for lunch?"
+      },
+      {
+        "speaker": "Miller",
+        "text": "Sure."
+      },
+      {
+        "speaker": "Yamada",
+        "text": "Where shall we go?"
+      },
+      {
+        "speaker": "Miller",
+        "text": "Let me see. Today I want to eat Japanese food."
+      },
+      {
+        "speaker": "Yamada",
+        "text": "Then, let's go to “Tsuru-ya.”"
+      },
+      {
+        "speaker": "Waiter",
+        "text": "May I take your order?"
+      },
+      {
+        "speaker": "Miller",
+        "text": "I'll have the tempura set lunch."
+      },
+      {
+        "speaker": "Yamada",
+        "text": "I'll have the gyudon."
+      },
+      {
+        "speaker": "Waiter",
+        "text": "One tempura set lunch and one gyudon. I'll be right back."
+      },
+      {
+        "speaker": "Cashier",
+        "text": "1,680 yen altogether, sir."
+      },
+      {
+        "speaker": "Miller",
+        "text": "Excuse me. Please charge us separately."
+      },
+      {
+        "speaker": "Cashier",
+        "text": "Right. 980 yen for the tempura set lunch, 700 yen for the gyudon."
+      }
+    ]
+  },
+  "14": {
+    "title": "To Umeda, please",
+    "lines": [
+      {
+        "speaker": "Karina",
+        "text": "To Umeda, please."
+      },
+      {
+        "speaker": "Driver",
+        "text": "Yes."
+      },
+      {
+        "speaker": "Karina",
+        "text": "Excuse me. Turn to the right at that traffic light."
+      },
+      {
+        "speaker": "Driver",
+        "text": "To the right?"
+      },
+      {
+        "speaker": "Karina",
+        "text": "Yes."
+      },
+      {
+        "speaker": "Driver",
+        "text": "Go straight?"
+      },
+      {
+        "speaker": "Karina",
+        "text": "Yes, go straight. Stop in front of that flower shop."
+      },
+      {
+        "speaker": "Driver",
+        "text": "Yes. 1,800 yen, please."
+      },
+      {
+        "speaker": "Karina",
+        "text": "Here you are."
+      },
+      {
+        "speaker": "Driver",
+        "text": "That's 3,200 yen change. Thank you."
+      }
+    ]
+  },
+  "15": {
+    "title": "Tell me about your family",
+    "lines": [
+      {
+        "speaker": "Miller",
+        "text": "Today's movie was good, wasn't it?"
+      },
+      {
+        "speaker": "Kimura",
+        "text": "Yes, it was. The father was particularly good, wasn't he?"
+      },
+      {
+        "speaker": "Miller",
+        "text": "Yes. I was reminded of my family."
+      },
+      {
+        "speaker": "Kimura",
+        "text": "Were you? Tell me about your family, Mr. Miller."
+      },
+      {
+        "speaker": "Miller",
+        "text": "I have my parents and an elder sister."
+      },
+      {
+        "speaker": "Kimura",
+        "text": "Where do they live?"
+      },
+      {
+        "speaker": "Miller",
+        "text": "My parents live near New York City. My sister is in London. How about your family, Ms. Kimura?"
+      },
+      {
+        "speaker": "Kimura",
+        "text": "There are three of us. My father works for a bank. My mother teaches English at a high school."
+      }
+    ]
+  },
+  "16": {
+    "title": "Tell me how to use this machine",
+    "lines": [
+      {
+        "speaker": "Maria",
+        "text": "Excuse me. Could you tell me how to use this machine?"
+      },
+      {
+        "speaker": "Bank clerk",
+        "text": "You want to make a withdrawal?"
+      },
+      {
+        "speaker": "Maria",
+        "text": "Yes."
+      },
+      {
+        "speaker": "Bank clerk",
+        "text": "Then, please push this button, first."
+      },
+      {
+        "speaker": "Maria",
+        "text": "Yes."
+      },
+      {
+        "speaker": "Bank clerk",
+        "text": "Do you have a cash card?"
+      },
+      {
+        "speaker": "Maria",
+        "text": "Yes, here it is."
+      },
+      {
+        "speaker": "Bank clerk",
+        "text": "Put it in here, and enter the code number."
+      },
+      {
+        "speaker": "Maria",
+        "text": "Yes."
+      },
+      {
+        "speaker": "Bank clerk",
+        "text": "Next, enter the sum."
+      },
+      {
+        "speaker": "Maria",
+        "text": "Fifty thousand yen. Five..."
+      },
+      {
+        "speaker": "Bank clerk",
+        "text": "Push this “Man” and “En.” And then push this “Kakunin” button."
+      },
+      {
+        "speaker": "Maria",
+        "text": "Got it, thank you very much."
+      }
+    ]
+  },
+  "17": {
+    "title": "What seems to be the problem?",
+    "lines": [
+      {
+        "speaker": "Doctor",
+        "text": "What seems to be the problem?"
+      },
+      {
+        "speaker": "Matsumoto",
+        "text": "I have had a sore throat and a slight temperature since yesterday."
+      },
+      {
+        "speaker": "Doctor",
+        "text": "Well, please open your mouth."
+      },
+      {
+        "speaker": "Doctor",
+        "text": "You have a cold. You need a good rest."
+      },
+      {
+        "speaker": "Matsumoto",
+        "text": "Doctor, I have to go to Tokyo on business from tomorrow."
+      },
+      {
+        "speaker": "Doctor",
+        "text": "Well then, take this medicine and go to bed early today."
+      },
+      {
+        "speaker": "Matsumoto",
+        "text": "Yes, doctor."
+      },
+      {
+        "speaker": "Doctor",
+        "text": "And do not take a bath tonight."
+      },
+      {
+        "speaker": "Matsumoto",
+        "text": "I see."
+      },
+      {
+        "speaker": "Doctor",
+        "text": "Please take care."
+      },
+      {
+        "speaker": "Matsumoto",
+        "text": "Thank you very much, doctor."
+      }
+    ]
+  },
+  "18": {
+    "title": "What is your hobby?",
+    "lines": [
+      {
+        "speaker": "Yamada",
+        "text": "What is your hobby, Mr. Santos?"
+      },
+      {
+        "speaker": "Santos",
+        "text": "Photography."
+      },
+      {
+        "speaker": "Yamada",
+        "text": "What kind of photos do you take?"
+      },
+      {
+        "speaker": "Santos",
+        "text": "Photos of animals. I like those of horses, especially."
+      },
+      {
+        "speaker": "Yamada",
+        "text": "Oh, that's interesting. Have you taken photos of horses since you came to Japan?"
+      },
+      {
+        "speaker": "Santos",
+        "text": "No. You can hardly ever see horses in Japan."
+      },
+      {
+        "speaker": "Yamada",
+        "text": "There is a lot of pastureland for horses in Hokkaido."
+      },
+      {
+        "speaker": "Santos",
+        "text": "Really? Then I would really like to go there on summer vacation."
+      }
+    ]
+  },
+  "19": {
+    "title": "As for my diet, I'll start it tomorrow",
+    "lines": [
+      {
+        "speaker": "All",
+        "text": "Cheers!"
+      },
+      {
+        "speaker": "Ms. Matsumoto",
+        "text": "Why, Ms. Maria, you're not eating much."
+      },
+      {
+        "speaker": "Maria",
+        "text": "No. To tell the truth, I have been on a diet since yesterday."
+      },
+      {
+        "speaker": "Ms. Matsumoto",
+        "text": "Have you? I have tried being on a diet many times, too."
+      },
+      {
+        "speaker": "Maria",
+        "text": "What kind of diets have you tried?"
+      },
+      {
+        "speaker": "Ms. Matsumoto",
+        "text": "I tried eating only apples, and drinking a lot of water, and so on."
+      },
+      {
+        "speaker": "Mr. Matsumoto",
+        "text": "I'm afraid strict diets are not good for your health."
+      },
+      {
+        "speaker": "Maria",
+        "text": "You are right."
+      },
+      {
+        "speaker": "Ms. Matsumoto",
+        "text": "Ms. Maria, this cake is delicious."
+      },
+      {
+        "speaker": "Maria",
+        "text": "Is it? I'll start dieting again tomorrow."
+      }
+    ]
+  },
+  "20": {
+    "title": "What will you do for the summer vacation?",
+    "lines": [
+      {
+        "speaker": "Kobayashi",
+        "text": "Are you going home for the summer vacation?"
+      },
+      {
+        "speaker": "Thawaphon",
+        "text": "No, I won't. Though I want to.... What about you, Mr. Kobayashi?"
+      },
+      {
+        "speaker": "Kobayashi",
+        "text": "Well, what shall I do? Have you climbed Mt. Fuji, Mr. Thawaphon?"
+      },
+      {
+        "speaker": "Thawaphon",
+        "text": "No, I haven't."
+      },
+      {
+        "speaker": "Kobayashi",
+        "text": "Then, if you'd like, shall we go together?"
+      },
+      {
+        "speaker": "Thawaphon",
+        "text": "Yes, okay. When?"
+      },
+      {
+        "speaker": "Kobayashi",
+        "text": "How about the beginning of August?"
+      },
+      {
+        "speaker": "Thawaphon",
+        "text": "Sounds good."
+      },
+      {
+        "speaker": "Kobayashi",
+        "text": "Then, I will check up on various things and call you later."
+      },
+      {
+        "speaker": "Thawaphon",
+        "text": "Thanks. I'll be waiting."
+      }
+    ]
+  }
+}
