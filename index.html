@@ -126,9 +126,10 @@
           </select>
         </label>
         <div style="display:flex; gap:10px; align-items:flex-end; flex-wrap:wrap;">
-          <button class="secondary-btn" onclick="playLesson()"><span style="font-size:16px;margin-right:5px;">🔊</span> Play lesson</button>
-          <button class="secondary-btn" onclick="pauseLesson()">⏸ Pause</button>
-          <button class="secondary-btn" onclick="stopLesson()">■ Stop</button>
+          <button id="btnPlayLesson" class="secondary-btn" onclick="playLesson()"><span style="font-size:16px;margin-right:5px;">🔊</span> Play lesson</button>
+          <button id="btnPauseLesson" class="secondary-btn hidden" onclick="pauseLesson()">⏸ Pause</button>
+          <button id="btnStopLesson" class="secondary-btn hidden" onclick="stopLesson()">■ Stop</button>
+          <span id="lessonCompleteMsg" style="color:var(--red); font-size:14px; font-weight:bold; margin-bottom:12px; display:none;">Lesson complete</span>
         </div>
       </div>
       <div id="detailHeader" class="detail-header"></div>
