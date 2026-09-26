@@ -60,6 +60,7 @@ function poolForScope(){
 }
 function updatePoolCount(){
   const mode=$("scopeMode").value;
+  $("lessonFromWrap").classList.toggle("hidden",mode==="all");
   $("lessonToWrap").classList.toggle("hidden",mode!=="range");
   $("poolCount").textContent=`${poolForScope().length} words`;
 }
@@ -214,6 +215,7 @@ function poolForReviewScope(){
 }
 function updateReviewPoolCount(){
   const mode=$("reviewScopeMode").value;
+  $("reviewLessonFromWrap").classList.toggle("hidden",mode==="all");
   $("reviewLessonToWrap").classList.toggle("hidden",mode!=="range");
   $("wrongPoolCount").textContent=`${poolForReviewScope().length} words`;
 }
