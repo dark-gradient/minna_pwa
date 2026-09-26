@@ -168,7 +168,7 @@ let currentLessonWords = [];
 function openLesson(n){
   currentLessonWords = VOCAB[n] || [];
   $("detailHeader").innerHTML=`<div class="eyebrow">LESSON ${String(n).padStart(2,"0")}</div><h1>${lessonNames[n]}</h1><p>${VOCAB[n].length} vocabulary entries • separate from Kaiwa.</p>`;
-  $("vocabTable").innerHTML=VOCAB[n].map(v=>`<div class="vocab-row" style="align-items: center;"><div style="display:flex; align-items:center; gap:12px;"><button class="speaker-btn" aria-label="Pronounce ${escapeHtml(v.jp)}" onclick="pronounceWord('${escapeHtml(v.jp.replace(/'/g, "\\'"))}', this)" style="border:none;background:var(--surface2);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">🔊</button><span class="vocab-jp">${escapeHtml(v.kanji && v.kanji !== "—" ? v.kanji + " (" + v.jp + ")" : v.jp)}</span></div><span class="vocab-en">${escapeHtml(v.en)}</span></div>`).join("");
+  $("vocabTable").innerHTML=VOCAB[n].map((v, i)=>`<div class="vocab-row" id="vocab-row-${i}" style="align-items: center; transition: 0.2s;"><div style="display:flex; align-items:center; gap:12px;"><button class="speaker-btn" aria-label="Pronounce ${escapeHtml(v.jp)}" onclick="pronounceWord('${escapeHtml(v.jp.replace(/'/g, "\\'"))}', this)" style="border:none;background:var(--surface2);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">🔊</button><span class="vocab-jp">${escapeHtml(v.kanji && v.kanji !== "—" ? v.kanji + " (" + v.jp + ")" : v.jp)}</span></div><span class="vocab-en">${escapeHtml(v.en)}</span></div>`).join("");
   $("detailPractice").onclick=()=>{ $("scopeMode").value="lesson";$("lessonFrom").value=n;updatePoolCount();startPractice(); };
   showView("lessonDetail");
 }
@@ -248,12 +248,18 @@ function renderReview(){
 }
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
 // Speech Synthesis
-let lessonSpeechQueue = [];
 let currentSpeakerBtn = null;
+let lessonSpeechIndex = 0;
+let lessonSpeechStage = "STOPPED"; // STOPPED, JAPANESE, PAUSE_AFTER_JAPANESE, ENGLISH, PAUSE_AFTER_ENGLISH
+let playbackTimeout = null;
 
 function getJpVoice() {
   const voices = speechSynthesis.getVoices();
   return voices.find(v => v.lang === "ja-JP" || v.lang === "ja") || null;
+}
+function getEnVoice() {
+  const voices = speechSynthesis.getVoices();
+  return voices.find(v => v.lang === "en-US" || v.lang === "en-GB" || v.lang.startsWith("en")) || null;
 }
 function saveSpeechRate() {
   localStorage.setItem("mnn-speech-rate", $("speechRate").value);
@@ -273,9 +279,9 @@ function pronounceWord(text, btn) {
     alert("Japanese pronunciation is unavailable on this device.");
     return;
   }
+  stopLesson(); // Safely stop teacher mode
   speechSynthesis.cancel();
   resetSpeakerBtn();
-  lessonSpeechQueue = []; // stop lesson play if individual word clicked
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "ja-JP";
   utterance.rate = parseFloat($("speechRate").value || "1.0");
@@ -290,42 +296,136 @@ function pronounceWord(text, btn) {
   }
   speechSynthesis.speak(utterance);
 }
+
 function playLesson() {
   if (!window.speechSynthesis) {
     alert("Japanese pronunciation is unavailable on this device.");
     return;
   }
-  if (speechSynthesis.paused) {
-    speechSynthesis.resume();
+  if (lessonSpeechStage !== "STOPPED") {
+    if (speechSynthesis.paused) {
+      speechSynthesis.resume();
+    }
+    if (lessonSpeechStage === "PAUSE_AFTER_JAPANESE") {
+      lessonSpeechStage = "ENGLISH";
+      executeTeacherStep();
+    } else if (lessonSpeechStage === "PAUSE_AFTER_ENGLISH") {
+      lessonSpeechIndex++;
+      lessonSpeechStage = "JAPANESE";
+      executeTeacherStep();
+    }
+    togglePlaybackUI(true);
     return;
   }
+  
   speechSynthesis.cancel();
   resetSpeakerBtn();
-  lessonSpeechQueue = [...currentLessonWords];
-  speakNextLessonWord();
+  clearTimeout(playbackTimeout);
+  lessonSpeechIndex = 0;
+  lessonSpeechStage = "JAPANESE";
+  togglePlaybackUI(true);
+  executeTeacherStep();
 }
-function speakNextLessonWord() {
-  if (lessonSpeechQueue.length === 0) return;
-  const word = lessonSpeechQueue.shift();
-  const utterance = new SpeechSynthesisUtterance(word.jp);
-  utterance.lang = "ja-JP";
-  utterance.rate = parseFloat($("speechRate").value || "1.0");
-  const voice = getJpVoice();
-  if (voice) utterance.voice = voice;
-  utterance.onend = () => speakNextLessonWord();
-  speechSynthesis.speak(utterance);
-}
-function pauseLesson() {
-  if (window.speechSynthesis) speechSynthesis.pause();
-}
-function stopLesson() {
-  if (window.speechSynthesis) {
-    speechSynthesis.cancel();
-    lessonSpeechQueue = [];
-    resetSpeakerBtn();
+
+function executeTeacherStep() {
+  if (lessonSpeechIndex >= currentLessonWords.length) {
+    finishTeacherPlayback();
+    return;
+  }
+  const word = currentLessonWords[lessonSpeechIndex];
+  highlightRow(lessonSpeechIndex);
+  
+  const rateMultiplier = parseFloat($("speechRate").value || "1.0");
+  const isSlow = rateMultiplier < 0.9;
+  
+  if (lessonSpeechStage === "JAPANESE") {
+    const utterance = new SpeechSynthesisUtterance(word.jp);
+    utterance.lang = "ja-JP";
+    utterance.rate = rateMultiplier;
+    const voice = getJpVoice();
+    if (voice) utterance.voice = voice;
+    
+    utterance.onend = () => {
+      if (lessonSpeechStage === "STOPPED") return;
+      lessonSpeechStage = "PAUSE_AFTER_JAPANESE";
+      playbackTimeout = setTimeout(() => {
+        if (lessonSpeechStage === "STOPPED") return;
+        lessonSpeechStage = "ENGLISH";
+        executeTeacherStep();
+      }, 1000);
+    };
+    utterance.onerror = () => stopLesson();
+    speechSynthesis.speak(utterance);
+    
+  } else if (lessonSpeechStage === "ENGLISH") {
+    const utterance = new SpeechSynthesisUtterance(word.en);
+    utterance.lang = "en-US";
+    utterance.rate = isSlow ? 0.8 : 1.0;
+    const voice = getEnVoice();
+    if (voice) utterance.voice = voice;
+    
+    utterance.onend = () => {
+      if (lessonSpeechStage === "STOPPED") return;
+      lessonSpeechStage = "PAUSE_AFTER_ENGLISH";
+      playbackTimeout = setTimeout(() => {
+        if (lessonSpeechStage === "STOPPED") return;
+        lessonSpeechIndex++;
+        lessonSpeechStage = "JAPANESE";
+        executeTeacherStep();
+      }, 1400);
+    };
+    utterance.onerror = () => stopLesson();
+    speechSynthesis.speak(utterance);
   }
 }
-if (window.speechSynthesis) speechSynthesis.onvoiceschanged = getJpVoice;
+
+function pauseLesson() {
+  if (window.speechSynthesis) speechSynthesis.pause();
+  clearTimeout(playbackTimeout);
+  togglePlaybackUI(false);
+}
+
+function stopLesson() {
+  if (window.speechSynthesis) speechSynthesis.cancel();
+  clearTimeout(playbackTimeout);
+  lessonSpeechStage = "STOPPED";
+  lessonSpeechIndex = 0;
+  highlightRow(-1);
+  togglePlaybackUI(false);
+}
+
+function finishTeacherPlayback() {
+  stopLesson();
+  const msg = $("lessonCompleteMsg");
+  if (msg) {
+    msg.style.display = "inline";
+    setTimeout(() => { msg.style.display = "none"; }, 3000);
+  }
+}
+
+function togglePlaybackUI(isPlaying) {
+  if (isPlaying) {
+    $("btnPlayLesson").classList.add("hidden");
+    $("btnPauseLesson").classList.remove("hidden");
+    $("btnStopLesson").classList.remove("hidden");
+  } else {
+    $("btnPlayLesson").classList.remove("hidden");
+    $("btnPauseLesson").classList.add("hidden");
+    $("btnStopLesson").classList.add("hidden");
+  }
+}
+
+function highlightRow(idx) {
+  document.querySelectorAll(".vocab-row").forEach(el => el.classList.remove("active-row"));
+  if (idx >= 0) {
+    const el = $("vocab-row-" + idx);
+    if (el) el.classList.add("active-row");
+  }
+}
+
+if (window.speechSynthesis) {
+  speechSynthesis.onvoiceschanged = () => { getJpVoice(); getEnVoice(); };
+}
 document.addEventListener("DOMContentLoaded", loadSpeechRate);
 
 loadData();
