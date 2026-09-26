@@ -302,21 +302,19 @@ function playLesson() {
     alert("Japanese pronunciation is unavailable on this device.");
     return;
   }
-  if (lessonSpeechStage !== "STOPPED") {
-    if (speechSynthesis.paused) {
-      speechSynthesis.resume();
-    }
-    if (lessonSpeechStage === "PAUSE_AFTER_JAPANESE") {
-      lessonSpeechStage = "ENGLISH";
-      executeTeacherStep();
-    } else if (lessonSpeechStage === "PAUSE_AFTER_ENGLISH") {
-      lessonSpeechIndex++;
+  
+  if (lessonSpeechStage.startsWith("PAUSED_")) {
+    if (lessonSpeechStage === "PAUSED_JAPANESE") {
       lessonSpeechStage = "JAPANESE";
-      executeTeacherStep();
+    } else {
+      lessonSpeechStage = "ENGLISH";
     }
     togglePlaybackUI(true);
+    executeTeacherStep();
     return;
   }
+  
+  if (lessonSpeechStage !== "STOPPED") return;
   
   speechSynthesis.cancel();
   resetSpeakerBtn();
@@ -346,10 +344,10 @@ function executeTeacherStep() {
     if (voice) utterance.voice = voice;
     
     utterance.onend = () => {
-      if (lessonSpeechStage === "STOPPED") return;
+      if (lessonSpeechStage !== "JAPANESE") return;
       lessonSpeechStage = "PAUSE_AFTER_JAPANESE";
       playbackTimeout = setTimeout(() => {
-        if (lessonSpeechStage === "STOPPED") return;
+        if (lessonSpeechStage !== "PAUSE_AFTER_JAPANESE") return;
         lessonSpeechStage = "ENGLISH";
         executeTeacherStep();
       }, 700);
@@ -366,10 +364,10 @@ function executeTeacherStep() {
     if (voice) utterance.voice = voice;
     
     utterance.onend = () => {
-      if (lessonSpeechStage === "STOPPED") return;
+      if (lessonSpeechStage !== "ENGLISH") return;
       lessonSpeechStage = "PAUSE_AFTER_ENGLISH";
       playbackTimeout = setTimeout(() => {
-        if (lessonSpeechStage === "STOPPED") return;
+        if (lessonSpeechStage !== "PAUSE_AFTER_ENGLISH") return;
         lessonSpeechIndex++;
         lessonSpeechStage = "JAPANESE";
         executeTeacherStep();
@@ -381,8 +379,13 @@ function executeTeacherStep() {
 }
 
 function pauseLesson() {
-  if (window.speechSynthesis) speechSynthesis.pause();
   clearTimeout(playbackTimeout);
+  if (lessonSpeechStage === "JAPANESE" || lessonSpeechStage === "PAUSE_AFTER_JAPANESE") {
+    lessonSpeechStage = "PAUSED_JAPANESE";
+  } else if (lessonSpeechStage === "ENGLISH" || lessonSpeechStage === "PAUSE_AFTER_ENGLISH") {
+    lessonSpeechStage = "PAUSED_ENGLISH";
+  }
+  if (window.speechSynthesis) speechSynthesis.cancel();
   togglePlaybackUI(false);
 }
 
