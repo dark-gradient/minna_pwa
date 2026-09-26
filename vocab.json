@@ -2,3201 +2,4326 @@
   "1": [
     {
       "jp": "わたし",
-      "en": "I"
+      "kanji": "—",
+      "en": "I / me"
     },
     {
       "jp": "わたしたち",
+      "kanji": "—",
       "en": "we"
     },
     {
       "jp": "あなた",
+      "kanji": "—",
       "en": "you"
     },
     {
       "jp": "あのひと",
-      "en": "that person; he; she"
+      "kanji": "あの人",
+      "en": "that person / he / she"
     },
     {
       "jp": "あのかた",
+      "kanji": "あの方",
       "en": "that person (polite)"
     },
     {
       "jp": "みなさん",
-      "en": "ladies and gentlemen; everyone"
+      "kanji": "皆さん",
+      "en": "ladies and gentlemen / all of you"
     },
     {
-      "jp": "〜さん",
-      "en": "Mr.; Ms."
+      "jp": "～さん",
+      "kanji": "—",
+      "en": "Mr. / Ms."
     },
     {
-      "jp": "〜ちゃん",
-      "en": "child's-name suffix"
+      "jp": "～ちゃん",
+      "kanji": "—",
+      "en": "(suffix for a child's name)"
     },
     {
-      "jp": "〜くん",
-      "en": "boy's-name suffix"
+      "jp": "～くん",
+      "kanji": "～君",
+      "en": "(suffix for a boy's name)"
     },
     {
-      "jp": "〜じん",
-      "en": "nationality suffix"
+      "jp": "～じん",
+      "kanji": "～人",
+      "en": "national of ～ (e.g. アメリカじん)"
     },
     {
       "jp": "せんせい",
-      "en": "teacher; instructor"
+      "kanji": "先生",
+      "en": "teacher / instructor"
     },
     {
       "jp": "きょうし",
-      "en": "teacher; instructor"
+      "kanji": "教師",
+      "en": "teacher / instructor (own job)"
     },
     {
       "jp": "がくせい",
+      "kanji": "学生",
       "en": "student"
     },
     {
       "jp": "かいしゃいん",
+      "kanji": "会社員",
       "en": "company employee"
     },
     {
       "jp": "しゃいん",
-      "en": "employee of ~ Company"
+      "kanji": "社員",
+      "en": "employee of ～ company"
     },
     {
       "jp": "ぎんこういん",
+      "kanji": "銀行員",
       "en": "bank employee"
     },
     {
       "jp": "いしゃ",
+      "kanji": "医者",
       "en": "medical doctor"
     },
     {
       "jp": "けんきゅうしゃ",
-      "en": "researcher; scholar"
+      "kanji": "研究者",
+      "en": "researcher / scholar"
     },
     {
       "jp": "エンジニア",
+      "kanji": "—",
       "en": "engineer"
     },
     {
       "jp": "だいがく",
+      "kanji": "大学",
       "en": "university"
     },
     {
       "jp": "びょういん",
+      "kanji": "病院",
       "en": "hospital"
     },
     {
-      "jp": "でんき",
-      "en": "electricity; light"
-    },
-    {
       "jp": "だれ",
+      "kanji": "—",
       "en": "who"
     },
     {
       "jp": "どなた",
+      "kanji": "—",
       "en": "who (polite)"
     },
     {
-      "jp": "〜さい",
-      "en": "~ years old"
+      "jp": "～さい",
+      "kanji": "～歳",
+      "en": "～ years old"
     },
     {
       "jp": "なんさい",
+      "kanji": "何歳",
       "en": "how old"
     },
     {
       "jp": "おいくつ",
+      "kanji": "—",
       "en": "how old (polite)"
     },
     {
       "jp": "はい",
+      "kanji": "—",
       "en": "yes"
     },
     {
       "jp": "いいえ",
+      "kanji": "—",
       "en": "no"
     },
     {
       "jp": "しつれいですが",
-      "en": "excuse me, but"
+      "kanji": "失礼ですが",
+      "en": "Excuse me, but"
     },
     {
-      "jp": "おなまえは？",
-      "en": "may I have your name?"
+      "jp": "おなまえは",
+      "kanji": "お名前は",
+      "en": "May I have your name?"
     },
     {
       "jp": "はじめまして",
-      "en": "how do you do?"
+      "kanji": "初めまして",
+      "en": "How do you do?"
     },
     {
       "jp": "どうぞよろしく",
-      "en": "pleased to meet you"
+      "kanji": "—",
+      "en": "Pleased to meet you"
     },
     {
-      "jp": "こちらは〜さんです",
-      "en": "this is Mr./Ms. ~"
+      "jp": "こちらは～さんです",
+      "kanji": "—",
+      "en": "This is Mr./Ms. ～"
     },
     {
-      "jp": "〜からきました",
-      "en": "I came from ~"
-    },
-    {
-      "jp": "アメリカ",
-      "en": "U.S.A."
-    },
-    {
-      "jp": "イギリス",
-      "en": "U.K."
-    },
-    {
-      "jp": "インド",
-      "en": "India"
-    },
-    {
-      "jp": "インドネシア",
-      "en": "Indonesia"
-    },
-    {
-      "jp": "かんこく",
-      "en": "South Korea"
-    },
-    {
-      "jp": "タイ",
-      "en": "Thailand"
-    },
-    {
-      "jp": "ちゅうごく",
-      "en": "China"
-    },
-    {
-      "jp": "ドイツ",
-      "en": "Germany"
-    },
-    {
-      "jp": "にほん",
-      "en": "Japan"
-    },
-    {
-      "jp": "フランス",
-      "en": "France"
-    },
-    {
-      "jp": "ブラジル",
-      "en": "Brazil"
+      "jp": "～からきました",
+      "kanji": "～から来ました",
+      "en": "I came from ～"
     }
   ],
   "2": [
     {
       "jp": "これ",
+      "kanji": "—",
       "en": "this (thing here)"
     },
     {
       "jp": "それ",
+      "kanji": "—",
       "en": "that (thing near you)"
     },
     {
       "jp": "あれ",
+      "kanji": "—",
       "en": "that (thing over there)"
     },
     {
-      "jp": "この〜",
-      "en": "this ~; this ~ here"
+      "jp": "この～",
+      "kanji": "—",
+      "en": "this ～"
     },
     {
-      "jp": "その〜",
-      "en": "that ~; that ~ near you"
+      "jp": "その～",
+      "kanji": "—",
+      "en": "that ～ (near you)"
     },
     {
-      "jp": "あの〜",
-      "en": "that ~; that ~ over there"
+      "jp": "あの～",
+      "kanji": "—",
+      "en": "that ～ (over there)"
     },
     {
       "jp": "ほん",
+      "kanji": "本",
       "en": "book"
     },
     {
       "jp": "じしょ",
+      "kanji": "辞書",
       "en": "dictionary"
     },
     {
       "jp": "ざっし",
+      "kanji": "雑誌",
       "en": "magazine"
     },
     {
       "jp": "しんぶん",
+      "kanji": "新聞",
       "en": "newspaper"
     },
     {
       "jp": "ノート",
+      "kanji": "—",
       "en": "notebook"
     },
     {
       "jp": "てちょう",
+      "kanji": "手帳",
       "en": "pocket notebook"
     },
     {
       "jp": "めいし",
+      "kanji": "名刺",
       "en": "business card"
     },
     {
       "jp": "カード",
+      "kanji": "—",
       "en": "card"
     },
     {
       "jp": "テレホンカード",
+      "kanji": "—",
       "en": "telephone card"
     },
     {
       "jp": "えんぴつ",
+      "kanji": "鉛筆",
       "en": "pencil"
     },
     {
       "jp": "ボールペン",
+      "kanji": "—",
       "en": "ballpoint pen"
     },
     {
       "jp": "シャープペンシル",
-      "en": "mechanical pencil; propelling pencil"
+      "kanji": "—",
+      "en": "mechanical pencil"
     },
     {
       "jp": "かぎ",
+      "kanji": "—",
       "en": "key"
     },
     {
       "jp": "とけい",
-      "en": "watch; clock"
+      "kanji": "時計",
+      "en": "watch / clock"
     },
     {
       "jp": "かさ",
+      "kanji": "傘",
       "en": "umbrella"
     },
     {
       "jp": "かばん",
-      "en": "bag; briefcase"
+      "kanji": "—",
+      "en": "bag / briefcase"
     },
     {
-      "jp": "カセットテープ",
-      "en": "[cassette] tape"
+      "jp": "テープ",
+      "kanji": "—",
+      "en": "tape"
     },
     {
       "jp": "テープレコーダー",
+      "kanji": "—",
       "en": "tape recorder"
     },
     {
       "jp": "テレビ",
+      "kanji": "—",
       "en": "television"
     },
     {
       "jp": "ラジオ",
+      "kanji": "—",
       "en": "radio"
     },
     {
       "jp": "カメラ",
+      "kanji": "—",
       "en": "camera"
     },
     {
       "jp": "コンピューター",
+      "kanji": "—",
       "en": "computer"
     },
     {
       "jp": "じどうしゃ",
-      "en": "automobile; car"
+      "kanji": "自動車",
+      "en": "automobile / car"
     },
     {
       "jp": "つくえ",
+      "kanji": "机",
       "en": "desk"
     },
     {
       "jp": "いす",
+      "kanji": "—",
       "en": "chair"
     },
     {
       "jp": "チョコレート",
+      "kanji": "—",
       "en": "chocolate"
     },
     {
       "jp": "コーヒー",
+      "kanji": "—",
       "en": "coffee"
     },
     {
       "jp": "えいご",
+      "kanji": "英語",
       "en": "the English language"
     },
     {
       "jp": "にほんご",
+      "kanji": "日本語",
       "en": "the Japanese language"
     },
     {
-      "jp": "〜ご",
-      "en": "~ language"
+      "jp": "～ご",
+      "kanji": "～語",
+      "en": "～ language"
     },
     {
       "jp": "なん",
+      "kanji": "何",
       "en": "what"
     },
     {
       "jp": "そう",
+      "kanji": "—",
       "en": "so"
     },
     {
       "jp": "ちがいます",
-      "en": "No, it isn't. / You're wrong"
+      "kanji": "違います",
+      "en": "No, it isn't / You're wrong"
     },
     {
       "jp": "そうですか",
-      "en": "I see. / Is that so?"
-    },
-    {
-      "jp": "あのう",
-      "en": "well... (hesitation)"
+      "kanji": "—",
+      "en": "I see / Is that so?"
     },
     {
       "jp": "ほんのきもちです",
-      "en": "It's nothing; a token of my gratitude"
+      "kanji": "—",
+      "en": "It's a token of my gratitude"
     },
     {
       "jp": "どうぞ",
-      "en": "please; here you are"
+      "kanji": "—",
+      "en": "Please / Here you are"
     },
     {
       "jp": "どうも",
-      "en": "well, thanks"
+      "kanji": "—",
+      "en": "Well, thanks"
     },
     {
       "jp": "ありがとうございます",
-      "en": "thank you very much"
+      "kanji": "—",
+      "en": "Thank you [very much]"
     }
   ],
   "3": [
     {
       "jp": "ここ",
-      "en": "here; this place"
+      "kanji": "—",
+      "en": "here / this place"
     },
     {
       "jp": "そこ",
-      "en": "there; that place near you"
+      "kanji": "—",
+      "en": "there / that place near you"
     },
     {
       "jp": "あそこ",
+      "kanji": "—",
       "en": "that place over there"
     },
     {
       "jp": "どこ",
-      "en": "where; what place"
+      "kanji": "—",
+      "en": "where"
     },
     {
       "jp": "こちら",
-      "en": "this way; this place (polite)"
+      "kanji": "—",
+      "en": "this way (polite)"
     },
     {
       "jp": "そちら",
-      "en": "that way; that place near you (polite)"
+      "kanji": "—",
+      "en": "that way near you (polite)"
     },
     {
       "jp": "あちら",
-      "en": "that way; that place over there (polite)"
+      "kanji": "—",
+      "en": "that way over there (polite)"
     },
     {
       "jp": "どちら",
-      "en": "which way; where (polite)"
+      "kanji": "—",
+      "en": "which way (polite)"
     },
     {
       "jp": "きょうしつ",
+      "kanji": "教室",
       "en": "classroom"
     },
     {
       "jp": "しょくどう",
-      "en": "dining hall; canteen"
+      "kanji": "食堂",
+      "en": "dining hall / cafeteria"
     },
     {
       "jp": "じむしょ",
+      "kanji": "事務所",
       "en": "office"
     },
     {
       "jp": "かいぎしつ",
-      "en": "conference room; assembly room"
+      "kanji": "会議室",
+      "en": "conference room"
     },
     {
       "jp": "うけつけ",
+      "kanji": "受付",
       "en": "reception desk"
     },
     {
       "jp": "ロビー",
+      "kanji": "—",
       "en": "lobby"
     },
     {
       "jp": "へや",
+      "kanji": "部屋",
       "en": "room"
     },
     {
       "jp": "トイレ",
-      "en": "toilet; rest room"
+      "kanji": "—",
+      "en": "toilet / restroom"
     },
     {
       "jp": "おてあらい",
-      "en": "rest room"
+      "kanji": "お手洗い",
+      "en": "restroom (polite)"
     },
     {
       "jp": "かいだん",
+      "kanji": "階段",
       "en": "staircase"
     },
     {
       "jp": "エレベーター",
-      "en": "elevator; lift"
+      "kanji": "—",
+      "en": "elevator"
     },
     {
       "jp": "エスカレーター",
+      "kanji": "—",
       "en": "escalator"
     },
     {
       "jp": "おくに",
+      "kanji": "お国",
       "en": "country"
     },
     {
       "jp": "かいしゃ",
+      "kanji": "会社",
       "en": "company"
     },
     {
       "jp": "うち",
-      "en": "house; home"
+      "kanji": "—",
+      "en": "house / home"
     },
     {
       "jp": "でんわ",
-      "en": "telephone; telephone call"
+      "kanji": "電話",
+      "en": "telephone"
     },
     {
       "jp": "くつ",
+      "kanji": "靴",
       "en": "shoes"
     },
     {
       "jp": "ネクタイ",
+      "kanji": "—",
       "en": "necktie"
     },
     {
       "jp": "ワイン",
+      "kanji": "—",
       "en": "wine"
     },
     {
       "jp": "たばこ",
-      "en": "tobacco; cigarette"
+      "kanji": "—",
+      "en": "tobacco / cigarette"
     },
     {
       "jp": "うりば",
-      "en": "department; counter (department store)"
+      "kanji": "売り場",
+      "en": "sales counter"
     },
     {
       "jp": "ちか",
+      "kanji": "地下",
       "en": "basement"
     },
     {
-      "jp": "〜かい",
-      "en": "~th floor"
+      "jp": "～かい",
+      "kanji": "～階",
+      "en": "～th floor"
     },
     {
       "jp": "なんがい",
+      "kanji": "何階",
       "en": "what floor"
     },
     {
-      "jp": "〜えん",
-      "en": "~ yen"
+      "jp": "～えん",
+      "kanji": "～円",
+      "en": "～ yen"
     },
     {
       "jp": "いくら",
+      "kanji": "—",
       "en": "how much"
     },
     {
       "jp": "ひゃく",
+      "kanji": "百",
       "en": "hundred"
     },
     {
       "jp": "せん",
+      "kanji": "千",
       "en": "thousand"
     },
     {
       "jp": "まん",
+      "kanji": "万",
       "en": "ten thousand"
     },
     {
       "jp": "すみません",
+      "kanji": "—",
       "en": "excuse me"
     },
     {
-      "jp": "〜でございます",
-      "en": "polite equivalent of です"
-    },
-    {
-      "jp": "〜をみせてください",
-      "en": "please show me ~"
+      "jp": "みせてください",
+      "kanji": "—",
+      "en": "Please show me [～]"
     },
     {
       "jp": "じゃ",
-      "en": "well, then; in that case"
+      "kanji": "—",
+      "en": "well, then"
     },
     {
-      "jp": "〜をください",
-      "en": "give me ~, please"
+      "jp": "ください",
+      "kanji": "—",
+      "en": "Give me [～], please"
     }
   ],
   "4": [
     {
-      "jp": "おきます",
-      "en": "get up; wake up"
-    },
-    {
-      "jp": "ねます",
-      "en": "sleep; go to bed"
-    },
-    {
-      "jp": "はたらきます",
-      "en": "work"
-    },
-    {
-      "jp": "やすみます",
-      "en": "take a rest; take a holiday"
-    },
-    {
-      "jp": "べんきょうします",
-      "en": "study"
-    },
-    {
-      "jp": "おわります",
-      "en": "finish"
-    },
-    {
-      "jp": "デパート",
-      "en": "department store"
-    },
-    {
-      "jp": "ぎんこう",
-      "en": "bank"
-    },
-    {
-      "jp": "ゆうびんきょく",
-      "en": "post office"
-    },
-    {
-      "jp": "としょかん",
-      "en": "library"
-    },
-    {
-      "jp": "びじゅつかん",
-      "en": "art museum"
-    },
-    {
       "jp": "いま",
+      "kanji": "今",
       "en": "now"
     },
     {
-      "jp": "〜じ",
-      "en": "~ o'clock"
+      "jp": "～じ",
+      "kanji": "～時",
+      "en": "～ o'clock"
     },
     {
-      "jp": "〜ふん",
-      "en": "~ minute"
+      "jp": "～ふん",
+      "kanji": "～分",
+      "en": "～ minutes"
     },
     {
       "jp": "はん",
+      "kanji": "半",
       "en": "half"
     },
     {
       "jp": "なんじ",
+      "kanji": "何時",
       "en": "what time"
     },
     {
       "jp": "なんぷん",
+      "kanji": "何分",
       "en": "what minute"
     },
     {
+      "jp": "おきます",
+      "kanji": "起きます",
+      "en": "get up"
+    },
+    {
+      "jp": "ねます",
+      "kanji": "寝ます",
+      "en": "sleep / go to bed"
+    },
+    {
+      "jp": "はたらきます",
+      "kanji": "働きます",
+      "en": "work"
+    },
+    {
+      "jp": "やすみます",
+      "kanji": "休みます",
+      "en": "rest / take a day off"
+    },
+    {
+      "jp": "べんきょうします",
+      "kanji": "勉強します",
+      "en": "study"
+    },
+    {
+      "jp": "おわります",
+      "kanji": "終わります",
+      "en": "finish"
+    },
+    {
+      "jp": "デパート",
+      "kanji": "—",
+      "en": "department store"
+    },
+    {
+      "jp": "ぎんこう",
+      "kanji": "銀行",
+      "en": "bank"
+    },
+    {
+      "jp": "ゆうびんきょく",
+      "kanji": "郵便局",
+      "en": "post office"
+    },
+    {
+      "jp": "としょかん",
+      "kanji": "図書館",
+      "en": "library"
+    },
+    {
+      "jp": "びじゅつかん",
+      "kanji": "美術館",
+      "en": "art museum"
+    },
+    {
       "jp": "ごぜん",
-      "en": "a.m.; morning"
+      "kanji": "午前",
+      "en": "a.m. / morning"
     },
     {
       "jp": "ごご",
-      "en": "p.m.; afternoon"
+      "kanji": "午後",
+      "en": "p.m. / afternoon"
     },
     {
       "jp": "あさ",
+      "kanji": "朝",
       "en": "morning"
     },
     {
       "jp": "ひる",
-      "en": "daytime; noon"
+      "kanji": "昼",
+      "en": "daytime / noon"
     },
     {
       "jp": "ばん",
-      "en": "night; evening"
-    },
-    {
-      "jp": "よる",
-      "en": "night; evening"
+      "kanji": "晩",
+      "en": "evening / night"
     },
     {
       "jp": "おととい",
+      "kanji": "—",
       "en": "the day before yesterday"
     },
     {
       "jp": "きのう",
+      "kanji": "—",
       "en": "yesterday"
     },
     {
       "jp": "きょう",
+      "kanji": "—",
       "en": "today"
     },
     {
       "jp": "あした",
+      "kanji": "—",
       "en": "tomorrow"
     },
     {
       "jp": "あさって",
+      "kanji": "—",
       "en": "the day after tomorrow"
     },
     {
       "jp": "けさ",
+      "kanji": "—",
       "en": "this morning"
     },
     {
       "jp": "こんばん",
-      "en": "this evening; tonight"
+      "kanji": "今晩",
+      "en": "tonight"
     },
     {
       "jp": "やすみ",
-      "en": "rest; holiday; day off"
+      "kanji": "休み",
+      "en": "a holiday / day off"
     },
     {
       "jp": "ひるやすみ",
+      "kanji": "昼休み",
       "en": "lunchtime"
     },
     {
       "jp": "まいあさ",
+      "kanji": "毎朝",
       "en": "every morning"
     },
     {
       "jp": "まいばん",
+      "kanji": "毎晩",
       "en": "every night"
     },
     {
       "jp": "まいにち",
+      "kanji": "毎日",
       "en": "every day"
     },
     {
       "jp": "げつようび",
+      "kanji": "月曜日",
       "en": "Monday"
     },
     {
       "jp": "かようび",
+      "kanji": "火曜日",
       "en": "Tuesday"
     },
     {
       "jp": "すいようび",
+      "kanji": "水曜日",
       "en": "Wednesday"
     },
     {
       "jp": "もくようび",
+      "kanji": "木曜日",
       "en": "Thursday"
     },
     {
       "jp": "きんようび",
+      "kanji": "金曜日",
       "en": "Friday"
     },
     {
       "jp": "どようび",
+      "kanji": "土曜日",
       "en": "Saturday"
     },
     {
       "jp": "にちようび",
+      "kanji": "日曜日",
       "en": "Sunday"
     },
     {
       "jp": "なんようび",
+      "kanji": "何曜日",
       "en": "what day of the week"
     },
     {
       "jp": "ばんごう",
+      "kanji": "番号",
       "en": "number"
     },
     {
       "jp": "なんばん",
+      "kanji": "何番",
       "en": "what number"
     },
     {
-      "jp": "〜から",
-      "en": "from ~"
+      "jp": "～から",
+      "kanji": "—",
+      "en": "from ～"
     },
     {
-      "jp": "〜まで",
-      "en": "up to ~; until ~"
-    },
-    {
-      "jp": "と",
-      "en": "and (connects nouns)"
-    },
-    {
-      "jp": "そちら",
-      "en": "your place"
+      "jp": "～まで",
+      "kanji": "—",
+      "en": "up to ～ / until ～"
     },
     {
       "jp": "たいへんですね",
-      "en": "that's tough, isn't it?"
+      "kanji": "大変ですね",
+      "en": "That's tough, isn't it"
     },
     {
       "jp": "えーと",
+      "kanji": "—",
       "en": "well, let me see"
     }
   ],
   "5": [
     {
       "jp": "いきます",
+      "kanji": "行きます",
       "en": "go"
     },
     {
       "jp": "きます",
+      "kanji": "来ます",
       "en": "come"
     },
     {
       "jp": "かえります",
-      "en": "go home; return"
+      "kanji": "帰ります",
+      "en": "go home / return"
     },
     {
       "jp": "がっこう",
+      "kanji": "学校",
       "en": "school"
     },
     {
       "jp": "スーパー",
+      "kanji": "—",
       "en": "supermarket"
     },
     {
       "jp": "えき",
+      "kanji": "駅",
       "en": "station"
     },
     {
       "jp": "ひこうき",
+      "kanji": "飛行機",
       "en": "airplane"
     },
     {
       "jp": "ふね",
+      "kanji": "船",
       "en": "ship"
     },
     {
       "jp": "でんしゃ",
+      "kanji": "電車",
       "en": "electric train"
     },
     {
       "jp": "ちかてつ",
-      "en": "subway; underground"
+      "kanji": "地下鉄",
+      "en": "subway"
     },
     {
       "jp": "しんかんせん",
-      "en": "the Shinkansen; bullet train"
+      "kanji": "新幹線",
+      "en": "the bullet train"
     },
     {
       "jp": "バス",
+      "kanji": "—",
       "en": "bus"
     },
     {
       "jp": "タクシー",
+      "kanji": "—",
       "en": "taxi"
     },
     {
       "jp": "じてんしゃ",
+      "kanji": "自転車",
       "en": "bicycle"
     },
     {
       "jp": "あるいて",
+      "kanji": "歩いて",
       "en": "on foot"
     },
     {
       "jp": "ひと",
-      "en": "person; people"
+      "kanji": "人",
+      "en": "person / people"
     },
     {
       "jp": "ともだち",
+      "kanji": "友達",
       "en": "friend"
     },
     {
       "jp": "かれ",
-      "en": "he; boyfriend; lover"
+      "kanji": "彼",
+      "en": "he / boyfriend"
     },
     {
       "jp": "かのじょ",
-      "en": "she; girlfriend; lover"
+      "kanji": "彼女",
+      "en": "she / girlfriend"
     },
     {
       "jp": "かぞく",
+      "kanji": "家族",
       "en": "family"
     },
     {
       "jp": "ひとりで",
-      "en": "alone; by oneself"
+      "kanji": "一人で",
+      "en": "alone / by oneself"
     },
     {
       "jp": "せんしゅう",
+      "kanji": "先週",
       "en": "last week"
     },
     {
       "jp": "こんしゅう",
+      "kanji": "今週",
       "en": "this week"
     },
     {
       "jp": "らいしゅう",
+      "kanji": "来週",
       "en": "next week"
     },
     {
       "jp": "せんげつ",
+      "kanji": "先月",
       "en": "last month"
     },
     {
       "jp": "こんげつ",
+      "kanji": "今月",
       "en": "this month"
     },
     {
       "jp": "らいげつ",
+      "kanji": "来月",
       "en": "next month"
     },
     {
       "jp": "きょねん",
+      "kanji": "去年",
       "en": "last year"
     },
     {
       "jp": "ことし",
+      "kanji": "—",
       "en": "this year"
     },
     {
       "jp": "らいねん",
+      "kanji": "来年",
       "en": "next year"
     },
     {
-      "jp": "〜がつ",
-      "en": "~th month of the year"
+      "jp": "～がつ",
+      "kanji": "～月",
+      "en": "～th month of the year"
     },
     {
       "jp": "なんがつ",
+      "kanji": "何月",
       "en": "what month"
     },
     {
       "jp": "ついたち",
-      "en": "1st day of month"
+      "kanji": "1日",
+      "en": "first day of the month"
     },
     {
       "jp": "ふつか",
-      "en": "2nd; two days"
+      "kanji": "2日",
+      "en": "2nd day / two days"
     },
     {
       "jp": "みっか",
-      "en": "3rd; three days"
+      "kanji": "3日",
+      "en": "3rd day / three days"
     },
     {
       "jp": "よっか",
-      "en": "4th; four days"
+      "kanji": "4日",
+      "en": "4th day / four days"
     },
     {
       "jp": "いつか",
-      "en": "5th; five days"
+      "kanji": "5日",
+      "en": "5th day / five days"
     },
     {
       "jp": "むいか",
-      "en": "6th; six days"
+      "kanji": "6日",
+      "en": "6th day / six days"
     },
     {
       "jp": "なのか",
-      "en": "7th; seven days"
+      "kanji": "7日",
+      "en": "7th day / seven days"
     },
     {
       "jp": "ようか",
-      "en": "8th; eight days"
+      "kanji": "8日",
+      "en": "8th day / eight days"
     },
     {
       "jp": "ここのか",
-      "en": "9th; nine days"
+      "kanji": "9日",
+      "en": "9th day / nine days"
     },
     {
       "jp": "とおか",
-      "en": "10th; ten days"
+      "kanji": "10日",
+      "en": "10th day / ten days"
     },
     {
       "jp": "じゅうよっか",
-      "en": "14th; fourteen days"
+      "kanji": "14日",
+      "en": "14th day"
     },
     {
       "jp": "はつか",
-      "en": "20th; twenty days"
+      "kanji": "20日",
+      "en": "20th day"
     },
     {
       "jp": "にじゅうよっか",
-      "en": "24th; twenty-four days"
+      "kanji": "24日",
+      "en": "24th day"
     },
     {
-      "jp": "〜にち",
-      "en": "~th day of month; ~ days"
+      "jp": "～にち",
+      "kanji": "～日",
+      "en": "～th day of the month"
     },
     {
       "jp": "なんにち",
-      "en": "which day; how many days"
+      "kanji": "何日",
+      "en": "which day / how many days"
     },
     {
       "jp": "いつ",
+      "kanji": "—",
       "en": "when"
     },
     {
       "jp": "たんじょうび",
+      "kanji": "誕生日",
       "en": "birthday"
     },
     {
       "jp": "ふつう",
-      "en": "local train"
+      "kanji": "普通",
+      "en": "local (train)"
     },
     {
       "jp": "きゅうこう",
-      "en": "rapid train"
+      "kanji": "急行",
+      "en": "rapid (train)"
     },
     {
       "jp": "とっきゅう",
-      "en": "express train"
+      "kanji": "特急",
+      "en": "express (train)"
     },
     {
       "jp": "つぎの",
+      "kanji": "次の",
       "en": "next"
     }
   ],
   "6": [
     {
       "jp": "たべます",
+      "kanji": "食べます",
       "en": "eat"
     },
     {
       "jp": "のみます",
+      "kanji": "飲みます",
       "en": "drink"
     },
     {
       "jp": "すいます",
-      "en": "smoke [a cigarette]"
+      "kanji": "吸います",
+      "en": "smoke"
     },
     {
       "jp": "みます",
-      "en": "see; look at; watch"
+      "kanji": "見ます",
+      "en": "see / watch"
     },
     {
       "jp": "ききます",
-      "en": "hear; listen"
+      "kanji": "聞きます",
+      "en": "hear / listen"
     },
     {
       "jp": "よみます",
+      "kanji": "読みます",
       "en": "read"
     },
     {
       "jp": "かきます",
-      "en": "write; draw; paint"
+      "kanji": "書きます",
+      "en": "write / draw"
     },
     {
       "jp": "かいます",
+      "kanji": "買います",
       "en": "buy"
     },
     {
       "jp": "とります",
-      "en": "take [a photograph]"
+      "kanji": "撮ります",
+      "en": "take (a photo)"
     },
     {
       "jp": "します",
+      "kanji": "—",
       "en": "do"
     },
     {
       "jp": "あいます",
-      "en": "meet [a friend]"
+      "kanji": "会います",
+      "en": "meet (a friend)"
     },
     {
       "jp": "ごはん",
-      "en": "a meal; cooked rice"
+      "kanji": "—",
+      "en": "a meal / cooked rice"
     },
     {
       "jp": "あさごはん",
+      "kanji": "朝ごはん",
       "en": "breakfast"
     },
     {
       "jp": "ひるごはん",
+      "kanji": "昼ごはん",
       "en": "lunch"
     },
     {
       "jp": "ばんごはん",
+      "kanji": "晩ごはん",
       "en": "supper"
     },
     {
       "jp": "パン",
+      "kanji": "—",
       "en": "bread"
     },
     {
       "jp": "たまご",
+      "kanji": "卵",
       "en": "egg"
     },
     {
       "jp": "にく",
+      "kanji": "肉",
       "en": "meat"
     },
     {
       "jp": "さかな",
+      "kanji": "魚",
       "en": "fish"
     },
     {
       "jp": "やさい",
+      "kanji": "野菜",
       "en": "vegetable"
     },
     {
       "jp": "くだもの",
+      "kanji": "果物",
       "en": "fruit"
     },
     {
       "jp": "みず",
+      "kanji": "水",
       "en": "water"
     },
     {
       "jp": "おちゃ",
-      "en": "tea; green tea"
+      "kanji": "お茶",
+      "en": "tea / green tea"
     },
     {
       "jp": "こうちゃ",
+      "kanji": "紅茶",
       "en": "black tea"
     },
     {
       "jp": "ぎゅうにゅう",
-      "en": "milk"
-    },
-    {
-      "jp": "ミルク",
+      "kanji": "牛乳",
       "en": "milk"
     },
     {
       "jp": "ジュース",
+      "kanji": "—",
       "en": "juice"
     },
     {
       "jp": "ビール",
+      "kanji": "—",
       "en": "beer"
     },
     {
       "jp": "おさけ",
-      "en": "alcohol; Japanese rice wine"
+      "kanji": "お酒",
+      "en": "alcohol / rice wine"
     },
     {
       "jp": "ビデオ",
-      "en": "video tape; video deck"
+      "kanji": "—",
+      "en": "video tape"
     },
     {
       "jp": "えいが",
+      "kanji": "映画",
       "en": "movie"
     },
     {
       "jp": "CD",
-      "en": "CD; compact disc"
+      "kanji": "—",
+      "en": "CD"
     },
     {
       "jp": "てがみ",
+      "kanji": "手紙",
       "en": "letter"
     },
     {
       "jp": "レポート",
+      "kanji": "—",
       "en": "report"
     },
     {
       "jp": "しゃしん",
+      "kanji": "写真",
       "en": "photograph"
     },
     {
       "jp": "みせ",
-      "en": "store; shop"
+      "kanji": "店",
+      "en": "store / shop"
     },
     {
       "jp": "レストラン",
+      "kanji": "—",
       "en": "restaurant"
     },
     {
+      "jp": "にわ",
+      "kanji": "庭",
+      "en": "garden"
+    },
+    {
       "jp": "しゅくだい",
+      "kanji": "宿題",
       "en": "homework"
     },
     {
       "jp": "テニス",
+      "kanji": "—",
       "en": "tennis"
     },
     {
       "jp": "サッカー",
-      "en": "soccer; football"
+      "kanji": "—",
+      "en": "soccer"
     },
     {
       "jp": "おはなみ",
+      "kanji": "お花見",
       "en": "cherry-blossom viewing"
     },
     {
       "jp": "なに",
+      "kanji": "何",
       "en": "what"
     },
     {
       "jp": "いっしょに",
+      "kanji": "—",
       "en": "together"
     },
     {
       "jp": "ちょっと",
-      "en": "a little while; a little bit"
+      "kanji": "—",
+      "en": "a little bit"
     },
     {
       "jp": "いつも",
-      "en": "always; usually"
+      "kanji": "—",
+      "en": "always / usually"
     },
     {
       "jp": "ときどき",
+      "kanji": "時々",
       "en": "sometimes"
     },
     {
       "jp": "それから",
-      "en": "after that; and then"
+      "kanji": "—",
+      "en": "after that"
     },
     {
       "jp": "ええ",
+      "kanji": "—",
       "en": "yes"
     },
     {
       "jp": "いいですね",
-      "en": "that's good"
+      "kanji": "—",
+      "en": "That's good"
     },
     {
       "jp": "わかりました",
-      "en": "I see"
+      "kanji": "—",
+      "en": "I see / Understood"
     }
   ],
   "7": [
     {
       "jp": "きります",
-      "en": "cut; slice"
+      "kanji": "切ります",
+      "en": "cut / slice"
     },
     {
       "jp": "おくります",
+      "kanji": "送ります",
       "en": "send"
     },
     {
       "jp": "あげます",
+      "kanji": "—",
       "en": "give"
     },
     {
       "jp": "もらいます",
+      "kanji": "—",
       "en": "receive"
     },
     {
       "jp": "かします",
+      "kanji": "貸します",
       "en": "lend"
     },
     {
       "jp": "かります",
+      "kanji": "借ります",
       "en": "borrow"
     },
     {
       "jp": "おしえます",
+      "kanji": "教えます",
       "en": "teach"
     },
     {
       "jp": "ならいます",
+      "kanji": "習います",
       "en": "learn"
     },
     {
       "jp": "かけます",
-      "en": "make [a telephone call]"
+      "kanji": "—",
+      "en": "make (a phone call)"
     },
     {
       "jp": "て",
-      "en": "hand; arm"
+      "kanji": "手",
+      "en": "hand / arm"
     },
     {
       "jp": "はし",
+      "kanji": "—",
       "en": "chopsticks"
     },
     {
       "jp": "スプーン",
+      "kanji": "—",
       "en": "spoon"
     },
     {
       "jp": "ナイフ",
+      "kanji": "—",
       "en": "knife"
     },
     {
       "jp": "フォーク",
+      "kanji": "—",
       "en": "fork"
     },
     {
       "jp": "はさみ",
+      "kanji": "—",
       "en": "scissors"
     },
     {
       "jp": "ファクス",
+      "kanji": "—",
       "en": "fax"
     },
     {
       "jp": "ワープロ",
+      "kanji": "—",
       "en": "word processor"
     },
     {
       "jp": "パソコン",
+      "kanji": "—",
       "en": "personal computer"
     },
     {
       "jp": "パンチ",
+      "kanji": "—",
       "en": "punch"
     },
     {
       "jp": "ホッチキス",
+      "kanji": "—",
       "en": "stapler"
     },
     {
       "jp": "セロテープ",
-      "en": "Scotch tape; clear adhesive tape"
+      "kanji": "—",
+      "en": "scotch tape"
     },
     {
       "jp": "けしゴム",
+      "kanji": "消しゴム",
       "en": "eraser"
     },
     {
       "jp": "かみ",
+      "kanji": "紙",
       "en": "paper"
     },
     {
       "jp": "はな",
-      "en": "flower; blossom"
+      "kanji": "花",
+      "en": "flower"
     },
     {
       "jp": "シャツ",
+      "kanji": "—",
       "en": "shirt"
     },
     {
       "jp": "プレゼント",
-      "en": "present; gift"
+      "kanji": "—",
+      "en": "present / gift"
     },
     {
       "jp": "にもつ",
-      "en": "baggage; parcel"
+      "kanji": "荷物",
+      "en": "baggage / parcel"
     },
     {
       "jp": "おかね",
+      "kanji": "お金",
       "en": "money"
     },
     {
       "jp": "きっぷ",
+      "kanji": "切符",
       "en": "ticket"
     },
     {
       "jp": "クリスマス",
+      "kanji": "—",
       "en": "Christmas"
     },
     {
       "jp": "ちち",
-      "en": "my father"
+      "kanji": "父",
+      "en": "(my) father"
     },
     {
       "jp": "はは",
-      "en": "my mother"
+      "kanji": "母",
+      "en": "(my) mother"
     },
     {
       "jp": "おとうさん",
-      "en": "someone else's father"
+      "kanji": "お父さん",
+      "en": "(someone's) father"
     },
     {
       "jp": "おかあさん",
-      "en": "someone else's mother"
+      "kanji": "お母さん",
+      "en": "(someone's) mother"
     },
     {
       "jp": "もう",
+      "kanji": "—",
       "en": "already"
     },
     {
       "jp": "まだ",
+      "kanji": "—",
       "en": "not yet"
     },
     {
       "jp": "これから",
-      "en": "from now on; soon"
+      "kanji": "—",
+      "en": "from now on / soon"
     },
     {
-      "jp": "ごめんください",
-      "en": "excuse me; anybody home?; may I come in?"
-    },
-    {
-      "jp": "いらっしゃい",
-      "en": "how nice of you to come; welcome"
-    },
-    {
-      "jp": "どうぞおあがりください",
-      "en": "do come in"
-    },
-    {
-      "jp": "しつれいします",
-      "en": "thank you; may I?"
-    },
-    {
-      "jp": "〜はいかがですか",
-      "en": "won't you have ~?; would you like ~?"
-    },
-    {
-      "jp": "いただきます",
-      "en": "thank you; I accept (before eating/drinking)"
-    },
-    {
-      "jp": "りょこう",
-      "en": "trip; tour"
-    },
-    {
-      "jp": "おみやげ",
-      "en": "souvenir; present"
-    },
-    {
-      "jp": "ヨーロッパ",
-      "en": "Europe"
-    },
-    {
-      "jp": "スペイン",
-      "en": "Spain"
+      "jp": "すてきですね",
+      "kanji": "—",
+      "en": "What a nice ～!"
     }
   ],
   "8": [
     {
       "jp": "ハンサム",
+      "kanji": "—",
       "en": "handsome"
     },
     {
       "jp": "きれい",
-      "en": "beautiful; clean"
+      "kanji": "—",
+      "en": "beautiful / clean"
     },
     {
       "jp": "しずか",
+      "kanji": "静か",
       "en": "quiet"
     },
     {
       "jp": "にぎやか",
+      "kanji": "—",
       "en": "lively"
     },
     {
       "jp": "ゆうめい",
+      "kanji": "有名",
       "en": "famous"
     },
     {
       "jp": "しんせつ",
+      "kanji": "親切",
       "en": "kind"
     },
     {
       "jp": "げんき",
-      "en": "healthy; sound; cheerful"
+      "kanji": "元気",
+      "en": "healthy / cheerful"
     },
     {
       "jp": "ひま",
+      "kanji": "暇",
       "en": "free (time)"
     },
     {
       "jp": "べんり",
+      "kanji": "便利",
       "en": "convenient"
     },
     {
       "jp": "すてき",
-      "en": "fine; nice; wonderful"
+      "kanji": "—",
+      "en": "fine / wonderful"
     },
     {
       "jp": "おおきい",
-      "en": "big; large"
+      "kanji": "大きい",
+      "en": "big / large"
     },
     {
       "jp": "ちいさい",
-      "en": "small; little"
+      "kanji": "小さい",
+      "en": "small / little"
     },
     {
       "jp": "あたらしい",
+      "kanji": "新しい",
       "en": "new"
     },
     {
       "jp": "ふるい",
-      "en": "old"
+      "kanji": "古い",
+      "en": "old (not of age)"
     },
     {
       "jp": "いい",
+      "kanji": "—",
       "en": "good"
     },
     {
       "jp": "わるい",
+      "kanji": "悪い",
       "en": "bad"
     },
     {
       "jp": "あつい",
-      "en": "hot"
+      "kanji": "暑い",
+      "en": "hot (weather)"
     },
     {
       "jp": "さむい",
+      "kanji": "寒い",
       "en": "cold (temperature)"
     },
     {
       "jp": "つめたい",
-      "en": "cold (touch)"
+      "kanji": "冷たい",
+      "en": "cold (to the touch)"
     },
     {
       "jp": "むずかしい",
+      "kanji": "難しい",
       "en": "difficult"
     },
     {
       "jp": "やさしい",
+      "kanji": "易しい",
       "en": "easy"
     },
     {
       "jp": "たかい",
-      "en": "expensive; tall; high"
+      "kanji": "高い",
+      "en": "expensive / tall"
     },
     {
       "jp": "やすい",
+      "kanji": "安い",
       "en": "inexpensive"
     },
     {
       "jp": "ひくい",
+      "kanji": "低い",
       "en": "low"
     },
     {
       "jp": "おもしろい",
+      "kanji": "—",
       "en": "interesting"
     },
     {
       "jp": "おいしい",
-      "en": "delicious; tasty"
+      "kanji": "—",
+      "en": "delicious"
     },
     {
       "jp": "いそがしい",
+      "kanji": "忙しい",
       "en": "busy"
     },
     {
       "jp": "たのしい",
+      "kanji": "楽しい",
       "en": "enjoyable"
     },
     {
       "jp": "しろい",
+      "kanji": "白い",
       "en": "white"
     },
     {
       "jp": "くろい",
+      "kanji": "黒い",
       "en": "black"
     },
     {
       "jp": "あかい",
+      "kanji": "赤い",
       "en": "red"
     },
     {
       "jp": "あおい",
+      "kanji": "青い",
       "en": "blue"
     },
     {
       "jp": "さくら",
+      "kanji": "桜",
       "en": "cherry blossom"
     },
     {
       "jp": "やま",
+      "kanji": "山",
       "en": "mountain"
     },
     {
       "jp": "まち",
-      "en": "town; city"
+      "kanji": "町",
+      "en": "town / city"
     },
     {
       "jp": "たべもの",
+      "kanji": "食べ物",
       "en": "food"
     },
     {
       "jp": "くるま",
-      "en": "car; vehicle"
+      "kanji": "車",
+      "en": "car / vehicle"
     },
     {
       "jp": "ところ",
+      "kanji": "所",
       "en": "place"
     },
     {
       "jp": "りょう",
+      "kanji": "寮",
       "en": "dormitory"
     },
     {
       "jp": "べんきょう",
+      "kanji": "勉強",
       "en": "study"
     },
     {
       "jp": "せいかつ",
+      "kanji": "生活",
       "en": "life"
     },
     {
       "jp": "おしごと",
-      "en": "work; business"
+      "kanji": "お仕事",
+      "en": "work / business"
     },
     {
       "jp": "どう",
+      "kanji": "—",
       "en": "how"
     },
     {
-      "jp": "どんな",
-      "en": "what kind of ~"
+      "jp": "どんな～",
+      "kanji": "—",
+      "en": "what kind of ～"
     },
     {
       "jp": "どれ",
-      "en": "which one (of three or more)"
+      "kanji": "—",
+      "en": "which one (of three+)"
     },
     {
       "jp": "とても",
+      "kanji": "—",
       "en": "very"
     },
     {
       "jp": "あまり",
-      "en": "not so (used with negatives)"
+      "kanji": "—",
+      "en": "not so (with negatives)"
     },
     {
       "jp": "そして",
-      "en": "and; and then"
-    },
-    {
-      "jp": "〜が",
-      "en": "~; but ~"
-    },
-    {
-      "jp": "おげんきですか",
-      "en": "how are you?"
-    },
-    {
-      "jp": "そうですね",
-      "en": "well, let me see"
+      "kanji": "—",
+      "en": "and"
     }
   ],
   "9": [
     {
       "jp": "わかります",
+      "kanji": "—",
       "en": "understand"
     },
     {
       "jp": "あります",
+      "kanji": "—",
       "en": "have"
     },
     {
       "jp": "すき",
+      "kanji": "好き",
       "en": "like"
     },
     {
       "jp": "きらい",
+      "kanji": "嫌い",
       "en": "dislike"
     },
     {
       "jp": "じょうず",
+      "kanji": "上手",
       "en": "good at"
     },
     {
       "jp": "へた",
+      "kanji": "下手",
       "en": "poor at"
     },
     {
       "jp": "りょうり",
-      "en": "dish; cooking"
+      "kanji": "料理",
+      "en": "dish / cooking"
     },
     {
       "jp": "のみもの",
+      "kanji": "飲み物",
       "en": "drinks"
     },
     {
       "jp": "スポーツ",
+      "kanji": "—",
       "en": "sport"
     },
     {
       "jp": "やきゅう",
+      "kanji": "野球",
       "en": "baseball"
     },
     {
       "jp": "ダンス",
+      "kanji": "—",
       "en": "dance"
     },
     {
       "jp": "おんがく",
+      "kanji": "音楽",
       "en": "music"
     },
     {
       "jp": "うた",
+      "kanji": "歌",
       "en": "song"
     },
     {
       "jp": "クラシック",
+      "kanji": "—",
       "en": "classical music"
     },
     {
       "jp": "ジャズ",
+      "kanji": "—",
       "en": "jazz"
     },
     {
       "jp": "コンサート",
+      "kanji": "—",
       "en": "concert"
     },
     {
       "jp": "カラオケ",
+      "kanji": "—",
       "en": "karaoke"
     },
     {
       "jp": "かぶき",
+      "kanji": "歌舞伎",
       "en": "Kabuki"
     },
     {
       "jp": "え",
-      "en": "picture; drawing"
+      "kanji": "絵",
+      "en": "picture / drawing"
     },
     {
       "jp": "じ",
-      "en": "letter; character"
+      "kanji": "字",
+      "en": "letter / character"
     },
     {
       "jp": "かんじ",
+      "kanji": "漢字",
       "en": "Chinese characters"
     },
     {
       "jp": "ひらがな",
+      "kanji": "—",
       "en": "Hiragana script"
     },
     {
       "jp": "かたかな",
+      "kanji": "—",
       "en": "Katakana script"
     },
     {
       "jp": "ローマじ",
-      "en": "Roman alphabet"
+      "kanji": "ローマ字",
+      "en": "the Roman alphabet"
     },
     {
       "jp": "こまかいおかね",
+      "kanji": "細かいお金",
       "en": "small change"
     },
     {
       "jp": "チケット",
+      "kanji": "—",
       "en": "ticket"
     },
     {
       "jp": "じかん",
+      "kanji": "時間",
       "en": "time"
     },
     {
       "jp": "ようじ",
-      "en": "something to do; errand"
+      "kanji": "用事",
+      "en": "something to do / errand"
     },
     {
       "jp": "やくそく",
-      "en": "appointment; promise"
+      "kanji": "約束",
+      "en": "appointment / promise"
     },
     {
       "jp": "ごしゅじん",
-      "en": "someone else's husband"
+      "kanji": "ご主人",
+      "en": "(someone's) husband"
     },
     {
       "jp": "おっと",
-      "en": "my husband"
+      "kanji": "夫",
+      "en": "(my) husband"
+    },
+    {
+      "jp": "しゅじん",
+      "kanji": "主人",
+      "en": "(my) husband"
     },
     {
       "jp": "おくさん",
-      "en": "someone else's wife"
+      "kanji": "奥さん",
+      "en": "(someone's) wife"
     },
     {
       "jp": "つま",
-      "en": "my wife"
+      "kanji": "妻",
+      "en": "(my) wife"
     },
     {
       "jp": "かない",
-      "en": "my wife"
+      "kanji": "家内",
+      "en": "(my) wife"
     },
     {
       "jp": "こども",
+      "kanji": "子ども",
       "en": "child"
     },
     {
       "jp": "よく",
-      "en": "well; much"
+      "kanji": "—",
+      "en": "well / much"
     },
     {
       "jp": "だいたい",
-      "en": "mostly; roughly"
+      "kanji": "—",
+      "en": "mostly / roughly"
     },
     {
       "jp": "たくさん",
-      "en": "many; much"
+      "kanji": "—",
+      "en": "many / much"
     },
     {
       "jp": "すこし",
-      "en": "a little; a few"
+      "kanji": "少し",
+      "en": "a little / a few"
     },
     {
       "jp": "ぜんぜん",
-      "en": "not at all (with negatives)"
+      "kanji": "全然",
+      "en": "not at all"
     },
     {
       "jp": "はやく",
-      "en": "early; quickly; fast"
-    },
-    {
-      "jp": "〜から",
-      "en": "because ~"
+      "kanji": "早く",
+      "en": "early / quickly"
     },
     {
       "jp": "どうして",
+      "kanji": "—",
       "en": "why"
     },
     {
-      "jp": "ざんねんですね",
-      "en": "I'm sorry to hear that; that's a pity"
-    },
-    {
-      "jp": "すみません",
-      "en": "I am sorry"
+      "jp": "ざんねんです",
+      "kanji": "残念です",
+      "en": "I'm sorry to hear that"
     }
   ],
   "10": [
     {
       "jp": "います",
-      "en": "exist; be (animate)"
+      "kanji": "—",
+      "en": "exist / be (animate)"
     },
     {
       "jp": "あります",
-      "en": "exist; be (inanimate)"
+      "kanji": "—",
+      "en": "exist / be (inanimate)"
     },
     {
       "jp": "いろいろ",
+      "kanji": "—",
       "en": "various"
     },
     {
       "jp": "おとこのひと",
+      "kanji": "男の人",
       "en": "man"
     },
     {
       "jp": "おんなのひと",
+      "kanji": "女の人",
       "en": "woman"
     },
     {
       "jp": "おとこのこ",
+      "kanji": "男の子",
       "en": "boy"
     },
     {
       "jp": "おんなのこ",
+      "kanji": "女の子",
       "en": "girl"
     },
     {
       "jp": "いぬ",
+      "kanji": "犬",
       "en": "dog"
     },
     {
       "jp": "ねこ",
+      "kanji": "猫",
       "en": "cat"
     },
     {
       "jp": "き",
-      "en": "tree; wood"
+      "kanji": "木",
+      "en": "tree / wood"
     },
     {
       "jp": "もの",
+      "kanji": "物",
       "en": "thing"
     },
     {
       "jp": "フィルム",
+      "kanji": "—",
       "en": "film"
     },
     {
       "jp": "でんち",
+      "kanji": "電池",
       "en": "battery"
     },
     {
       "jp": "はこ",
+      "kanji": "箱",
       "en": "box"
     },
     {
       "jp": "スイッチ",
+      "kanji": "—",
       "en": "switch"
     },
     {
       "jp": "れいぞうこ",
+      "kanji": "冷蔵庫",
       "en": "refrigerator"
     },
     {
       "jp": "テーブル",
+      "kanji": "—",
       "en": "table"
     },
     {
       "jp": "ベッド",
+      "kanji": "—",
       "en": "bed"
     },
     {
       "jp": "たな",
+      "kanji": "棚",
       "en": "shelf"
     },
     {
       "jp": "ドア",
+      "kanji": "—",
       "en": "door"
     },
     {
       "jp": "まど",
+      "kanji": "窓",
       "en": "window"
     },
     {
       "jp": "ポスト",
-      "en": "mailbox; postbox"
+      "kanji": "—",
+      "en": "mailbox"
     },
     {
       "jp": "ビル",
+      "kanji": "—",
       "en": "building"
     },
     {
       "jp": "こうえん",
+      "kanji": "公園",
       "en": "park"
     },
     {
       "jp": "きっさてん",
+      "kanji": "喫茶店",
       "en": "coffee shop"
     },
     {
       "jp": "ほんや",
+      "kanji": "本屋",
       "en": "bookstore"
     },
     {
-      "jp": "〜や",
-      "en": "~ store"
+      "jp": "～や",
+      "kanji": "～屋",
+      "en": "～ store"
     },
     {
       "jp": "のりば",
-      "en": "fixed place to catch taxis; trains; etc."
+      "kanji": "乗り場",
+      "en": "a fixed place to catch taxis/trains"
     },
     {
       "jp": "けん",
+      "kanji": "県",
       "en": "prefecture"
     },
     {
       "jp": "うえ",
-      "en": "on; above; over"
+      "kanji": "上",
+      "en": "on / above"
     },
     {
       "jp": "した",
-      "en": "under; below; beneath"
+      "kanji": "下",
+      "en": "under"
     },
     {
       "jp": "まえ",
-      "en": "front; before"
+      "kanji": "前",
+      "en": "front / before"
     },
     {
       "jp": "うしろ",
-      "en": "back; behind"
+      "kanji": "—",
+      "en": "back / behind"
     },
     {
       "jp": "みぎ",
-      "en": "right"
+      "kanji": "右",
+      "en": "right side"
     },
     {
       "jp": "ひだり",
-      "en": "left"
+      "kanji": "左",
+      "en": "left side"
     },
     {
       "jp": "なか",
-      "en": "in; inside"
+      "kanji": "中",
+      "en": "in / inside"
     },
     {
       "jp": "そと",
+      "kanji": "外",
       "en": "outside"
     },
     {
       "jp": "となり",
-      "en": "next; next door"
+      "kanji": "隣",
+      "en": "next / next door"
     },
     {
       "jp": "ちかく",
-      "en": "near; vicinity"
+      "kanji": "近く",
+      "en": "near / vicinity"
     },
     {
       "jp": "あいだ",
-      "en": "between; among"
+      "kanji": "間",
+      "en": "between / among"
     },
     {
-      "jp": "〜や〜など",
-      "en": "~; ~; and so on"
-    },
-    {
-      "jp": "いちばん",
-      "en": "the most"
-    },
-    {
-      "jp": "〜だんめ",
-      "en": "the ~th shelf"
+      "jp": "いちばん～",
+      "kanji": "—",
+      "en": "the most ～"
     }
   ],
   "11": [
     {
       "jp": "います",
-      "en": "have [a child]"
-    },
-    {
-      "jp": "います",
-      "en": "stay; be [in Japan]"
+      "kanji": "—",
+      "en": "have (a child)"
     },
     {
       "jp": "かかります",
+      "kanji": "—",
       "en": "take (time or money)"
     },
     {
       "jp": "やすみます",
-      "en": "take a day off [work]"
+      "kanji": "休みます",
+      "en": "take a day off"
     },
     {
       "jp": "ひとつ",
-      "en": "one (things)"
+      "kanji": "1つ",
+      "en": "one"
     },
     {
       "jp": "ふたつ",
+      "kanji": "2つ",
       "en": "two"
     },
     {
       "jp": "みっつ",
+      "kanji": "3つ",
       "en": "three"
     },
     {
       "jp": "よっつ",
+      "kanji": "4つ",
       "en": "four"
     },
     {
       "jp": "いつつ",
+      "kanji": "5つ",
       "en": "five"
     },
     {
       "jp": "むっつ",
+      "kanji": "6つ",
       "en": "six"
     },
     {
       "jp": "ななつ",
+      "kanji": "7つ",
       "en": "seven"
     },
     {
       "jp": "やっつ",
+      "kanji": "8つ",
       "en": "eight"
     },
     {
       "jp": "ここのつ",
+      "kanji": "9つ",
       "en": "nine"
     },
     {
       "jp": "とお",
+      "kanji": "—",
       "en": "ten"
     },
     {
       "jp": "いくつ",
+      "kanji": "—",
       "en": "how many"
     },
     {
       "jp": "ひとり",
+      "kanji": "1人",
       "en": "one person"
     },
     {
       "jp": "ふたり",
+      "kanji": "2人",
       "en": "two persons"
     },
     {
-      "jp": "〜にん",
-      "en": "~ people"
+      "jp": "～にん",
+      "kanji": "～人",
+      "en": "～ people"
     },
     {
-      "jp": "〜だい",
-      "en": "counter for machines; cars; etc."
+      "jp": "～だい",
+      "kanji": "～台",
+      "en": "counter for machines/cars"
     },
     {
-      "jp": "〜まい",
-      "en": "counter for paper; stamps; etc."
+      "jp": "～まい",
+      "kanji": "～枚",
+      "en": "counter for paper/stamps"
     },
     {
-      "jp": "〜かい",
-      "en": "~ times"
+      "jp": "～かい",
+      "kanji": "～回",
+      "en": "～ times"
     },
     {
       "jp": "りんご",
+      "kanji": "—",
       "en": "apple"
     },
     {
       "jp": "みかん",
+      "kanji": "—",
       "en": "mandarin orange"
     },
     {
       "jp": "サンドイッチ",
+      "kanji": "—",
       "en": "sandwich"
     },
     {
-      "jp": "カレー[ライス]",
+      "jp": "カレー",
+      "kanji": "—",
       "en": "curry [and rice]"
     },
     {
       "jp": "アイスクリーム",
+      "kanji": "—",
       "en": "ice cream"
     },
     {
       "jp": "きって",
+      "kanji": "切手",
       "en": "postage stamp"
     },
     {
       "jp": "はがき",
-      "en": "postcard"
+      "kanji": "—",
+      "en": "post card"
     },
     {
       "jp": "ふうとう",
+      "kanji": "封筒",
       "en": "envelope"
     },
     {
       "jp": "そくたつ",
+      "kanji": "速達",
       "en": "special delivery"
     },
     {
       "jp": "かきとめ",
+      "kanji": "書留",
       "en": "registered mail"
     },
     {
       "jp": "エアメール",
+      "kanji": "—",
       "en": "airmail"
     },
     {
       "jp": "ふなびん",
+      "kanji": "船便",
       "en": "sea mail"
     },
     {
       "jp": "りょうしん",
+      "kanji": "両親",
       "en": "parents"
     },
     {
       "jp": "きょうだい",
+      "kanji": "兄弟",
       "en": "brothers and sisters"
     },
     {
       "jp": "あに",
-      "en": "my elder brother"
+      "kanji": "兄",
+      "en": "(my) elder brother"
     },
     {
       "jp": "おにいさん",
-      "en": "someone else's elder brother"
+      "kanji": "お兄さん",
+      "en": "(someone's) elder brother"
     },
     {
       "jp": "あね",
-      "en": "my elder sister"
+      "kanji": "姉",
+      "en": "(my) elder sister"
     },
     {
       "jp": "おねえさん",
-      "en": "someone else's elder sister"
+      "kanji": "お姉さん",
+      "en": "(someone's) elder sister"
     },
     {
       "jp": "おとうと",
-      "en": "my younger brother"
+      "kanji": "弟",
+      "en": "(my) younger brother"
     },
     {
       "jp": "おとうとさん",
-      "en": "someone else's younger brother"
+      "kanji": "弟さん",
+      "en": "(someone's) younger brother"
     },
     {
       "jp": "いもうと",
-      "en": "my younger sister"
+      "kanji": "妹",
+      "en": "(my) younger sister"
     },
     {
       "jp": "いもうとさん",
-      "en": "someone else's younger sister"
+      "kanji": "妹さん",
+      "en": "(someone's) younger sister"
     },
     {
       "jp": "がいこく",
+      "kanji": "外国",
       "en": "foreign country"
     },
     {
-      "jp": "〜じかん",
-      "en": "~ hours"
+      "jp": "～じかん",
+      "kanji": "～時間",
+      "en": "～ hours"
     },
     {
-      "jp": "〜しゅうかん",
-      "en": "~ weeks"
+      "jp": "～しゅうかん",
+      "kanji": "～週間",
+      "en": "～ weeks"
     },
     {
-      "jp": "〜かげつ",
-      "en": "~ months"
+      "jp": "～かげつ",
+      "kanji": "～か月",
+      "en": "～ months"
     },
     {
-      "jp": "〜ねん",
-      "en": "~ years"
+      "jp": "～ねん",
+      "kanji": "～年",
+      "en": "～ years"
     },
     {
-      "jp": "〜ぐらい",
-      "en": "about ~"
+      "jp": "～ぐらい",
+      "kanji": "—",
+      "en": "about ～"
     },
     {
       "jp": "どのくらい",
+      "kanji": "—",
       "en": "how long"
     },
     {
       "jp": "ぜんぶで",
+      "kanji": "全部で",
       "en": "in total"
     },
     {
       "jp": "みんな",
-      "en": "all; everything"
+      "kanji": "—",
+      "en": "all / everything"
     },
     {
-      "jp": "〜だけ",
-      "en": "only ~"
-    },
-    {
-      "jp": "いらっしゃいませ",
-      "en": "welcome; may I help you?"
+      "jp": "～だけ",
+      "kanji": "—",
+      "en": "only ～"
     }
   ],
   "12": [
     {
       "jp": "かんたん",
-      "en": "easy; simple"
+      "kanji": "簡単",
+      "en": "easy / simple"
     },
     {
       "jp": "ちかい",
+      "kanji": "近い",
       "en": "near"
     },
     {
       "jp": "とおい",
+      "kanji": "遠い",
       "en": "far"
     },
     {
       "jp": "はやい",
-      "en": "fast; early"
+      "kanji": "速い",
+      "en": "fast / early"
     },
     {
       "jp": "おそい",
-      "en": "slow; late"
+      "kanji": "遅い",
+      "en": "slow / late"
     },
     {
       "jp": "おおい",
-      "en": "many [people]; much"
+      "kanji": "多い",
+      "en": "many [people]"
     },
     {
       "jp": "すくない",
-      "en": "few [people]; a little"
+      "kanji": "少ない",
+      "en": "few [people]"
     },
     {
       "jp": "あたたかい",
+      "kanji": "暖かい",
       "en": "warm"
     },
     {
       "jp": "すずしい",
+      "kanji": "涼しい",
       "en": "cool"
     },
     {
       "jp": "あまい",
+      "kanji": "甘い",
       "en": "sweet"
     },
     {
       "jp": "からい",
-      "en": "hot (taste); spicy"
+      "kanji": "辛い",
+      "en": "hot (taste) / spicy"
     },
     {
       "jp": "おもい",
+      "kanji": "重い",
       "en": "heavy"
     },
     {
       "jp": "かるい",
+      "kanji": "軽い",
       "en": "light"
     },
     {
-      "jp": "いい",
-      "en": "prefer [coffee]"
-    },
-    {
       "jp": "きせつ",
+      "kanji": "季節",
       "en": "season"
     },
     {
       "jp": "はる",
+      "kanji": "春",
       "en": "spring"
     },
     {
       "jp": "なつ",
+      "kanji": "夏",
       "en": "summer"
     },
     {
       "jp": "あき",
-      "en": "autumn; fall"
+      "kanji": "秋",
+      "en": "autumn / fall"
     },
     {
       "jp": "ふゆ",
+      "kanji": "冬",
       "en": "winter"
     },
     {
       "jp": "てんき",
+      "kanji": "天気",
       "en": "weather"
     },
     {
       "jp": "あめ",
-      "en": "rain; rainy"
+      "kanji": "雨",
+      "en": "rain / rainy"
     },
     {
       "jp": "ゆき",
-      "en": "snow; snowy"
+      "kanji": "雪",
+      "en": "snow / snowy"
     },
     {
       "jp": "くもり",
+      "kanji": "曇り",
       "en": "cloudy"
     },
     {
       "jp": "ホテル",
+      "kanji": "—",
       "en": "hotel"
     },
     {
       "jp": "くうこう",
+      "kanji": "空港",
       "en": "airport"
     },
     {
       "jp": "うみ",
-      "en": "sea; ocean"
+      "kanji": "海",
+      "en": "sea / ocean"
     },
     {
       "jp": "せかい",
+      "kanji": "世界",
       "en": "world"
     },
     {
       "jp": "パーティー",
+      "kanji": "—",
       "en": "party"
     },
     {
       "jp": "おまつり",
+      "kanji": "お祭り",
       "en": "festival"
     },
     {
       "jp": "しけん",
+      "kanji": "試験",
       "en": "examination"
     },
     {
       "jp": "すきやき",
+      "kanji": "すき焼き",
       "en": "sukiyaki"
     },
     {
       "jp": "さしみ",
+      "kanji": "刺身",
       "en": "sashimi"
     },
     {
       "jp": "おすし",
+      "kanji": "—",
       "en": "sushi"
     },
     {
       "jp": "てんぷら",
+      "kanji": "—",
       "en": "tempura"
     },
     {
       "jp": "いけばな",
+      "kanji": "生け花",
       "en": "flower arrangement"
     },
     {
       "jp": "もみじ",
-      "en": "maple; red leaves of autumn"
+      "kanji": "紅葉",
+      "en": "maple / autumn leaves"
     },
     {
       "jp": "どちら",
-      "en": "which one (between two)"
+      "kanji": "—",
+      "en": "which one (of two)"
     },
     {
       "jp": "どちらも",
+      "kanji": "—",
       "en": "both"
     },
     {
       "jp": "ずっと",
+      "kanji": "—",
       "en": "by far"
     },
     {
       "jp": "はじめて",
+      "kanji": "初めて",
       "en": "for the first time"
     }
   ],
   "13": [
     {
       "jp": "あそびます",
-      "en": "enjoy oneself; play"
+      "kanji": "遊びます",
+      "en": "enjoy oneself / play"
     },
     {
       "jp": "およぎます",
+      "kanji": "泳ぎます",
       "en": "swim"
     },
     {
       "jp": "むかえます",
-      "en": "go to meet; welcome"
+      "kanji": "迎えます",
+      "en": "go to meet / welcome"
     },
     {
       "jp": "つかれます",
+      "kanji": "疲れます",
       "en": "get tired"
     },
     {
       "jp": "だします",
-      "en": "send [a letter]"
+      "kanji": "出します",
+      "en": "send (a letter)"
     },
     {
       "jp": "はいります",
-      "en": "enter [a coffee shop]"
+      "kanji": "入ります",
+      "en": "enter (a coffee shop)"
     },
     {
       "jp": "でます",
-      "en": "go out [of a coffee shop]"
+      "kanji": "出ます",
+      "en": "go out (of a coffee shop)"
     },
     {
       "jp": "けっこんします",
-      "en": "marry; get married"
+      "kanji": "結婚します",
+      "en": "marry / get married"
     },
     {
       "jp": "かいものします",
+      "kanji": "買い物します",
       "en": "do shopping"
     },
     {
       "jp": "しょくじします",
-      "en": "have a meal; dine"
+      "kanji": "食事します",
+      "en": "have a meal / dine"
     },
     {
       "jp": "さんぽします",
-      "en": "take a walk [in a park]"
+      "kanji": "散歩します",
+      "en": "take a walk"
     },
     {
       "jp": "たいへん",
-      "en": "hard; tough; severe; awful"
+      "kanji": "大変",
+      "en": "hard / tough / awful"
     },
     {
       "jp": "ほしい",
+      "kanji": "欲しい",
       "en": "want (something)"
     },
     {
       "jp": "さびしい",
+      "kanji": "寂しい",
       "en": "lonely"
     },
     {
       "jp": "ひろい",
-      "en": "wide; spacious"
+      "kanji": "広い",
+      "en": "wide / spacious"
     },
     {
       "jp": "せまい",
-      "en": "narrow; small (room)"
+      "kanji": "狭い",
+      "en": "narrow / small (room)"
     },
     {
       "jp": "しやくしょ",
-      "en": "municipal office; city hall"
+      "kanji": "市役所",
+      "en": "municipal office / city hall"
     },
     {
       "jp": "プール",
+      "kanji": "—",
       "en": "swimming pool"
     },
     {
       "jp": "かわ",
+      "kanji": "川",
       "en": "river"
     },
     {
       "jp": "けいざい",
+      "kanji": "経済",
       "en": "economy"
     },
     {
       "jp": "びじゅつ",
+      "kanji": "美術",
       "en": "fine arts"
     },
     {
       "jp": "つり",
+      "kanji": "釣り",
       "en": "fishing"
     },
     {
       "jp": "スキー",
+      "kanji": "—",
       "en": "skiing"
     },
     {
       "jp": "かいぎ",
-      "en": "meeting; conference"
+      "kanji": "会議",
+      "en": "meeting / conference"
     },
     {
       "jp": "とうろく",
+      "kanji": "登録",
       "en": "registration"
     },
     {
       "jp": "しゅうまつ",
+      "kanji": "週末",
       "en": "weekend"
     },
     {
-      "jp": "〜ごろ",
+      "jp": "～ごろ",
+      "kanji": "—",
       "en": "about (time)"
     },
     {
       "jp": "なにか",
+      "kanji": "何か",
       "en": "something"
     },
     {
       "jp": "どこか",
-      "en": "somewhere; some place"
+      "kanji": "—",
+      "en": "somewhere"
+    },
+    {
+      "jp": "おなかがすきました",
+      "kanji": "—",
+      "en": "I'm hungry"
+    },
+    {
+      "jp": "おなかがいっぱいです",
+      "kanji": "—",
+      "en": "I'm full"
+    },
+    {
+      "jp": "のどがかわきました",
+      "kanji": "—",
+      "en": "I'm thirsty"
+    },
+    {
+      "jp": "そうですね",
+      "kanji": "—",
+      "en": "I agree with you"
+    },
+    {
+      "jp": "そうしましょう",
+      "kanji": "—",
+      "en": "Let's do that"
     }
   ],
   "14": [
     {
       "jp": "つけます",
+      "kanji": "—",
       "en": "turn on"
     },
     {
       "jp": "けします",
+      "kanji": "消します",
       "en": "turn off"
     },
     {
       "jp": "あけます",
+      "kanji": "開けます",
       "en": "open"
     },
     {
       "jp": "しめます",
-      "en": "close; shut"
+      "kanji": "閉めます",
+      "en": "close / shut"
     },
     {
       "jp": "いそぎます",
+      "kanji": "急ぎます",
       "en": "hurry"
     },
     {
       "jp": "まちます",
+      "kanji": "待ちます",
       "en": "wait"
     },
     {
       "jp": "とめます",
-      "en": "stop; park"
+      "kanji": "止めます",
+      "en": "stop / park"
     },
     {
       "jp": "まがります",
-      "en": "turn [to the right]"
+      "kanji": "曲がります",
+      "en": "turn (to the right)"
     },
     {
       "jp": "もちます",
+      "kanji": "持ちます",
       "en": "hold"
     },
     {
       "jp": "とります",
-      "en": "take; pass"
+      "kanji": "取ります",
+      "en": "take / pass"
     },
     {
       "jp": "てつだいます",
+      "kanji": "手伝います",
       "en": "help (with a task)"
     },
     {
-      "jp": "よびます",
-      "en": "call"
-    },
-    {
       "jp": "はなします",
-      "en": "speak; talk"
+      "kanji": "話します",
+      "en": "speak / talk"
     },
     {
       "jp": "みせます",
+      "kanji": "見せます",
       "en": "show"
     },
     {
       "jp": "おしえます",
-      "en": "tell [an address]"
+      "kanji": "教えます",
+      "en": "tell (an address)"
     },
     {
       "jp": "はじめます",
-      "en": "start; begin"
+      "kanji": "始めます",
+      "en": "start / begin"
     },
     {
       "jp": "ふります",
-      "en": "rain"
+      "kanji": "降ります",
+      "en": "rain (fall)"
     },
     {
       "jp": "コピーします",
+      "kanji": "—",
       "en": "copy"
     },
     {
       "jp": "エアコン",
+      "kanji": "—",
       "en": "air conditioner"
     },
     {
       "jp": "パスポート",
+      "kanji": "—",
       "en": "passport"
     },
     {
       "jp": "なまえ",
+      "kanji": "名前",
       "en": "name"
     },
     {
       "jp": "じゅうしょ",
+      "kanji": "住所",
       "en": "address"
     },
     {
       "jp": "ちず",
+      "kanji": "地図",
       "en": "map"
     },
     {
       "jp": "しお",
+      "kanji": "塩",
       "en": "salt"
     },
     {
       "jp": "さとう",
+      "kanji": "砂糖",
       "en": "sugar"
     },
     {
       "jp": "よみかた",
-      "en": "how to read; way of reading"
+      "kanji": "読み方",
+      "en": "how to read"
     },
     {
-      "jp": "〜かた",
-      "en": "how to ~; way of ~ing"
+      "jp": "～かた",
+      "kanji": "～方",
+      "en": "how to ～ / way of ～ing"
+    },
+    {
+      "jp": "ゆっくり",
+      "kanji": "—",
+      "en": "slowly / leisurely"
+    },
+    {
+      "jp": "すぐ",
+      "kanji": "—",
+      "en": "immediately"
+    },
+    {
+      "jp": "また",
+      "kanji": "—",
+      "en": "again"
+    },
+    {
+      "jp": "あとで",
+      "kanji": "—",
+      "en": "later"
+    },
+    {
+      "jp": "もうすこし",
+      "kanji": "もう少し",
+      "en": "a little more"
+    },
+    {
+      "jp": "もう～",
+      "kanji": "—",
+      "en": "～ more / another ～"
+    },
+    {
+      "jp": "いいですよ",
+      "kanji": "—",
+      "en": "Sure / Certainly"
+    },
+    {
+      "jp": "さあ",
+      "kanji": "—",
+      "en": "right (encouraging action)"
     }
   ],
   "15": [
     {
       "jp": "たちます",
+      "kanji": "立ちます",
       "en": "stand up"
     },
     {
       "jp": "すわります",
+      "kanji": "座ります",
       "en": "sit down"
     },
     {
       "jp": "つかいます",
+      "kanji": "使います",
       "en": "use"
     },
     {
       "jp": "おきます",
+      "kanji": "置きます",
       "en": "put"
     },
     {
       "jp": "つくります",
-      "en": "make; produce"
+      "kanji": "作ります",
+      "en": "make / produce"
     },
     {
       "jp": "うります",
+      "kanji": "売ります",
       "en": "sell"
     },
     {
       "jp": "しります",
+      "kanji": "知ります",
       "en": "get to know"
     },
     {
       "jp": "すみます",
+      "kanji": "住みます",
       "en": "be going to live"
     },
     {
       "jp": "けんきゅうします",
+      "kanji": "研究します",
       "en": "do research"
     },
     {
       "jp": "しっています",
+      "kanji": "知っています",
       "en": "know"
     },
     {
       "jp": "すんでいます",
-      "en": "live [in Osaka]"
+      "kanji": "住んでいます",
+      "en": "live (in Osaka)"
     },
     {
       "jp": "しりょう",
-      "en": "materials; data"
+      "kanji": "資料",
+      "en": "materials / data"
     },
     {
       "jp": "カタログ",
+      "kanji": "—",
       "en": "catalog"
     },
     {
       "jp": "じこくひょう",
+      "kanji": "時刻表",
       "en": "timetable"
     },
     {
       "jp": "ふく",
+      "kanji": "服",
       "en": "clothes"
     },
     {
       "jp": "せいひん",
+      "kanji": "製品",
       "en": "products"
     },
     {
       "jp": "ソフト",
+      "kanji": "—",
       "en": "software"
     },
     {
       "jp": "せんもん",
-      "en": "speciality; field of study"
+      "kanji": "専門",
+      "en": "speciality / field of study"
     },
     {
       "jp": "はいしゃ",
-      "en": "dentist; dentist's"
+      "kanji": "歯医者",
+      "en": "dentist"
     },
     {
       "jp": "とこや",
-      "en": "barber; barber's"
+      "kanji": "床屋",
+      "en": "barber"
     },
     {
       "jp": "プレイガイド",
-      "en": "(theater) ticket agency"
+      "kanji": "—",
+      "en": "ticket agency"
     },
     {
       "jp": "どくしん",
-      "en": "single; unmarried"
+      "kanji": "独身",
+      "en": "single / unmarried"
     }
   ],
   "16": [
     {
       "jp": "のります",
-      "en": "ride; get on [a train]"
+      "kanji": "乗ります",
+      "en": "ride / get on (a train)"
     },
     {
       "jp": "おります",
-      "en": "get off [a train]"
+      "kanji": "降ります",
+      "en": "get off (a train)"
     },
     {
       "jp": "のりかえます",
-      "en": "change trains"
+      "kanji": "乗り換えます",
+      "en": "change (trains)"
     },
     {
       "jp": "あびます",
-      "en": "take [a shower]"
+      "kanji": "浴びます",
+      "en": "take (a shower)"
     },
     {
       "jp": "いれます",
-      "en": "put in; insert"
+      "kanji": "入れます",
+      "en": "put in / insert"
     },
     {
       "jp": "だします",
-      "en": "take out; withdraw"
+      "kanji": "出します",
+      "en": "take out / withdraw"
     },
     {
       "jp": "はいります",
-      "en": "enter [university]"
+      "kanji": "入ります",
+      "en": "enter (university)"
     },
     {
       "jp": "でます",
-      "en": "graduate from [university]"
+      "kanji": "出ます",
+      "en": "graduate from (university)"
     },
     {
       "jp": "やめます",
-      "en": "quit or retire from [a company]; stop; give up"
+      "kanji": "—",
+      "en": "quit / retire / stop"
     },
     {
       "jp": "おします",
-      "en": "push; press"
+      "kanji": "押します",
+      "en": "push / press"
     },
     {
       "jp": "わかい",
+      "kanji": "若い",
       "en": "young"
     },
     {
       "jp": "ながい",
+      "kanji": "長い",
       "en": "long"
     },
     {
       "jp": "みじかい",
+      "kanji": "短い",
       "en": "short"
     },
     {
       "jp": "あかるい",
-      "en": "bright; light"
+      "kanji": "明るい",
+      "en": "bright / light"
     },
     {
       "jp": "くらい",
+      "kanji": "暗い",
       "en": "dark"
     },
     {
       "jp": "せがたかい",
+      "kanji": "背が高い",
       "en": "tall (person)"
     },
     {
       "jp": "あたまがいい",
-      "en": "clever; smart"
+      "kanji": "頭がいい",
+      "en": "clever / smart"
     },
     {
       "jp": "からだ",
+      "kanji": "体",
       "en": "body"
     },
     {
       "jp": "あたま",
+      "kanji": "頭",
       "en": "head"
     },
     {
       "jp": "かみ",
+      "kanji": "髪",
       "en": "hair"
     },
     {
       "jp": "かお",
+      "kanji": "顔",
       "en": "face"
     },
     {
       "jp": "め",
+      "kanji": "目",
       "en": "eye"
     },
     {
       "jp": "みみ",
+      "kanji": "耳",
       "en": "ear"
     },
     {
       "jp": "くち",
+      "kanji": "口",
       "en": "mouth"
     },
     {
       "jp": "は",
+      "kanji": "歯",
       "en": "tooth"
     },
     {
       "jp": "おなか",
+      "kanji": "—",
       "en": "stomach"
     },
     {
       "jp": "あし",
-      "en": "leg; foot"
+      "kanji": "足",
+      "en": "leg / foot"
     },
     {
       "jp": "サービス",
+      "kanji": "—",
       "en": "service"
     },
     {
       "jp": "ジョギング",
+      "kanji": "—",
       "en": "jogging"
     },
     {
       "jp": "シャワー",
+      "kanji": "—",
       "en": "shower"
     },
     {
       "jp": "みどり",
-      "en": "green; greenery"
+      "kanji": "緑",
+      "en": "green / greenery"
     },
     {
       "jp": "おてら",
+      "kanji": "お寺",
       "en": "Buddhist temple"
     },
     {
       "jp": "じんじゃ",
+      "kanji": "神社",
       "en": "Shinto shrine"
     },
     {
       "jp": "りゅうがくせい",
+      "kanji": "留学生",
       "en": "foreign student"
     },
     {
-      "jp": "〜ばん",
-      "en": "number ~"
+      "jp": "～ばん",
+      "kanji": "～番",
+      "en": "number ～"
     },
     {
       "jp": "どうやって",
-      "en": "in what way; how"
+      "kanji": "—",
+      "en": "in what way / how"
     },
     {
-      "jp": "どの〜",
-      "en": "which ~ (three or more)"
+      "jp": "どの～",
+      "kanji": "—",
+      "en": "which ～ (three+)"
     },
     {
       "jp": "まだまだです",
-      "en": "[No,] I still have a long way to go"
-    },
-    {
-      "jp": "おひきだしですか",
-      "en": "are you making a withdrawal?"
-    },
-    {
-      "jp": "まず",
-      "en": "first of all"
-    },
-    {
-      "jp": "キャッシュカード",
-      "en": "cash dispensing card"
-    },
-    {
-      "jp": "あんしょうばんごう",
-      "en": "personal identification number; PIN"
-    },
-    {
-      "jp": "つぎに",
-      "en": "next"
-    },
-    {
-      "jp": "きんがく",
-      "en": "amount of money"
-    },
-    {
-      "jp": "かくにん",
-      "en": "confirmation"
-    },
-    {
-      "jp": "ボタン",
-      "en": "button"
+      "kanji": "—",
+      "en": "I still have a long way to go"
     }
   ],
   "17": [
     {
       "jp": "おぼえます",
+      "kanji": "覚えます",
       "en": "memorize"
     },
     {
       "jp": "わすれます",
+      "kanji": "忘れます",
       "en": "forget"
     },
     {
       "jp": "なくします",
+      "kanji": "—",
       "en": "lose"
     },
     {
       "jp": "だします",
-      "en": "hand in [a report]"
+      "kanji": "出します",
+      "en": "hand in (a report)"
     },
     {
       "jp": "はらいます",
+      "kanji": "払います",
       "en": "pay"
     },
     {
       "jp": "かえします",
-      "en": "give back; return"
+      "kanji": "返します",
+      "en": "give back / return"
     },
     {
       "jp": "でかけます",
+      "kanji": "出かけます",
       "en": "go out"
     },
     {
       "jp": "ぬぎます",
-      "en": "take off (clothes; shoes; etc.)"
+      "kanji": "脱ぎます",
+      "en": "take off (clothes)"
     },
     {
       "jp": "もっていきます",
+      "kanji": "持って行きます",
       "en": "take (something)"
     },
     {
       "jp": "もってきます",
+      "kanji": "持って来ます",
       "en": "bring (something)"
     },
     {
       "jp": "しんぱいします",
+      "kanji": "心配します",
       "en": "worry"
     },
     {
       "jp": "ざんぎょうします",
+      "kanji": "残業します",
       "en": "work overtime"
     },
     {
       "jp": "しゅっちょうします",
+      "kanji": "出張します",
       "en": "go on a business trip"
     },
     {
       "jp": "のみます",
-      "en": "take [medicine]"
+      "kanji": "飲みます",
+      "en": "take (medicine)"
     },
     {
       "jp": "はいります",
-      "en": "take [a bath]"
+      "kanji": "入ります",
+      "en": "take (a bath)"
     },
     {
       "jp": "たいせつ",
-      "en": "important; precious"
+      "kanji": "大切",
+      "en": "important / precious"
     },
     {
       "jp": "だいじょうぶ",
+      "kanji": "大丈夫",
       "en": "all right"
     },
     {
       "jp": "あぶない",
+      "kanji": "危ない",
       "en": "dangerous"
     },
     {
       "jp": "もんだい",
-      "en": "question; problem; trouble"
+      "kanji": "問題",
+      "en": "question / problem"
     },
     {
       "jp": "こたえ",
+      "kanji": "答え",
       "en": "answer"
     },
     {
       "jp": "きんえん",
+      "kanji": "禁煙",
       "en": "no smoking"
     },
     {
-      "jp": "けんこうほけんしょう",
+      "jp": "ほけんしょう",
+      "kanji": "保険証",
       "en": "health insurance card"
     },
     {
       "jp": "かぜ",
-      "en": "cold; flu"
+      "kanji": "—",
+      "en": "cold / flu"
     },
     {
       "jp": "ねつ",
+      "kanji": "熱",
       "en": "fever"
     },
     {
       "jp": "びょうき",
-      "en": "illness; disease"
+      "kanji": "病気",
+      "en": "illness / disease"
     },
     {
       "jp": "くすり",
+      "kanji": "薬",
       "en": "medicine"
     },
     {
       "jp": "おふろ",
+      "kanji": "—",
       "en": "bath"
     },
     {
       "jp": "うわぎ",
-      "en": "jacket; outerwear"
+      "kanji": "上着",
+      "en": "jacket / outerwear"
     },
     {
       "jp": "したぎ",
+      "kanji": "下着",
       "en": "underwear"
     },
     {
       "jp": "せんせい",
-      "en": "doctor (when addressing a medical doctor)"
+      "kanji": "先生",
+      "en": "doctor (when addressing one)"
     },
     {
-      "jp": "2、3にち",
+      "jp": "にさんにち",
+      "kanji": "2、3日",
       "en": "a few days"
     },
     {
-      "jp": "〜までに",
-      "en": "before ~; by ~"
+      "jp": "までに",
+      "kanji": "—",
+      "en": "before ～ / by ～"
     },
     {
       "jp": "ですから",
-      "en": "therefore; so"
-    },
-    {
-      "jp": "どうしましたか",
-      "en": "what's the matter?"
-    },
-    {
-      "jp": "〜がいたいです",
-      "en": "have a pain in ~"
-    },
-    {
-      "jp": "のど",
-      "en": "throat"
-    },
-    {
-      "jp": "おだいじに",
-      "en": "take care of yourself"
+      "kanji": "—",
+      "en": "therefore / so"
     }
   ],
   "18": [
     {
       "jp": "できます",
-      "en": "be able to; can"
+      "kanji": "—",
+      "en": "be able to / can"
     },
     {
       "jp": "あらいます",
+      "kanji": "洗います",
       "en": "wash"
     },
     {
       "jp": "ひきます",
-      "en": "play (stringed instrument or piano)"
+      "kanji": "弾きます",
+      "en": "play (piano etc.)"
     },
     {
       "jp": "うたいます",
+      "kanji": "歌います",
       "en": "sing"
     },
     {
       "jp": "あつめます",
-      "en": "collect; gather"
+      "kanji": "集めます",
+      "en": "collect / gather"
     },
     {
       "jp": "すてます",
+      "kanji": "捨てます",
       "en": "throw away"
     },
     {
       "jp": "かえます",
-      "en": "exchange; change"
+      "kanji": "換えます",
+      "en": "exchange / change"
     },
     {
       "jp": "うんてんします",
+      "kanji": "運転します",
       "en": "drive"
     },
     {
       "jp": "よやくします",
-      "en": "reserve; book"
+      "kanji": "予約します",
+      "en": "reserve / book"
     },
     {
       "jp": "けんがくします",
-      "en": "visit some place for study"
+      "kanji": "見学します",
+      "en": "visit for study"
     },
     {
       "jp": "ピアノ",
+      "kanji": "—",
       "en": "piano"
     },
     {
-      "jp": "〜メートル",
-      "en": "~ meter"
+      "jp": "～メートル",
+      "kanji": "—",
+      "en": "～ meter"
     },
     {
-      "jp": "こくさい",
-      "en": "international ~"
+      "jp": "こくさい～",
+      "kanji": "国際～",
+      "en": "international ～"
     },
     {
       "jp": "げんきん",
+      "kanji": "現金",
       "en": "cash"
     },
     {
       "jp": "しゅみ",
+      "kanji": "趣味",
       "en": "hobby"
     },
     {
       "jp": "にっき",
+      "kanji": "日記",
       "en": "diary"
     },
     {
       "jp": "おいのり",
+      "kanji": "お祈り",
       "en": "prayer"
     },
     {
       "jp": "かちょう",
+      "kanji": "課長",
       "en": "section chief"
     },
     {
       "jp": "ぶちょう",
+      "kanji": "部長",
       "en": "department chief"
     },
     {
       "jp": "しゃちょう",
+      "kanji": "社長",
       "en": "president of a company"
     }
   ],
   "19": [
     {
       "jp": "のぼります",
-      "en": "climb [a mountain]"
+      "kanji": "登ります",
+      "en": "climb (a mountain)"
     },
     {
       "jp": "とまります",
-      "en": "stay [at a hotel]"
+      "kanji": "泊まります",
+      "en": "stay (at a hotel)"
     },
     {
       "jp": "そうじします",
+      "kanji": "掃除します",
       "en": "clean (a room)"
     },
     {
       "jp": "せんたくします",
+      "kanji": "洗濯します",
       "en": "wash (clothes)"
     },
     {
       "jp": "れんしゅうします",
+      "kanji": "練習します",
       "en": "practice"
     },
     {
       "jp": "なります",
+      "kanji": "—",
       "en": "become"
     },
     {
       "jp": "ねむい",
+      "kanji": "眠い",
       "en": "sleepy"
     },
     {
       "jp": "つよい",
+      "kanji": "強い",
       "en": "strong"
     },
     {
+      "jp": "よわい",
+      "kanji": "弱い",
+      "en": "weak"
+    },
+    {
       "jp": "ちょうしがいい",
+      "kanji": "調子がいい",
       "en": "be in good condition"
     },
     {
       "jp": "ちょうしがわるい",
+      "kanji": "調子が悪い",
       "en": "be in bad condition"
     },
     {
       "jp": "ちょうし",
+      "kanji": "調子",
       "en": "condition"
     },
     {
       "jp": "ゴルフ",
+      "kanji": "—",
       "en": "golf"
     },
     {
       "jp": "すもう",
+      "kanji": "相撲",
       "en": "sumo wrestling"
     },
     {
       "jp": "パチンコ",
+      "kanji": "—",
       "en": "pinball game"
     },
     {
       "jp": "おちゃ",
+      "kanji": "お茶",
       "en": "tea ceremony"
     },
     {
       "jp": "ひ",
-      "en": "day; date"
+      "kanji": "日",
+      "en": "day / date"
     },
     {
       "jp": "いちど",
+      "kanji": "一度",
       "en": "once"
     },
     {
       "jp": "いちども",
-      "en": "not once; never (with negatives)"
+      "kanji": "一度も",
+      "en": "not once / never"
     },
     {
       "jp": "だんだん",
+      "kanji": "—",
       "en": "gradually"
     },
     {
       "jp": "もうすぐ",
+      "kanji": "—",
       "en": "soon"
     },
     {
       "jp": "おかげさまで",
-      "en": "thank you (for help received)"
+      "kanji": "—",
+      "en": "Thank you (expressing gratitude)"
     }
   ],
   "20": [
     {
       "jp": "いります",
-      "en": "need; require [a visa]"
+      "kanji": "要ります",
+      "en": "need / require (a visa)"
     },
     {
       "jp": "しらべます",
-      "en": "check; investigate"
+      "kanji": "調べます",
+      "en": "check / investigate"
     },
     {
       "jp": "なおします",
-      "en": "repair; correct"
+      "kanji": "直します",
+      "en": "repair / correct"
     },
     {
       "jp": "しゅうりします",
+      "kanji": "修理します",
       "en": "repair"
     },
     {
       "jp": "でんわします",
+      "kanji": "電話します",
       "en": "phone"
     },
     {
       "jp": "ぼく",
-      "en": "I (informal; men)"
+      "kanji": "僕",
+      "en": "I (informal, men)"
     },
     {
       "jp": "きみ",
-      "en": "you (informal; men)"
+      "kanji": "君",
+      "en": "you (informal, men)"
     },
     {
-      "jp": "〜くん",
-      "en": "Mr. (informal male suffix)"
+      "jp": "～くん",
+      "kanji": "～君",
+      "en": "Mr. (informal, men)"
     },
     {
       "jp": "うん",
+      "kanji": "—",
       "en": "yes (informal)"
     },
     {
       "jp": "ううん",
+      "kanji": "—",
       "en": "no (informal)"
     },
     {
       "jp": "サラリーマン",
-      "en": "salaried worker; office worker"
+      "kanji": "—",
+      "en": "salaried worker"
     },
     {
       "jp": "ことば",
-      "en": "word; language"
+      "kanji": "—",
+      "en": "word / language"
     },
     {
       "jp": "ぶっか",
+      "kanji": "物価",
       "en": "commodity prices"
     },
     {
       "jp": "きもの",
+      "kanji": "着物",
       "en": "kimono"
     },
     {
       "jp": "ビザ",
+      "kanji": "—",
       "en": "visa"
     },
     {
       "jp": "はじめ",
+      "kanji": "初め",
       "en": "the beginning"
     },
     {
       "jp": "おわり",
+      "kanji": "終わり",
       "en": "the end"
     },
     {
       "jp": "こっち",
-      "en": "this way; this place (informal)"
+      "kanji": "—",
+      "en": "this way (informal)"
     },
     {
       "jp": "そっち",
-      "en": "this way; that place (informal)"
+      "kanji": "—",
+      "en": "that way near you (informal)"
     },
     {
       "jp": "あっち",
-      "en": "this way; that place over there (informal)"
+      "kanji": "—",
+      "en": "that way over there (informal)"
     },
     {
       "jp": "どっち",
-      "en": "which one; which way; where (informal)"
+      "kanji": "—",
+      "en": "which one (informal)"
+    },
+    {
+      "jp": "このあいだ",
+      "kanji": "この間",
+      "en": "the other day"
+    },
+    {
+      "jp": "みんなで",
+      "kanji": "—",
+      "en": "all together"
+    },
+    {
+      "jp": "～けど",
+      "kanji": "—",
+      "en": "～, but (informal)"
+    }
+  ],
+  "21": [
+    {
+      "jp": "おもいます",
+      "kanji": "思います",
+      "en": "think"
+    },
+    {
+      "jp": "いいます",
+      "kanji": "言います",
+      "en": "say"
+    },
+    {
+      "jp": "たります",
+      "kanji": "足ります",
+      "en": "be enough"
+    },
+    {
+      "jp": "かちます",
+      "kanji": "勝ちます",
+      "en": "win"
+    },
+    {
+      "jp": "まけます",
+      "kanji": "負けます",
+      "en": "lose / be beaten"
+    },
+    {
+      "jp": "やくにたちます",
+      "kanji": "役に立ちます",
+      "en": "be useful"
+    },
+    {
+      "jp": "むだ",
+      "kanji": "—",
+      "en": "wasteful"
+    },
+    {
+      "jp": "ふべん",
+      "kanji": "不便",
+      "en": "inconvenient"
+    },
+    {
+      "jp": "おなじ",
+      "kanji": "同じ",
+      "en": "the same"
+    },
+    {
+      "jp": "すごい",
+      "kanji": "—",
+      "en": "awful / great"
+    },
+    {
+      "jp": "しゅしょう",
+      "kanji": "首相",
+      "en": "prime minister"
+    },
+    {
+      "jp": "だいとうりょう",
+      "kanji": "大統領",
+      "en": "president"
+    },
+    {
+      "jp": "せいじ",
+      "kanji": "政治",
+      "en": "politics"
+    },
+    {
+      "jp": "ニュース",
+      "kanji": "—",
+      "en": "news"
+    },
+    {
+      "jp": "スピーチ",
+      "kanji": "—",
+      "en": "speech"
+    },
+    {
+      "jp": "しあい",
+      "kanji": "試合",
+      "en": "game / match"
+    },
+    {
+      "jp": "アルバイト",
+      "kanji": "—",
+      "en": "side job"
+    },
+    {
+      "jp": "いけん",
+      "kanji": "意見",
+      "en": "opinion"
+    },
+    {
+      "jp": "おはなし",
+      "kanji": "お話",
+      "en": "talk / story"
+    },
+    {
+      "jp": "ユーモア",
+      "kanji": "—",
+      "en": "humor"
+    },
+    {
+      "jp": "むだ",
+      "kanji": "—",
+      "en": "waste"
+    },
+    {
+      "jp": "デザイン",
+      "kanji": "—",
+      "en": "design"
+    },
+    {
+      "jp": "こうつう",
+      "kanji": "交通",
+      "en": "transportation / traffic"
+    },
+    {
+      "jp": "ラッシュ",
+      "kanji": "—",
+      "en": "rush hour"
+    },
+    {
+      "jp": "さいきん",
+      "kanji": "最近",
+      "en": "recently"
+    },
+    {
+      "jp": "たぶん",
+      "kanji": "—",
+      "en": "probably / maybe"
+    },
+    {
+      "jp": "きっと",
+      "kanji": "—",
+      "en": "surely"
+    },
+    {
+      "jp": "ほんとうに",
+      "kanji": "—",
+      "en": "really"
+    },
+    {
+      "jp": "そんなに",
+      "kanji": "—",
+      "en": "not so much"
+    },
+    {
+      "jp": "について",
+      "kanji": "—",
+      "en": "about ～ / concerning ～"
+    },
+    {
+      "jp": "しかたがありません",
+      "kanji": "—",
+      "en": "It can't be helped"
+    }
+  ],
+  "22": [
+    {
+      "jp": "きます",
+      "kanji": "着きます",
+      "en": "put on (a shirt)"
+    },
+    {
+      "jp": "はきます",
+      "kanji": "—",
+      "en": "put on (shoes/trousers)"
+    },
+    {
+      "jp": "かぶります",
+      "kanji": "—",
+      "en": "put on (a hat)"
+    },
+    {
+      "jp": "かけます",
+      "kanji": "—",
+      "en": "put on (glasses)"
+    },
+    {
+      "jp": "うまれます",
+      "kanji": "生まれます",
+      "en": "be born"
+    },
+    {
+      "jp": "コート",
+      "kanji": "—",
+      "en": "coat"
+    },
+    {
+      "jp": "スーツ",
+      "kanji": "—",
+      "en": "suit"
+    },
+    {
+      "jp": "セーター",
+      "kanji": "—",
+      "en": "sweater"
+    },
+    {
+      "jp": "ぼうし",
+      "kanji": "帽子",
+      "en": "hat / cap"
+    },
+    {
+      "jp": "めがね",
+      "kanji": "眼鏡",
+      "en": "glasses"
+    },
+    {
+      "jp": "よく",
+      "kanji": "—",
+      "en": "often"
+    },
+    {
+      "jp": "おめでとうございます",
+      "kanji": "—",
+      "en": "Congratulations"
+    }
+  ],
+  "23": [
+    {
+      "jp": "ききます",
+      "kanji": "聞きます",
+      "en": "ask (the teacher)"
+    },
+    {
+      "jp": "まわします",
+      "kanji": "回します",
+      "en": "turn"
+    },
+    {
+      "jp": "ひきます",
+      "kanji": "引きます",
+      "en": "pull"
+    },
+    {
+      "jp": "かえます",
+      "kanji": "変えます",
+      "en": "change"
+    },
+    {
+      "jp": "さわります",
+      "kanji": "触ります",
+      "en": "touch (a door)"
+    },
+    {
+      "jp": "でます",
+      "kanji": "出ます",
+      "en": "[change] come out"
+    },
+    {
+      "jp": "うごきます",
+      "kanji": "動きます",
+      "en": "[a watch] move / work"
+    },
+    {
+      "jp": "あるきます",
+      "kanji": "歩きます",
+      "en": "walk (along a road)"
+    },
+    {
+      "jp": "わたります",
+      "kanji": "渡ります",
+      "en": "cross (a bridge)"
+    },
+    {
+      "jp": "きをつけます",
+      "kanji": "気をつけます",
+      "en": "pay attention / take care"
+    },
+    {
+      "jp": "ひっこしします",
+      "kanji": "引っ越しします",
+      "en": "move (house)"
+    },
+    {
+      "jp": "でんきや",
+      "kanji": "電気屋",
+      "en": "electrician"
+    },
+    {
+      "jp": "～や",
+      "kanji": "～屋",
+      "en": "person of ～ shop"
+    },
+    {
+      "jp": "サイズ",
+      "kanji": "—",
+      "en": "size"
+    },
+    {
+      "jp": "おと",
+      "kanji": "音",
+      "en": "sound"
+    },
+    {
+      "jp": "きかい",
+      "kanji": "機械",
+      "en": "machine"
+    },
+    {
+      "jp": "つまみ",
+      "kanji": "—",
+      "en": "knob"
+    },
+    {
+      "jp": "こしょう",
+      "kanji": "故障",
+      "en": "breakdown"
+    },
+    {
+      "jp": "みち",
+      "kanji": "道",
+      "en": "road / way"
+    },
+    {
+      "jp": "こうさてん",
+      "kanji": "交差点",
+      "en": "crossroad"
+    },
+    {
+      "jp": "しんごう",
+      "kanji": "信号",
+      "en": "traffic light"
+    },
+    {
+      "jp": "かど",
+      "kanji": "角",
+      "en": "corner"
+    },
+    {
+      "jp": "はし",
+      "kanji": "橋",
+      "en": "bridge"
+    },
+    {
+      "jp": "ちゅうしゃじょう",
+      "kanji": "駐車場",
+      "en": "parking lot"
+    },
+    {
+      "jp": "～め",
+      "kanji": "～目",
+      "en": "the ～th (order)"
+    },
+    {
+      "jp": "おしょうがつ",
+      "kanji": "お正月",
+      "en": "New Year's Day"
+    },
+    {
+      "jp": "ごちそうさまでした",
+      "kanji": "—",
+      "en": "That was delicious"
+    }
+  ],
+  "24": [
+    {
+      "jp": "くれます",
+      "kanji": "—",
+      "en": "give (me)"
+    },
+    {
+      "jp": "つれていきます",
+      "kanji": "連れて行きます",
+      "en": "take (someone)"
+    },
+    {
+      "jp": "つれてきます",
+      "kanji": "連れて来ます",
+      "en": "bring (someone)"
+    },
+    {
+      "jp": "おくります",
+      "kanji": "送ります",
+      "en": "escort (someone)"
+    },
+    {
+      "jp": "しょうかいします",
+      "kanji": "紹介します",
+      "en": "introduce"
+    },
+    {
+      "jp": "あんないします",
+      "kanji": "案内します",
+      "en": "show around"
+    },
+    {
+      "jp": "せつめいします",
+      "kanji": "説明します",
+      "en": "explain"
+    },
+    {
+      "jp": "いれます",
+      "kanji": "—",
+      "en": "make (coffee)"
+    },
+    {
+      "jp": "おじいさん",
+      "kanji": "—",
+      "en": "grandfather / old man"
+    },
+    {
+      "jp": "おばあさん",
+      "kanji": "—",
+      "en": "grandmother / old woman"
+    },
+    {
+      "jp": "じゅんび",
+      "kanji": "準備",
+      "en": "preparation"
+    },
+    {
+      "jp": "いみ",
+      "kanji": "意味",
+      "en": "meaning"
+    },
+    {
+      "jp": "おかし",
+      "kanji": "お菓子",
+      "en": "sweets / snacks"
+    },
+    {
+      "jp": "ぜんぶ",
+      "kanji": "全部",
+      "en": "all"
+    },
+    {
+      "jp": "じぶんで",
+      "kanji": "自分で",
+      "en": "by oneself"
+    }
+  ],
+  "25": [
+    {
+      "jp": "かんがえます",
+      "kanji": "考えます",
+      "en": "think / consider"
+    },
+    {
+      "jp": "つきます",
+      "kanji": "着きます",
+      "en": "arrive (at the station)"
+    },
+    {
+      "jp": "りゅうがくします",
+      "kanji": "留学します",
+      "en": "study abroad"
+    },
+    {
+      "jp": "とります",
+      "kanji": "取ります",
+      "en": "grow old"
+    },
+    {
+      "jp": "いなか",
+      "kanji": "田舎",
+      "en": "countryside / hometown"
+    },
+    {
+      "jp": "たいしかん",
+      "kanji": "大使館",
+      "en": "embassy"
+    },
+    {
+      "jp": "グループ",
+      "kanji": "—",
+      "en": "group"
+    },
+    {
+      "jp": "チャンス",
+      "kanji": "—",
+      "en": "chance"
+    },
+    {
+      "jp": "おく",
+      "kanji": "億",
+      "en": "hundred million"
+    },
+    {
+      "jp": "もし",
+      "kanji": "—",
+      "en": "if ～"
+    },
+    {
+      "jp": "いくら",
+      "kanji": "—",
+      "en": "however ～ / even if ～"
     }
   ]
 }
