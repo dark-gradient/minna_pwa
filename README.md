@@ -3,7 +3,9 @@
 A standalone installable Progressive Web App for vocabulary practice.
 
 ## Included
-- Lessons 1–20 from the uploaded source
+- Lessons 1–25 from the exact source dataset
+- Comprehensive dataset (855 Vocabulary entries, 121 Kaiwa entries)
+- Accurate display of Japanese phrases (Kanji support)
 - Single lesson, lesson range, or all available lessons
 - Japanese → English, English → Japanese, or mixed direction
 - Randomized sessions
