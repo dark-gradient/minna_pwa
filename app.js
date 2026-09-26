@@ -352,7 +352,10 @@ function executeTeacherStep() {
         executeTeacherStep();
       }, 700);
     };
-    utterance.onerror = () => stopLesson();
+    utterance.onerror = () => {
+      if (lessonSpeechStage.startsWith("PAUSED") || lessonSpeechStage === "STOPPED") return;
+      stopLesson();
+    };
     speechSynthesis.speak(utterance);
     
   } else if (lessonSpeechStage === "ENGLISH") {
@@ -373,7 +376,10 @@ function executeTeacherStep() {
         executeTeacherStep();
       }, 1100);
     };
-    utterance.onerror = () => stopLesson();
+    utterance.onerror = () => {
+      if (lessonSpeechStage.startsWith("PAUSED") || lessonSpeechStage === "STOPPED") return;
+      stopLesson();
+    };
     speechSynthesis.speak(utterance);
   }
 }
@@ -390,10 +396,10 @@ function pauseLesson() {
 }
 
 function stopLesson() {
-  if (window.speechSynthesis) speechSynthesis.cancel();
   clearTimeout(playbackTimeout);
   lessonSpeechStage = "STOPPED";
   lessonSpeechIndex = 0;
+  if (window.speechSynthesis) speechSynthesis.cancel();
   highlightRow(-1);
   togglePlaybackUI(false);
 }
