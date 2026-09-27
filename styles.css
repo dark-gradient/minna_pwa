@@ -12,6 +12,7 @@
     --indigo: #233d62;
     --line: #e5d8c5;
     --gold: #c79a43;
+    --green: #137333;
     --shadow: 0 16px 45px rgba(49, 38, 24, .09)
 }
 [data-theme=dark] {
@@ -25,6 +26,7 @@
     --indigo: #9bb7dd;
     --line: #383d42;
     --gold: #d9b45f;
+    --green: #81c995;
     --shadow: 0 16px 45px rgba(0, 0, 0, .25)
 }
 body {
@@ -257,6 +259,10 @@ h1 span {
     background: var(--bg);
     color: var(--ink);
     outline: none
+}
+select option {
+    background: var(--surface);
+    color: var(--ink)
 }
 .primary-btn,
 .secondary-btn,
@@ -606,6 +612,18 @@ footer span {
     background: #4d2020 !important;
     border-color: #f28b82 !important;
     color: #f28b82 !important
+}
+[data-theme=dark] .mcq-option:disabled {
+    color: var(--ink);
+    opacity: 0.7;
+}
+[data-theme=dark] .mcq-option.correct:disabled {
+    color: #81c995 !important;
+    opacity: 1;
+}
+[data-theme=dark] .mcq-option.incorrect:disabled {
+    color: #f28b82 !important;
+    opacity: 1;
 }
 @media(max-width:650px) {
     .mcq-grid {
