@@ -106,7 +106,7 @@
         <div class="answer-actions" style="justify-content:center; gap: 16px; margin-top: 30px;">
           <button class="secondary-btn" onclick="showView('home')">Back to Practice</button>
           <button class="secondary-btn" onclick="startPractice()">Practice Again</button>
-          <button class="primary-btn" onclick="reviewWrongAnswers()">Review Wrong Answers</button>
+          <button id="btnReviewWrong" class="primary-btn" onclick="reviewWrongAnswers()">Review Wrong Answers</button>
         </div>
       </div>
     </section>
@@ -151,7 +151,7 @@
       
       <div class="panel setup" style="margin-bottom: 40px;" id="reviewSetupPanel">
         <div class="section-head"><div><span class="kicker">PRACTICE</span><h2>Practice Wrong Answers</h2></div><span id="wrongPoolCount" class="count-pill"></span></div>
-        <div class="controls-grid" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="controls-grid" id="reviewControls">
           <label>Scope
             <select id="reviewScopeMode">
               <option value="lesson">Single lesson</option>
@@ -167,7 +167,7 @@
           </label>
           <button id="startReviewBtn" class="primary-btn" style="margin-top:auto; height:44px;">Start Review →</button>
         </div>
-        <div style="text-align:right; margin-top:10px;">
+        <div class="clear-btn-wrap">
           <button id="clearWrongBtn" class="secondary-btn compact" style="color:var(--red); border-color:var(--red2);">Clear Wrong Answers</button>
         </div>
       </div>
@@ -176,7 +176,7 @@
     </section>
   </main>
 
-  <footer>みんなのことば <span>•</span> Minna Vocabulary Trainer <span>•</span> local practice app</footer>
+  <footer><span class="footer-text">みんなのことば</span> <span class="footer-dot">•</span> <span class="footer-text">Minna Vocabulary Trainer</span> <span class="footer-dot">•</span> <span class="footer-text">local practice app</span></footer>
 </div>
 <script src="app.js"></script>
 <script>

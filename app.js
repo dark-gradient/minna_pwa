@@ -120,6 +120,7 @@ function selectOption(idx) {
   if (state.answered) return;
   state.answered = true;
   const selected = state.currentOptions[idx];
+  state.lastSelectedObj = selected;
   const isCorrect = selected.id === state.current.id;
   state.lastCorrect = isCorrect;
   state.currentOptions.forEach((opt, i) => {
@@ -137,7 +138,23 @@ function grade(){
   } else {
     markWrong(state.current.id);
   }
-  state.history.push({id:state.current.id,known:state.lastCorrect});
+  const isJpEn = state.current.dir === "jp-en";
+  const qJp = state.current.kanji && state.current.kanji !== "—" ? state.current.kanji + " (" + state.current.jp + ")" : state.current.jp;
+  const qEn = state.current.en;
+  
+  const selJp = state.lastSelectedObj ? (state.lastSelectedObj.kanji && state.lastSelectedObj.kanji !== "—" ? state.lastSelectedObj.kanji + " (" + state.lastSelectedObj.jp + ")" : state.lastSelectedObj.jp) : "";
+  const selEn = state.lastSelectedObj ? state.lastSelectedObj.en : "";
+
+  state.history.push({
+    id: state.current.id,
+    lesson: state.current.lesson,
+    dir: state.current.dir,
+    questionText: isJpEn ? qJp : qEn,
+    selectedAnswer: state.lastSelectedObj ? (isJpEn ? selEn : selJp) : "Timeout",
+    correctAnswer: isJpEn ? qEn : qJp,
+    known: state.lastCorrect
+  });
+  
   state.index++;
   nextQuestion();
 }
@@ -145,14 +162,50 @@ function finishQuiz(){
   $("progressBar").style.width="100%";
   $("quizProgress").textContent="Done";
   showView("resultsView");
-  const wrongCount = state.history.filter(h => !h.known).length;
+  const wrongList = state.history.filter(h => !h.known);
+  const wrongCount = wrongList.length;
   const acc = Math.round((state.score / state.queue.length) * 100);
-  $("resultsSummary").innerHTML = `
-    <div class="big-number">${state.score} / ${state.queue.length}</div>
-    <p>Accuracy: ${acc}%</p>
-    <p>Correct: ${state.score} | Incorrect: ${wrongCount}</p>
-    <p>${wrongCount} questions added to Wrong Answers.</p>
+  
+  let html = `
+    <div class="results-desktop-split">
+      <div style="background:var(--surface); border:1px solid var(--line); border-radius:22px; padding:30px; text-align:center; box-shadow:var(--shadow);">
+        <div class="big-number">${state.score} / ${state.queue.length}</div>
+        <div style="font-size: 24px; font-weight: 800; color: var(--muted); margin-bottom: 20px;">${acc}%</div>
+        <div style="display:flex; justify-content:center; gap:20px; font-weight:700; font-size:14px;">
+          <span style="color: #137333;">✓ Correct &nbsp; ${state.score}</span>
+          <span style="color: var(--red);">✕ Wrong &nbsp; ${wrongCount}</span>
+        </div>
+      </div>
   `;
+  
+  if (wrongCount === 0) {
+    html += `
+      <div style="flex:1; display:flex; align-items:center; justify-content:center;">
+        <div style="color: #137333; font-weight: 800; font-size:18px; text-align:center;">Perfect!<br><span style="font-size:14px; color: var(--muted);">All questions correct.</span></div>
+      </div>
+    </div>`;
+    $("btnReviewWrong").style.display = "none";
+  } else {
+    html += `
+      <div>
+        <div class="eyebrow" style="margin-bottom: 15px; text-align:center;">WHAT YOU GOT WRONG</div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+    `;
+    wrongList.forEach(w => {
+      html += `
+        <div style="background:var(--surface2); border-radius:12px; padding:16px; border:1px solid var(--line); text-align:left;">
+          <div style="font-size:18px; font-weight:800; font-family:'Noto Sans JP'; margin-bottom:8px;">${escapeHtml(w.questionText)}</div>
+          <div style="font-size:13px; color:var(--red); font-weight:600; margin-bottom:4px;">Your: ${escapeHtml(w.selectedAnswer)}</div>
+          <div style="font-size:13px; color:#137333; font-weight:600; margin-bottom:8px;">Correct: ${escapeHtml(w.correctAnswer)}</div>
+          <div class="lesson-tag" style="display:inline-block; padding: 4px 8px; font-size:10px;">Lesson ${w.lesson}</div>
+        </div>
+      `;
+    });
+    html += `</div></div></div>`;
+    $("btnReviewWrong").style.display = "block";
+  }
+  
+  $("resultsSummary").innerHTML = html;
 }
 function quickStart(n){
   $("scopeMode").value="lesson";$("lessonFrom").value=n;updatePoolCount();startPractice();
