@@ -43,7 +43,7 @@ function reviewWrongAnswers() {
   showView("review");
 }
 function showView(view){
-  const map={home:"homeView",quiz:"quizView",lessons:"lessonsView",lessonDetail:"lessonDetailView",kaiwa:"kaiwaView",review:"reviewView"};
+  const map={home:"homeView",quiz:"quizView",lessons:"lessonsView",lessonDetail:"lessonDetailView",kaiwa:"kaiwaView",review:"reviewView",resultsView:"resultsView"};
   Object.values(map).forEach(id=>$(id).classList.remove("active"));
   $(map[view]).classList.add("active"); state.view=view;
   document.querySelectorAll(".nav-btn").forEach(b=>b.classList.toggle("active",b.dataset.view===view));
