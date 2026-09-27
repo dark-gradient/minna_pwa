@@ -48,7 +48,8 @@ body:before {
 }
 button,
 select {
-    font: inherit
+    font: inherit;
+    color: inherit;
 }
 button {
     cursor: pointer
@@ -385,6 +386,7 @@ select option {
     gap: 14px
 }
 .lesson-card {
+    color: var(--ink);
     border: 1px solid var(--line);
     background: var(--surface);
     border-radius: 18px;
