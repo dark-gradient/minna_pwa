@@ -645,3 +645,30 @@ footer span {
     footer .footer-dot { display: none; }
 }
 footer .footer-dot { margin: 0 6px; color: var(--gold); }
+@media(max-width: 650px) {
+    body.quiz-active { overflow: hidden; height: 100dvh; margin: 0; padding: 0; background: var(--bg); }
+    body.quiz-active .topbar, body.quiz-active footer { display: none !important; }
+    body.quiz-active .app-shell { padding: 0 !important; height: 100dvh; display: flex; flex-direction: column; }
+    body.quiz-active .content-area { height: 100dvh; padding: 0 !important; flex: 1; display: flex; flex-direction: column; }
+    body.quiz-active #quizView {
+        height: 100dvh; display: flex; flex-direction: column;
+        padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+        box-sizing: border-box;
+    }
+    body.quiz-active .quiz-top { flex: none; margin-bottom: 8px; }
+    body.quiz-active .progress { flex: none; margin-bottom: 12px; }
+    body.quiz-active .quiz-card { flex: 1; display: flex; flex-direction: column; justify-content: space-between; margin: 0; padding: 16px 12px; min-height: 0; height: auto; }
+    body.quiz-active .quiz-label { flex: none; margin-bottom: 8px; }
+    body.quiz-active .question { flex: none; font-size: clamp(28px, 8vw, 40px); line-height: 1.2; margin-bottom: 12px; }
+    body.quiz-active .lesson-tag, body.quiz-active .quiz-tip { display: none !important; }
+    body.quiz-active .mcq-grid { flex: 1; display: flex !important; flex-direction: column; gap: 8px; margin: 0; justify-content: center; min-height: 0; }
+    body.quiz-active .mcq-option { flex: 1; max-height: 70px; min-height: 48px; padding: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; width: 100%; margin: 0; }
+    body.quiz-active .answer-actions { flex: none; margin-top: 12px; min-height: 48px; }
+    body.quiz-active .answer-actions button { width: 100%; height: 48px; }
+    body.quiz-active .answer-actions.hidden { display: flex !important; visibility: hidden; }
+}
+@media (max-height: 600px) and (max-width: 650px) {
+    body.quiz-active .question { font-size: 24px; margin-bottom: 4px; }
+    body.quiz-active .quiz-card { padding: 8px; }
+    body.quiz-active .mcq-option { min-height: 44px; padding: 6px; font-size: 14px; }
+}

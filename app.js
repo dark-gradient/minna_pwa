@@ -47,6 +47,7 @@ function showView(view){
   Object.values(map).forEach(id=>$(id).classList.remove("active"));
   $(map[view]).classList.add("active"); state.view=view;
   document.querySelectorAll(".nav-btn").forEach(b=>b.classList.toggle("active",b.dataset.view===view));
+  document.body.classList.toggle("quiz-active", view==="quiz");
   if(view==="review") renderReview();
   window.scrollTo({top:0,behavior:"smooth"});
 }
