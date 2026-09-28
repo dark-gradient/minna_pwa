@@ -51,6 +51,7 @@
               <option value="lesson">Single lesson</option>
               <option value="range">Lesson range</option>
               <option value="all">All available lessons</option>
+              <option value="focus">Focus Words</option>
             </select>
           </label>
           <label id="lessonFromWrap">Lesson
@@ -133,7 +134,20 @@
         </div>
       </div>
       <div id="detailHeader" class="detail-header"></div>
-      <div id="vocabTable" class="vocab-table"></div>
+      <div id="lessonSelectionControls" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 12px; font-size: 13px;">
+        <div>
+          <button class="nav-btn compact" onclick="selectAllInLesson()">Select All</button>
+          <button class="nav-btn compact" onclick="clearLessonSelection()">Clear Selection</button>
+        </div>
+        <div id="desktopFocusAction" class="hidden">
+          <button class="primary-btn compact" onclick="addSelectionToFocus()">? Add to Focus (<span class="sel-count">0</span>)</button>
+        </div>
+      </div>
+      <div id="vocabTable" class="vocab-table" style="padding-bottom: 80px;"></div>
+      <div id="mobileFocusActionBar" class="focus-action-bar hidden">
+        <div><strong class="sel-count">0</strong> selected</div>
+        <button class="primary-btn compact" onclick="addSelectionToFocus()">Add to Focus</button>
+      </div>
     </section>
 
     <section id="kaiwaView" class="view">
@@ -173,6 +187,28 @@
       </div>
 
       <div id="wrongListContainer"></div>
+    </section>
+
+    <section id="focusView" class="view">
+      <div class="page-head" style="margin-bottom: 20px;">
+        <div>
+          <div class="eyebrow">YOUR WORDS</div>
+          <h1>Focus Words</h1>
+        </div>
+        <div id="focusStats" class="big-number">0</div>
+      </div>
+      
+      <div class="panel setup" style="margin-bottom: 40px;" id="focusSetupPanel">
+        <div class="section-head"><div><span class="kicker">PRACTICE</span><h2>Practice Focus Words</h2></div></div>
+        <div class="controls-grid" style="grid-template-columns: 1fr;">
+          <button id="startFocusBtn" class="primary-btn" onclick="startFocusPractice()" style="height:44px; width:100%;">Start Focus Practice ?</button>
+        </div>
+        <div class="clear-btn-wrap">
+          <button onclick="confirmClearFocus()" class="secondary-btn compact" style="color:var(--red); border-color:var(--red2);">Clear All Focus Words</button>
+        </div>
+      </div>
+
+      <div id="focusListContainer"></div>
     </section>
   </main>
 

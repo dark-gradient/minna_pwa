@@ -1,5 +1,9 @@
 let VOCAB = {},
   KAIWA = {};
+let focusWords = JSON.parse(localStorage.getItem("minna_focus_words")) || {};
+function saveFocusWords() { localStorage.setItem("minna_focus_words", JSON.stringify(focusWords)); }
+let lessonSelection = new Set();
+let currentLessonId = null;
 let state = {
   view: "home",
   pool: [],
@@ -168,6 +172,8 @@ function showView(view) {
     kaiwa: "kaiwaView",
     review: "reviewView",
     resultsView: "resultsView",
+    focus: "focusView",
+    focus: "focusView",
   };
   Object.values(map).forEach((id) => $(id).classList.remove("active"));
   $(map[view]).classList.add("active");
@@ -177,10 +183,22 @@ function showView(view) {
     .forEach((b) => b.classList.toggle("active", b.dataset.view === view));
   document.body.classList.toggle("quiz-active", view === "quiz");
   if (view === "review") renderReview();
+  if (view === "focus") renderFocusView();
+  if (view === "focus") renderFocusView();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 function poolForScope() {
   const mode = $("scopeMode").value;
+  if (mode === "focus") {
+    let all = [];
+    for (let l in VOCAB) {
+      VOCAB[l].forEach((v, i) => {
+        let id = +l + "-" + i;
+        if (focusWords[id]) all.push({ ...v, lesson: +l, id });
+      });
+    }
+    return all;
+  }
   let nums = [];
   if (mode === "lesson") nums = [$("lessonFrom").value];
   else if (mode === "range") {
@@ -195,7 +213,7 @@ function poolForScope() {
 }
 function updatePoolCount() {
   const mode = $("scopeMode").value;
-  $("lessonFromWrap").classList.toggle("hidden", mode === "all");
+  $("lessonFromWrap").classList.toggle("hidden", mode === "all" || mode === "focus");
   $("lessonToWrap").classList.toggle("hidden", mode !== "range");
   $("poolCount").textContent = `${poolForScope().length} words`;
 }
@@ -457,15 +475,13 @@ function renderLessons() {
 }
 let currentLessonWords = [];
 function openLesson(n) {
+  currentLessonId = n;
+  lessonSelection.clear();
   currentLessonWords = VOCAB[n] || [];
   $("detailHeader").innerHTML =
     `<div class="eyebrow">LESSON ${String(n).padStart(2, "0")}</div><h1>${lessonNames[n]}</h1><p>${VOCAB[n].length} vocabulary entries • separate from Kaiwa.</p>`;
-  $("vocabTable").innerHTML = VOCAB[n]
-    .map(
-      (v, i) =>
-        `<div class="vocab-row" id="vocab-row-${i}" style="align-items: center; transition: 0.2s;"><div style="display:flex; align-items:center; gap:12px;"><button class="speaker-btn" aria-label="Pronounce ${escapeHtml(v.jp)}" onclick="pronounceWord('${escapeHtml(v.jp.replace(/'/g, "\\'"))}', this)" style="border:none;background:var(--surface2);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">🔊</button><span class="vocab-jp">${escapeHtml(v.kanji && v.kanji !== "—" ? v.kanji + " (" + v.jp + ")" : v.jp)}</span></div><span class="vocab-en">${escapeHtml(v.en)}</span></div>`,
-    )
-    .join("");
+  renderLessonVocabRows();
+  updateFocusSelectionUI();
   $("detailPractice").onclick = () => {
     $("scopeMode").value = "lesson";
     $("lessonFrom").value = n;
@@ -473,6 +489,150 @@ function openLesson(n) {
     startPractice();
   };
   showView("lessonDetail");
+}
+
+function renderLessonVocabRows() {
+  $("vocabTable").innerHTML = currentLessonWords
+    .map(
+      (v, i) => {
+        let id = currentLessonId + "-" + i;
+        let isFocused = !!focusWords[id];
+        let isSelected = lessonSelection.has(id);
+        return `<div class="vocab-row selectable ${isSelected ? 'selected' : ''}" id="vocab-row-${i}" onclick="toggleVocabSelection('${id}')" style="align-items: center; transition: 0.2s;">
+          <div style="display:flex; align-items:center; gap:0;">
+            <div class="vocab-checkbox"></div>
+            <button class="speaker-btn" aria-label="Pronounce ${escapeHtml(v.jp)}" onclick="event.stopPropagation(); pronounceWord('${escapeHtml(v.jp.replace(/'/g, "\\'"))}', this)" style="border:none;background:var(--surface2);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;margin-right:12px;">🔊</button>
+            <span class="vocab-jp">${escapeHtml(v.kanji && v.kanji !== "—" ? v.kanji + " (" + v.jp + ")" : v.jp)}</span>
+            ${isFocused ? `<span class="focus-badge">✓ In Focus</span>` : ''}
+          </div>
+          <span class="vocab-en">${escapeHtml(v.en)}</span>
+        </div>`;
+      }
+    )
+    .join("");
+}
+
+function toggleVocabSelection(id) {
+  if (lessonSelection.has(id)) lessonSelection.delete(id);
+  else lessonSelection.add(id);
+  let idx = id.split("-")[1];
+  let row = $("vocab-row-" + idx);
+  if (row) row.classList.toggle('selected', lessonSelection.has(id));
+  updateFocusSelectionUI();
+}
+
+function selectAllInLesson() {
+  currentLessonWords.forEach((v, i) => {
+    let id = currentLessonId + "-" + i;
+    lessonSelection.add(id);
+    let row = $("vocab-row-" + i);
+    if (row) row.classList.add('selected');
+  });
+  updateFocusSelectionUI();
+}
+
+function clearLessonSelection() {
+  lessonSelection.clear();
+  currentLessonWords.forEach((v, i) => {
+    let row = $("vocab-row-" + i);
+    if (row) row.classList.remove('selected');
+  });
+  updateFocusSelectionUI();
+}
+
+function updateFocusSelectionUI() {
+  let count = lessonSelection.size;
+  document.querySelectorAll('.sel-count').forEach(el => el.textContent = count);
+  let mobileBar = $('mobileFocusActionBar');
+  let desktopBar = $('desktopFocusAction');
+  if (count > 0) {
+    if (mobileBar) { mobileBar.classList.remove('hidden'); setTimeout(() => mobileBar.classList.add('visible'), 10); }
+    if (desktopBar) desktopBar.classList.remove('hidden');
+  } else {
+    if (mobileBar) { mobileBar.classList.remove('visible'); setTimeout(() => mobileBar.classList.add('hidden'), 300); }
+    if (desktopBar) desktopBar.classList.add('hidden');
+  }
+}
+
+function addSelectionToFocus() {
+  let added = 0;
+  lessonSelection.forEach(id => {
+    if (!focusWords[id]) {
+      focusWords[id] = { vocabId: id, lesson: +id.split("-")[0], addedAt: Date.now() };
+      added++;
+    }
+  });
+  if (added > 0) saveFocusWords();
+  clearLessonSelection();
+  renderLessonVocabRows();
+}
+
+function renderFocusView() {
+  let keys = Object.keys(focusWords);
+  $("focusStats").textContent = keys.length;
+  if (keys.length === 0) {
+    $("focusListContainer").innerHTML = `
+      <div class="quiz-card" style="min-height: auto; padding: 30px;">
+        <div style="font-size: 24px; font-weight: 800; font-family: 'Noto Sans JP'; color: var(--muted);">まだありません</div>
+        <p style="color: var(--muted);">No Focus Words yet. Select words you keep forgetting from any lesson and add them here.</p>
+        <button class="secondary-btn" onclick="showView('lessons')" style="margin-top: 15px;">Go to Lessons</button>
+      </div>`;
+    return;
+  }
+  
+  let html = "";
+  let byLesson = {};
+  keys.forEach(k => {
+    let l = focusWords[k].lesson;
+    if (!byLesson[l]) byLesson[l] = [];
+    byLesson[l].push(k);
+  });
+  
+  let sortedLessons = Object.keys(byLesson).map(Number).sort((a,b)=>a-b);
+  sortedLessons.forEach(l => {
+    html += `<div class="focus-list-header">LESSON ${String(l).padStart(2, "0")}</div>`;
+    html += `<div class="vocab-table">`;
+    byLesson[l].forEach(id => {
+      let idx = id.split("-")[1];
+      let v = VOCAB[l][idx];
+      if (!v) return;
+      html += `<div class="vocab-row" style="align-items: center;">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <button class="speaker-btn" aria-label="Pronounce ${escapeHtml(v.jp)}" onclick="pronounceWord('${escapeHtml(v.jp.replace(/'/g, "\\'"))}', this)" style="border:none;background:var(--surface2);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">🔊</button>
+          <span class="vocab-jp">${escapeHtml(v.kanji && v.kanji !== "—" ? v.kanji + " (" + v.jp + ")" : v.jp)}</span>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
+          <span class="vocab-en">${escapeHtml(v.en)}</span>
+          <button class="secondary-btn compact" style="font-size:11px; padding:4px 8px; color:var(--red);" onclick="removeFromFocus('${id}')">Remove</button>
+        </div>
+      </div>`;
+    });
+    html += `</div>`;
+  });
+  $("focusListContainer").innerHTML = html;
+}
+
+function removeFromFocus(id) {
+  delete focusWords[id];
+  saveFocusWords();
+  renderFocusView();
+}
+
+function confirmClearFocus() {
+  if (Object.keys(focusWords).length === 0) return;
+  if (confirm("Clear all Focus Words? This will remove all manually selected practice words.")) {
+    focusWords = {};
+    saveFocusWords();
+    renderFocusView();
+  }
+}
+
+function startFocusPractice() {
+  if (Object.keys(focusWords).length === 0) return;
+  $("scopeMode").value = "focus";
+  $("sessionSize").value = "all";
+  updatePoolCount();
+  startPractice();
 }
 function renderKaiwa() {
   $("kaiwaGrid").innerHTML = lessons
