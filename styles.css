@@ -1,4 +1,4 @@
-* {
+﻿* {
     box-sizing: border-box
 }
 :root {
@@ -750,7 +750,7 @@ footer .footer-dot { margin: 0 6px; color: var(--gold); }
     border-color: var(--red);
 }
 .vocab-row.selected .vocab-checkbox::after {
-    content: "?";
+    content: "🌸";
     color: white;
     font-size: 14px;
     font-weight: bold;
