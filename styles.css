@@ -571,11 +571,11 @@ select option {
     font-weight: 700
 }
 .vocab-en {
-    color: #ff2d78;
+    color: var(--pink);
     font-size: 13px;
     text-align: right;
     font-weight: 700;
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.18);
 }
 .kaiwa-grid {
     display: grid;
@@ -903,9 +903,9 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
 
 .focus-badge {
     font-size: 10px;
-    background: #ff2d78;
-    color: #fff;
-    border: 2px solid #fff;
+    background: var(--pink);
+    color: #17252A;
+    border: 2px solid #17252A;
     padding: 3px 7px;
     border-radius: 6px;
     font-weight: 800;
@@ -913,7 +913,7 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
     margin-left: 8px;
     display: inline-block;
     vertical-align: middle;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    text-shadow: none;
 }
 [data-theme=dark] 
 
