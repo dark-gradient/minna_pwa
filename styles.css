@@ -571,11 +571,14 @@ select option {
     font-weight: 700
 }
 .vocab-en {
-    color: var(--pink);
+    color: var(--yellow);
+    background: var(--pink);
     font-size: 13px;
     text-align: right;
     font-weight: 700;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.18);
+    padding: 2px 7px;
+    border-radius: 5px;
+    display: inline-block;
 }
 .kaiwa-grid {
     display: grid;
