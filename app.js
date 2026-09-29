@@ -596,18 +596,14 @@ function selectAllInLesson() {
   currentLessonWords.forEach((v, i) => {
     let id = currentLessonId + "-" + i;
     lessonSelection.add(id);
-    let row = $("vocab-row-" + i);
-    if (row) row.classList.add('selected');
   });
+  renderLessonVocabRows();
   updateFocusSelectionUI();
 }
 
 function clearLessonSelection() {
   lessonSelection.clear();
-  currentLessonWords.forEach((v, i) => {
-    let row = $("vocab-row-" + i);
-    if (row) row.classList.remove('selected');
-  });
+  renderLessonVocabRows();
   updateFocusSelectionUI();
 }
 
