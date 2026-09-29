@@ -865,26 +865,29 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
 }
 
 .vocab-checkbox {
-    width: 22px;
-    height: 22px;
-    border: 2px solid var(--text-secondary);
-    border-radius: 6px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--text-primary) !important;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     margin-right: 12px;
-    background: var(--surface);
+    background: var(--yellow) !important;
+    box-shadow: 2px 2px 0 var(--text-primary) !important;
 }
 .vocab-row.selected .vocab-checkbox {
-    background: var(--pink);
-    border-color: var(--pink);
+    background: var(--pink) !important;
+    border-color: var(--text-primary) !important;
 }
 .vocab-row.selected .vocab-checkbox::after {
-    content: "🌸";
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
+    content: "X";
+    color: var(--yellow) !important;
+    font-family: 'DotGothic16', sans-serif !important;
+    font-size: 18px;
+    font-weight: 900;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
 }
 
 .focus-badge {
@@ -1482,4 +1485,34 @@ body.welcome-active {
     text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
     font-size: 18px !important;
     letter-spacing: 2px;
+}
+
+/* Custom Checkboxes */
+.vocab-row input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    background: var(--yellow);
+    border: 2px solid var(--text-primary);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 2px 2px 0 var(--text-primary);
+    margin-right: 12px;
+}
+.vocab-row input[type="checkbox"]:checked {
+    background: var(--pink);
+}
+.vocab-row input[type="checkbox"]:checked::after {
+    content: 'X';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--yellow);
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary);
 }
