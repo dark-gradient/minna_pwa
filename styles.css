@@ -500,9 +500,12 @@ select option {
     margin: 7px 0
 }
 .big-number {
-    font-size: 34px;
-    font-weight: 800;
-    color: var(--pink)
+    font-size: 34px !important;
+    font-weight: 800 !important;
+    color: var(--pink) !important;
+    font-family: 'DotGothic16', sans-serif !important;
+    -webkit-text-stroke: 0px !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary), 3px 3px 0px var(--text-primary) !important;
 }
 .lesson-grid {
     display: grid;
@@ -1133,7 +1136,7 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
 .secondary-btn:active { transform: translateY(2px) translateX(2px); box-shadow: 0px 0px 0px var(--border-strong); }
 
 .panel, .quiz-card, .lesson-card {
-    background: rgba(253, 251, 247, 0.55); /* Translucent surface */
+    background: rgba(253, 251, 247, 0.35); /* Translucent surface */
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 2px solid var(--border);
@@ -1403,20 +1406,21 @@ body.welcome-active {
 
 .page-head h1 {
     color: var(--pink) !important;
-    -webkit-text-stroke: 2px var(--text-primary);
-    text-shadow: 4px 4px 0px var(--text-primary);
+    -webkit-text-stroke: 0px !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary), 4px 4px 0px var(--text-primary) !important;
     font-family: 'DotGothic16', sans-serif !important;
     font-size: 42px !important;
 }
 .page-head .eyebrow {
     color: var(--yellow) !important;
     font-weight: 800;
-    -webkit-text-stroke: 1px var(--text-primary);
+    -webkit-text-stroke: 0px !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary), 2px 2px 0px var(--text-primary) !important;
     font-size: 18px !important;
     letter-spacing: 2px;
 }
 .page-head {
-    padding-top: 24px !important;
+    padding-top: 12px !important;
 }
 
 .lesson-card, .lesson-card *, .practice-card, .practice-card * {
