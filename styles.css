@@ -805,8 +805,24 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
    NEW RETRO UI STYLES
    ========================================= */
 
-/* Topbar Hide (Mobile First) */
-.topbar { display: none; } /* We will hide it or re-purpose it */
+/* Topbar Redesign */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: var(--bg-primary);
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.brand { display: flex; align-items: center; cursor: pointer; }
+.brand-jp { font-size: 16px; font-weight: 800; color: var(--text-primary); font-family: 'Noto Sans JP'; }
+.brand-en { font-size: 10px; font-weight: 700; color: var(--text-secondary); letter-spacing: 1px; }
+.header-actions { display: flex; align-items: center; }
+.icon-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-primary); }
+ /* We will hide it or re-purpose it */
 
 /* Bottom Navigation */
 .bottom-nav {
@@ -839,7 +855,7 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
     transition: 0.2s;
 }
 .nav-btn.active {
-    color: var(--text-primary);
+    color: #17252A; /* Black on pink even in dark mode */
     background: var(--pink);
 }
 .nav-icon {
@@ -978,7 +994,7 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
 .test-badge {
     display: inline-block;
     background: var(--pink);
-    color: var(--text-primary);
+    color: #17252A;
     padding: 4px 8px;
     border-radius: 4px;
     font-weight: 800;
