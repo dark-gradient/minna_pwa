@@ -545,7 +545,7 @@ select option {
 }
 .detail-header {
     padding: 18px 0 24px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: none !important;
     margin-bottom: 20px
 }
 .detail-header h1 {
@@ -1515,4 +1515,81 @@ body.welcome-active {
     font-size: 18px;
     font-weight: 900;
     text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary);
+}
+
+.detail-header p {
+    color: var(--yellow) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+    font-weight: 800 !important;
+    font-family: 'DotGothic16', sans-serif !important;
+    letter-spacing: 1px;
+}
+
+#lessonDetailView .back-btn {
+    color: var(--pink) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+    font-family: 'DotGothic16', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+}
+#lessonDetailView .back-btn:hover {
+    color: var(--yellow) !important;
+}
+
+#lessonDetailView select {
+    background: rgba(253, 251, 247, 0.35) !important;
+    backdrop-filter: blur(4px) !important;
+    border: 2px solid var(--text-primary) !important;
+    color: var(--yellow) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+    font-family: 'DotGothic16', sans-serif !important;
+    font-weight: 800 !important;
+    border-radius: 4px;
+    padding: 4px 8px;
+    box-shadow: 2px 2px 0 var(--text-primary) !important;
+}
+
+#lessonDetailView label, #lessonSelectionControls button {
+    color: var(--pink) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+    font-family: 'DotGothic16', sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+    font-size: 16px !important;
+    opacity: 1 !important;
+}
+#lessonSelectionControls button:hover {
+    color: var(--yellow) !important;
+}
+
+#lessonDetailView .secondary-btn {
+    background: var(--pink) !important;
+    color: var(--yellow) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+    font-family: 'DotGothic16', sans-serif !important;
+    font-weight: 800 !important;
+    border: 2px solid var(--text-primary) !important;
+    box-shadow: 2px 2px 0 var(--text-primary) !important;
+    font-size: 16px !important;
+}
+#lessonDetailView .secondary-btn:hover {
+    background: var(--yellow) !important;
+    color: var(--pink) !important;
+}
+
+.practice-card .card-en {
+    color: var(--pink) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+    font-weight: 800 !important;
+    font-family: 'DotGothic16', sans-serif !important;
+    opacity: 1 !important;
+    font-size: 15px !important;
+    letter-spacing: 1px;
+}
+.practice-card .card-jp {
+    color: var(--yellow) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+    font-weight: 800 !important;
+    font-family: 'DotGothic16', sans-serif !important;
 }
