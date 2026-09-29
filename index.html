@@ -32,15 +32,36 @@
 
   <main>
 
-    <section id="welcomeView" class="view">
-      <div class="welcome-container">
-        <div class="welcome-logo">みんなのことば</div>
-        <h1 class="welcome-title">MINNA KOTOBA</h1>
-        <p class="welcome-subtitle">Learn Japanese.<br>Step by step. Together.</p>
-        <button class="primary-btn welcome-start-btn" onclick="showView('home')">
-          <span class="jp-text">はじめる</span>
-          <span class="en-text">GET STARTED</span>
-        </button>
+        <section id="welcomeView" class="view">
+      <div class="welcome-container" style="display: flex; flex-direction: column; height: 100vh; background: var(--bg-primary); overflow: hidden; padding-bottom: 40px;">
+        
+        <div style="text-align: center; margin-top: 80px; position: relative;">
+          <h1 style="font-family: 'Courier New', monospace; font-weight: 900; font-size: 52px; line-height: 1; margin: 0; color: var(--text-primary); text-transform: uppercase;">
+            Minna<br>Kotoba
+            <span style="position: absolute; right: 20%; top: 0; font-size: 30px;">🌸</span>
+          </h1>
+          <div style="font-weight: 800; font-size: 14px; margin-top: 12px; color: var(--text-primary);">みんなのことば</div>
+          <p style="font-family: 'Courier New', monospace; font-size: 13px; font-weight: 700; margin-top: 24px; color: var(--text-primary);">Learn Japanese.<br>Step by step. Together.</p>
+        </div>
+
+        <div style="flex: 1; display: flex; align-items: center; justify-content: center; position: relative; margin: 20px 0;">
+          <img src="fuji.jpg" alt="Mount Fuji Pixel Art" style="width: 100%; max-width: 400px; object-fit: contain;">
+        </div>
+
+        <div style="padding: 0 40px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <button class="primary-btn" onclick="showView('home')" style="width: 100%; max-width: 300px; background: var(--pink); color: var(--text-primary); border: 3px solid var(--text-primary); border-radius: 12px; padding: 16px; font-size: 24px; font-weight: 800; box-shadow: 4px 4px 0px var(--text-primary); display: flex; justify-content: space-between; align-items: center;">
+            <span style="flex: 1; text-align: center;">はじめる</span>
+            <span>→</span>
+          </button>
+          <div style="font-family: 'Courier New', monospace; font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--text-primary);">GET STARTED</div>
+          
+          <div style="display: flex; gap: 8px; margin-top: 24px;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--pink);"></div>
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--border-strong);"></div>
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--border-strong);"></div>
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--border-strong);"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -50,10 +71,7 @@
           <h1>Minna Kotoba</h1>
           <span class="subtitle">N5 JOURNEY</span>
         </div>
-        <div class="home-actions">
-          <button class="icon-btn" aria-label="Notifications">🔔</button>
-          <button class="icon-btn" aria-label="Profile">🐱</button>
-        </div>
+        
       </div>
       
       <div class="dashboard-scroll">
@@ -61,7 +79,7 @@
         <div class="streak-card">
           <div class="streak-content">
             <h2>Keep going!</h2>
-            <p>🔥 You're on a 7 day streak</p>
+            <p id="streakText">🔥 You're on a 0 day streak</p>
           </div>
           <div class="streak-mascot">
              <!-- Placeholder for pixel cat -->
@@ -82,7 +100,7 @@
             <div class="card-en">Vocabulary</div>
             <div class="card-progress">
               <div class="progress-bar"><div class="progress-fill" style="width: 60%;"></div></div>
-              <span class="progress-text">12/20</span>
+              <span class="progress-text" id="statVocab">0/0</span>
             </div>
           </div>
           <div class="practice-card bg-pink">
@@ -91,7 +109,7 @@
             <div class="card-en">Grammar</div>
             <div class="card-progress">
               <div class="progress-bar"><div class="progress-fill" style="width: 53%;"></div></div>
-              <span class="progress-text">8/15</span>
+              <span class="progress-text" id="statGrammar">0/0</span>
             </div>
           </div>
           <div class="practice-card bg-blue">
@@ -100,16 +118,16 @@
             <div class="card-en">Listening</div>
             <div class="card-progress">
               <div class="progress-bar"><div class="progress-fill" style="width: 40%;"></div></div>
-              <span class="progress-text">6/15</span>
+              <span class="progress-text" id="statListening">0/0</span>
             </div>
           </div>
           <div class="practice-card bg-yellow">
             <div class="card-icon">💬</div>
-            <div class="card-jp">読解</div>
-            <div class="card-en">Reading</div>
+            <div class="card-jp">漢字</div>
+            <div class="card-en">Kanji</div>
             <div class="card-progress">
               <div class="progress-bar"><div class="progress-fill" style="width: 40%;"></div></div>
-              <span class="progress-text">4/10</span>
+              <span class="progress-text" id="statKanji">0/0</span>
             </div>
           </div>
         </div>
@@ -119,11 +137,11 @@
           <h2>N5 Progress</h2>
           <span class="chevron">›</span>
         </div>
-        <div class="progress-card">
+        <div class="progress-card" style="cursor:pointer;" onclick="showView('lessons')">
           <div class="progress-row">
-            <span class="progress-percent">38%</span>
-            <div class="progress-bar-large"><div class="progress-fill-large" style="width: 38%;"></div></div>
-            <span class="progress-topics">48/125<br>Topics</span>
+            <span class="progress-percent" id="n5Percent">0%</span>
+            <div class="progress-bar-large"><div class="progress-fill-large" id="n5ProgressBar" style="width: 0%;"></div></div>
+            <span class="progress-topics" id="n5Topics">0/0<br>Words</span>
           </div>
         </div>
       </div>

@@ -1292,3 +1292,11 @@ body.home-active .topbar {
     font-size: 10px;
     font-weight: 800;
 }
+
+body.welcome-active .topbar,
+body.welcome-active .bottom-nav {
+    display: none !important;
+}
+body.welcome-active {
+    padding-bottom: 0 !important;
+}

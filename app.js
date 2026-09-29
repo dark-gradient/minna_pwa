@@ -159,7 +159,15 @@ function init() {
   updateReviewPoolCount();
   const saved = localStorage.getItem("mnn-theme");
   if (saved) document.documentElement.dataset.theme = saved;
+
+  let currentStreak = parseInt(localStorage.getItem('minna_streak') || '0', 10);
+  if (currentStreak === 0 && !localStorage.getItem('minna_last_active')) {
+    showView('welcomeView');
+  } else {
+    showView('home');
+  }
 }
+
 function reviewWrongAnswers() {
   showView("review");
 }
@@ -190,6 +198,8 @@ function showView(view) {
     .forEach((b) => b.classList.toggle("active", b.dataset.view === view));
   document.body.classList.toggle("quiz-active", view === "quiz");
   document.body.classList.toggle("home-active", view === "home");
+  document.body.classList.toggle("welcome-active", view === "welcomeView");
+  if (view === "home") updateDashboardStats();
   if (view === "review") renderReview();
   if (view === "focus") renderFocusView();
   if (view === "focus") renderFocusView();
@@ -1089,4 +1099,34 @@ function startMockTest() {
       alert("No questions available for Mock Test yet.");
     }
   }, 100);
+}
+
+
+function updateDashboardStats() {
+  let streak = parseInt(localStorage.getItem('minna_streak') || '0', 10);
+  let streakText = document.getElementById('streakText');
+  if (streakText) streakText.innerHTML = '🔥 You\'re on a ' + streak + ' day streak';
+  
+  // Calculate vocab stats
+  let totalVocab = allVocab.length || 800; // fallback if not loaded
+  
+  // We don't have grammar/listening/kanji data yet, so we just show 0
+  let statVocab = document.getElementById('statVocab');
+  if (statVocab) statVocab.innerText = '0/' + totalVocab;
+  
+  let statGrammar = document.getElementById('statGrammar');
+  if (statGrammar) statGrammar.innerText = '0/0';
+  
+  let statListening = document.getElementById('statListening');
+  if (statListening) statListening.innerText = '0/0';
+  
+  let statKanji = document.getElementById('statKanji');
+  if (statKanji) statKanji.innerText = '0/0';
+  
+  let n5Percent = document.getElementById('n5Percent');
+  let n5Topics = document.getElementById('n5Topics');
+  let n5ProgressBar = document.getElementById('n5ProgressBar');
+  if (n5Percent) n5Percent.innerText = '0%';
+  if (n5Topics) n5Topics.innerHTML = '0/' + totalVocab + '<br>Words';
+  if (n5ProgressBar) n5ProgressBar.style.width = '0%';
 }
