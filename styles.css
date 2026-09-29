@@ -500,12 +500,13 @@ select option {
     margin: 7px 0
 }
 .big-number {
+    letter-spacing: 2px !important;
     font-size: 34px !important;
     font-weight: 800 !important;
     color: var(--pink) !important;
     font-family: 'DotGothic16', sans-serif !important;
     -webkit-text-stroke: 0px !important;
-    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary), 3px 3px 0px var(--text-primary) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
 }
 .lesson-grid {
     display: grid;
@@ -557,7 +558,10 @@ select option {
     gap: 9px
 }
 .vocab-row {
-    background: var(--surface);
+    background: rgba(253, 251, 247, 0.35) !important;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 2px solid var(--border) !important;
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 13px 15px;
@@ -1407,7 +1411,7 @@ body.welcome-active {
 .page-head h1 {
     color: var(--pink) !important;
     -webkit-text-stroke: 0px !important;
-    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary), 4px 4px 0px var(--text-primary) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
     font-family: 'DotGothic16', sans-serif !important;
     font-size: 42px !important;
 }
@@ -1415,7 +1419,7 @@ body.welcome-active {
     color: var(--yellow) !important;
     font-weight: 800;
     -webkit-text-stroke: 0px !important;
-    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary), 2px 2px 0px var(--text-primary) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
     font-size: 18px !important;
     letter-spacing: 2px;
 }
@@ -1461,4 +1465,21 @@ body.welcome-active {
 
 .nav-btn.active, .nav-btn:hover {
     background: rgba(253, 251, 247, 0.25) !important;
+}
+
+.detail-header h1 {
+    color: var(--pink) !important;
+    -webkit-text-stroke: 0px !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+    font-family: 'DotGothic16', sans-serif !important;
+    font-size: 42px !important;
+    margin: 12px 0 !important;
+}
+.detail-header .eyebrow {
+    color: var(--yellow) !important;
+    font-weight: 800;
+    -webkit-text-stroke: 0px !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+    font-size: 18px !important;
+    letter-spacing: 2px;
 }

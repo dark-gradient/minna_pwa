@@ -238,6 +238,7 @@ function showView(view) {
     .querySelectorAll(".nav-btn")
     .forEach((b) => b.classList.toggle("active", b.dataset.view === view));
   document.body.className = '';
+  document.body.style.removeProperty('background-image');
   document.body.classList.add(view + '-active');
   if (view === 'welcomeView') {
       document.body.classList.add('welcome-active');
@@ -539,6 +540,11 @@ function renderLessons() {
 let currentLessonWords = [];
 function openLesson(n) {
   currentLessonId = n;
+  
+  // Set custom background image for the lesson, or fallback to the learn background
+  const imgUrl = (n >= 1 && n <= 3) ? 'bg_lesson_' + n + '.jpg' : 'bg_learn.jpg';
+  document.body.style.setProperty('background-image', 'url(' + imgUrl + ')', 'important');
+  
   lessonSelection.clear();
   currentLessonWords = VOCAB[n] || [];
   $("detailHeader").innerHTML =
