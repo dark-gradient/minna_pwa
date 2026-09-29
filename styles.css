@@ -78,8 +78,7 @@ body.quiz-active { background-image: url('bg_practice.jpg') !important; }
 }
 .bottom-nav {
     background: rgba(253, 251, 247, 0.35) !important;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    
     border-top: 2px solid var(--border-strong) !important;
 }
 
@@ -558,16 +557,14 @@ select option {
     gap: 9px
 }
 .vocab-row {
-    background: rgba(253, 251, 247, 0.35) !important;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background: rgba(253, 251, 247, 0.45) !important;
     border: 2px solid var(--border) !important;
-    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 13px 15px;
     display: flex;
     justify-content: space-between;
-    gap: 18px
+    gap: 18px;
+    transform: translateZ(0); /* Hardware acceleration */
 }
 .vocab-jp {
     font-family: "Noto Sans JP";
@@ -832,8 +829,7 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
     left: 16px;
     right: 16px;
     background: rgba(253, 251, 247, 0.35) !important;
-    backdrop-filter: blur(4px) !important;
-    -webkit-backdrop-filter: blur(4px) !important;
+    
     border: 2px solid var(--text-primary) !important;
     border-radius: 8px !important;
     padding: 12px 16px !important;
@@ -1157,8 +1153,7 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
 
 .panel, .quiz-card, .lesson-card {
     background: rgba(253, 251, 247, 0.35); /* Translucent surface */
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    
     border: 2px solid var(--border);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -1537,8 +1532,7 @@ body.welcome-active {
     font-family: 'DotGothic16', sans-serif !important;
     letter-spacing: 1px;
     background: rgba(253, 251, 247, 0.35) !important;
-    backdrop-filter: blur(4px) !important;
-    -webkit-backdrop-filter: blur(4px) !important;
+    
     display: inline-block;
     padding: 6px 12px;
     border-radius: 4px;
@@ -1584,8 +1578,7 @@ body.welcome-active {
 
 #lessonSelectionControls button {
     background: rgba(253, 251, 247, 0.35) !important;
-    backdrop-filter: blur(4px) !important;
-    -webkit-backdrop-filter: blur(4px) !important;
+    
     border: 2px solid var(--text-primary) !important;
     box-shadow: 2px 2px 0 var(--text-primary) !important;
     border-radius: 4px;
