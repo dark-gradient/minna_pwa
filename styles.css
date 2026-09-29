@@ -40,7 +40,7 @@ body {
 .app-shell {
     transition: background 0.3s ease;
 }
-body.welcome-active .app-shell { background: url('fuji.jpg') center/cover no-repeat !important; }
+body.welcome-active .app-shell { background: url('fuji_wide.jpg') center/cover no-repeat !important; }
 body.home-active .app-shell { background: url('bg_home.jpg') center/cover no-repeat !important; }
 body.lessons-active .app-shell { background: url('bg_learn.jpg') center/cover no-repeat !important; }
 body.practiceSetup-active .app-shell { background: url('bg_practice.jpg') center/cover no-repeat !important; }
