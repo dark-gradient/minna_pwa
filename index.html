@@ -204,16 +204,16 @@
           <button type="button" class="nav-btn compact" onclick="clearLessonSelection()">Clear Selection</button>
         </div>
         <div id="desktopFocusAction" class="hidden" style="display:flex; gap:8px;">
-          <button type="button" class="secondary-btn compact" style="color:var(--red); border-color:var(--red);" onclick="removeSelectionFromFocus()">- Remove</button>
-          <button type="button" class="primary-btn compact" onclick="addSelectionToFocus()">+ Add to Focus (<span class="sel-count">0</span>)</button>
+          <button id="desktopRemoveFocusBtn" type="button" class="secondary-btn compact" style="color:var(--red); border-color:var(--red);" onclick="removeSelectionFromFocus()">- Remove</button>
+          <button id="desktopAddFocusBtn" type="button" class="primary-btn compact" onclick="addSelectionToFocus()">+ Add to Focus (<span class="sel-count">0</span>)</button>
         </div>
       </div>
       <div id="vocabTable" class="vocab-table" style="padding-bottom: 80px;"></div>
       <div id="mobileFocusActionBar" class="focus-action-bar hidden">
         <div><strong class="sel-count">0</strong> selected</div>
         <div style="display:flex; gap:8px;">
-          <button type="button" class="secondary-btn compact" style="color:var(--red); border-color:var(--red);" onclick="removeSelectionFromFocus()">- Remove</button>
-          <button type="button" class="primary-btn compact" onclick="addSelectionToFocus()">+ Add to Focus</button>
+          <button id="mobileRemoveFocusBtn" type="button" class="secondary-btn compact" style="color:var(--red); border-color:var(--red);" onclick="removeSelectionFromFocus()">- Remove</button>
+          <button id="mobileAddFocusBtn" type="button" class="primary-btn compact" onclick="addSelectionToFocus()">+ Add to Focus</button>
         </div>
       </div>
     </section>

@@ -612,7 +612,23 @@ function updateFocusSelectionUI() {
   document.querySelectorAll('.sel-count').forEach(el => el.textContent = count);
   let mobileBar = $('mobileFocusActionBar');
   let desktopBar = $('desktopFocusAction');
+  
   if (count > 0) {
+    let hasFocus = false;
+    let hasNonFocus = false;
+    lessonSelection.forEach(id => {
+      if (focusWords[id]) hasFocus = true;
+      else hasNonFocus = true;
+    });
+
+    let displayAdd = hasNonFocus ? 'inline-block' : 'none';
+    let displayRemove = hasFocus ? 'inline-block' : 'none';
+
+    if ($('desktopAddFocusBtn')) $('desktopAddFocusBtn').style.display = displayAdd;
+    if ($('mobileAddFocusBtn')) $('mobileAddFocusBtn').style.display = displayAdd;
+    if ($('desktopRemoveFocusBtn')) $('desktopRemoveFocusBtn').style.display = displayRemove;
+    if ($('mobileRemoveFocusBtn')) $('mobileRemoveFocusBtn').style.display = displayRemove;
+
     if (mobileBar) { mobileBar.classList.remove('hidden'); setTimeout(() => mobileBar.classList.add('visible'), 10); }
     if (desktopBar) desktopBar.classList.remove('hidden');
   } else {
