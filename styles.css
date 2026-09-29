@@ -557,7 +557,7 @@ select option {
     gap: 9px
 }
 .vocab-row {
-    background: rgba(253, 251, 247, 0.45) !important;
+    background: rgba(253, 251, 247, 0.35) !important;
     border: 2px solid var(--border) !important;
     border-radius: 12px;
     padding: 13px 15px;
