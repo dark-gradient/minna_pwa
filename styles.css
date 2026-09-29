@@ -56,7 +56,10 @@ body.quiz-active .app-shell { background-image: url('bg_practice.jpg') !importan
     background: transparent !important;
 }
 .bottom-nav {
-    background: rgba(247, 241, 231, 0.95) !important; /* Slightly transparent solid color, NOT glass */
+    background: rgba(247, 241, 231, 0.6) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(247, 241, 231, 0.8);
 }
 
 /* Make text readable against backgrounds */
