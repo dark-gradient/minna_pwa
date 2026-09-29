@@ -364,10 +364,15 @@ h1 span {
     flex-direction: column;
     gap: 8px;
     font-size: 11px;
-    color: var(--text-secondary);
+    color: var(--yellow);
+    background: var(--pink);
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: .06em
+    letter-spacing: .06em;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 2px solid var(--text-primary);
+    box-shadow: 2px 2px 0 var(--text-primary);
 }
 .controls-grid select {
     height: 44px;
