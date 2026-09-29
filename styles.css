@@ -77,10 +77,10 @@ body.quiz-active { background-image: url('bg_practice.jpg') !important; }
     background: transparent !important;
 }
 .bottom-nav {
-    background: rgba(247, 241, 231, 0.6) !important;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-top: 1px solid rgba(247, 241, 231, 0.8);
+    background: rgba(253, 251, 247, 0.35) !important;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-top: 2px solid var(--border-strong) !important;
 }
 
 /* Make text readable against backgrounds */
@@ -1435,4 +1435,30 @@ body.welcome-active {
     font-size: 16px !important;
     color: var(--text-primary) !important;
     font-weight: 600 !important;
+}
+
+/* Pink and yellow text inside lesson and practice cards */
+.lesson-card .lesson-no {
+    color: var(--pink) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+    font-size: 14px !important;
+}
+.lesson-card p {
+    color: var(--yellow) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+    font-weight: 800 !important;
+    font-size: 14px !important;
+}
+.practice-card h2 {
+    color: var(--pink) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+}
+.practice-card p {
+    color: var(--yellow) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+    font-weight: 800 !important;
+}
+
+.nav-btn.active, .nav-btn:hover {
+    background: rgba(253, 251, 247, 0.25) !important;
 }
