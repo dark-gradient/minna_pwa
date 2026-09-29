@@ -550,7 +550,7 @@ function openLesson(n) {
   lessonSelection.clear();
   currentLessonWords = VOCAB[n] || [];
   $("detailHeader").innerHTML =
-    `<div class="eyebrow">LESSON ${String(n).padStart(2, "0")}</div><h1>${lessonNames[n]}</h1><p>${VOCAB[n].length} vocabulary entries • separate from Kaiwa.</p>`;
+    `<div class="eyebrow">LESSON ${String(n).padStart(2, "0")}</div><h1>${lessonNames[n]}</h1><p> vocabulary entries</p>`;
   renderLessonVocabRows();
   updateFocusSelectionUI();
   $("detailPractice").onclick = () => {

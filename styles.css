@@ -1523,7 +1523,7 @@ body.welcome-active {
     font-weight: 800 !important;
     font-family: 'DotGothic16', sans-serif !important;
     letter-spacing: 1px;
-    background: rgba(253, 251, 247, 0.7) !important;
+    background: rgba(253, 251, 247, 0.35) !important;
     backdrop-filter: blur(4px) !important;
     -webkit-backdrop-filter: blur(4px) !important;
     display: inline-block;
