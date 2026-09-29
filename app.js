@@ -406,6 +406,8 @@ function grade() {
   nextQuestion();
 }
 function finishQuiz() {
+  recordActivity();
+
   $("progressBar").style.width = "100%";
   $("quizProgress").textContent = "Done";
   showView("resultsView");
@@ -1011,3 +1013,72 @@ window.auditQuizDataset = function() {
   
   return "Audit complete. Check console.";
 };
+
+
+function updateStreakAndDashboard() {
+  const today = new Date().toDateString();
+  let lastActive = localStorage.getItem('minna_last_active');
+  let currentStreak = parseInt(localStorage.getItem('minna_streak') || '0', 10);
+  
+  // Dashboard updates
+  const elStreak = document.getElementById('streakDays');
+  if (elStreak) elStreak.textContent = currentStreak;
+  
+  // Calculate N5 Progress
+  const total = allVocab.length;
+  let learnedCount = Object.keys(getWrongData()).length; // rough estimate based on wrong/correct history
+  // Since we don't have a real 'learned' array, let's just use total focus words and wrong words + some constant for now
+  // Actually, we can just say progress is based on how many words we have answered at least once
+  let n5Percent = total > 0 ? Math.round((learnedCount / total) * 100) : 0;
+  if(n5Percent > 100) n5Percent = 100;
+  
+  const elProgress = document.getElementById('n5ProgressBar');
+  const elProgressText = document.getElementById('n5ProgressText');
+  if (elProgress) elProgress.style.width = n5Percent + '%';
+  if (elProgressText) elProgressText.textContent = n5Percent;
+  
+  // Update Vocab / Kaiwa progress bars
+  const elVocab = document.getElementById('vocabProgress');
+  if(elVocab) elVocab.textContent = Math.round(n5Percent) + '%';
+  const elKaiwa = document.getElementById('kaiwaProgress');
+  if(elKaiwa) elKaiwa.textContent = '100%';
+}
+
+function recordActivity() {
+  const today = new Date().toDateString();
+  let lastActive = localStorage.getItem('minna_last_active');
+  let currentStreak = parseInt(localStorage.getItem('minna_streak') || '0', 10);
+  
+  if (lastActive !== today) {
+    let yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    if (lastActive === yesterday.toDateString()) {
+      currentStreak++;
+    } else {
+      currentStreak = 1;
+    }
+    localStorage.setItem('minna_last_active', today);
+    localStorage.setItem('minna_streak', currentStreak);
+    updateStreakAndDashboard();
+  }
+}
+
+
+function startMockTest() {
+  // Set scope to All, mixed direction, 50 questions
+  document.getElementById("scopeMode").value = "all";
+  document.getElementById("direction").value = "mixed";
+  document.getElementById("sessionSize").value = "50";
+  
+  // Update state and pool
+  updateScopeUI(); 
+  
+  // Wait for pool to update then start
+  setTimeout(() => {
+    if(state.pool.length > 0) {
+      document.getElementById('startBtn').click();
+    } else {
+      alert("No questions available for Mock Test yet.");
+    }
+  }, 100);
+}

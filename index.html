@@ -13,7 +13,7 @@
 <title>みんなのことば — Minna Vocabulary Trainer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,18 +23,59 @@
       <div class="brand-mark">日</div>
       <div><div class="brand-jp">みんなのことば</div><div class="brand-en">MINNA VOCAB TRAINER</div></div>
     </div>
-    <nav>
-      <button data-view="home" class="nav-btn active">Practice</button>
-      <button data-view="lessons" class="nav-btn">Lessons</button>
-      <button data-view="kaiwa" class="nav-btn">会話 Kaiwa</button>
-      <button data-view="review" class="nav-btn">Review</button>
-    </nav>
+    
     <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">◐</button>
   </header>
 
   <main>
+
+    <section id="welcomeView" class="view">
+      <div class="welcome-container">
+        <div class="welcome-logo">みんなのことば</div>
+        <h1 class="welcome-title">MINNA KOTOBA</h1>
+        <p class="welcome-subtitle">Learn Japanese.<br>Step by step. Together.</p>
+        <button class="primary-btn welcome-start-btn" onclick="showView('home')">
+          <span class="jp-text">はじめる</span>
+          <span class="en-text">GET STARTED</span>
+        </button>
+      </div>
+    
+      <div class="dashboard">
+        <div class="streak-card">
+          <div class="streak-icon">🔥</div>
+          <div class="streak-text">
+            <strong><span id="streakDays">0</span> DAY STREAK</strong>
+            <div>Keep going!</div>
+          </div>
+        </div>
+        
+        <div class="section-head"><span class="kicker">TODAY\'S PRACTICE</span></div>
+        <div class="dashboard-grid">
+          <div class="dash-card" onclick="showView('lessons')">
+            <div class="dash-card-jp">語彙</div>
+            <div class="dash-card-en">Vocabulary</div>
+            <div class="dash-progress" id="vocabProgress">--%</div>
+          </div>
+          <div class="dash-card" onclick="showView('kaiwa')">
+            <div class="dash-card-jp">会話</div>
+            <div class="dash-card-en">Kaiwa</div>
+            <div class="dash-progress" id="kaiwaProgress">--%</div>
+          </div>
+        </div>
+        
+        <div class="section-head" style="margin-top:20px;"><span class="kicker">N5 PROGRESS</span></div>
+        <div class="progress-card">
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="n5ProgressBar" style="width:0%"></div>
+          </div>
+          <div class="progress-text"><span id="n5ProgressText">0</span>%</div>
+        </div>
+      </div>
+
+    </section>
+
     <section id="homeView" class="view active">
-      <div class="hero">
+      <div class="hero" style="display:none;">
         <div>
           <div class="eyebrow">日本語 • DAILY PRACTICE</div>
           <h1>Learn it. Recall it.<br><span>使ってみよう。</span></h1>
@@ -43,41 +84,7 @@
         <div class="hero-seal"><span>語</span><small>ごい</small></div>
       </div>
 
-      <div class="panel setup">
-        <div class="section-head"><div><span class="kicker">01</span><h2>Choose your practice</h2></div><span id="poolCount" class="count-pill"></span></div>
-        <div class="controls-grid">
-          <label>Scope
-            <select id="scopeMode">
-              <option value="lesson">Single lesson</option>
-              <option value="range">Lesson range</option>
-              <option value="all">All available lessons</option>
-              <option value="focus">Focus Words</option>
-            </select>
-          </label>
-          <label id="lessonFromWrap">Lesson
-            <select id="lessonFrom"></select>
-          </label>
-          <label id="lessonToWrap" class="hidden">To lesson
-            <select id="lessonTo"></select>
-          </label>
-          <label>Question direction
-            <select id="direction">
-              <option value="mixed">Mixed — Japanese ↔ English</option>
-              <option value="jp-en">Japanese → English</option>
-              <option value="en-jp">English → Japanese</option>
-            </select>
-          </label>
-          <label>Session size
-            <select id="sessionSize">
-              <option value="10">10 questions</option>
-              <option value="20" selected>20 questions</option>
-              <option value="30">30 questions</option>
-              <option value="all">All in pool</option>
-            </select>
-          </label>
-        </div>
-        <button id="startBtn" class="primary-btn">Start practice <span>→</span></button>
-      </div>
+      
 
 
     </section>
@@ -210,9 +217,114 @@
 
       <div id="focusListContainer"></div>
     </section>
+  
+    <section id="practiceSetupView" class="view">
+      <div class="page-head"><div><div class="eyebrow">CUSTOM PRACTICE</div><h1>Practice Setup</h1></div></div>
+      <div class="panel setup">
+        <div class="section-head"><div><span class="kicker">01</span><h2>Choose your practice</h2></div><span id="poolCount" class="count-pill"></span></div>
+        <div class="controls-grid">
+          <label>Scope
+            <select id="scopeMode">
+              <option value="lesson">Single lesson</option>
+              <option value="range">Lesson range</option>
+              <option value="all">All available lessons</option>
+              <option value="focus">Focus Words</option>
+            </select>
+          </label>
+          <label id="lessonFromWrap">Lesson
+            <select id="lessonFrom"></select>
+          </label>
+          <label id="lessonToWrap" class="hidden">To lesson
+            <select id="lessonTo"></select>
+          </label>
+          <label>Question direction
+            <select id="direction">
+              <option value="mixed">Mixed — Japanese ↔ English</option>
+              <option value="jp-en">Japanese → English</option>
+              <option value="en-jp">English → Japanese</option>
+            </select>
+          </label>
+          <label>Session size
+            <select id="sessionSize">
+              <option value="10">10 questions</option>
+              <option value="20" selected>20 questions</option>
+              <option value="30">30 questions</option>
+              <option value="all">All in pool</option>
+            </select>
+          </label>
+        </div>
+        <button id="startBtn" class="primary-btn">Start practice <span>→</span></button>
+      </div>
+    </section>
+    
+  
+    <section id="mockTestView" class="view">
+      <div class="page-head"><div><div class="eyebrow">MOCK TEST</div><h1>N5 Practice Exam</h1></div></div>
+      <div class="panel">
+        <div class="test-header">
+          <div class="test-badge">N5</div>
+          <h2>Try a full N5 mock test</h2>
+          <p>Real format • Timed</p>
+        </div>
+        <div class="test-meta">
+          <span>⏱ 60 min</span>
+          <span>📝 50 questions</span>
+        </div>
+        <button id="startMockTestBtn" class="primary-btn" style="width:100%; margin-top:16px;" onclick="startMockTest()">START MOCK TEST →</button>
+      </div>
+      
+      <div class="section-head" style="margin-top: 30px;"><span class="kicker">PAST RESULTS</span></div>
+      <div id="mockTestResults">
+        <div class="empty-state">No mock tests yet.<br><br>Take your first N5 mock test →</div>
+      </div>
+    </section>
+
+  
+    <section id="moreView" class="view">
+      <div class="page-head"><div><h1>More</h1></div></div>
+      <div class="more-menu">
+        <button class="more-item" onclick="showView('review')">
+          <span>❌ Wrong Answers</span>
+          <span>→</span>
+        </button>
+        <button class="more-item" onclick="showView('focus')">
+          <span>🎯 Focus Words</span>
+          <span>→</span>
+        </button>
+        <button class="more-item" onclick="toggleTheme()">
+          <span>🌗 Toggle Dark Mode</span>
+          <span>→</span>
+        </button>
+      </div>
+    </section>
+
   </main>
 
   <footer><span class="footer-text">みんなのことば</span> <span class="footer-dot">•</span> <span class="footer-text">Minna Vocabulary Trainer</span> <span class="footer-dot">•</span> <span class="footer-text">local practice app</span></footer>
+
+  <nav class="bottom-nav">
+    <button data-view="home" class="nav-btn active">
+      <div class="nav-icon">⌂</div>
+      <span>Home</span>
+    </button>
+    <button data-view="lessons" class="nav-btn">
+      <div class="nav-icon">📚</div>
+      <span>Learn</span>
+    </button>
+    <button data-view="practiceSetup" class="nav-btn">
+      <div class="nav-icon">🎮</div>
+      <span>Practice</span>
+    </button>
+    <button data-view="mockTest" class="nav-btn">
+      <div class="nav-icon">📝</div>
+      <span>Mock Test</span>
+    </button>
+    <button data-view="more" class="nav-btn">
+      <div class="nav-icon">⋯</div>
+      <span>More</span>
+    </button>
+  </nav>
+
 </div>
 <script src="app.js"></script>
 <script>

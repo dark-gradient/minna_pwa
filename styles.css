@@ -2,38 +2,66 @@
     box-sizing: border-box
 }
 :root {
-    --bg: #f7f1e6;
-    --surface: #fffaf2;
-    --surface2: #f1e7d6;
-    --ink: #1d2d3a;
-    --muted: #6d756f;
-    --red: #b74336;
-    --red2: #d95f4f;
-    --indigo: #233d62;
-    --line: #e5d8c5;
-    --gold: #c79a43;
-    --green: #137333;
-    --shadow: 0 16px 45px rgba(49, 38, 24, .09)
+    --bg-primary: #F7F1E7;
+    --surface: #FCF8EF;
+    --surface-soft: #F3EBDD;
+
+    --text-primary: #17252A;
+    --text-secondary: #66706D;
+    --text-muted: #8A918C;
+
+    --green: #21483D;
+    --green-soft: #C9DCC7;
+
+    --pink: #F4A6A6;
+    --peach: #F6D9B8;
+    --blue: #C9DCE4;
+    --yellow: #F3D99B;
+
+    --border: #D8D0C3;
+    --border-strong: #BDB3A6;
+
+    --success: #6E9D78;
+    --warning: #D39A4A;
+    --error: #C96B63;
+    
+    --shadow: 4px 4px 0px rgba(29, 45, 58, 0.1);
+    --radius: 8px;
 }
+
 [data-theme=dark] {
-    --bg: #171a1d;
-    --surface: #202428;
-    --surface2: #292e33;
-    --ink: #f3eee5;
-    --muted: #b8b3a9;
-    --red: #df6a59;
-    --red2: #ef7b68;
-    --indigo: #9bb7dd;
-    --line: #383d42;
-    --gold: #d9b45f;
-    --green: #81c995;
-    --shadow: 0 16px 45px rgba(0, 0, 0, .25)
+    --bg-primary: #17211F;
+    --surface: #20302C;
+    --surface-soft: #283833;
+
+    --text-primary: #F7F1E7;
+    --text-secondary: #C2CBC5;
+    --text-muted: #909C95;
+
+    --green: #9FC4A9;
+    --green-soft: #334B41;
+
+    --pink: #F4A6A6;
+    --peach: #D8B58E;
+    --blue: #A9C4CE;
+    --yellow: #D8BA70;
+
+    --border: #40514B;
+    --border-strong: #566760;
+
+    --success: #6E9D78;
+    --warning: #D39A4A;
+    --error: #C96B63;
+
+    --shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    --radius: 8px;
 }
+
 body {
     margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: "DM Sans", "Noto Sans JP", sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Quicksand", "Noto Sans JP", sans-serif;
     transition: .2s
 }
 body:before {
@@ -65,10 +93,10 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
-    background: color-mix(in srgb, var(--bg) 94%, transparent);
+    background: color-mix(in srgb, var(--bg-primary) 94%, transparent);
     backdrop-filter: blur(14px);
     z-index: 5
 }
@@ -84,7 +112,7 @@ button {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    background: var(--red);
+    background: var(--pink);
     color: white;
     font-family: "Noto Sans JP";
     font-weight: 800;
@@ -98,7 +126,7 @@ button {
 .brand-en {
     font-size: 9px;
     letter-spacing: .17em;
-    color: var(--muted);
+    color: var(--text-secondary);
     font-weight: 700
 }
 nav {
@@ -108,23 +136,23 @@ nav {
 .nav-btn {
     border: 0;
     background: transparent;
-    color: var(--muted);
+    color: var(--text-secondary);
     padding: 9px 13px;
     border-radius: 10px;
     font-weight: 700
 }
 .nav-btn.active,
 .nav-btn:hover {
-    background: var(--surface2);
-    color: var(--ink)
+    background: var(--surface-soft);
+    color: var(--text-primary)
 }
 .icon-btn {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    border: 1px solid var(--line);
+    border: 1px solid var(--border);
     background: var(--surface);
-    color: var(--ink)
+    color: var(--text-primary)
 }
 main {
     padding: 42px 0
@@ -147,7 +175,7 @@ main {
     font-size: 11px;
     letter-spacing: .18em;
     font-weight: 800;
-    color: var(--red)
+    color: var(--pink)
 }
 h1 {
     font-size: clamp(38px, 5vw, 62px);
@@ -158,19 +186,19 @@ h1 {
 h1 span {
     font-family: "Noto Sans JP";
     font-size: .62em;
-    color: var(--red)
+    color: var(--pink)
 }
 .hero p,
 .page-head p {
     max-width: 650px;
-    color: var(--muted);
+    color: var(--text-secondary);
     line-height: 1.65;
     margin: 0
 }
 .hero-seal {
     width: 130px;
     height: 130px;
-    border: 1px solid var(--line);
+    border: 1px solid var(--border);
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -183,7 +211,7 @@ h1 span {
 .hero-seal:after {
     content: "";
     position: absolute;
-    border: 1px solid var(--gold);
+    border: 1px solid var(--yellow);
     border-radius: 50%
 }
 .hero-seal:before {
@@ -191,7 +219,7 @@ h1 span {
 }
 .hero-seal:after {
     inset: 17px;
-    border-color: var(--red)
+    border-color: var(--pink)
 }
 .hero-seal span {
     font-family: "Noto Sans JP";
@@ -209,7 +237,7 @@ h1 span {
 }
 .panel {
     background: var(--surface);
-    border: 1px solid var(--line);
+    border: 1px solid var(--border);
     border-radius: 22px;
     box-shadow: var(--shadow);
     padding: 25px
@@ -230,10 +258,10 @@ h1 span {
 .count-pill,
 .lesson-tag {
     font-size: 12px;
-    background: var(--surface2);
+    background: var(--surface-soft);
     padding: 7px 10px;
     border-radius: 999px;
-    color: var(--muted);
+    color: var(--text-secondary);
     font-weight: 700
 }
 .controls-grid {
@@ -247,23 +275,23 @@ h1 span {
     flex-direction: column;
     gap: 8px;
     font-size: 11px;
-    color: var(--muted);
+    color: var(--text-secondary);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: .06em
 }
 .controls-grid select {
     height: 44px;
-    border: 1px solid var(--line);
+    border: 1px solid var(--border);
     border-radius: 10px;
     padding: 0 12px;
-    background: var(--bg);
-    color: var(--ink);
+    background: var(--bg-primary);
+    color: var(--text-primary);
     outline: none
 }
 select option {
     background: var(--surface);
-    color: var(--ink)
+    color: var(--text-primary)
 }
 .primary-btn,
 .secondary-btn,
@@ -274,22 +302,22 @@ select option {
     font-weight: 800
 }
 .primary-btn {
-    background: var(--red);
+    background: var(--pink);
     color: white;
     box-shadow: 0 8px 18px #b7433630
 }
 .primary-btn:hover {
-    background: var(--red2);
+    background: var(--peach);
     transform: translateY(-1px)
 }
 .secondary-btn {
-    background: var(--surface2);
-    color: var(--ink);
-    border-color: var(--line)
+    background: var(--surface-soft);
+    color: var(--text-primary);
+    border-color: var(--border)
 }
 .back-btn {
     background: transparent;
-    color: var(--muted);
+    color: var(--text-secondary);
     padding-left: 0
 }
 .compact {
@@ -304,13 +332,13 @@ select option {
 .quiz-meta {
     display: flex;
     gap: 10px;
-    color: var(--muted);
+    color: var(--text-secondary);
     font-size: 12px;
     font-weight: 800
 }
 .progress {
     height: 5px;
-    background: var(--surface2);
+    background: var(--surface-soft);
     border-radius: 9px;
     overflow: hidden;
     margin-bottom: 28px
@@ -318,14 +346,14 @@ select option {
 .progress div {
     height: 100%;
     width: 0;
-    background: var(--red);
+    background: var(--pink);
     transition: .25s
 }
 .quiz-card {
     max-width: 820px;
     margin: 0 auto;
     background: var(--surface);
-    border: 1px solid var(--line);
+    border: 1px solid var(--border);
     border-radius: 25px;
     box-shadow: var(--shadow);
     min-height: 450px;
@@ -340,7 +368,7 @@ select option {
     font-size: 11px;
     letter-spacing: .16em;
     text-transform: uppercase;
-    color: var(--red);
+    color: var(--pink);
     font-weight: 900
 }
 .question {
@@ -356,7 +384,7 @@ select option {
     font-family: "Noto Sans JP";
     font-size: 25px;
     font-weight: 600;
-    color: var(--indigo);
+    color: var(--blue);
     min-height: 32px
 }
 .answer-actions {
@@ -364,7 +392,7 @@ select option {
 }
 .quiz-tip {
     text-align: center;
-    color: var(--muted);
+    color: var(--text-secondary);
     font-size: 12px;
     margin-top: 14px
 }
@@ -378,7 +406,7 @@ select option {
 .big-number {
     font-size: 34px;
     font-weight: 800;
-    color: var(--red)
+    color: var(--pink)
 }
 .lesson-grid {
     display: grid;
@@ -386,8 +414,8 @@ select option {
     gap: 14px
 }
 .lesson-card {
-    color: var(--ink);
-    border: 1px solid var(--line);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
     background: var(--surface);
     border-radius: 18px;
     padding: 20px;
@@ -401,7 +429,7 @@ select option {
 }
 .lesson-no {
     font-size: 11px;
-    color: var(--red);
+    color: var(--pink);
     font-weight: 900;
     letter-spacing: .12em
 }
@@ -412,12 +440,12 @@ select option {
 }
 .lesson-card p {
     margin: 0;
-    color: var(--muted);
+    color: var(--text-secondary);
     font-size: 12px
 }
 .detail-header {
     padding: 18px 0 24px;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--border);
     margin-bottom: 20px
 }
 .detail-header h1 {
@@ -431,7 +459,7 @@ select option {
 }
 .vocab-row {
     background: var(--surface);
-    border: 1px solid var(--line);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 13px 15px;
     display: flex;
@@ -443,7 +471,7 @@ select option {
     font-weight: 700
 }
 .vocab-en {
-    color: var(--muted);
+    color: var(--text-secondary);
     font-size: 13px;
     text-align: right
 }
@@ -454,13 +482,13 @@ select option {
 }
 .kaiwa-card {
     background: var(--surface);
-    border: 1px solid var(--line);
+    border: 1px solid var(--border);
     border-radius: 18px;
     overflow: hidden
 }
 .kaiwa-head {
     padding: 17px 18px;
-    background: var(--surface2);
+    background: var(--surface-soft);
     display: flex;
     justify-content: space-between;
     gap: 10px
@@ -476,7 +504,7 @@ select option {
     grid-template-columns: 125px 1fr;
     gap: 12px;
     padding: 9px 0;
-    border-bottom: 1px dashed var(--line);
+    border-bottom: 1px dashed var(--border);
     line-height: 1.5;
     font-size: 13px
 }
@@ -485,17 +513,17 @@ select option {
 }
 .speaker {
     font-weight: 800;
-    color: var(--red)
+    color: var(--pink)
 }
 footer {
     text-align: center;
-    color: var(--muted);
+    color: var(--text-secondary);
     font-size: 11px;
     padding: 30px 0 42px
 }
 footer span {
     margin: 0 6px;
-    color: var(--gold)
+    color: var(--yellow)
 }
 @media(max-width:900px) {
     .controls-grid {
@@ -579,12 +607,12 @@ footer span {
     margin-top: 20px
 }
 .mcq-option {
-    background: var(--surface2);
+    background: var(--surface-soft);
     border: 2px solid transparent;
     border-radius: 12px;
     padding: 16px;
     font-size: 18px;
-    color: var(--ink);
+    color: var(--text-primary);
     text-align: center;
     transition: 0.2s;
     font-family: "Noto Sans JP", sans-serif;
@@ -593,7 +621,7 @@ footer span {
 .mcq-option:hover:not(:disabled) {
     transform: translateY(-2px);
     box-shadow: var(--shadow);
-    border-color: var(--red)
+    border-color: var(--pink)
 }
 .mcq-option.correct {
     background: #e6f4ea !important;
@@ -616,7 +644,7 @@ footer span {
     color: #f28b82 !important
 }
 [data-theme=dark] .mcq-option:disabled {
-    color: var(--ink);
+    color: var(--text-primary);
     opacity: 0.7;
 }
 [data-theme=dark] .mcq-option.correct:disabled {
@@ -633,7 +661,7 @@ footer span {
     }
 }
 .active-row {
-    border-color: var(--red) !important;
+    border-color: var(--pink) !important;
     box-shadow: var(--shadow) !important;
     transform: scale(1.02) !important;
     transition: 0.2s
@@ -665,10 +693,10 @@ footer span {
 @media(max-width:650px) {
     footer .footer-dot { display: none; }
 }
-footer .footer-dot { margin: 0 6px; color: var(--gold); }
+footer .footer-dot { margin: 0 6px; color: var(--yellow); }
 @media(max-width: 650px) {
     /* Mobile quiz constraints to prevent scrolling */
-    body.quiz-active { overflow: hidden; height: 100dvh; margin: 0; padding: 0; background: var(--bg); }
+    body.quiz-active { overflow: hidden; height: 100dvh; margin: 0; padding: 0; background: var(--bg-primary); }
     body.quiz-active .topbar, body.quiz-active footer { display: none !important; }
     body.quiz-active .app-shell { padding: 0 !important; height: 100dvh; display: flex; flex-direction: column; }
     body.quiz-active .content-area { height: 100dvh; padding: 0 !important; flex: 1; display: flex; flex-direction: column; }
@@ -701,7 +729,7 @@ footer .footer-dot { margin: 0 6px; color: var(--gold); }
     left: 0;
     right: 0;
     background: var(--surface);
-    border-top: 1px solid var(--line);
+    border-top: 1px solid var(--border);
     padding: 16px 24px;
     padding-bottom: calc(16px + env(safe-area-inset-bottom));
     display: flex;
@@ -726,17 +754,17 @@ footer .footer-dot { margin: 0 6px; color: var(--gold); }
     user-select: none;
 }
 .vocab-row.selectable:hover {
-    border-color: var(--red);
+    border-color: var(--pink);
 }
 .vocab-row.selected {
-    background: var(--surface2);
-    border-color: var(--red);
+    background: var(--surface-soft);
+    border-color: var(--pink);
 }
 
 .vocab-checkbox {
     width: 22px;
     height: 22px;
-    border: 2px solid var(--muted);
+    border: 2px solid var(--text-secondary);
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -746,8 +774,8 @@ footer .footer-dot { margin: 0 6px; color: var(--gold); }
     background: var(--surface);
 }
 .vocab-row.selected .vocab-checkbox {
-    background: var(--red);
-    border-color: var(--red);
+    background: var(--pink);
+    border-color: var(--pink);
 }
 .vocab-row.selected .vocab-checkbox::after {
     content: "🌸";
@@ -758,8 +786,8 @@ footer .footer-dot { margin: 0 6px; color: var(--gold); }
 
 .focus-badge {
     font-size: 10px;
-    background: var(--gold);
-    color: var(--bg);
+    background: var(--yellow);
+    color: var(--bg-primary);
     padding: 3px 7px;
     border-radius: 6px;
     font-weight: 800;
@@ -770,4 +798,253 @@ footer .footer-dot { margin: 0 6px; color: var(--gold); }
 }
 [data-theme=dark] .focus-badge {
     color: #171a1d;
+}
+
+
+/* =========================================
+   NEW RETRO UI STYLES
+   ========================================= */
+
+/* Topbar Hide (Mobile First) */
+.topbar { display: none; } /* We will hide it or re-purpose it */
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: var(--bg-primary);
+    border-top: 2px solid var(--border);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: env(safe-area-inset-bottom);
+    z-index: 100;
+}
+.nav-btn {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    gap: 4px;
+    border-radius: 8px;
+    padding: 6px 12px;
+    transition: 0.2s;
+}
+.nav-btn.active {
+    color: var(--text-primary);
+    background: var(--pink);
+}
+.nav-icon {
+    font-size: 20px;
+}
+
+/* Page Spacing for Bottom Nav */
+.app-shell {
+    padding-bottom: 90px; 
+}
+
+/* Welcome Screen */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+}
+.welcome-logo {
+    font-family: 'Noto Sans JP';
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--pink);
+    margin-bottom: 12px;
+}
+.welcome-title {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin: 0 0 16px 0;
+}
+.welcome-subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+.welcome-start-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 32px;
+    border-radius: 12px;
+}
+.welcome-start-btn .jp-text { font-size: 20px; font-weight: 700; }
+.welcome-start-btn .en-text { font-size: 11px; letter-spacing: 2px; opacity: 0.8; }
+
+/* Dashboard Cards */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.streak-card {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: var(--shadow);
+}
+.streak-icon {
+    font-size: 32px;
+}
+.streak-text strong {
+    display: block;
+    font-size: 18px;
+    color: var(--text-primary);
+}
+.streak-text div {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.dash-card {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+.dash-card:active { transform: translateY(2px); box-shadow: none; }
+.dash-card-jp {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.dash-card-en {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+.dash-progress {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--green);
+}
+.progress-card {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: var(--shadow);
+}
+.progress-bar-container {
+    flex: 1;
+    height: 12px;
+    background: var(--bg-primary);
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+}
+.progress-bar-fill {
+    height: 100%;
+    background: var(--green);
+}
+.progress-text {
+    font-weight: 700;
+}
+
+/* Mock Test */
+.test-header {
+    margin-bottom: 20px;
+}
+.test-badge {
+    display: inline-block;
+    background: var(--pink);
+    color: var(--text-primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.test-header h2 { margin: 0 0 4px 0; font-size: 20px; }
+.test-header p { margin: 0; color: var(--text-secondary); }
+.test-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--green);
+}
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--surface);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    color: var(--text-muted);
+}
+
+/* More Menu */
+.more-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.more-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    font-size: 16px;
+    font-weight: 600;
+}
+.more-item:active { transform: translateY(2px); box-shadow: none; }
+
+/* Global components override */
+.primary-btn {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border: 2px solid var(--text-primary);
+    border-radius: var(--radius);
+    box-shadow: 4px 4px 0px var(--pink);
+}
+.primary-btn:active { transform: translateY(4px) translateX(4px); box-shadow: 0px 0px 0px var(--pink); }
+
+.secondary-btn {
+    background: var(--surface);
+    color: var(--text-primary);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 2px 2px 0px var(--border-strong);
+}
+.secondary-btn:active { transform: translateY(2px) translateX(2px); box-shadow: 0px 0px 0px var(--border-strong); }
+
+.panel, .quiz-card, .lesson-card {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
