@@ -139,7 +139,7 @@ function init() {
   $("reviewLessonTo").value = 5;
 
   document
-    .querySelectorAll(".nav-btn")
+    .querySelectorAll("[data-view]")
     .forEach((b) => (b.onclick = () => showView(b.dataset.view)));
   ["scopeMode", "lessonFrom", "lessonTo"].forEach((id) =>
     $(id).addEventListener("change", updatePoolCount),
