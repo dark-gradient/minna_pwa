@@ -189,6 +189,7 @@ function showView(view) {
     .querySelectorAll(".nav-btn")
     .forEach((b) => b.classList.toggle("active", b.dataset.view === view));
   document.body.classList.toggle("quiz-active", view === "quiz");
+  document.body.classList.toggle("home-active", view === "home");
   if (view === "review") renderReview();
   if (view === "focus") renderFocusView();
   if (view === "focus") renderFocusView();
