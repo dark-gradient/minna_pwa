@@ -3,20 +3,19 @@
 with open('index.html', 'r', encoding='utf-8') as f:
     html = f.read()
 
-# Extract dashboard from welcomeView
-dashboard_pattern = re.compile(r'\s*<div class="dashboard">.*?</div>\s*</div>\s*', re.DOTALL)
-match = dashboard_pattern.search(html)
+# Replace Minna with hand-kerned spans
+old_minna = '''Minna<br>Kotoba'''
+new_minna = '''<span style="letter-spacing: -6px;">M</span><span style="letter-spacing: 0px;">I</span><span style="letter-spacing: 6px;">N</span><span style="letter-spacing: 4px;">N</span>A<br>KOTOBA'''
+html = html.replace(old_minna, new_minna)
 
-if match:
-    dashboard_html = match.group(0)
-    # Remove it from where it is
-    html = html.replace(dashboard_html, '\n')
-    
-    # Insert it into homeView right after the hidden hero
-    hero_pattern = r'<div class="hero".*?</div>\s*</div>'
-    hero_match = re.search(hero_pattern, html, re.DOTALL)
-    if hero_match:
-        html = html.replace(hero_match.group(0), hero_match.group(0) + '\n' + dashboard_html)
+# Remove the pagination dots
+dots = '''<div style="display: flex; gap: 8px; margin-top: 24px;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--pink);"></div>
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--border-strong);"></div>
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--border-strong);"></div>
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--border-strong);"></div>
+          </div>'''
+html = html.replace(dots, '')
 
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html)
