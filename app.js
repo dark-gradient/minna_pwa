@@ -631,7 +631,18 @@ function addSelectionToFocus() {
   });
   if (added > 0) saveFocusWords();
   clearLessonSelection();
-  renderLessonVocabRows();
+}
+
+function removeSelectionFromFocus() {
+  let removed = 0;
+  lessonSelection.forEach(id => {
+    if (focusWords[id]) {
+      delete focusWords[id];
+      removed++;
+    }
+  });
+  if (removed > 0) saveFocusWords();
+  clearLessonSelection();
 }
 
 function renderFocusView() {
