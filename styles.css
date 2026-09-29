@@ -1538,8 +1538,8 @@ body.welcome-active {
 }
 
 #lessonDetailView select {
-    background: rgba(253, 251, 247, 0.35) !important;
-    backdrop-filter: blur(4px) !important;
+    background: var(--pink) !important;
+    backdrop-filter: none !important;
     border: 2px solid var(--text-primary) !important;
     color: var(--yellow) !important;
     text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
@@ -1550,7 +1550,7 @@ body.welcome-active {
     box-shadow: 2px 2px 0 var(--text-primary) !important;
 }
 
-#lessonDetailView label, #lessonSelectionControls button {
+#lessonDetailView label {
     color: var(--pink) !important;
     text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
     font-family: 'DotGothic16', sans-serif !important;
@@ -1559,8 +1559,28 @@ body.welcome-active {
     font-size: 16px !important;
     opacity: 1 !important;
 }
+
+#lessonSelectionControls button {
+    background: rgba(253, 251, 247, 0.35) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    border: 2px solid var(--text-primary) !important;
+    box-shadow: 2px 2px 0 var(--text-primary) !important;
+    border-radius: 4px;
+    padding: 6px 12px !important;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    color: var(--pink) !important;
+    text-shadow: -1px -1px 0 var(--text-primary), 1px -1px 0 var(--text-primary), -1px 1px 0 var(--text-primary), 1px 1px 0 var(--text-primary) !important;
+    font-family: 'DotGothic16', sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+    font-size: 14px !important;
+    opacity: 1 !important;
+}
 #lessonSelectionControls button:hover {
-    color: var(--yellow) !important;
+    background: var(--yellow) !important;
+    color: var(--pink) !important;
 }
 
 #lessonDetailView .secondary-btn {
