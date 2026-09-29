@@ -238,7 +238,9 @@ function showView(view) {
     .querySelectorAll(".nav-btn")
     .forEach((b) => b.classList.toggle("active", b.dataset.view === view));
   document.body.className = '';
-  document.body.style.removeProperty('background-image');
+  if (view !== 'lessonDetail') {
+      document.body.style.removeProperty('background-image');
+  }
   document.body.classList.add(view + '-active');
   if (view === 'welcomeView') {
       document.body.classList.add('welcome-active');
