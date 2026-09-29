@@ -237,9 +237,11 @@ function showView(view) {
   document
     .querySelectorAll(".nav-btn")
     .forEach((b) => b.classList.toggle("active", b.dataset.view === view));
-  document.body.classList.toggle("quiz-active", view === "quiz");
-  document.body.classList.toggle("home-active", view === "home");
-  document.body.classList.toggle("welcome-active", view === "welcomeView");
+  document.body.className = '';
+  document.body.classList.add(view + '-active');
+  if (view === 'welcomeView') {
+      document.body.classList.add('welcome-active');
+  }
   if (view === "home") updateDashboardStats();
   if (view === "review") renderReview();
   if (view === "focus") renderFocusView();

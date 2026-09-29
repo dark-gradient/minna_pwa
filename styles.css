@@ -17,16 +17,23 @@ body {
         width: 100vw !important;
         height: 100vh !important;
         margin: 0 !important;
-        padding: 0 !important;
-        overflow: hidden !important;
+        padding: 0 5vw 90px 5vw !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
         max-width: 100% !important;
         max-height: 100% !important;
         border-radius: 0 !important;
         border: none !important;
         box-shadow: none !important;
+        box-sizing: border-box !important;
+    }
+    body.welcome-active, body.welcome-active .app-shell {
+        overflow: hidden !important;
+        padding: 0 !important;
     }
     main {
-        overflow: hidden !important; /* No scrolling on desktop */
+        overflow-y: auto !important;
+        overflow-x: hidden !important; /* No scrolling on desktop */
         height: 100%;
         width: 100%;
     }
@@ -371,13 +378,19 @@ select option {
     font-weight: 800
 }
 .primary-btn {
-    background: var(--pink);
-    color: white;
-    box-shadow: 0 8px 18px #b7433630
+    background: var(--pink) !important;
+    color: var(--text-primary) !important;
+    border: 3px solid var(--text-primary) !important;
+    border-radius: 12px !important;
+    font-family: 'DotGothic16', sans-serif !important;
+    font-weight: 800 !important;
+    box-shadow: 4px 4px 0px var(--text-primary) !important;
 }
 .primary-btn:hover {
-    background: var(--peach);
-    transform: translateY(-1px)
+    background: var(--yellow) !important;
+    color: var(--text-primary) !important;
+    transform: translate(2px, 2px) !important;
+    box-shadow: 2px 2px 0px var(--text-primary) !important;
 }
 .secondary-btn {
     background: var(--surface-soft);
