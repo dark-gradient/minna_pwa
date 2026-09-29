@@ -165,6 +165,7 @@ function reviewWrongAnswers() {
 }
 function showView(view) {
   const map = {
+    welcomeView: "welcomeView",
     home: "homeView",
     quiz: "quizView",
     lessons: "lessonsView",
@@ -173,10 +174,16 @@ function showView(view) {
     review: "reviewView",
     resultsView: "resultsView",
     focus: "focusView",
-    focus: "focusView",
+    practiceSetup: "practiceSetupView",
+    mockTest: "mockTestView",
+    more: "moreView"
   };
-  Object.values(map).forEach((id) => $(id).classList.remove("active"));
-  $(map[view]).classList.add("active");
+  Object.values(map).forEach((id) => {
+    const el = $(id);
+    if (el) el.classList.remove("active");
+  });
+  const target = $(map[view]);
+  if (target) target.classList.add("active");
   state.view = view;
   document
     .querySelectorAll(".nav-btn")
