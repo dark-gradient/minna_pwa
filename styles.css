@@ -77,7 +77,7 @@ body.quiz-active { background-image: url('bg_practice.jpg') !important; }
     background: transparent !important;
 }
 .bottom-nav {
-    background: rgba(253, 251, 247, 0.75) !important;
+    background: rgba(253, 251, 247, 0.65) !important;
     
     border-top: 2px solid var(--border-strong) !important;
 }
@@ -557,7 +557,7 @@ select option {
     gap: 9px
 }
 .vocab-row {
-    background: rgba(253, 251, 247, 0.75) !important;
+    background: rgba(253, 251, 247, 0.65) !important;
     border: 2px solid var(--border) !important;
     border-radius: 12px;
     padding: 13px 15px;
@@ -571,9 +571,11 @@ select option {
     font-weight: 700
 }
 .vocab-en {
-    color: var(--text-secondary);
+    color: #ff2d78;
     font-size: 13px;
-    text-align: right
+    text-align: right;
+    font-weight: 700;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 .kaiwa-grid {
     display: grid;
@@ -828,7 +830,7 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
     bottom: -150px;
     left: 16px;
     right: 16px;
-    background: rgba(253, 251, 247, 0.75) !important;
+    background: rgba(253, 251, 247, 0.65) !important;
     
     border: 2px solid var(--text-primary) !important;
     border-radius: 8px !important;
@@ -901,8 +903,9 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
 
 .focus-badge {
     font-size: 10px;
-    background: var(--yellow);
-    color: var(--bg-primary);
+    background: #ff2d78;
+    color: #fff;
+    border: 2px solid #fff;
     padding: 3px 7px;
     border-radius: 6px;
     font-weight: 800;
@@ -910,10 +913,9 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
     margin-left: 8px;
     display: inline-block;
     vertical-align: middle;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
-[data-theme=dark] .focus-badge {
-    color: #171a1d;
-}
+[data-theme=dark] 
 
 
 /* =========================================
@@ -1152,7 +1154,7 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
 .secondary-btn:active { transform: translateY(2px) translateX(2px); box-shadow: 0px 0px 0px var(--border-strong); }
 
 .panel, .quiz-card, .lesson-card {
-    background: rgba(253, 251, 247, 0.75); /* Translucent surface */
+    background: rgba(253, 251, 247, 0.65); /* Translucent surface */
     
     border: 2px solid var(--border);
     border-radius: var(--radius);
@@ -1531,7 +1533,7 @@ body.welcome-active {
     font-weight: 800 !important;
     font-family: 'DotGothic16', sans-serif !important;
     letter-spacing: 1px;
-    background: rgba(253, 251, 247, 0.75) !important;
+    background: rgba(253, 251, 247, 0.65) !important;
     
     display: inline-block;
     padding: 6px 12px;
@@ -1577,7 +1579,7 @@ body.welcome-active {
 }
 
 #lessonSelectionControls button {
-    background: rgba(253, 251, 247, 0.75) !important;
+    background: rgba(253, 251, 247, 0.65) !important;
     
     border: 2px solid var(--text-primary) !important;
     box-shadow: 2px 2px 0 var(--text-primary) !important;
