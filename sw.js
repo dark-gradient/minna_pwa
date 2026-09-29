@@ -1,4 +1,4 @@
-﻿const CACHE = 'minna-kotoba-v55';
+﻿const CACHE = 'minna-kotoba-v56';
 const ASSETS = [
   './', './index.html', './styles.css', './app.js', './vocab.json', './kaiwa.json',
   './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-180.png'
