@@ -1389,7 +1389,7 @@ body.home-active .topbar {
     left: 0;
     right: 0;
     height: 80px;
-    background: rgba(253, 251, 247, 0.75) !important;
+    background: rgba(244, 166, 166, 0.70) !important;
     border-top: 2px solid var(--border-strong);
     display: flex;
     justify-content: space-around;
