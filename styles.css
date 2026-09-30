@@ -2119,11 +2119,11 @@ body.listening-active main {
 
 .playlist-tray {
   width: 100%;
-  background: rgba(244, 166, 166, 0.95);
-  border: 2px solid #17252A;
+  background: rgba(23, 37, 42, 0.95);
+  border: 2px solid #F3D99B;
   border-right: none;
   border-radius: 12px 0 0 12px;
-  box-shadow: -4px 4px 0 #17252A, inset 4px 4px 0 rgba(243, 217, 155, 0.6);
+  box-shadow: -4px 4px 0 rgba(0,0,0,0.5), inset 4px 4px 0 rgba(0,0,0,0.3);
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -2132,7 +2132,7 @@ body.listening-active main {
 
 .sidebar-header {
   padding: 24px;
-  border-bottom: 2px dashed #17252A;
+  border-bottom: 2px dashed #F3D99B;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -2141,7 +2141,7 @@ body.listening-active main {
 .sidebar-header h3 {
   font-family: 'DotGothic16', sans-serif;
   font-size: 24px;
-  color: #17252A;
+  color: #F7F1E7;
   margin: 0;
 }
 
@@ -2165,14 +2165,14 @@ body.listening-active main {
 }
 
 .sidebar-video-item:hover {
-  background: rgba(243, 217, 155, 0.5);
-  border-color: #17252A;
+  background: rgba(243, 217, 155, 0.1);
+  border-color: #F3D99B;
 }
 
 .sidebar-video-item.active {
-  background: rgba(243, 217, 155, 0.9);
-  border-color: #17252A;
-  box-shadow: 2px 2px 0 #17252A;
+  background: rgba(243, 217, 155, 0.2);
+  border-color: #F3D99B;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.5);
 }
 
 .video-thumb-placeholder {
@@ -2183,9 +2183,9 @@ body.listening-active main {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #F4A6A6;
+  color: #F3D99B;
   font-size: 20px;
-  border: 2px solid #21483D;
+  border: 2px solid #F3D99B;
   flex-shrink: 0;
 }
 
@@ -2199,19 +2199,19 @@ body.listening-active main {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 14px;
   margin: 0 0 4px 0;
-  color: #17252A;
+  color: #F3D99B;
   font-weight: 800;
 }
 
 .video-info p {
   font-size: 12px;
-  color: #17252A;
+  color: #F7F1E7;
   margin: 0 0 4px 0;
 }
 
 .video-time {
   font-family: 'DotGothic16', sans-serif;
   font-size: 12px;
-  color: #17252A;
+  color: #F4A6A6;
   font-weight: bold;
 }
