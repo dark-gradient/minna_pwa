@@ -345,20 +345,24 @@
   
     <section id="moreView" class="view">
       <div class="page-head"><div><h1>More</h1></div></div>
-      <div class="more-menu">
-        <button class="more-item" onclick="showView('review')">
-          <span>❌ Wrong Answers</span>
-          <span>→</span>
+      <div class="practice-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+        <button class="practice-card bg-pink" onclick="showView('review')" style="cursor:pointer; border:none; text-align:center;">
+          <div class="card-icon" style="font-size:32px; margin-bottom:8px;">❌</div>
+          <div class="card-jp">誤答</div>
+          <div class="card-en">Wrong Answers</div>
         </button>
-        <button class="more-item" onclick="showView('focus')">
-          <span>🎯 Focus Words</span>
-          <span>→</span>
+        <button class="practice-card bg-green" onclick="showView('focus')" style="cursor:pointer; border:none; text-align:center;">
+          <div class="card-icon" style="font-size:32px; margin-bottom:8px;">🎯</div>
+          <div class="card-jp">重点</div>
+          <div class="card-en">Focus Words</div>
         </button>
-        <button class="more-item" onclick="toggleTheme()">
-          <span>🌗 Toggle Dark Mode</span>
-          <span>→</span>
+        <button class="practice-card bg-yellow" onclick="toggleTheme()" style="cursor:pointer; border:none; text-align:center;">
+          <div class="card-icon" style="font-size:32px; margin-bottom:8px;">🌗</div>
+          <div class="card-jp">夜間</div>
+          <div class="card-en">Dark Mode</div>
         </button>
       </div>
+    </section>
     </section>
 
   </main>
