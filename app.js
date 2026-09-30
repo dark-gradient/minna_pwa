@@ -1316,7 +1316,7 @@ function selectVideo(id) {
     if (!container || !placeholder) return;
     
     if (navigator.onLine) {
-        container.innerHTML = \`<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${id}?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>\`;
+        container.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${id}?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>`;
         container.style.display = "block";
         placeholder.style.display = "none";
     } else {
