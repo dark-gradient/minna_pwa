@@ -1917,15 +1917,7 @@ option:checked {
 }
 body.listening-active { background: #0c1214 !important; overflow: hidden !important; }
 
-body.listening-active { 
-  background-color: #F7F1E7 !important;
-  background-image: 
-    linear-gradient(#21483D 4px, transparent 4px),
-    linear-gradient(90deg, #21483D 4px, transparent 4px) !important;
-  background-size: 120px 180px !important;
-  background-position: center top !important;
-  overflow: hidden !important; 
-}
+
 
 /* === JAPANESE SCREEN ENVIRONMENT === */
 .theater-background-container {
@@ -1953,10 +1945,10 @@ body.listening-active {
 
 .cinema-screen-overlay {
   position: absolute;
-  top: 33.98%;
-  left: 34.23%;
-  width: 31.47%;
-  height: 32.29%;
+  top: 22.40%;
+  left: 27.54%;
+  width: 44.84%;
+  height: 44.92%;
   background: #000;
   border: none;
   outline: none;
