@@ -1922,25 +1922,23 @@ body.listening-active { background: #0c1214 !important; overflow: hidden !import
 /* === JAPANESE SCREEN ENVIRONMENT === */
 .theater-background-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: #000; /* Letterbox color */
+  background: #000; /* Fallback */
 }
 
 .theater-scale-box {
-  position: relative;
-  aspect-ratio: 16 / 9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-image: url('bg_pixel_cinema.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: 100% 100%;
   width: 100vw;
-  max-width: calc(100vh * (16 / 9));
+  min-width: calc(100vh * (16 / 9));
   height: 100vh;
-  max-height: calc(100vw * (9 / 16));
+  min-height: calc(100vw * (9 / 16));
 }
 
 .cinema-screen-overlay {
