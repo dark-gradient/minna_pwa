@@ -1953,14 +1953,14 @@ body.listening-active {
 
 .cinema-screen-overlay {
   position: absolute;
-  top: 31%;
-  left: 28%;
-  width: 44%;
-  aspect-ratio: 16 / 9;
+  top: 33.98%;
+  left: 34.23%;
+  width: 31.47%;
+  height: 32.29%;
   background: #000;
-  border: 4px solid #142E27;
-  outline: 2px solid #F3D99B;
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 0 40px rgba(243, 217, 155, 0.4);
+  border: none;
+  outline: none;
+  box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: center;
