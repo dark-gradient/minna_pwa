@@ -213,6 +213,17 @@ function updateDashboardStats() {
 }
 
 function showView(view) {
+  if (!document.startViewTransition) {
+    _showView(view);
+    return;
+  }
+  // Try to use view transition
+  document.startViewTransition(() => {
+    _showView(view);
+  });
+}
+
+function _showView(view) {
   const map = {
     welcomeView: "welcomeView",
     home: "homeView",

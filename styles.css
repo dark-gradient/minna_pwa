@@ -255,7 +255,19 @@ main {
     display: none
 }
 .view.active {
-    display: block
+    display: block;
+    animation: viewFadeIn 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes viewFadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@supports (view-transition-name: root) {
+    .view.active {
+        animation: none !important;
+    }
 }
 .hero {
     display: flex;
