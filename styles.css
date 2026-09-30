@@ -527,7 +527,7 @@ select option {
 .lesson-card {
     color: var(--text-primary);
     border: 2px solid var(--text-primary) !important;
-    background: rgba(244, 166, 166, 0.70) !important;
+    background: rgba(244, 166, 166, 0.40) !important;
     border-radius: 18px;
     padding: 20px;
     cursor: pointer;
@@ -1389,7 +1389,7 @@ body.home-active .topbar {
     left: 0;
     right: 0;
     height: 80px;
-    background: rgba(244, 166, 166, 0.70) !important;
+    background: rgba(244, 166, 166, 0.40) !important;
     border-top: 2px solid var(--border-strong);
     display: flex;
     justify-content: space-around;
@@ -1406,8 +1406,9 @@ body.home-active .topbar {
     align-items: center;
     gap: 4px;
     color: var(--text-primary);
-    font-family: inherit;
+    font-family: 'DotGothic16', sans-serif;
     cursor: pointer;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 .nav-icon {
     width: 44px;
@@ -1416,15 +1417,18 @@ body.home-active .topbar {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    font-size: 24px;
+    font-size: 22px;
+    filter: drop-shadow(1px 1px 0 #fff) drop-shadow(-1px -1px 0 #fff);
 }
 .nav-btn.active .nav-icon {
     background: var(--pink);
-    border: 2px solid var(--border-strong);
+    border: 2px solid var(--text-primary);
+    box-shadow: 1px 1px 0 var(--text-primary);
 }
 .nav-btn span {
     font-size: 10px;
     font-weight: 800;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 body.welcome-active .topbar,
@@ -1663,7 +1667,7 @@ option:checked {
 }
 
 .panel {
-    background: rgba(244, 166, 166, 0.70) !important;
+    background: rgba(244, 166, 166, 0.40) !important;
     border: 2px solid #F4A6A6 !important;
     border-radius: var(--radius) !important;
     box-shadow: 3px 3px 0 #17252A !important;
