@@ -64,6 +64,9 @@ body.welcome-active { background-image: url('fuji_wide.jpg') !important; }
 body.home-active { background-image: url('bg_home.jpg') !important; }
 body.lessons-active { background-image: url('bg_learn.jpg') !important; }
 body.practiceSetup-active { background-image: url('bg_practice_new.jpg') !important; }
+body.vocabulary-active { background-image: url('bg_practice_new.jpg') !important; }
+body.grammar-active { background-image: url('bg_practice_new.jpg') !important; }
+body.kanji-active { background-image: url('bg_practice_new.jpg') !important; }
 body.mockTest-active { background-image: url('bg_practice.jpg') !important; }
 body.more-active { background-image: url('bg_more_new.jpg') !important; background-position: bottom right !important; background-size: cover !important; }
 body.quiz-active { background-image: url('bg_practice_new.jpg') !important; }
