@@ -699,7 +699,7 @@ function renderFocusView() {
   if (keys.length === 0) {
     $("focusListContainer").innerHTML = `
       <div class="panel" style="min-height:auto; padding:30px; text-align:center;">
-        <p style="color:var(--text-primary); font-family:'DotGothic16',sans-serif; font-weight:800; margin-bottom:16px;">No Focus Words yet!</p>
+        <p style="color:var(--text-primary); font-family:'Noto Serif JP',serif; font-weight:800; margin-bottom:16px;">No Focus Words yet!</p>
         <p style="color:var(--text-secondary); margin-bottom:20px;">Select words from any lesson and add them here.</p>
         <button class="secondary-btn" onclick="showView('lessons')">Go to Lessons</button>
       </div>`;
@@ -718,7 +718,7 @@ function renderFocusView() {
   sortedLessons.forEach(l => {
     html += `<div style="margin-bottom:24px;">
       <div style="margin-bottom:10px;">
-        <span style="background:var(--pink);color:var(--yellow);padding:4px 12px;border-radius:8px;border:2px solid var(--text-primary);box-shadow:2px 2px 0 var(--text-primary);font-family:'DotGothic16',sans-serif;font-weight:800;font-size:12px;">LESSON ${String(l).padStart(2, "0")}</span>
+        <span style="background:var(--pink);color:var(--yellow);padding:4px 12px;border-radius:8px;border:2px solid var(--text-primary);box-shadow:2px 2px 0 var(--text-primary);font-family:'Noto Serif JP',serif;font-weight:800;font-size:12px;">LESSON ${String(l).padStart(2, "0")}</span>
       </div>
       <div class="vocab-table">`;
     byLesson[l].forEach(id => {
@@ -850,7 +850,7 @@ function renderReview() {
   if (total === 0) {
     $("wrongListContainer").innerHTML =
       `<div class="panel" style="min-height:auto; padding:30px; text-align:center;">
-        <p style="color:var(--text-primary); font-family:'DotGothic16',sans-serif; font-weight:800; margin-bottom:16px;">No wrong answers yet!</p>
+        <p style="color:var(--text-primary); font-family:'Noto Serif JP',serif; font-weight:800; margin-bottom:16px;">No wrong answers yet!</p>
         <p style="color:var(--text-secondary); margin-bottom:20px;">Words you answer incorrectly will appear here.</p>
         <button class="secondary-btn" onclick="showView('home')">Back to Practice</button>
       </div>`;
@@ -866,7 +866,7 @@ function renderReview() {
     if (wrongInLesson.length > 0) {
       html += `<div style="margin-bottom: 24px;">
         <div style="margin-bottom:10px;">
-          <span style="background:var(--pink);color:var(--yellow);padding:4px 12px;border-radius:8px;border:2px solid var(--text-primary);box-shadow:2px 2px 0 var(--text-primary);font-family:'DotGothic16',sans-serif;font-weight:800;font-size:12px;">LESSON ${String(n).padStart(2,'0')}</span>
+          <span style="background:var(--pink);color:var(--yellow);padding:4px 12px;border-radius:8px;border:2px solid var(--text-primary);box-shadow:2px 2px 0 var(--text-primary);font-family:'Noto Serif JP',serif;font-weight:800;font-size:12px;">LESSON ${String(n).padStart(2,'0')}</span>
         </div>`;
       html +=
         `<div class="vocab-table">` +
