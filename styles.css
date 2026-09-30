@@ -65,7 +65,7 @@ body.home-active { background-image: url('bg_home.jpg') !important; }
 body.lessons-active { background-image: url('bg_learn.jpg') !important; }
 body.practiceSetup-active { background-image: url('bg_practice_new.jpg') !important; }
 body.mockTest-active { background-image: url('bg_practice.jpg') !important; }
-body.more-active { background-image: url('bg_more_new.jpg') !important; }
+body.more-active { background-image: url('bg_more_new.jpg') !important; background-position: bottom right !important; background-size: cover !important; }
 body.quiz-active { background-image: url('bg_practice_new.jpg') !important; }
 
 /* Make App Shell completely transparent to show body background */
@@ -1765,7 +1765,7 @@ option:checked {
 }
 
 .omamori-tag:hover {
-  transform: rotate(-15deg) !important;
+  transform: rotate(5deg) !important;
   animation: none !important;
 }
 

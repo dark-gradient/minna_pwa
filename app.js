@@ -277,7 +277,7 @@ function poolForScope() {
 }
 function updatePoolCount() {
   const mode = $("scopeMode").value;
-  $("lessonFromWrap").classList.toggle("hidden", mode === "all" || mode === "focus");
+  $("lessonFromWrap").classList.toggle("hidden", mode === "all" || mode === "focus" || mode === "review");
   $("lessonToWrap").classList.toggle("hidden", mode !== "range");
   $("poolCount").textContent = `${poolForScope().length} words`;
 }
