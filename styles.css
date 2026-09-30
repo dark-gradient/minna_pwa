@@ -1892,8 +1892,11 @@ option:checked {
 }
 
 .omamori-icon {
-  font-size: 20px;
-  filter: drop-shadow(1px 1px 0 #fff) drop-shadow(-1px -1px 0 #fff);
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  flex-shrink: 0;
 }
 
 .omamori-tray::before {
