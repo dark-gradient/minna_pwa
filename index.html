@@ -364,24 +364,27 @@
 
   <div id="omamori-nav" class="omamori-nav">
     <div class="omamori-overlay" onclick="toggleOmamoriNav()"></div>
-    <button id="omamori-tag" class="omamori-tag" aria-expanded="false" aria-label="Toggle Navigation" onclick="toggleOmamoriNav()">
-      <div class="omamori-cord">
-        <div class="omamori-knot">🎀</div>
-        <div class="omamori-bell">🔔</div>
-      </div>
-      <div class="omamori-body">🌸</div>
-    </button>
-    <nav id="omamori-tray" class="omamori-tray" aria-hidden="true">
-      <ul class="omamori-menu">
-        <li><button class="omamori-btn" data-view="lessons" onclick="showView('lessons'); toggleOmamoriNav();"><span class="omamori-icon">📜</span> <span>Lessons</span></button></li>
-        <li><button class="omamori-btn" data-view="focus" onclick="showView('focus'); toggleOmamoriNav();"><span class="omamori-icon">🎴</span> <span>Vocabulary</span></button></li>
-        <li><button class="omamori-btn" data-view="kaiwa" onclick="showView('kaiwa'); toggleOmamoriNav();"><span class="omamori-icon">📝</span> <span>Grammar</span></button></li>
-        <li><button class="omamori-btn" data-view="practiceSetup" onclick="showView('practiceSetup'); toggleOmamoriNav();"><span class="omamori-icon">🖌️</span> <span>Kanji</span></button></li>
-        <li><button class="omamori-btn" data-view="home" onclick="showView('home'); toggleOmamoriNav();"><span class="omamori-icon">🎧</span> <span>Listening</span></button></li>
-        <li><button class="omamori-btn" data-view="mockTest" onclick="showView('mockTest'); toggleOmamoriNav();"><span class="omamori-icon">💮</span> <span>Mock Tests</span></button></li>
-        <li><button class="omamori-btn" data-view="review" onclick="showView('review'); toggleOmamoriNav();"><span class="omamori-icon">⭐</span> <span>Review</span></button></li>
-      </ul>
-    </nav>
+    <div class="omamori-container">
+      <div class="omamori-string-horizontal"></div>
+      <button id="omamori-tag" class="omamori-tag" aria-expanded="false" aria-label="Toggle Navigation" onclick="toggleOmamoriNav()">
+        <div class="omamori-cord">
+          <div class="omamori-knot">🎀</div>
+          <div class="omamori-bell">🔔</div>
+        </div>
+        <div class="omamori-body">🌸</div>
+      </button>
+      <nav id="omamori-tray" class="omamori-tray" aria-hidden="true">
+        <ul class="omamori-menu">
+          <li><button class="omamori-btn" data-view="lessons" onclick="showView('lessons'); toggleOmamoriNav();"><span class="omamori-icon">📜</span> <span>Lessons</span></button></li>
+          <li><button class="omamori-btn" data-view="focus" onclick="showView('focus'); toggleOmamoriNav();"><span class="omamori-icon">🎴</span> <span>Vocabulary</span></button></li>
+          <li><button class="omamori-btn" data-view="kaiwa" onclick="showView('kaiwa'); toggleOmamoriNav();"><span class="omamori-icon">📝</span> <span>Grammar</span></button></li>
+          <li><button class="omamori-btn" data-view="practiceSetup" onclick="showView('practiceSetup'); toggleOmamoriNav();"><span class="omamori-icon">🖌️</span> <span>Kanji</span></button></li>
+          <li><button class="omamori-btn" data-view="home" onclick="showView('home'); toggleOmamoriNav();"><span class="omamori-icon">🎧</span> <span>Listening</span></button></li>
+          <li><button class="omamori-btn" data-view="mockTest" onclick="showView('mockTest'); toggleOmamoriNav();"><span class="omamori-icon">💮</span> <span>Mock Tests</span></button></li>
+          <li><button class="omamori-btn" data-view="review" onclick="showView('review'); toggleOmamoriNav();"><span class="omamori-icon">⭐</span> <span>Review</span></button></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 
   </main>
