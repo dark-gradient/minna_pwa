@@ -227,6 +227,7 @@ function showView(view) {
     vocabulary: "practiceSetupView",
     grammar: "practiceSetupView",
     kanji: "practiceSetupView",
+    listening: "listeningView",
     mockTest: "mockTestView",
     more: "moreView"
   };
