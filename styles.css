@@ -1639,3 +1639,7 @@ body.welcome-active {
     font-weight: 800 !important;
     font-family: 'DotGothic16', sans-serif !important;
 }
+
+body.welcomeView-active .bottom-nav {
+    display: none !important;
+}
