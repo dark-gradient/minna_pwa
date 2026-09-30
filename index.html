@@ -362,30 +362,60 @@
     </section>
 
     <section id="listeningView" class="view listening-theater">
-      <div class="theater-background">
-        <div class="cinema-stage">
-          <div class="cinema-curtain-top"></div>
-          <div class="cinema-curtain-left"></div>
-          <div class="cinema-curtain-right"></div>
-          <div class="cinema-screen-frame">
-              <div class="cinema-video-viewport">
-                  <div class="video-placeholder">
-                      <img src="icon_listening.png" alt="Listening" style="width:48px; height:48px; image-rendering:pixelated; margin-bottom: 20px;">
-                      <h2 style="font-family:'DotGothic16'; color:#17252A; font-size: 24px; margin-bottom: 8px;">Minna Kotoba</h2>
-                      <p style="font-family:'DotGothic16'; color:#17252A; font-size: 16px; opacity:0.8;">Japanese Listening Practice</p>
-                  </div>
-              </div>
-          </div>
-          <div class="cinema-stage-floor"></div>
+      <div class="theater-background-container">
+        <img src="bg_cinema.jpg" class="theater-bg-image" alt="Cinema Environment">
+        <div class="cinema-screen-overlay">
+           <div class="video-placeholder">
+              <img src="icon_listening.png" alt="Listening" style="width:64px; height:64px; image-rendering:pixelated; margin-bottom: 20px;">
+              <h2 style="font-family:'DotGothic16'; color:#F7F1E7; font-size: 28px; margin-bottom: 8px; text-shadow: 2px 2px 0 #000;">Minna Kotoba</h2>
+              <p style="font-family:'DotGothic16'; color:#F3D99B; font-size: 18px; text-shadow: 1px 1px 0 #000;">Japanese Listening Practice</p>
+           </div>
         </div>
       </div>
 
       <aside class="listening-sidebar">
           <div class="sidebar-header">
-            <h3>N5 Listening</h3>
+            <img src="icon_listening.png" alt="Listening" style="width:32px; height:32px; image-rendering:pixelated;">
+            <h3>N5 Listening Practice</h3>
           </div>
           <div class="sidebar-list">
-            <div class="sidebar-placeholder">Playlist goes here (Coming Soon)</div>
+            
+            <div class="sidebar-video-item active">
+                <div class="video-thumb-placeholder">▶</div>
+                <div class="video-info">
+                    <h4>N5 Listening 01</h4>
+                    <p>Basic Greetings</p>
+                    <span class="video-time">12:34</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-video-item">
+                <div class="video-thumb-placeholder">▶</div>
+                <div class="video-info">
+                    <h4>N5 Listening 02</h4>
+                    <p>Self Introduction</p>
+                    <span class="video-time">10:21</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-video-item">
+                <div class="video-thumb-placeholder">▶</div>
+                <div class="video-info">
+                    <h4>N5 Listening 03</h4>
+                    <p>Daily Life</p>
+                    <span class="video-time">15:08</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-video-item">
+                <div class="video-thumb-placeholder">▶</div>
+                <div class="video-info">
+                    <h4>N5 Listening 04</h4>
+                    <p>Shopping</p>
+                    <span class="video-time">11:45</span>
+                </div>
+            </div>
+
           </div>
       </aside>
     </section>
