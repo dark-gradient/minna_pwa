@@ -527,7 +527,7 @@ select option {
 .lesson-card {
     color: var(--text-primary);
     border: 2px solid var(--text-primary) !important;
-    background: rgba(244, 166, 166, 0.35) !important;
+    background: rgba(244, 166, 166, 0.70) !important;
     border-radius: 18px;
     padding: 20px;
     cursor: pointer;
@@ -1663,7 +1663,7 @@ option:checked {
 }
 
 .panel {
-    background: rgba(244, 166, 166, 0.35) !important;
+    background: rgba(244, 166, 166, 0.70) !important;
     border: 2px solid #F4A6A6 !important;
     border-radius: var(--radius) !important;
     box-shadow: 3px 3px 0 #17252A !important;
