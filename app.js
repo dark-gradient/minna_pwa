@@ -1285,6 +1285,17 @@ function initListening() {
         let toSelect = LISTENING.find(v => v.id === lastId) || LISTENING[0];
         selectVideo(toSelect.id);
     }
+    
+    setTimeout(() => {
+        validateListeningLibrary();
+    }, 1000);
+}
+
+let currentPlaylistFilter = 'all';
+
+function setPlaylistFilter(filter) {
+    currentPlaylistFilter = filter;
+    renderPlaylist();
 }
 
 function renderPlaylist() {
@@ -1294,17 +1305,33 @@ function renderPlaylist() {
     const easy = LISTENING.filter(v => v.group === 'easy');
     const practice = LISTENING.filter(v => v.group === 'practice');
     const exam = LISTENING.filter(v => v.group === 'exam');
+    const official = LISTENING.filter(v => v.group === 'official');
     
     let html = `
         <div class="programme-header">
             <h3>🎧 N5 LISTENING</h3>
             <p>Choose your challenge</p>
+            <div class="playlist-filters">
+                <button class="filter-btn ${currentPlaylistFilter === 'all' ? 'active' : ''}" onclick="setPlaylistFilter('all')">ALL</button>
+                <button class="filter-btn ${currentPlaylistFilter === 'easy' ? 'active' : ''}" onclick="setPlaylistFilter('easy')">🌱 EASY</button>
+                <button class="filter-btn ${currentPlaylistFilter === 'practice' ? 'active' : ''}" onclick="setPlaylistFilter('practice')">🎧 PRACTICE</button>
+                <button class="filter-btn ${currentPlaylistFilter === 'exam' ? 'active' : ''}" onclick="setPlaylistFilter('exam')">🎯 EXAM</button>
+            </div>
         </div>
     `;
     
-    html += renderPlaylistGroup('🌱 EASY', 'Build your listening confidence', easy, false);
-    html += renderPlaylistGroup('🎧 PRACTICE', 'Train with real N5-style listening', practice, true);
-    html += renderPlaylistGroup('🎯 EXAM CHALLENGE', 'Test your N5 listening', exam, true);
+    if (currentPlaylistFilter === 'all' || currentPlaylistFilter === 'easy') {
+        html += renderPlaylistGroup('🌱 EASY', 'Build your listening confidence', easy, currentPlaylistFilter === 'easy' ? true : false);
+    }
+    if (currentPlaylistFilter === 'all' || currentPlaylistFilter === 'practice') {
+        html += renderPlaylistGroup('🎧 PRACTICE', 'Train with real N5-style listening', practice, true);
+    }
+    if (currentPlaylistFilter === 'all' || currentPlaylistFilter === 'exam') {
+        html += renderPlaylistGroup('🎯 EXAM CHALLENGE', 'Test your N5 listening', exam, true);
+    }
+    if (currentPlaylistFilter === 'all' || currentPlaylistFilter === 'official') {
+        html += renderPlaylistGroup('📘 OFFICIAL JLPT', 'Official resources', official, true);
+    }
     
     list.innerHTML = html;
 }
@@ -1393,4 +1420,44 @@ function handleNetworkChange() {
 function retryConnection() {
     handleNetworkChange();
 }
+
+function validateListeningLibrary() {
+    let totalSecs = 0;
+    let easySecs = 0;
+    let practiceSecs = 0;
+    let examSecs = 0;
+    let verifiedCount = 0;
+    let uniqueChannels = new Set();
+    
+    LISTENING.forEach(v => {
+        if (v.verified !== false) {
+            verifiedCount++;
+            const s = v.durationSeconds || 0;
+            totalSecs += s;
+            uniqueChannels.add(v.channel);
+            if (v.group === 'easy') easySecs += s;
+            if (v.group === 'practice') practiceSecs += s;
+            if (v.group === 'exam') examSecs += s;
+        }
+    });
+
+    const f = (s) => `${Math.floor(s/3600)}h ${Math.floor((s%3600)/60)}m`;
+    
+    const result = totalSecs >= 72000 ? "PASS" : "FAIL";
+    
+    console.log(`N5 LISTENING CONTENT
+====================
+Verified videos: ${verifiedCount}
+Unique channels: ${uniqueChannels.size}
+Easy: ${f(easySecs)}
+Practice: ${f(practiceSecs)}
+Exam Challenge: ${f(examSecs)}
+Verified total: ${f(totalSecs)}
+Minimum required: 20h
+Safety target: 22–25h
+
+RESULT:
+${result}`);
+}
+
 window.toggleOmamoriNav = toggleOmamoriNav;

@@ -2150,6 +2150,31 @@ body.listening-active main {
 .programme-group {
   margin-bottom: 4px;
 }
+.playlist-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.filter-btn {
+  background: rgba(23, 37, 42, 0.8);
+  border: 1px solid rgba(243, 217, 155, 0.3);
+  color: #F7F1E7;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn:hover {
+  background: rgba(243, 217, 155, 0.1);
+}
+.filter-btn.active {
+  background: rgba(243, 217, 155, 0.2);
+  border-color: #F3D99B;
+  color: #F3D99B;
+}
 .programme-group .group-items {
   display: none;
   padding: 0 8px 8px 8px;
