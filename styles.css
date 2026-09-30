@@ -2175,6 +2175,116 @@ body.listening-active main {
   border-color: #F3D99B;
   color: #F3D99B;
 }
+
+/* Mock Test Library */
+.mock-filter-btn {
+  background: rgba(23, 37, 42, 0.8);
+  border: 1px solid rgba(243, 217, 155, 0.3);
+  color: #F7F1E7;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.mock-filter-btn:hover {
+  background: rgba(243, 217, 155, 0.1);
+}
+.mock-filter-btn.active {
+  background: rgba(243, 217, 155, 0.2);
+  border-color: #F3D99B;
+  color: #F3D99B;
+}
+.mock-category-title {
+  margin: 24px 0 12px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #F3D99B;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(243, 217, 155, 0.2);
+  padding-bottom: 4px;
+}
+.mock-card {
+  background: rgba(253, 246, 227, 0.95);
+  border: 1px solid #c9b18b;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  color: #17252A;
+  box-shadow: 2px 2px 0 rgba(23, 37, 42, 0.2);
+}
+.mock-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+.mock-card-author {
+  font-size: 12px;
+  opacity: 0.7;
+  margin: 0 0 12px 0;
+}
+.mock-sections {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.mock-sections span {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(23, 37, 42, 0.1);
+  color: #17252A;
+  opacity: 0.5;
+}
+.mock-sections span.active {
+  background: #2b5742;
+  color: #F7F1E7;
+  opacity: 1;
+}
+.mock-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+  font-size: 12px;
+  opacity: 0.8;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+.mock-actions {
+  display: flex;
+  gap: 8px;
+}
+.mock-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s;
+  flex: 1;
+}
+.mock-btn.primary {
+  background: #17252A;
+  color: #F7F1E7;
+}
+.mock-btn.primary:hover {
+  background: #2b454e;
+}
+.mock-btn.secondary {
+  background: transparent;
+  color: #17252A;
+  border: 1px solid #17252A;
+}
+.mock-btn.secondary:hover {
+  background: rgba(23, 37, 42, 0.05);
+}
+
 .programme-group .group-items {
   display: none;
   padding: 0 8px 8px 8px;

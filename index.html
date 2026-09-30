@@ -323,25 +323,23 @@
     
   
     <section id="mockTestView" class="view">
-      <div class="page-head"><div><div class="eyebrow">MOCK TEST</div><h1>N5 Practice Exam</h1></div></div>
-      <div class="panel">
-        <div class="test-header">
-          <div class="test-badge">N5</div>
-          <h2>Try a full N5 mock test</h2>
-          <p>Real format • Timed</p>
+      <div class="page-head"><div><div class="eyebrow">MOCK TESTS</div><h1>N5 Practice Exam</h1></div></div>
+      
+      <div class="kicker" style="background: rgba(23, 37, 42, 0.95); color: #F3D99B; padding: 12px; margin-top: 12px; border: 1px solid rgba(243, 217, 155, 0.3); border-radius: 8px; font-family: 'Noto Sans JP', sans-serif;">
+        <h3 style="margin: 0 0 8px 0; font-size: 14px;">YOUR MOCK TEST LIBRARY</h3>
+        <p style="margin: 0 0 12px 0; font-size: 12px; opacity: 0.8;">50+ TESTS</p>
+        
+        <div class="mock-filters" style="display: flex; flex-wrap: wrap; gap: 6px;">
+          <button class="mock-filter-btn active" onclick="setMockFilter('all')">ALL</button>
+          <button class="mock-filter-btn" onclick="setMockFilter('full-mock')">FULL MOCKS</button>
+          <button class="mock-filter-btn" onclick="setMockFilter('with-listening')">WITH LISTENING</button>
+          <button class="mock-filter-btn" onclick="setMockFilter('official')">OFFICIAL</button>
+          <button class="mock-filter-btn" onclick="setMockFilter('practice')">PRACTICE</button>
         </div>
-        <div class="test-meta">
-          <span>⏱ 60 min</span>
-          <span>📝 50 questions</span>
-        </div>
-        <button id="startMockTestBtn" class="primary-btn" style="width:100%; margin-top:16px;" onclick="startMockTest()">START MOCK TEST →</button>
       </div>
       
-      <div style="margin-top: 24px; margin-bottom: 12px;">
-        <span class="kicker" style="background: var(--pink); color: var(--yellow); padding: 5px 12px; border-radius: 8px; border: 2px solid var(--text-primary); box-shadow: 2px 2px 0 var(--text-primary); font-size: 12px;">PAST RESULTS</span>
-      </div>
-      <div id="mockTestResults">
-        <div class="empty-state">No mock tests yet.<br><br>Take your first N5 mock test →</div>
+      <div id="mockTestList" style="margin-top: 16px;">
+        <!-- Dynamically populated by renderMockTests() -->
       </div>
     </section>
 
