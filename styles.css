@@ -2176,42 +2176,110 @@ body.listening-active main {
   color: #F3D99B;
 }
 
-/* Mock Test Library Design (V2) */
-.mock-chalkboard-header {
-  background: #17252A;
-  border: 12px solid #5D3A1A;
-  border-radius: 8px;
-  padding: 30px 20px;
-  text-align: center;
-  color: #F7F1E7;
+/* Mock Test Library - Giant Scroll Design */
+.mock-scroll-container {
   position: relative;
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 4px 10px rgba(0,0,0,0.3);
-  margin-bottom: 24px;
+  width: 96%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 30px 0;
 }
-.mock-chalkboard-header h2 {
-  font-size: 32px;
-  margin: 0;
-  color: #F3D99B;
-  letter-spacing: 0.1em;
+
+.scroll-roller {
+  background: linear-gradient(to bottom, #3E2723, #5D4037 40%, #3E2723);
+  height: 36px;
+  width: 104%;
+  margin-left: -2%;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4), inset 0 2px 4px rgba(255,255,255,0.1);
+  position: relative;
+  z-index: 2;
+  border: 1px solid #2d1a11;
 }
-.mock-chalkboard-header .jp-subtitle {
-  font-size: 24px;
-  margin: 8px 0;
-  font-weight: 400;
-  opacity: 0.9;
+
+.scroll-roller::before, .scroll-roller::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #D4AF37; /* Gold end caps */
+  border-radius: 50%;
+  top: 5px;
+  box-shadow: inset -2px -2px 6px rgba(0,0,0,0.5);
+  border: 1px solid #b89931;
 }
-.mock-chalkboard-header p {
-  font-size: 16px;
-  opacity: 0.8;
-  margin: 8px 0 20px 0;
+.scroll-roller::before { left: -12px; }
+.scroll-roller::after { right: -12px; }
+
+.scroll-paper {
+  background: #F4E8D1;
+  background-image: linear-gradient(rgba(243, 217, 155, 0.1) 1px, transparent 1px);
+  background-size: 100% 40px;
+  min-height: 500px;
+  width: 100%;
+  margin: -15px auto;
+  padding: 40px 20px 60px 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: inset 0 0 40px rgba(93, 58, 26, 0.15), 0 10px 20px rgba(0,0,0,0.2);
+  border-left: 2px solid #D5C3A5;
+  border-right: 2px solid #D5C3A5;
 }
-.chalkboard-meta {
-  display: inline-flex;
-  gap: 16px;
-  background: rgba(255,255,255,0.1);
+
+/* In-App Browser UI */
+#mockInAppBrowser {
+  background: #FFF;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  border: 2px solid #5D3A1A;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  min-height: 600px;
+}
+
+.browser-header {
+  background: #E8E4D9;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 2px solid #5D3A1A;
+}
+
+.browser-close-btn, .browser-action-btn {
+  background: #17252A;
+  color: #F7F1E7;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.browser-close-btn:hover { background: #D6336C; }
+.browser-action-btn:hover { background: #2b454e; }
+
+.browser-url-bar {
+  flex: 1;
+  background: #FFF;
+  border: 1px solid #c9b18b;
+  border-radius: 16px;
   padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 14px;
+  font-size: 12px;
+  color: #5D3A1A;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: monospace;
+}
+
+.browser-iframe {
+  width: 100%;
+  flex: 1;
+  background: #f0f0f0;
 }
 
 .mock-filters {

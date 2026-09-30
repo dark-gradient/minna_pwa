@@ -1,4 +1,4 @@
-const CACHE = 'minna-kotoba-v112';
+const CACHE = 'minna-kotoba-v113';
 const ASSETS = [
   './', './index.html', './styles.css', './app.js', './vocab.json', './kaiwa.json', './listening-n5.json', './mock-tests-n5.json', './mock_tests/2018_N5_Mondai.pdf', './mock_tests/2018_N5_Kaitou.pdf', './manifest.webmanifest', './bg_pixel_cinema.jpg', './bg_cinema_wall.jpg', './bg_grammar.jpg', './bg_home.jpg', './bg_kanji.jpg', './bg_learn.jpg', './bg_lesson_1.jpg', './bg_lesson_2.jpg', './bg_lesson_3.jpg', './bg_more.jpg', './bg_more_new.jpg', './bg_practice.jpg', './bg_practice_new.jpg', './fuji.jpg', './fuji_wide.jpg', './icon_grammar.png', './icon_home.png', './icon_kanji.png', './icon_lessons.png', './icon_listening.png', './icon_mocktest.png', './icon_vocabulary.png', './icons/icon-180.png', './icons/icon-192.png', './icons/icon-512.png'
 ];

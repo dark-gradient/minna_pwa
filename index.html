@@ -327,38 +327,44 @@
       
       <div class="panel" style="max-width: 1000px; width: 100%; margin: 0 auto; background: transparent; box-shadow: none; padding: 0;">
         
-        <!-- Chalkboard Header Area -->
-        <div class="mock-chalkboard-header">
-          <div class="chalkboard-inner">
-            <h2>N5 MOCK TEST</h2>
-            <h3 class="jp-subtitle">模擬試験</h3>
-            <p>Challenge Yourself</p>
-            <div class="chalkboard-meta">
-              <span>📝 50 Questions</span>
-              <span>⏱ 60 Minutes</span>
+        <!-- Giant Scroll Container -->
+        <div class="mock-scroll-container">
+          <div class="scroll-roller top-roller"></div>
+          
+          <div class="scroll-paper">
+            
+            <div id="mockLibraryContent">
+              <div class="mock-lib-header" style="text-align: center; margin-bottom: 24px;">
+                <h2 style="margin: 0; font-size: 28px; color: #5D3A1A; font-family: 'Noto Serif JP', serif;">巻物 MOCK TEST LIBRARY</h2>
+                <p style="margin: 8px 0 16px 0; font-size: 14px; color: #5D3A1A; opacity: 0.8;">Choose a parchment to begin your trial</p>
+                
+                <div class="mock-filters" style="justify-content: center;">
+                  <button class="mock-filter-btn active" onclick="setMockFilter('all')">All</button>
+                  <button class="mock-filter-btn" onclick="setMockFilter('full-mock')">Full Mock</button>
+                  <button class="mock-filter-btn" onclick="setMockFilter('with-listening')">With Listening</button>
+                  <button class="mock-filter-btn" onclick="setMockFilter('official')">Official JLPT</button>
+                  <button class="mock-filter-btn" onclick="setMockFilter('practice')">Practice</button>
+                </div>
+              </div>
+              
+              <div id="mockTestList" class="mock-test-grid">
+                <!-- Dynamically populated by renderMockTests() -->
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="mock-library-container" style="background: rgba(253, 246, 227, 0.95); border: 2px solid #5D3A1A; border-radius: 12px; padding: 20px; margin-top: 16px;">
-          <div class="mock-lib-header">
-            <div>
-              <h3 style="margin: 0; font-size: 20px; color: #17252A; display: flex; align-items: center; gap: 8px;">🌸 N5 MOCK TEST LIBRARY</h3>
-              <p style="margin: 4px 0 16px 0; font-size: 13px; color: #5D3A1A; opacity: 0.8;">50+ Practice Papers with Answer Keys</p>
+            <!-- In-App Web Browser Overlay (Hidden by default) -->
+            <div id="mockInAppBrowser" style="display: none;">
+              <div class="browser-header">
+                <button class="browser-close-btn" onclick="closeMockBrowser()">✖ Close</button>
+                <div class="browser-url-bar" id="browserUrlBar">https://...</div>
+                <button class="browser-action-btn" id="browserAltAction" style="display:none;" onclick="openAltAnswerKey()">Answer Key</button>
+              </div>
+              <iframe id="mockIframe" class="browser-iframe" src="" frameborder="0" allowfullscreen></iframe>
             </div>
+
           </div>
           
-          <div class="mock-filters">
-            <button class="mock-filter-btn active" onclick="setMockFilter('all')">All</button>
-            <button class="mock-filter-btn" onclick="setMockFilter('full-mock')">Full Mock</button>
-            <button class="mock-filter-btn" onclick="setMockFilter('with-listening')">With Listening</button>
-            <button class="mock-filter-btn" onclick="setMockFilter('official')">Official JLPT</button>
-            <button class="mock-filter-btn" onclick="setMockFilter('practice')">Practice</button>
-          </div>
-          
-          <div id="mockTestList" class="mock-test-grid">
-            <!-- Dynamically populated by renderMockTests() -->
-          </div>
+          <div class="scroll-roller bottom-roller"></div>
         </div>
       </div>
     </section>

@@ -1539,13 +1539,40 @@ function renderMockCard(test, index) {
         
         <div class="mock-actions">
             ${test.rightsStatus === 'external-link-only' ? 
-              `<a href="${test.sourceUrl}" target="_blank" class="mock-btn primary">▶ Open Source</a>` :
-              `<a href="${test.paperUrl}" target="_blank" class="mock-btn primary">▶ Start Test</a>
-               <a href="${test.answerKeyUrl}" target="_blank" class="mock-btn secondary">📄 Answer Key</a>`
+              `<button onclick="openMockBrowser('${test.sourceUrl || ''}', '${test.answerKeyUrl || ''}')" class="mock-btn primary">▶ Open Source</button>` :
+              `<button onclick="openMockBrowser('${test.paperUrl || ''}', '${test.answerKeyUrl || ''}')" class="mock-btn primary">▶ Start Test</button>
+               <button onclick="openMockBrowser('${test.answerKeyUrl || ''}', '')" class="mock-btn secondary">📄 Answer Key</button>`
             }
         </div>
     </div>
     `;
+}
+
+function openMockBrowser(url, answerUrl) {
+    if (!url) return;
+    document.getElementById('mockLibraryContent').style.display = 'none';
+    
+    const browser = document.getElementById('mockInAppBrowser');
+    browser.style.display = 'flex';
+    
+    document.getElementById('browserUrlBar').textContent = url;
+    document.getElementById('mockIframe').src = url;
+    
+    const altAction = document.getElementById('browserAltAction');
+    if (answerUrl && answerUrl !== 'undefined') {
+        altAction.style.display = 'block';
+        altAction.onclick = function() {
+            openMockBrowser(answerUrl, null);
+        };
+    } else {
+        altAction.style.display = 'none';
+    }
+}
+
+function closeMockBrowser() {
+    document.getElementById('mockInAppBrowser').style.display = 'none';
+    document.getElementById('mockIframe').src = '';
+    document.getElementById('mockLibraryContent').style.display = 'block';
 }
 
 function validateMockTestLibrary() {
