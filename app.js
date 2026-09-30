@@ -224,6 +224,9 @@ function showView(view) {
     resultsView: "resultsView",
     focus: "focusView",
     practiceSetup: "practiceSetupView",
+    vocabulary: "practiceSetupView",
+    grammar: "practiceSetupView",
+    kanji: "practiceSetupView",
     mockTest: "mockTestView",
     more: "moreView"
   };
@@ -233,6 +236,18 @@ function showView(view) {
   });
   const target = $(map[view]);
   if (target) target.classList.add("active");
+  
+  if (view === 'vocabulary' || view === 'grammar' || view === 'kanji' || view === 'practiceSetup') {
+    let title = 'Practice Setup';
+    let eyebrowText = 'CUSTOM PRACTICE';
+    if (view === 'vocabulary') { title = 'Vocabulary Practice'; eyebrowText = 'VOCABULARY SETUP'; }
+    if (view === 'grammar') { title = 'Grammar Practice'; eyebrowText = 'GRAMMAR SETUP'; }
+    if (view === 'kanji') { title = 'Kanji Practice'; eyebrowText = 'KANJI SETUP'; }
+    const header = document.querySelector('#practiceSetupView h1');
+    const eyebrow = document.querySelector('#practiceSetupView .eyebrow');
+    if (header) header.textContent = title;
+    if (eyebrow) eyebrow.textContent = eyebrowText;
+  }
   state.view = view;
   document
     .querySelectorAll(".nav-btn")
