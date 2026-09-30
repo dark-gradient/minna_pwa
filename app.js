@@ -666,10 +666,10 @@ function renderFocusView() {
   $("focusStats").textContent = keys.length;
   if (keys.length === 0) {
     $("focusListContainer").innerHTML = `
-      <div class="quiz-card" style="min-height: auto; padding: 30px;">
-        <div style="font-size: 24px; font-weight: 800; font-family: 'Noto Sans JP'; color: var(--muted);">まだありません</div>
-        <p style="color: var(--muted);">No Focus Words yet. Select words you keep forgetting from any lesson and add them here.</p>
-        <button class="secondary-btn" onclick="showView('lessons')" style="margin-top: 15px;">Go to Lessons</button>
+      <div class="panel" style="min-height:auto; padding:30px; text-align:center;">
+        <p style="color:var(--text-primary); font-family:'DotGothic16',sans-serif; font-weight:800; margin-bottom:16px;">No Focus Words yet!</p>
+        <p style="color:var(--text-secondary); margin-bottom:20px;">Select words from any lesson and add them here.</p>
+        <button class="secondary-btn" onclick="showView('lessons')">Go to Lessons</button>
       </div>`;
     return;
   }
@@ -684,8 +684,11 @@ function renderFocusView() {
   
   let sortedLessons = Object.keys(byLesson).map(Number).sort((a,b)=>a-b);
   sortedLessons.forEach(l => {
-    html += `<div class="focus-list-header">LESSON ${String(l).padStart(2, "0")}</div>`;
-    html += `<div class="vocab-table">`;
+    html += `<div style="margin-bottom:24px;">
+      <div style="margin-bottom:10px;">
+        <span style="background:var(--pink);color:var(--yellow);padding:4px 12px;border-radius:8px;border:2px solid var(--text-primary);box-shadow:2px 2px 0 var(--text-primary);font-family:'DotGothic16',sans-serif;font-weight:800;font-size:12px;">LESSON ${String(l).padStart(2, "0")}</span>
+      </div>
+      <div class="vocab-table">`;
     byLesson[l].forEach(id => {
       let idx = id.split("-")[1];
       let v = VOCAB[l][idx];
@@ -697,11 +700,11 @@ function renderFocusView() {
         </div>
         <div style="display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
           <span class="vocab-en">${escapeHtml(v.en)}</span>
-          <button class="secondary-btn compact" style="font-size:11px; padding:4px 8px; color:var(--red);" onclick="removeFromFocus('${id}')">Remove</button>
+          <button class="secondary-btn compact" style="font-size:11px; padding:4px 8px;" onclick="removeFromFocus('${id}')">Remove</button>
         </div>
       </div>`;
     });
-    html += `</div>`;
+    html += `</div></div>`;
   });
   $("focusListContainer").innerHTML = html;
 }
@@ -814,7 +817,11 @@ function renderReview() {
     `<div style="font-size: 14px; color: var(--muted); line-height: 1.4;">${total} words<br>${new Set(ids.map((id) => id.split("-")[0])).size} lessons affected</div>`;
   if (total === 0) {
     $("wrongListContainer").innerHTML =
-      `<div class="quiz-card" style="min-height: auto; padding: 30px;"><div style="font-size: 24px; font-weight: 800; font-family: 'Noto Sans JP'; color: var(--muted);">まだ間違いはありません</div><p style="color: var(--muted);">No wrong answers yet. Words you answer incorrectly will appear here for review.</p><button class="secondary-btn" onclick="showView('home')" style="margin-top: 15px;">Back to Practice</button></div>`;
+      `<div class="panel" style="min-height:auto; padding:30px; text-align:center;">
+        <p style="color:var(--text-primary); font-family:'DotGothic16',sans-serif; font-weight:800; margin-bottom:16px;">No wrong answers yet!</p>
+        <p style="color:var(--text-secondary); margin-bottom:20px;">Words you answer incorrectly will appear here.</p>
+        <button class="secondary-btn" onclick="showView('home')">Back to Practice</button>
+      </div>`;
     $("reviewSetupPanel").style.display = "none";
     return;
   }
@@ -825,7 +832,10 @@ function renderReview() {
       .map((v, i) => ({ ...v, lesson: +n, id: `${n}-${i}` }))
       .filter((v) => data[v.id]);
     if (wrongInLesson.length > 0) {
-      html += `<div style="margin-bottom: 30px;"><div class="eyebrow" style="margin-bottom: 10px;">Lesson ${n}</div>`;
+      html += `<div style="margin-bottom: 24px;">
+        <div style="margin-bottom:10px;">
+          <span style="background:var(--pink);color:var(--yellow);padding:4px 12px;border-radius:8px;border:2px solid var(--text-primary);box-shadow:2px 2px 0 var(--text-primary);font-family:'DotGothic16',sans-serif;font-weight:800;font-size:12px;">LESSON ${String(n).padStart(2,'0')}</span>
+        </div>`;
       html +=
         `<div class="vocab-table">` +
         wrongInLesson
