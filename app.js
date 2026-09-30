@@ -1491,16 +1491,16 @@ function renderMockTests() {
     let html = '';
     
     if (filtered.filter(t => t.id.includes('official')).length > 0) {
-        html += `<div class="mock-category-title">📘 OFFICIAL JLPT PRACTICE</div>`;
+        let officialIndex = 0;
         filtered.filter(t => t.id.includes('official')).forEach(t => {
-            html += renderMockCard(t);
+            html += renderMockCard(t, officialIndex++);
         });
     }
     
     if (filtered.filter(t => !t.id.includes('official')).length > 0) {
-        html += `<div class="mock-category-title">📝 N5 PRACTICE MOCKS</div>`;
+        let practiceIndex = 0;
         filtered.filter(t => !t.id.includes('official')).forEach(t => {
-            html += renderMockCard(t);
+            html += renderMockCard(t, practiceIndex++);
         });
     }
 
@@ -1513,34 +1513,35 @@ function renderMockTests() {
     }
 }
 
-function renderMockCard(test) {
-    const typeLabel = test.type === 'full-mock' ? '● Full Mock' : '○ Partial Mock';
-    const ansLabel = test.answerKeyUrl ? '● Answer Key' : '○ No Answers';
-    const authorLabel = test.contentOrigin === 'human-authored' ? '● Human Authored' : '○ Unverified';
+function renderMockCard(test, index) {
+    const typeLabel = test.type === 'full-mock' ? 'Full Mock' : 'Partial Mock';
+    const num = String(index + 1).padStart(2, '0');
     
     return `
-    <div class="mock-card">
-        <h3 class="mock-card-title">${test.title}</h3>
-        <p class="mock-card-author">${test.author}</p>
-        
-        <div class="mock-sections">
-            <span class="${test.hasVocabulary ? 'active' : ''}">Vocabulary</span>
-            <span class="${test.hasGrammar ? 'active' : ''}">Grammar</span>
-            <span class="${test.hasReading ? 'active' : ''}">Reading</span>
-            <span class="${test.hasListening ? 'active' : ''}">Listening</span>
+    <div class="mock-card-v2">
+        <div class="mock-card-header">
+            <div class="mock-badge-num">${num}</div>
+            <h3 class="mock-card-title">${test.title}</h3>
         </div>
+        <div class="mock-badge-pink">${typeLabel}</div>
         
-        <ul class="mock-details">
-            <li>${typeLabel}</li>
-            <li>${ansLabel}</li>
-            <li>${authorLabel}</li>
+        <ul class="mock-sections-list">
+            <li class="${test.hasVocabulary ? 'active' : ''}"><span>📖</span> Vocabulary</li>
+            <li class="${test.hasGrammar ? 'active' : ''}"><span>✍️</span> Grammar</li>
+            <li class="${test.hasReading ? 'active' : ''}"><span>📄</span> Reading</li>
+            <li class="${test.hasListening ? 'active' : ''}"><span>🎧</span> Listening</li>
         </ul>
+        
+        <div class="mock-meta-row">
+            <span>📝 50 Questions</span>
+            <span>⏱ 60 Min</span>
+        </div>
         
         <div class="mock-actions">
             ${test.rightsStatus === 'external-link-only' ? 
-              `<a href="${test.sourceUrl}" target="_blank" class="mock-btn primary">OPEN ORIGINAL SOURCE</a>` :
-              `<a href="${test.paperUrl}" target="_blank" class="mock-btn primary">VIEW PAPER</a>
-               <a href="${test.answerKeyUrl}" target="_blank" class="mock-btn secondary">ANSWERS</a>`
+              `<a href="${test.sourceUrl}" target="_blank" class="mock-btn primary">▶ Open Source</a>` :
+              `<a href="${test.paperUrl}" target="_blank" class="mock-btn primary">▶ Start Test</a>
+               <a href="${test.answerKeyUrl}" target="_blank" class="mock-btn secondary">📄 Answer Key</a>`
             }
         </div>
     </div>

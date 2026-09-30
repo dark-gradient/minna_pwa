@@ -325,22 +325,40 @@
     <section id="mockTestView" class="view">
       <div class="page-head"><div><div class="eyebrow">MOCK TESTS</div><h1>N5 Practice Exam</h1></div></div>
       
-      <div class="panel">
-        <div class="kicker" style="background: rgba(23, 37, 42, 0.95); color: #F3D99B; padding: 12px; margin-top: 12px; border: 1px solid rgba(243, 217, 155, 0.3); border-radius: 8px; font-family: 'Noto Sans JP', sans-serif;">
-          <h3 style="margin: 0 0 8px 0; font-size: 14px;">YOUR MOCK TEST LIBRARY</h3>
-          <p style="margin: 0 0 12px 0; font-size: 12px; opacity: 0.8;">50+ TESTS</p>
-          
-          <div class="mock-filters" style="display: flex; flex-wrap: wrap; gap: 6px;">
-            <button class="mock-filter-btn active" onclick="setMockFilter('all')">ALL</button>
-            <button class="mock-filter-btn" onclick="setMockFilter('full-mock')">FULL MOCKS</button>
-            <button class="mock-filter-btn" onclick="setMockFilter('with-listening')">WITH LISTENING</button>
-            <button class="mock-filter-btn" onclick="setMockFilter('official')">OFFICIAL</button>
-            <button class="mock-filter-btn" onclick="setMockFilter('practice')">PRACTICE</button>
+      <div class="panel" style="max-width: 1000px; width: 100%; margin: 0 auto; background: transparent; box-shadow: none; padding: 0;">
+        
+        <!-- Chalkboard Header Area -->
+        <div class="mock-chalkboard-header">
+          <div class="chalkboard-inner">
+            <h2>N5 MOCK TEST</h2>
+            <h3 class="jp-subtitle">模擬試験</h3>
+            <p>Challenge Yourself</p>
+            <div class="chalkboard-meta">
+              <span>📝 50 Questions</span>
+              <span>⏱ 60 Minutes</span>
+            </div>
           </div>
         </div>
-        
-        <div id="mockTestList" style="margin-top: 16px;">
-          <!-- Dynamically populated by renderMockTests() -->
+
+        <div class="mock-library-container" style="background: rgba(253, 246, 227, 0.95); border: 2px solid #5D3A1A; border-radius: 12px; padding: 20px; margin-top: 16px;">
+          <div class="mock-lib-header">
+            <div>
+              <h3 style="margin: 0; font-size: 20px; color: #17252A; display: flex; align-items: center; gap: 8px;">🌸 N5 MOCK TEST LIBRARY</h3>
+              <p style="margin: 4px 0 16px 0; font-size: 13px; color: #5D3A1A; opacity: 0.8;">50+ Practice Papers with Answer Keys</p>
+            </div>
+          </div>
+          
+          <div class="mock-filters">
+            <button class="mock-filter-btn active" onclick="setMockFilter('all')">All</button>
+            <button class="mock-filter-btn" onclick="setMockFilter('full-mock')">Full Mock</button>
+            <button class="mock-filter-btn" onclick="setMockFilter('with-listening')">With Listening</button>
+            <button class="mock-filter-btn" onclick="setMockFilter('official')">Official JLPT</button>
+            <button class="mock-filter-btn" onclick="setMockFilter('practice')">Practice</button>
+          </div>
+          
+          <div id="mockTestList" class="mock-test-grid">
+            <!-- Dynamically populated by renderMockTests() -->
+          </div>
         </div>
       </div>
     </section>
