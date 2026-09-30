@@ -1915,9 +1915,26 @@ option:checked {
   font-size: 24px;
   opacity: 0.8;
 }
-body.listening-active { background: #0c1214 !important; overflow: hidden !important; }
-
-
+body.listening-active { 
+  background: #000 !important; 
+  overflow: hidden !important; 
+  margin: 0 !important; 
+  padding: 0 !important;
+}
+body.listening-active .topbar, 
+body.listening-active footer { 
+  display: none !important; 
+}
+body.listening-active .app-shell { 
+  padding: 0 !important; 
+  margin: 0 !important; 
+  max-width: none !important; 
+  height: 100vh; 
+}
+body.listening-active main { 
+  padding: 0 !important; 
+  height: 100vh; 
+}
 
 /* === JAPANESE SCREEN ENVIRONMENT === */
 .theater-background-container {
