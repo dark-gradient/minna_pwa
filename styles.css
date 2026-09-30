@@ -1482,7 +1482,9 @@ body.welcome-active {
     font-size: 24px !important;
     font-weight: 800 !important;
     color: var(--text-primary) !important;
-    background: rgba(243, 217, 155, 0.8) !important; /* Translucent yellow background */
+    background: rgba(243, 217, 155, 0.9) !important; /* Stronger translucent yellow */
+    border: 2px solid var(--text-primary);
+    box-shadow: 2px 2px 0 var(--text-primary);
     display: inline-block;
     padding: 2px 8px;
     border-radius: 4px;
