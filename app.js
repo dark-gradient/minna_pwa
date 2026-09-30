@@ -1214,3 +1214,30 @@ function updateDashboardStats() {
   if (n5Topics) n5Topics.innerHTML = '0/' + totalVocab + '<br>Words';
   if (n5ProgressBar) n5ProgressBar.style.width = '0%';
 }
+
+
+// Omamori Nav logic
+function toggleOmamoriNav() {
+  const nav = document.getElementById('omamori-nav');
+  const tag = document.getElementById('omamori-tag');
+  const tray = document.getElementById('omamori-tray');
+  if (!nav) return;
+  const isOpen = nav.classList.contains('open');
+  if (isOpen) {
+    nav.classList.remove('open');
+    if (tag) tag.setAttribute('aria-expanded', 'false');
+    if (tray) tray.setAttribute('aria-hidden', 'true');
+  } else {
+    nav.classList.add('open');
+    if (tag) tag.setAttribute('aria-expanded', 'true');
+    if (tray) tray.setAttribute('aria-hidden', 'false');
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const nav = document.getElementById('omamori-nav');
+    if (nav && nav.classList.contains('open')) toggleOmamoriNav();
+  }
+});
+window.toggleOmamoriNav = toggleOmamoriNav;
