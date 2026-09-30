@@ -11,23 +11,12 @@
     "description": "Short beginner conversation with slow pronunciation."
   },
   {
-    "id": "1y2pD2F17Xo",
-    "title": "Shopping and Numbers",
-    "level": "N5",
-    "difficulty": "medium",
-    "group": "practice",
-    "type": "listening comprehension",
-    "channel": "Nihongo Practice",
-    "duration": "10:15",
-    "description": "Real N5-style listening scenarios in daily life."
-  },
-  {
     "id": "tJeLjftoDjs",
     "title": "2025 JLPT N5 Listening Practice Test",
     "level": "N5",
-    "difficulty": "hard",
-    "group": "exam",
-    "type": "full practice test",
+    "difficulty": "medium",
+    "group": "practice",
+    "type": "listening practice",
     "channel": "Nihongo JLPT Crush",
     "duration": "35:00",
     "description": "Simulated full-length N5 listening test."
