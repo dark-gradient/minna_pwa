@@ -544,7 +544,7 @@ select option {
 .lesson-card {
     color: var(--text-primary);
     border: 2px solid var(--text-primary) !important;
-    background: rgba(244, 166, 166, 0.40) !important;
+    background: rgba(244, 166, 166, 0.50) !important;
     border-radius: 18px;
     padding: 20px;
     cursor: pointer;
@@ -599,16 +599,16 @@ select option {
     transform: translateZ(0); /* Hardware acceleration */
 }
 .vocab-jp {
-    font-family: "Noto Sans JP";
+    font-family: "Shippori Mincho", serif;
     font-weight: 700
 }
 .vocab-en {
     color: var(--yellow);
     background: var(--pink);
-    font-size: 15px;
+    font-size: 18px;
     text-align: right;
     font-weight: 700;
-    padding: 3px 9px;
+    padding: 4px 12px;
     border-radius: 5px;
     display: inline-block;
 }
@@ -970,8 +970,8 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
     z-index: 100;
 }
 .brand { display: flex; align-items: center; cursor: pointer; }
-.brand-jp { font-size: 16px; font-weight: 800; color: var(--text-primary); font-family: 'Noto Sans JP'; }
-.brand-en { font-size: 10px; font-weight: 700; color: var(--text-secondary); letter-spacing: 1px; }
+.brand-jp { font-size: 18px; font-weight: 800; color: var(--text-primary); font-family: 'Shippori Mincho', serif; }
+.brand-en { font-size: 14px; font-weight: 800; color: var(--text-primary); letter-spacing: 2px; font-family: 'Noto Serif JP', serif; }
 .header-actions { display: flex; align-items: center; }
 .icon-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-primary); }
  /* We will hide it or re-purpose it */
@@ -1321,16 +1321,16 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
     margin-bottom: 12px;
 }
 .card-jp {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 800;
     color: var(--text-primary);
     margin-bottom: 2px;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Shippori Mincho', serif;
 }
 .card-en {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 700;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     margin-bottom: 16px;
 }
 .card-progress {
@@ -1484,7 +1484,7 @@ body.welcome-active {
     font-size: 24px !important;
     font-weight: 800 !important;
     color: var(--text-primary) !important;
-    background: rgba(243, 217, 155, 0.40) !important; /* Match pink background opacity */
+    background: rgba(243, 217, 155, 0.50) !important; /* Match pink background opacity */
     border: 2px solid var(--text-primary);
     box-shadow: 2px 2px 0 var(--text-primary);
     display: inline-block;
