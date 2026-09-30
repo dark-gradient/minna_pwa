@@ -1,4 +1,4 @@
-﻿
+
 /* --- GLOBAL BACKGROUNDS & DESKTOP FRAME --- */
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
@@ -1482,6 +1482,11 @@ body.welcome-active {
     font-size: 24px !important;
     font-weight: 800 !important;
     color: var(--text-primary) !important;
+    background: rgba(243, 217, 155, 0.8) !important; /* Translucent yellow background */
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
 }
 .lesson-card .meta {
     font-size: 16px !important;
