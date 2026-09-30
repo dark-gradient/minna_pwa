@@ -1,37 +1,46 @@
 [
-    {
-        "id": "M7lc1UVf-VE",
-        "title": "N5 Listening Practice 01 (Test)",
-        "category": "Daily Conversation",
-        "duration": "14:20",
-        "level": "N5"
-    },
-    {
-        "id": "1y2pD2F17Xo",
-        "title": "N5 Listening Practice 02",
-        "category": "Greetings & Introductions",
-        "duration": "10:15",
-        "level": "N5"
-    },
-    {
-        "id": "4GgBw2O3a4M",
-        "title": "N5 Listening Practice 03",
-        "category": "Shopping & Numbers",
-        "duration": "12:45",
-        "level": "N5"
-    },
-    {
-        "id": "2Z9P0R7B6aE",
-        "title": "N5 Listening Practice 04",
-        "category": "School & Time",
-        "duration": "18:30",
-        "level": "N5"
-    },
-    {
-        "id": "9B0H2M4T8kL",
-        "title": "JLPT N5 Full Mock Listening",
-        "category": "Exam Practice",
-        "duration": "35:00",
-        "level": "N5"
-    }
+  {
+    "id": "M7lc1UVf-VE",
+    "title": "Daily Conversation (Test)",
+    "level": "N5",
+    "difficulty": "easy",
+    "group": "easy",
+    "type": "listening practice",
+    "channel": "YouTube Developers",
+    "duration": "02:15",
+    "description": "Short beginner conversation with slow pronunciation."
+  },
+  {
+    "id": "1y2pD2F17Xo",
+    "title": "Shopping and Numbers",
+    "level": "N5",
+    "difficulty": "medium",
+    "group": "practice",
+    "type": "listening comprehension",
+    "channel": "Nihongo Practice",
+    "duration": "10:15",
+    "description": "Real N5-style listening scenarios in daily life."
+  },
+  {
+    "id": "tJeLjftoDjs",
+    "title": "2025 JLPT N5 Listening Practice Test",
+    "level": "N5",
+    "difficulty": "hard",
+    "group": "exam",
+    "type": "full practice test",
+    "channel": "Nihongo JLPT Crush",
+    "duration": "35:00",
+    "description": "Simulated full-length N5 listening test."
+  },
+  {
+    "id": "411OSqgxgrQ",
+    "title": "JLPT N5 Listening Practice Test With Answers — 2025",
+    "level": "N5",
+    "difficulty": "hard",
+    "group": "exam",
+    "type": "full practice test",
+    "channel": "JLPT Test",
+    "duration": "38:15",
+    "description": "Exam-style listening comprehension with answers at the end."
+  }
 ]

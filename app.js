@@ -1290,16 +1290,57 @@ function initListening() {
 function renderPlaylist() {
     const list = document.getElementById("playlistItems");
     if (!list) return;
-    list.innerHTML = LISTENING.map(v => `
+    
+    const easy = LISTENING.filter(v => v.group === 'easy');
+    const practice = LISTENING.filter(v => v.group === 'practice');
+    const exam = LISTENING.filter(v => v.group === 'exam');
+    
+    let html = `
+        <div class="programme-header">
+            <h3>🎧 N5 LISTENING</h3>
+            <p>Choose your challenge</p>
+        </div>
+    `;
+    
+    html += renderPlaylistGroup('🌱 EASY', 'Build your listening confidence', easy, false);
+    html += renderPlaylistGroup('🎧 PRACTICE', 'Train with real N5-style listening', practice, true);
+    html += renderPlaylistGroup('🎯 EXAM CHALLENGE', 'Test your N5 listening', exam, true);
+    
+    list.innerHTML = html;
+}
+
+function renderPlaylistGroup(title, subtitle, videos, expanded) {
+    if (videos.length === 0) return '';
+    const openState = expanded ? 'open' : '';
+    
+    const itemsHtml = videos.map(v => `
         <div class="sidebar-video-item" id="video-item-${v.id}" onclick="selectVideo('${v.id}')">
-            <div class="video-thumb-placeholder">▶</div>
+            <div class="video-indicator">▶</div>
             <div class="video-info">
                 <h4>${v.title}</h4>
-                <p>${v.category}</p>
-                <span class="video-time">${v.level} • ${v.duration}</span>
+                <p>${v.type || v.channel}</p>
+                <div class="video-meta">
+                    <span class="n5-badge">N5</span>
+                    <span class="video-time">${v.duration}</span>
+                </div>
             </div>
         </div>
     `).join("");
+    
+    return `
+        <div class="programme-group ${openState}">
+            <button class="group-header" onclick="this.parentElement.classList.toggle('open')">
+                <div class="group-title">
+                    <h4>${title}</h4>
+                    <p>${subtitle}</p>
+                </div>
+                <span class="chevron">▼</span>
+            </button>
+            <div class="group-items">
+                ${itemsHtml}
+            </div>
+        </div>
+    `;
 }
 
 function selectVideo(id) {
