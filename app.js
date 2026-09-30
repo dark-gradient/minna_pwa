@@ -1,5 +1,6 @@
 let VOCAB = {},
   KAIWA = {};
+let LISTENING = [];
 let focusWords = JSON.parse(localStorage.getItem("minna_focus_words")) || {};
 function saveFocusWords() { localStorage.setItem("minna_focus_words", JSON.stringify(focusWords)); }
 let lessonSelection = new Set();
@@ -104,9 +105,10 @@ const lessonNames = {
   25: "Conditions & moving",
 };
 async function loadData() {
-  [VOCAB, KAIWA] = await Promise.all([
+  [VOCAB, KAIWA, LISTENING] = await Promise.all([
     fetch("vocab.json").then((r) => r.json()),
     fetch("kaiwa.json").then((r) => r.json()),
+    fetch("listening-n5.json").then((r) => r.json()).catch(() => [])
   ]);
   initAmbiguousSet();
   init();
@@ -157,6 +159,7 @@ function init() {
   renderKaiwa();
   updatePoolCount();
   updateReviewPoolCount();
+  initListening();
   const saved = localStorage.getItem("mnn-theme");
   if (saved) document.documentElement.dataset.theme = saved;
 
@@ -1267,4 +1270,85 @@ document.addEventListener('keydown', (e) => {
     if (nav && nav.classList.contains('open')) toggleOmamoriNav();
   }
 });
+
+// === LISTENING PAGE LOGIC ===
+
+function initListening() {
+    renderPlaylist();
+    
+    window.addEventListener("offline", handleNetworkChange);
+    window.addEventListener("online", handleNetworkChange);
+    handleNetworkChange(); 
+    
+    let lastId = localStorage.getItem("minna-listening-last-video");
+    if (LISTENING.length > 0) {
+        let toSelect = LISTENING.find(v => v.id === lastId) || LISTENING[0];
+        selectVideo(toSelect.id);
+    }
+}
+
+function renderPlaylist() {
+    const list = document.getElementById("playlistItems");
+    if (!list) return;
+    list.innerHTML = LISTENING.map(v => `
+        <div class="sidebar-video-item" id="video-item-${v.id}" onclick="selectVideo('${v.id}')">
+            <div class="video-thumb-placeholder">▶</div>
+            <div class="video-info">
+                <h4>${v.title}</h4>
+                <p>${v.category}</p>
+                <span class="video-time">${v.level} • ${v.duration}</span>
+            </div>
+        </div>
+    `).join("");
+}
+
+function selectVideo(id) {
+    localStorage.setItem("minna-listening-last-video", id);
+    const video = LISTENING.find(v => v.id === id);
+    if (!video) return;
+    
+    document.querySelectorAll(".sidebar-video-item").forEach(el => el.classList.remove("active"));
+    const activeEl = document.getElementById(`video-item-${id}`);
+    if (activeEl) activeEl.classList.add("active");
+    
+    const container = document.getElementById("youtubeContainer");
+    const placeholder = document.getElementById("videoPlaceholder");
+    if (!container || !placeholder) return;
+    
+    if (navigator.onLine) {
+        container.innerHTML = \`<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${id}?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>\`;
+        container.style.display = "block";
+        placeholder.style.display = "none";
+    } else {
+        container.innerHTML = "";
+        container.style.display = "none";
+        placeholder.style.display = "flex";
+    }
+}
+
+function handleNetworkChange() {
+    const overlay = document.getElementById("offlineOverlay");
+    const container = document.getElementById("youtubeContainer");
+    const placeholder = document.getElementById("videoPlaceholder");
+    if (!overlay) return;
+    
+    if (!navigator.onLine) {
+        overlay.classList.remove("hidden");
+        if (container) {
+            container.innerHTML = "";
+            container.style.display = "none";
+        }
+        if (placeholder) placeholder.style.display = "flex";
+    } else {
+        overlay.classList.add("hidden");
+        let lastId = localStorage.getItem("minna-listening-last-video");
+        if (lastId && document.getElementById("listeningView").classList.contains("active")) {
+            selectVideo(lastId); // Reload iframe
+        }
+    }
+}
+
+function retryConnection() {
+    handleNetworkChange();
+}
 window.toggleOmamoriNav = toggleOmamoriNav;
