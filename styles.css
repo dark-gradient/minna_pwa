@@ -378,16 +378,21 @@ h1 span {
 }
 .controls-grid select {
     height: 44px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
+    border: 2px solid var(--text-primary) !important;
+    border-radius: 8px;
     padding: 0 12px;
-    background: var(--bg-primary);
-    color: var(--text-primary);
-    outline: none
+    background: var(--yellow) !important;
+    color: var(--text-primary) !important;
+    font-family: 'DotGothic16', sans-serif !important;
+    font-weight: 800 !important;
+    outline: none;
+    box-shadow: 2px 2px 0 var(--text-primary) !important;
 }
 select option {
-    background: var(--surface);
-    color: var(--text-primary)
+    background: #F3D99B !important;
+    color: #17252A !important;
+    font-family: 'DotGothic16', sans-serif !important;
+    font-weight: 700 !important;
 }
 .primary-btn,
 .secondary-btn,
