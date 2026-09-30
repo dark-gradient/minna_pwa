@@ -63,10 +63,10 @@ body {
 body.welcome-active { background-image: url('fuji_wide.jpg') !important; }
 body.home-active { background-image: url('bg_home.jpg') !important; }
 body.lessons-active { background-image: url('bg_learn.jpg') !important; }
-body.practiceSetup-active { background-image: url('bg_practice.jpg') !important; }
+body.practiceSetup-active { background-image: url('bg_practice_new.jpg') !important; }
 body.mockTest-active { background-image: url('bg_practice.jpg') !important; }
 body.more-active { background-image: url('bg_more.jpg') !important; }
-body.quiz-active { background-image: url('bg_practice.jpg') !important; }
+body.quiz-active { background-image: url('bg_practice_new.jpg') !important; }
 
 /* Make App Shell completely transparent to show body background */
 .app-shell { background: transparent !important; }
