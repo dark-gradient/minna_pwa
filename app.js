@@ -628,6 +628,14 @@ function renderKanji() {
     </button>`;
   }).join("");
 }
+
+function openGrammarLesson(n) {
+  startGrammarTest('lesson', n);
+}
+
+function openKanjiUnit(n) {
+  startKanjiTest('unit', n);
+}
 let currentLessonWords = [];
 function openLesson(n) {
   currentLessonId = n;
@@ -1678,11 +1686,15 @@ window.toggleOmamoriNav = toggleOmamoriNav;
 
 
 
-function startKanjiTest(type) {
+function startKanjiTest(type, n) {
   state.testMode = "kanji";
   let kanjiItems = KANJI;
   if (type === 'quick') kanjiItems = shuffle(KANJI).slice(0, 10);
   else if (type === 'n5') kanjiItems = KANJI;
+  else if (type === 'unit') {
+      let startIdx = (n - 1) * 40;
+      kanjiItems = KANJI.slice(startIdx, startIdx + 40);
+  }
   else kanjiItems = shuffle(KANJI).slice(0, 20); // mixed
   
   let qQueue = [];
@@ -1721,7 +1733,7 @@ function startKanjiTest(type) {
   nextQuestion();
 }
 
-function startGrammarTest(type) {
+function startGrammarTest(type, n) {
   state.testMode = "grammar";
   let grammarPoints = [];
   GRAMMAR.forEach(lesson => {
@@ -1732,6 +1744,9 @@ function startGrammarTest(type) {
   let selected = grammarPoints;
   if (type === 'quick') selected = shuffle(grammarPoints).slice(0, 10);
   else if (type === 'mixed') selected = shuffle(grammarPoints).slice(0, 20);
+  else if (type === 'lesson') {
+      selected = grammarPoints.filter(p => p.lessonId === n);
+  }
   
   let qQueue = [];
   selected.forEach(g => {
