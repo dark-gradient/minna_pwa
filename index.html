@@ -455,6 +455,98 @@
     </div>
   </div>
 
+    <section id="grammarView" class="view">
+      <div class="topbar-home">
+        <div class="home-title">
+          <h1>文法</h1>
+          <span class="subtitle">GRAMMAR</span>
+        </div>
+      </div>
+      
+      <div class="dashboard-scroll">
+        <div class="streak-card" style="background: var(--green); border-color: #17252A; color: #fff;">
+          <div class="streak-content">
+            <h2 style="color: var(--yellow);">Learn Japanese grammar step by step.</h2>
+            <p style="color: #fff;">Master all 25 lessons of foundational N5 grammar.</p>
+          </div>
+        </div>
+
+        <div class="section-header">
+          <h2>Grammar Lessons</h2>
+          <span class="chevron">›</span>
+        </div>
+        <div class="practice-grid" id="grammarLessonGrid">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="section-header" style="margin-top:24px;">
+          <h2>Grammar Practice</h2>
+          <span class="chevron">›</span>
+        </div>
+        <div class="practice-grid">
+          <div class="practice-card" style="background: var(--yellow);" onclick="startGrammarTest('quick')">
+            <div class="card-icon">⚡</div>
+            <div class="card-en" style="color:var(--text-primary);">Quick Test</div>
+          </div>
+          <div class="practice-card" style="background: var(--pink);" onclick="startGrammarTest('mixed')">
+            <div class="card-icon">🔀</div>
+            <div class="card-en" style="color:var(--text-primary);">Mixed Test</div>
+          </div>
+          <div class="practice-card" style="background: var(--blue);" onclick="startGrammarTest('weak')">
+            <div class="card-icon">🎯</div>
+            <div class="card-en" style="color:var(--text-primary);">Weak Areas</div>
+          </div>
+        </div>
+        <div style="height: 120px;"></div>
+      </div>
+    </section>
+
+    <section id="kanjiView" class="view">
+      <div class="topbar-home">
+        <div class="home-title">
+          <h1>漢字</h1>
+          <span class="subtitle">KANJI</span>
+        </div>
+      </div>
+      
+      <div class="dashboard-scroll">
+        <div class="streak-card" style="background: var(--text-primary); border-color: var(--yellow); color: #fff;">
+          <div class="streak-content">
+            <h2 style="color: var(--yellow);">Learn 320 foundational kanji step by step.</h2>
+            <p style="color: #fff;">Kanji Journey</p>
+          </div>
+        </div>
+
+        <div class="section-header">
+          <h2>Units</h2>
+          <span class="chevron">›</span>
+        </div>
+        <div class="practice-grid" id="kanjiUnitGrid">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="section-header" style="margin-top:24px;">
+          <h2>Kanji Practice</h2>
+          <span class="chevron">›</span>
+        </div>
+        <div class="practice-grid">
+          <div class="practice-card" style="background: var(--yellow);" onclick="startKanjiTest('quick')">
+            <div class="card-icon">⚡</div>
+            <div class="card-en" style="color:var(--text-primary);">Quick Test</div>
+          </div>
+          <div class="practice-card" style="background: var(--pink);" onclick="startKanjiTest('mixed')">
+            <div class="card-icon">🔀</div>
+            <div class="card-en" style="color:var(--text-primary);">Mixed Test</div>
+          </div>
+          <div class="practice-card" style="background: var(--green);" onclick="startKanjiTest('n5')">
+            <div class="card-icon">🗻</div>
+            <div class="card-en" style="color:var(--text-primary);">Full N5 Challenge</div>
+          </div>
+        </div>
+        <div style="height: 120px;"></div>
+      </div>
+    </section>
+
   </main>
 
   

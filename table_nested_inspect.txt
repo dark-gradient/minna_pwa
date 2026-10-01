@@ -1,0 +1,2030 @@
+--- Main Table 0 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 1   人     Kun: ひと     On: ジン、ニン
+  Col 1 Inner Table -> Row 0: | 人 | ひと | person | ここは人が多いですね。 |
+  Col 1 Inner Table -> Row 1: | カナダ人 | カナダじん | Canadian | その人はカナダ人です。 |
+  Col 1 Inner Table -> Row 2: | 三人 | さんにん | three people | こどもが三人います。 |
+--- Main Table 1 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 2   日     Kun: ひ、か     On: ニチ
+  Col 1 Inner Table -> Row 0: | その日 | そのひ | that day | すみません。その日は忙しいです。 |
+  Col 1 Inner Table -> Row 1: | 三日 | みっか | the third day of the month | 今日は三日です。 |
+  Col 1 Inner Table -> Row 2: | 十五日 | じゅうごにち | the fifteenth day of the month | 明日は十五日です。 |
+  Col 1 Inner Table -> Row 3: | 日曜日 | にちようび | Sunday | 日曜日は休みです。 |
+--- Main Table 2 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 3   一     Kun: ひと(つ)     On: イチ、イッ
+  Col 1 Inner Table -> Row 0: | 一つ | ひとつ | one | すみません。それを一つください。 |
+  Col 1 Inner Table -> Row 1: | 一人 | ひとり | one person | 一人でホンコンに行きます。 |
+  Col 1 Inner Table -> Row 2: | 一日 | いちにち | one day | ホンコンに一日います。 |
+  Col 1 Inner Table -> Row 3: | 一日 | ついたち | the first day of the month | 一日にホンコンに行きます。 |
+  Col 1 Inner Table -> Row 4: | 一分 | いっぷん | one minute | ここからホテルまで一分です。 |
+--- Main Table 3 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 4   二     Kun: ふた(つ)     On: ニ
+  Col 1 Inner Table -> Row 0: | 二つ | ふたつ | two | コーヒーを二つください。 |
+  Col 1 Inner Table -> Row 1: | 二日 | ふつか | two days | パリに二日いました。 |
+  Col 1 Inner Table -> Row 2: |  |  | the second day of the month | 今日は二日です。 |
+  Col 1 Inner Table -> Row 3: | 二人 | ふたり | two people | 二人で行きます。 |
+  Col 1 Inner Table -> Row 4: | 二時間 | にじかん | two hours | 二時間テニスをしました。 |
+--- Main Table 4 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 5   三     Kun: みっ(つ)     On: サン
+  Col 1 Inner Table -> Row 0: | 三つ | みっつ | three | ハンバーガーを三つとポテトを二つください。 |
+  Col 1 Inner Table -> Row 1: | 三日 | みっか | three days | ローマに三日いました。 |
+  Col 1 Inner Table -> Row 2: |  |  | the third day of the month | 三日にロンドンに行きます。 |
+  Col 1 Inner Table -> Row 3: | 三人 | さんにん | three people | 家族は三人です。 |
+--- Main Table 5 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 6   四     Kun: よっ(つ)、よん、よ     On: シ
+  Col 1 Inner Table -> Row 0: | 四つ | よっつ | four | このパンを四つください。 |
+  Col 1 Inner Table -> Row 1: | 四日 | よっか | four days | カナダに四日います。 |
+  Col 1 Inner Table -> Row 2: |  |  | the fourth day of the month | 今日は四日です。 |
+  Col 1 Inner Table -> Row 3: | 四回 | よんかい | four times | ディズニーランドに四回行きました。 |
+  Col 1 Inner Table -> Row 4: | 四人 | よにん | four people | 家族は四人です。 |
+  Col 1 Inner Table -> Row 5: | 四月 | しがつ | April | 今日は四月四日です。 |
+--- Main Table 6 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 7   五     Kun: いつ(つ)     On: ゴ
+  Col 1 Inner Table -> Row 0: | 五つ | いつつ | five | チーズバーガーを五つください。 |
+  Col 1 Inner Table -> Row 1: | 五日 | いつか | five days | サンフランシスコに五日いました。 |
+  Col 1 Inner Table -> Row 2: |  |  | the fifth day of the month | 今日は五日です。 |
+  Col 1 Inner Table -> Row 3: | 五人 | ごにん | five people | 五人でキャンプに行きます。 |
+--- Main Table 7 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 8   六     Kun: むっ(つ)     On: ロク
+  Col 1 Inner Table -> Row 0: | 六つ | むっつ | six | ビールを六つください。 |
+  Col 1 Inner Table -> Row 1: | 六日 | むいか | six days | インドに六日いました。 |
+  Col 1 Inner Table -> Row 2: |  |  | the sixth day of the month | 今日は六日です。 |
+  Col 1 Inner Table -> Row 3: | 六人 | ろくにん | six people | 家族は六人です。 |
+--- Main Table 8 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 9   七     Kun: なな(つ)、なな     On: シチ
+  Col 1 Inner Table -> Row 0: | 七つ | ななつ | seven | コーラを七つください。 |
+  Col 1 Inner Table -> Row 1: | 七回 | ななかい | seven times | ディズニーシーに七回行きました。 |
+  Col 1 Inner Table -> Row 2: | 七日 | なのか | seven days | ロンドンに七日いました。 |
+  Col 1 Inner Table -> Row 3: |  |  | the seventh day of the month | 七日は休みです。 |
+  Col 1 Inner Table -> Row 4: | 七人 | しちにん | seven people | 家族は七人です。 |
+--- Main Table 9 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 10   八     Kun: やっ(つ)     On: ハチ
+  Col 1 Inner Table -> Row 0: | 八つ | やっつ | eight | このりんごを八つください。 |
+  Col 1 Inner Table -> Row 1: | 八日 | ようか | eight days | シンガポールに八日いました。 |
+  Col 1 Inner Table -> Row 2: |  |  | the eighth day of the month | 八日は休みです。 |
+  Col 1 Inner Table -> Row 3: | 八人 | はちにん | eight people | 家族は八人います。 |
+--- Main Table 10 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 11   九     Kun: ここの(つ)     On: キュウ、ク
+  Col 1 Inner Table -> Row 0: | 九つ | ここのつ | nine | コーヒーを九つください。 |
+  Col 1 Inner Table -> Row 1: | 九日 | ここのか | nine days | イタリアに九日いました。 |
+  Col 1 Inner Table -> Row 2: |  |  | the ninth day of the month | 九日は休みです。 |
+  Col 1 Inner Table -> Row 3: | 九人 | きゅうにん | nine people | 家族は九人です。 |
+  Col 1 Inner Table -> Row 4: | 九月 | くがつ | September | 今日は九月九日です。 |
+--- Main Table 11 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 12   十     Kun: とお     On: ジュウ
+  Col 1 Inner Table -> Row 0: | 十 | とお | ten | 「いくつありますか」、「一つ、二つ、・・・・、九つ、十」 |
+  Col 1 Inner Table -> Row 1: | 十日 | とおか | ten days | オーストラリアに十日いました。 |
+  Col 1 Inner Table -> Row 2: |  |  | the tenth day of the month | 十日は休みです。 |
+  Col 1 Inner Table -> Row 3: | 十人 | じゅうにん | ten people | 家族は十人です。 |
+--- Main Table 12 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 13   月     Kun: つき     On: ゲツ、ガツ
+  Col 1 Inner Table -> Row 0: | 月 | つき | moon | 月がとてもきれいです。 |
+  Col 1 Inner Table -> Row 1: |  |  | month | 月に一回サッカーをします。 |
+  Col 1 Inner Table -> Row 2: | 月曜日 | げつようび | Monday | 月曜日にカナダに行きます。 |
+  Col 1 Inner Table -> Row 3: | 一か月 | いっかげつ | one month | ドイツに一か月いました。 |
+  Col 1 Inner Table -> Row 4: | 四月 | しがつ | April | 四月四日に東京に来ました。 |
+--- Main Table 13 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 14   火     Kun: ひ     On: カ
+  Col 1 Inner Table -> Row 0: | 火 | ひ | fire | 火はあぶないです。 |
+  Col 1 Inner Table -> Row 1: | 火曜日 | かようび | Tuesday | 火曜日にどこに行きましたか。 |
+--- Main Table 14 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 15   水     Kun: みず     On: スイ
+  Col 1 Inner Table -> Row 0: | 水 | みず | water | すみません。水をください。 |
+  Col 1 Inner Table -> Row 1: | 水曜日 | すいようび | Wednesday | 十三日は水曜日です。 |
+--- Main Table 15 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 16   木     Kun: き     On: モク
+  Col 1 Inner Table -> Row 0: | 木 | き | tree | 木の上にカラス(crow)がたくさんいます。 |
+  Col 1 Inner Table -> Row 1: |  |  | wood | この木のテーブルはいくらですか。 |
+  Col 1 Inner Table -> Row 2: | 木曜日 | もくようび | Thursday | 二十四日は木曜日です。 |
+--- Main Table 16 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 17   金     Kun: かね     On: キン
+  Col 1 Inner Table -> Row 0: | お金 | おかね | money | すみません。お金を貸してください。 |
+  Col 1 Inner Table -> Row 1: | 金 | きん | gold | これは金のネックレスです。 |
+  Col 1 Inner Table -> Row 2: | 金曜日 | きんようび | Friday | レッスンは火曜日と金曜日です。 |
+--- Main Table 17 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 18   土     Kun: つち     On: ド
+  Col 1 Inner Table -> Row 0: | 土 | つち | soil; earth | この土はかたいです。 |
+  Col 1 Inner Table -> Row 1: | 土曜日 | どようび | Saturday | 土曜日にテニスをします。 |
+--- Main Table 18 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 19   百     On: ヒャク   Meaning of the kanji: hundred
+  Col 1 Inner Table -> Row 0: | 百円 | ひゃくえん | one hundred yen | 百円ショップはどこにありますか。 |
+--- Main Table 19 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 20   千     On: セン   Meaning of the kanji: thousand
+  Col 1 Inner Table -> Row 0: | 千円 | せんえん | one thousand yen | あのレストランのランチは千円です。 |
+--- Main Table 20 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 21   万     On: マン   Meaning of the kanji: ten thousand
+  Col 1 Inner Table -> Row 0: | 三万円 | さんまんえん | thirty thousand yen | このバッグは三万円でした。 |
+--- Main Table 21 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 22   円     On: エン   Meaning of the kanji: yen
+  Col 1 Inner Table -> Row 0: | 百円 | ひゃくえん | one hundred yen | これは三つで百円です。 |
+--- Main Table 22 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 23   行     Kun: い(きます)、おこな(います)     On: コウ
+  Col 1 Inner Table -> Row 0: | 行きます | いきます | go | いっしょにレストランに行きませんか。 |
+  Col 1 Inner Table -> Row 1: | 行います | おこないます | do; hold | どこでミーティングを行いますか。 |
+  Col 1 Inner Table -> Row 2: | 銀行 | ぎんこう | bank | これから銀行に行きます。 |
+  Col 1 Inner Table -> Row 3: | 旅行します | りょこうします | travel | ヨーロッパを旅行したいです。 |
+--- Main Table 23 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 24   来     Kun: き(ます)     On: ライ
+  Col 1 Inner Table -> Row 0: | 来ます | きます | come | 六月六日にアメリカから東京に来ました。 |
+  Col 1 Inner Table -> Row 1: | 来月 | らいげつ | next month | 来月、一人でカナダに行きます。 |
+--- Main Table 24 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 25   休     Kun: やす(みます)
+  Col 1 Inner Table -> Row 0: | 休みます | やすみます | rest | 少し休みましょう。 |
+  Col 1 Inner Table -> Row 1: |  |  | have a day off | 三日から七日まで休みます。 |
+  Col 1 Inner Table -> Row 2: |  |  | be absent | 明日のレッスンは休みます。 |
+  Col 1 Inner Table -> Row 3: | 休み | やすみ | holiday; vacation | 休みにオーストラリアに行きます。 |
+--- Main Table 25 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 26   見     Kun: み(ます)、み(えます)、み(せます)     On: ケン
+  Col 1 Inner Table -> Row 0: | 見ます | みます | see | 富士山を見ました。 |
+  Col 1 Inner Table -> Row 1: |  |  | look | これを見てください。 |
+  Col 1 Inner Table -> Row 2: |  |  | watch | テレビでそのニュースを見ました。 |
+  Col 1 Inner Table -> Row 3: | 見えます | みえます | be visible | ここから東京タワーが見えます。 |
+  Col 1 Inner Table -> Row 4: | 見せます | みせます | show | メニューを見せてください。 |
+  Col 1 Inner Table -> Row 5: | 意見 | いけん | opinion | みなさんの意見を聞きたいです。 |
+--- Main Table 26 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 27   今     Kun: いま     On: コン
+  Col 1 Inner Table -> Row 0: | 今 | いま | now | 今、ビデオを見ています。 |
+  Col 1 Inner Table -> Row 1: | 今月 | こんげつ | this month | 今月の十日に東京に来ました。 |
+  Col 1 Inner Table -> Row 2: | 今日 | きょう | today | 今日のレッスンはおもしろかったです。 |
+--- Main Table 27 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 28   大     Kun: おお(きい)     On: ダイ、タイ
+  Col 1 Inner Table -> Row 0: | 大きい | おおきい | big | 大きい木があります。 |
+  Col 1 Inner Table -> Row 1: | 大学 | だいがく | university | イギリスの大学に行きたいです。 |
+  Col 1 Inner Table -> Row 2: | 大切 | たいせつ | important | これは大切なデータです。 |
+  Col 1 Inner Table -> Row 3: | 大人 | おとな | adult | 大人は千八百円です。 |
+--- Main Table 28 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 29   小     Kun: ちい(さい)、こ     On: ショウ
+  Col 1 Inner Table -> Row 0: | 小さい | ちいさい | small | あの小さいカップは五百円です。 |
+  Col 1 Inner Table -> Row 1: | 小鳥 | ことり | small bird | 木の上に小鳥がいます。 |
+  Col 1 Inner Table -> Row 2: | 小学校 | しょうがっこう | elementary school | あれは小学校です。 |
+--- Main Table 29 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 30   上     Kun: うえ、あ(げます)、あ(がります)     On: ジョウ
+  Col 1 Inner Table -> Row 0: | 上 | うえ | on | テーブルの上にお金があります。 |
+  Col 1 Inner Table -> Row 1: |  |  | above | 窓の上に時計があります。 |
+  Col 1 Inner Table -> Row 2: | 上げます | あげます | raise | 来月から給料(salary)を上げます。 |
+  Col 1 Inner Table -> Row 3: | 上がります | あがります | go up; rise | 来月から給料が上がります。 |
+  Col 1 Inner Table -> Row 4: | 上手 | じょうず | good at; skillful | あの人はゴルフが上手です。 |
+--- Main Table 30 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 31   下     Kun: した、さ(げます)、さ(がります)     On: カ
+  Col 1 Inner Table -> Row 0: | 下 | した | under | テーブルの下にねこがいます。 |
+  Col 1 Inner Table -> Row 1: | くつ下 | くつした | socks | そのくつ下を見せてください。 |
+  Col 1 Inner Table -> Row 2: | 下げます | さげます | lower; get down | 来月から給料を下げます。 |
+  Col 1 Inner Table -> Row 3: | 下がります | さがります | go down | 来月から給料が下がります。 |
+  Col 1 Inner Table -> Row 4: | 地下鉄 | ちかてつ | subway; underground | 地下鉄で行きましょう。 |
+--- Main Table 31 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 32   中     Kun: なか     On: チュウ
+  Col 1 Inner Table -> Row 0: | 中 | なか | inside | ポケットの中に五万円あります。 |
+  Col 1 Inner Table -> Row 1: | 中国 | ちゅうごく | China | 中国に行きたいです。 |
+  Col 1 Inner Table -> Row 2: | 電話中 | でんわちゅう | on the phone | 今、電話中です。 |
+  Col 1 Inner Table -> Row 3: | 一日中 | いちにちじゅう | all day long | 休みの日は一日中テレビを見ています。 |
+--- Main Table 32 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 33   右     Kun: みぎ
+  Col 1 Inner Table -> Row 0: | 右 | みぎ | right | 右にまがってください。 |
+--- Main Table 33 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 34   左     Kun: ひだり
+  Col 1 Inner Table -> Row 0: | 左 | ひだり | left | 左にまがってください。 |
+--- Main Table 34 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 35   山     Kun: やま     On: サン
+  Col 1 Inner Table -> Row 0: | 山 | やま | mountain | 今月の休みに山に行きます。 |
+  Col 1 Inner Table -> Row 1: | 富士山 | ふじさん | Mt. Fuji | 来月、富士山に行きます。 |
+--- Main Table 35 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 36   川     Kun: かわ
+  Col 1 Inner Table -> Row 0: | 川 | かわ | river | きれいな川ですね。 |
+--- Main Table 36 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 37   白     Kun: しろ(い)、しろ
+  Col 1 Inner Table -> Row 0: | 白い | しろい | white (adj.) | 白いコートは三万四千円です。 |
+  Col 1 Inner Table -> Row 1: | 白 | しろ | white (noun) | 私は白が好きです。 |
+--- Main Table 37 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 38   本     On: ホン   Meaning of the kanji: book; counter for long object; origin; main
+  Col 1 Inner Table -> Row 0: | 本 | ほん | book | この本は千二百円です。 |
+  Col 1 Inner Table -> Row 1: | 九本 | きゅうほん | nine pieces (long object) | たばこを九本すいました。 |
+  Col 1 Inner Table -> Row 2: | 日本 | にほん | Japan | 六月にイタリアから日本に来ました。 |
+  Col 1 Inner Table -> Row 3: | 本当 | ほんとう | true; real | それは本当ですか。 |
+  Col 1 Inner Table -> Row 4: | 本社 | ほんしゃ | head office | 本社はどこにありますか。 |
+--- Main Table 38 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 39   子     Kun: こ
+  Col 1 Inner Table -> Row 0: | 子ども | こども | child | 中川さんは六歳の子どもが一人います。 |
+  Col 1 Inner Table -> Row 1: | 子どもたち | こどもたち | children | 子どもたちは川に行きました。 |
+  Col 1 Inner Table -> Row 2: | この子 | このこ | this child | この子は四歳です。 |
+--- Main Table 39 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 40   男     Kun: おとこ     On: ダン
+  Col 1 Inner Table -> Row 0: | 男 | おとこ | man | あの男の人は大木さんです。 |
+  Col 1 Inner Table -> Row 1: | 男の子 | おとこのこ | boy | 三歳の男の子が一人います。 |
+  Col 1 Inner Table -> Row 2: | 男性 | だんせい | man; male | 男性のトイレは右です。 |
+--- Main Table 40 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 41   女     Kun: おんな     On: ジョ
+  Col 1 Inner Table -> Row 0: | 女 | おんな | woman | あの女の人はフランス人です。 |
+  Col 1 Inner Table -> Row 1: | 女の子 | おんなのこ | girl | 五歳の女の子が一人います。 |
+  Col 1 Inner Table -> Row 2: | 女性 | じょせい | woman; female | 女性のトイレは左です。 |
+--- Main Table 41 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 42   父     Kun: ちち     On: フ
+  Col 1 Inner Table -> Row 0: | 父 | ちち | (my) father | 父はフランスにいます。 |
+  Col 1 Inner Table -> Row 1: | お父さん | おとうさん | (someone’s) father | お父さんはいつ日本に来ましたか。 |
+  Col 1 Inner Table -> Row 2: | 祖父 | そふ | (my) grandfather | 祖父は九十五歳です。 |
+--- Main Table 42 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 43   母     Kun: はは     On: ボ
+  Col 1 Inner Table -> Row 0: | 母 | はは | (my) mother | 母の誕生日にプレゼントをあげました。 |
+  Col 1 Inner Table -> Row 1: | お母さん | おかあさん | (someone’s) mother | お母さんはいつ日本に来ますか。 |
+  Col 1 Inner Table -> Row 2: | 祖母 | そぼ | (my) grandmother | 祖母はやさしいです。 |
+--- Main Table 43 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 44   友     Kun: とも
+  Col 1 Inner Table -> Row 0: | 友だち | ともだち | friend | 今日、友だちにメールしました。 |
+--- Main Table 44 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 45   先     Kun: さき     On: セン
+  Col 1 Inner Table -> Row 0: | 先に | さきに | earlier | お先に失礼します。 |
+  Col 1 Inner Table -> Row 1: | 先月 | せんげつ | last month | 先月、友だちとミュージカルを見ました。 |
+--- Main Table 45 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 46   生     Kun: い(きます)、う(まれます)、なま     On: セイ、ショウ
+  Col 1 Inner Table -> Row 0: | 生きます | いきます | live | 百歳まで生きたいです。 |
+  Col 1 Inner Table -> Row 1: | 生まれます | うまれます | be born | 先月、子どもが生まれました。 |
+  Col 1 Inner Table -> Row 2: | 生 | なま | raw | 生の魚がきらいです。 |
+  Col 1 Inner Table -> Row 3: | 生ビール | なまビール | draft beer | すみません。生ビールを一つおねがいします。 |
+  Col 1 Inner Table -> Row 4: | 先生 | せんせい | teacher | あの女の先生はとてもやさしいです。 |
+  Col 1 Inner Table -> Row 5: | 誕生日 | たんじょうび | birthday | 私の誕生日は九月六日です。 |
+--- Main Table 46 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 47   学     Kun: まな(びます)     On: ガク
+  Col 1 Inner Table -> Row 0: | 学びます | まなびます | learn; study | どこでフランス語を学びましたか。 |
+  Col 1 Inner Table -> Row 1: | 学生 | がくせい | student | わたしは学生ですから、あまりお金がありません。 |
+  Col 1 Inner Table -> Row 2: | 小学生 | しょうがくせい | elementary school children | この子は小学生です。 |
+  Col 1 Inner Table -> Row 3: | 中学生 | ちゅうがくせい | junior high school student | 中学生の子どもが一人います。 |
+  Col 1 Inner Table -> Row 4: | 大学 | だいがく | university; college | スペインの大学に行きました。 |
+  Col 1 Inner Table -> Row 5: | 大学生 | だいがくせい | university student | 大学生はよくアルバイトをします。 |
+--- Main Table 47 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 48   校     On: コウ   Meaning of the kanji: school
+  Col 1 Inner Table -> Row 0: | 学校 | がっこう | school | この学校は新しいです。 |
+  Col 1 Inner Table -> Row 1: | 小学校 | しょうがっこう | elementary school | うちの近くに小学校があります。 |
+  Col 1 Inner Table -> Row 2: | 中学校 | ちゅうがっこう | junior high school | あの人は中学校の先生です。 |
+--- Main Table 48 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 49   何     Kun: なに、なん
+  Col 1 Inner Table -> Row 0: | 何 | なに | what | 休みの日に何をしますか。 |
+  Col 1 Inner Table -> Row 1: | 何 | なん | ｗhat | これは何ですか。 |
+  Col 1 Inner Table -> Row 2: | 何+[noun] | なに+[noun] | what | あの人は何人ですか。 |
+  Col 1 Inner Table -> Row 3: | 何+[counter] | なん+[counter] | how many… | パーティーに何人来ましたか。 |
+--- Main Table 49 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 50   時     Kun: とき     On: ジ
+  Col 1 Inner Table -> Row 0: | 時 | とき | when | 子どもの時、あまりテレビを見ませんでした。 |
+  Col 1 Inner Table -> Row 1: |  |  | time | その時、私は十五歳でした。 |
+  Col 1 Inner Table -> Row 2: | 時々 | ときどき | sometimes | 時々コンビニで水をかいます。  (々=repeat の marker) |
+  Col 1 Inner Table -> Row 3: | 一時 | いちじ | one o’clock | 一時に学校に来てください。 |
+--- Main Table 50 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 51   間     Kun: あいだ、ま     On: カン
+  Col 1 Inner Table -> Row 0: | 間 | あいだ | between | マックとスタバの間にケンタッキーがあります。 |
+  Col 1 Inner Table -> Row 1: | 昼間 | ひるま | daytime | 明日の昼間は忙しいです。 |
+  Col 1 Inner Table -> Row 2: | 時間 | じかん | time | 今日は時間がありません。 |
+  Col 1 Inner Table -> Row 3: | 二時間 | にじかん | two hours | 時々二時間ぐらいテニスをします。 |
+--- Main Table 51 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 52   分     Kun: わ(けます)     On: フン、ブン
+  Col 1 Inner Table -> Row 0: | 分けます | わけます | divide, share | このケーキをみんなで分けましょう。 |
+  Col 1 Inner Table -> Row 1: | 五分 | ごふん | five minutes | すみません。五分待ってください。 |
+  Col 1 Inner Table -> Row 2: | 十分 | じゅっぷん | ten minutes | うちから学校まで十分です。 |
+  Col 1 Inner Table -> Row 3: | 十分 | じゅうぶん | enough; sufficient | もう十分です。ごちそうさまでした。 |
+--- Main Table 52 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 53   半     On: ハン   Meaning of the kanji: half
+  Col 1 Inner Table -> Row 0: | 八時半 | はちじはん | half past eight | 八時半に学校に行きます。 |
+  Col 1 Inner Table -> Row 1: | 半分 | はんぶん | half | このパンは大きいですから、半分食べてください。 |
+--- Main Table 53 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 54   毎     On: マイ   Meaning of the kanji: every
+  Col 1 Inner Table -> Row 0: | 毎日 | まいにち | every day | 毎日三十分ジョギングします。 |
+  Col 1 Inner Table -> Row 1: | 毎月 | まいつき | every month | 毎月二十五日にパーティーをします。 |
+--- Main Table 54 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 55   年     Kun: とし     On: ネン
+  Col 1 Inner Table -> Row 0: | 年 | とし | year | その年はとても暑かったです。 |
+  Col 1 Inner Table -> Row 1: |  |  | age | (お)年はいくつですか。 |
+  Col 1 Inner Table -> Row 2: | 今年 | ことし | this year | 今年のクリスマスにハワイに行きます。 |
+  Col 1 Inner Table -> Row 3: | 毎年 | まいとし/まいねん | every year | 毎年、父と母が日本に来ます。 |
+  Col 1 Inner Table -> Row 4: | 2003年 | 2003ねん | (the year of) 2003 | 2003年に日本に来ました。 |
+  Col 1 Inner Table -> Row 5: | 来年 | らいねん | next year | 来年の六月にアメリカに行きます。 |
+  Col 1 Inner Table -> Row 6: | 三年(間) | さんねん(かん) | three years | 三年(間)日本にいます。 |
+--- Main Table 55 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 56   前     Kun: まえ     On: ゼン
+  Col 1 Inner Table -> Row 0: | 前 | まえ | before | 今、九時五分前です。 |
+  Col 1 Inner Table -> Row 1: |  |  | in front of | 学校の前にスタバがあります。 |
+  Col 1 Inner Table -> Row 2: | 三年前 | さんねんまえ | three years ago | 三年前に日本に来ました。 |
+  Col 1 Inner Table -> Row 3: | 午前 | ごぜん | morning; a.m. | 今、午前十時です。 |
+--- Main Table 56 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 57   後     Kun: うし(ろ)、あと     On: ゴ
+  Col 1 Inner Table -> Row 0: | 後ろ | うしろ | behind | テレビの後ろにスピーカーがあります。 |
+  Col 1 Inner Table -> Row 1: | 後で | あとで | later | また後でメールします。 |
+  Col 1 Inner Table -> Row 2: | 一年後 | いちねんご | one year after | 一年後にフランスに行きます。 |
+  Col 1 Inner Table -> Row 3: | 午後 | ごご | afternoon; p.m. | 今、午後八時です。 |
+--- Main Table 57 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 58   午     On: ゴ   Meaning of the kanji: noon
+  Col 1 Inner Table -> Row 0: | 午前 | ごぜん | morning; a.m. | ミーティングは午前九時からです。 |
+  Col 1 Inner Table -> Row 1: | 午後 | ごご | afternoon; p.m. | 土曜日の午後は休みです。 |
+--- Main Table 58 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 59   名     Kun: な     On: メイ
+  Col 1 Inner Table -> Row 0: | 名前 | なまえ | name | こちらにお名前をおねがいします。 |
+  Col 1 Inner Table -> Row 1: | 有名 | ゆうめい | famous | あの人はとても有名な先生です。 |
+--- Main Table 59 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 60   車     Kun: くるま     On: シャ
+  Col 1 Inner Table -> Row 0: | 車 | くるま | car | 父の車で来ました。 |
+  Col 1 Inner Table -> Row 1: | 電車 | でんしゃ | train | 毎日電車で大学に行きます。 |
+--- Main Table 60 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 61   天     On: テン   Meaning of the kanji: heaven; sky
+--- Main Table 61 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 62   気     On: キ   Meaning of the kanji: mood; spirit; mind
+  Col 1 Inner Table -> Row 0: | 天気 | てんき | weather | 今日はいい天気ですね。 |
+  Col 1 Inner Table -> Row 1: | 人気 | にんき | popularity | あの先生は人気があります。 |
+  Col 1 Inner Table -> Row 2: | 気分 | きぶん | feeling | 今日は気分がよくないです。 |
+  Col 1 Inner Table -> Row 3: | 気をつけます | きをつけます | take care; be careful | あぶない！気をつけてください。 |
+--- Main Table 62 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 63   電     On: デン   Meaning of the kanji: electricity
+  Col 1 Inner Table -> Row 0: | 電気 | でんき | electricity | 電気をつけましょうか。 |
+  Col 1 Inner Table -> Row 1: | 電車 | でんしゃ | train | 毎日、電車で学校に行きます。 |
+--- Main Table 63 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 64   話     Kun: はな(します)、はなし     On: ワ
+  Col 1 Inner Table -> Row 0: | 話します | はなします | speak | 会社で日本語を話します。 |
+  Col 1 Inner Table -> Row 1: |  |  | talk; tell | 友だちに話します。 |
+  Col 1 Inner Table -> Row 2: | 話 | はなし | story | おもしろい話ですね。 |
+  Col 1 Inner Table -> Row 3: | 電話 | でんわ | telephone | 今日、母に電話しました。 |
+--- Main Table 64 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 65   食     Kun: た(べます)     On: ショク
+  Col 1 Inner Table -> Row 0: | 食べます | たべます | eat | このケーキを食べてもいいですか。 |
+  Col 1 Inner Table -> Row 1: | 食堂 | しょくどう | dining room | 会社の食堂でカレーを食べました。 |
+--- Main Table 65 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 66   聞     Kun: き(きます)、き(こえます)     On: ブン
+  Col 1 Inner Table -> Row 0: | 聞きます | ききます | hear | 友だちにその話を聞きました。 |
+  Col 1 Inner Table -> Row 1: |  |  | listen | 車の中でラジオを聞きます。 |
+  Col 1 Inner Table -> Row 2: |  |  | ask | すみません。ちょっと聞いてもいいですか。 |
+  Col 1 Inner Table -> Row 3: | 聞こえます | きこえます | be audible | すみません。よく聞こえません。 |
+  Col 1 Inner Table -> Row 4: | 新聞 | しんぶん | newspaper | これは三日前の新聞です。 |
+--- Main Table 66 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 67   書     Kun: か(きます)     On: ショ
+  Col 1 Inner Table -> Row 0: | 書きます | かきます | write | ここに名前を書いてください。 |
+  Col 1 Inner Table -> Row 1: | 図書館 | としょかん | library | 今日の午後、図書館に行きます。 |
+--- Main Table 67 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 68   読     Kun: よ(みます)     On: ドク
+  Col 1 Inner Table -> Row 0: | 読みます | よみます | read | 毎日電車の中で新聞を読みます。 |
+  Col 1 Inner Table -> Row 1: | 読書 | どくしょ | reading | 母は読書が好きです。 |
+--- Main Table 68 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 69   国     Kun: くに     On: コク
+  Col 1 Inner Table -> Row 0: | 国 | くに | country | あなたの国は、今何時ですか。 |
+  Col 1 Inner Table -> Row 1: | 中国 | ちゅうごく | China | 中国に行きたいです。 |
+  Col 1 Inner Table -> Row 2: | 国際電話 | こくさいでんわ | international call | ニューヨークに国際電話をかけました。 |
+--- Main Table 69 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 70   外     Kun: そと     On: ガイ
+  Col 1 Inner Table -> Row 0: | 外 | そと | outside | 天気がいいですから、外で食べましょう。 |
+  Col 1 Inner Table -> Row 1: | 外国 | がいこく | foreign country | 来月の休みに外国に行きます。 |
+  Col 1 Inner Table -> Row 2: | 外国人 | がいこくじん | foreigner | 外国人の友だちがたくさんいます。 |
+--- Main Table 70 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 71   語     On: ゴ   Meaning of the kanji: language
+  Col 1 Inner Table -> Row 0: | 日本語 | にほんご | Japanese (language) | 日本語で書いてください。 |
+  Col 1 Inner Table -> Row 1: | 英語 | えいご | English (language) | 電車の中で英語の新聞を読みます。 |
+--- Main Table 71 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 72   入     Kun: い(れます)、はい(ります)     On: ニュウ
+  Col 1 Inner Table -> Row 0: | 入れます | いれます | put in | ここにお金を入れてください。 |
+  Col 1 Inner Table -> Row 1: | 入ります | はいります | enter | 入ってもいいですか。 |
+  Col 1 Inner Table -> Row 2: |  |  | join | スポーツクラブに入りました。 |
+  Col 1 Inner Table -> Row 3: | 入学します | にゅうがくします | enter a school | 先月、大学に入学しました。 |
+--- Main Table 72 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 73   出     Kun: だ(します)、で(ます)     On: シュツ
+  Col 1 Inner Table -> Row 0: | 出します | だします | take out | ポケットからお金を出します。 |
+  Col 1 Inner Table -> Row 1: |  |  | send | あした手紙を出します。 |
+  Col 1 Inner Table -> Row 2: |  |  | hand in | レポートを出してください。 |
+  Col 1 Inner Table -> Row 3: | 出ます | でます | leave | 電車は九時に駅を出ます。 |
+  Col 1 Inner Table -> Row 4: |  |  | attend | 明日、ミーティングに出ますか。 |
+  Col 1 Inner Table -> Row 5: | 出かけます | でかけます | go out | 田中さんはもう出かけましたよ。 |
+  Col 1 Inner Table -> Row 6: | 出発します | しゅっぱつします | leave; depart | 明日、八時に出発しましょう。 |
+--- Main Table 73 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 74   雨     Kun: あめ
+  Col 1 Inner Table -> Row 0: | 雨 | あめ | rain | 今日の午後は雨です。 |
+--- Main Table 74 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 75   東     Kun: ひがし     On: トウ
+  Col 1 Inner Table -> Row 0: | 東 | ひがし | east | こちらが東です。 |
+  Col 1 Inner Table -> Row 1: | 東京 | とうきょう | Tokyo | 東京は人がたくさんいます。 |
+--- Main Table 75 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 76   西     Kun: にし     On: セイ、サイ
+  Col 1 Inner Table -> Row 0: | 西 | にし | west | あちらが西です。 |
+  Col 1 Inner Table -> Row 1: | 西洋 | せいよう | the West; Western | 西洋料理が好きですか。 |
+  Col 1 Inner Table -> Row 2: | 関西 | かんさい | the Kansai region | 関西に行ったことがありますか。 |
+--- Main Table 76 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 77   南     Kun: みなみ     On: ナン
+  Col 1 Inner Table -> Row 0: | 南 | みなみ | south | そちらが南です。 |
+  Col 1 Inner Table -> Row 1: | 東南アジア | とうなんアジア | Southeast Asia | 東南アジアの国に行きたいです。 |
+--- Main Table 77 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 78   北     Kun: きた     On: ホク
+  Col 1 Inner Table -> Row 0: | 北 | きた | north | どちらが北ですか。 |
+  Col 1 Inner Table -> Row 1: | 東北 | とうほく | Tohoku region | 東北はとても寒いです。 |
+--- Main Table 78 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 79   長     Kun: なが(い)     On: チョウ   Meaning of the kanji: long; chief; head
+  Col 1 Inner Table -> Row 0: | 長い | ながい | long | 三時間のレッスンは長いです。 |
+  Col 1 Inner Table -> Row 1: | 校長 | こうちょう | principal | これは校長先生の車です。 |
+--- Main Table 79 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 80   高     Kun: たか(い)     On: コウ
+  Col 1 Inner Table -> Row 0: | 高い | たかい | high | あのビルは高いです。 |
+  Col 1 Inner Table -> Row 1: |  |  | expensive | このレストランは高いです。 |
+  Col 1 Inner Table -> Row 2: | 高校 | こうこう | high school | 高校で日本語を学びました。 |
+  Col 1 Inner Table -> Row 3: | 高校生 | こうこうせい | high school student | 高校生の子どもが一人います。 |
+--- Main Table 80 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 81   口     Kun: くち     On: コウ
+  Col 1 Inner Table -> Row 0: | 口 | くち | mouth | あの男の人は口が大きいです。 |
+  Col 1 Inner Table -> Row 1: | 入口 | いりぐち | entrance | 右に入口があります。 |
+  Col 1 Inner Table -> Row 2: | 出口 | でぐち | exit | 左に出口があります。 |
+  Col 1 Inner Table -> Row 3: | 人口 | じんこう | population | 日本の人口は一億二千四百万人ぐらいです。 |
+--- Main Table 81 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 82   目     Kun: め
+  Col 1 Inner Table -> Row 0: | 目 | め | eye | あの女の人は目が大きいです。 |
+--- Main Table 82 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 83   手     Kun: て     On: シュ
+  Col 1 Inner Table -> Row 0: | 手 | て | hand | 手を洗いたいです。 |
+  Col 1 Inner Table -> Row 1: |  |  | arm | あの男の人は手が長いです。 |
+  Col 1 Inner Table -> Row 2: | お手洗い | おてあらい | lavatory; rest room | すみません。お手洗いはどこですか。 |
+  Col 1 Inner Table -> Row 3: | 運転手 | うんてんしゅ | driver | バスの運転手になりたいです。 |
+  Col 1 Inner Table -> Row 4: | 上手 | じょうず | skillful | 母はテニスがとても上手です。 |
+  Col 1 Inner Table -> Row 5: | 下手 | へた | poor; unskillful | 父はゴルフが下手です。 |
+--- Main Table 83 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 84   足     Kun: あし、た(ります)
+  Col 1 Inner Table -> Row 0: | 足 | あし | foot | 足のサイズは何センチですか。 |
+  Col 1 Inner Table -> Row 1: |  |  | leg | あの男の子は足が長いです。 |
+  Col 1 Inner Table -> Row 2: | 足ります | たります | enough | 一万円で足りますか。 |
+--- Main Table 84 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 85   近     Kun: ちか(い)     On: キン
+  Col 1 Inner Table -> Row 0: | 近い | ちかい | close | 中国と日本は近いです。 |
+  Col 1 Inner Table -> Row 1: | 近く | ちかく | neighborhood | この近くにコンビニがありますか。 |
+  Col 1 Inner Table -> Row 2: | 近所 | きんじょ | neighborhood | 近所に中学校があります。 |
+  Col 1 Inner Table -> Row 3: | 最近 | さいきん | recently | 最近、どんな本を読みましたか。 |
+--- Main Table 85 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 86   有     Kun: あ(ります)     On: ユウ
+  Col 1 Inner Table -> Row 0: | 有ります | あります | exist | 山に木がたくさん有ります。  (「あります」はあまり漢字で書きません。よくひらがなで書きます) |
+  Col 1 Inner Table -> Row 1: | 有名 | ゆうめい | famous | 有名なレストランに行きました。 |
+--- Main Table 86 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 87   花     Kun: はな     On: カ
+  Col 1 Inner Table -> Row 0: | 花 | はな | ｆlower | あの川の近くに白い花がたくさんあります。 |
+  Col 1 Inner Table -> Row 1: | 花屋 | はなや | ｆlower shop | 花屋でアルバイトをしています。 |
+  Col 1 Inner Table -> Row 2: | 花火 | はなび | fireworks | 今年は花火を見ましたか。 |
+  Col 1 Inner Table -> Row 3: | 花びん | かびん | vase | 母の誕生日に花びんをあげました。 |
+--- Main Table 87 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 88   赤     Kun: あか(い)、あか
+  Col 1 Inner Table -> Row 0: | 赤い | あかい | red (adj.) | 赤い花と白い花、どちらがすきですか。 |
+  Col 1 Inner Table -> Row 1: | 赤 | あか | red (noun) | 私は赤が好きです。 |
+  Col 1 Inner Table -> Row 2: | 赤ちゃん | あかちゃん | ｂaby | 赤ちゃん、かわいいですね。(=赤ん坊) |
+--- Main Table 88 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 89   紙     Kun: かみ
+  Col 1 Inner Table -> Row 0: | 紙 | かみ | paper | すみません。紙を一枚ください。 |
+  Col 1 Inner Table -> Row 1: | 手紙 | てがみ | letter | 外国の友だちに毎月手紙を書きます。 |
+--- Main Table 89 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 90   買     Kun: か(います)
+  Col 1 Inner Table -> Row 0: | 買います | かいます | buy | 今月、大きいテレビを買いました。 |
+  Col 1 Inner Table -> Row 1: | 買い物 | かいもの | shopping | 母は買い物に行きました。 |
+--- Main Table 90 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 91   朝     Kun: あさ
+  Col 1 Inner Table -> Row 0: | 朝 | あさ | morning | 朝は天気がよかったです。 |
+  Col 1 Inner Table -> Row 1: | 毎朝 | まいあさ | every morning | 毎朝、花に水をあげます。 |
+  Col 1 Inner Table -> Row 2: | 今朝 | けさ | this morning | 今朝は雨でした。 |
+--- Main Table 91 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 92   昼     Kun: ひる
+  Col 1 Inner Table -> Row 0: | 昼 | ひる | noon | あしたの昼に電話します。 |
+  Col 1 Inner Table -> Row 1: | 昼ごはん | ひるごはん | lunch | 毎日十二時に昼ごはんを食べます。 |
+  Col 1 Inner Table -> Row 2: | 昼間 | ひるま | daytime | 母は昼間、うちにいません。 |
+--- Main Table 92 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 93   夕     Kun: ゆう   Meaning of the kanji: evening
+  Col 1 Inner Table -> Row 0: | 夕方 | ゆうがた | evening | 今日の夕方に図書館に行きます。 |
+  Col 1 Inner Table -> Row 1: | 夕飯 | ゆうはん | dinner; supper | 夕飯は何時ですか。 |
+--- Main Table 93 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 94   夜     Kun: よる     On: ヤ
+  Col 1 Inner Table -> Row 0: | 夜 | よる | night | きのうの夜は何時に寝ましたか。 |
+  Col 1 Inner Table -> Row 1: | 今夜 | こんや | tonight | 今夜いっしょに飲みに行きませんか。 |
+--- Main Table 94 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 95   私     Kun: わたし、わたくし(formal)
+  Col 1 Inner Table -> Row 0: | 私 | わたし | I | 私は今日時間があります。 |
+  Col 1 Inner Table -> Row 1: |  | わたくし | I [formal] | 私は田中と申します。 |
+--- Main Table 95 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 96   家     Kun: いえ     On: カ
+  Col 1 Inner Table -> Row 0: | 家 | いえ | house | 私の家は六本木にあります。 |
+  Col 1 Inner Table -> Row 1: | 家族 | かぞく | family | 私は六人家族です。 |
+--- Main Table 96 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 97   会     Kun: あ(います)     On: カイ
+  Col 1 Inner Table -> Row 0: | 会います | あいます | see (a person) | 明日、友だちに会います。 |
+  Col 1 Inner Table -> Row 1: | 会話 | かいわ | conversation | 会話が上手になりたいです。 |
+  Col 1 Inner Table -> Row 2: | 会議 | かいぎ | meeting | 今日の会議は午後二時からです。出ますか。 |
+--- Main Table 97 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 98   社     On: シャ   Meaning of the kanji: company
+  Col 1 Inner Table -> Row 0: | 会社 | かいしゃ | company | 土曜日も会社に行きます。 |
+  Col 1 Inner Table -> Row 1: | 社会 | しゃかい | society | 日本の社会について学びたいです。 |
+  Col 1 Inner Table -> Row 2: | 社長 | しゃちょう | company president | 社長は今、出かけています。 |
+--- Main Table 98 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 99   店     Kun: みせ     On: テン
+  Col 1 Inner Table -> Row 0: | 店 | みせ | store; shop | この店で本を買いました。 |
+  Col 1 Inner Table -> Row 1: | 店員 | てんいん | salesclerk; shop assistant | あの店の店員はきれいです。 |
+--- Main Table 99 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 100   飲     Kun: の(みます)
+  Col 1 Inner Table -> Row 0: | 飲みます | のみます | drink | コーヒーを飲みに行きませんか。 |
+--- Main Table 100 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 101   多     Kun: おお(い)
+  Col 1 Inner Table -> Row 0: | 多い | おおい | a lot of | 東京は車が多いです。 |
+--- Main Table 101 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 102   少     Kun: すこ(し)、すく(ない)     On: ショウ
+  Col 1 Inner Table -> Row 0: | 少し | すこし | a little | 少し＋[verb]： 少しビールを飲みました。 |
+  Col 1 Inner Table -> Row 1: |  |  | a little | 少し＋[adj.]： このシャツは少し大きいです。 |
+  Col 1 Inner Table -> Row 2: | 少ない | すくない | not many/much | 私の家の近くは店が少ないです。 |
+  Col 1 Inner Table -> Row 3: | 少々 | しょうしょう | a little [formal] | 少々お待ちください。  (々=repeat の marker) |
+--- Main Table 102 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 103   古     Kun: ふる(い)
+  Col 1 Inner Table -> Row 0: | 古い | ふるい | old | この電話は古いです。 |
+--- Main Table 103 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 104   新     Kun: あたら(しい)     On: シン
+  Col 1 Inner Table -> Row 0: | 新しい | あたらしい | new | 先月デパートで新しいバッグを買いました。 |
+  Col 1 Inner Table -> Row 1: | 新聞 | しんぶん | newspaper | これは日本語の新聞です。 |
+--- Main Table 104 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 105   広     Kun: ひろ(い)
+  Col 1 Inner Table -> Row 0: | 広い | ひろい | spacious | 母の家はとても広いです。 |
+  Col 1 Inner Table -> Row 1: |  |  | wide | 学校の前の道は広いです。 |
+--- Main Table 105 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 106   安     Kun: やす(い)     On: アン   Meaning of the kanji: cheap; inexpensive; peacefulness
+  Col 1 Inner Table -> Row 0: | 安い | やすい | inexpensive | この車は安いです。 |
+  Col 1 Inner Table -> Row 1: | 安心します | あんしんします | feel relieved | 父から電話をもらって、安心しました。 |
+--- Main Table 106 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 107   立     Kun: た(ちます)
+  Col 1 Inner Table -> Row 0: | 立ちます | たちます | stand | 男の人がコンビニの前に立っています。 |
+--- Main Table 107 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 108   知     Kun: し(ります)
+  Col 1 Inner Table -> Row 0: | 知ります | しります | know | あの女の人を知っていますか。 |
+--- Main Table 108 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 109   言     Kun: い(います)、こと     On: ゴン
+  Col 1 Inner Table -> Row 0: | 言います | いいます | say | 山中さんは明日会社に来ると言いました。 |
+  Col 1 Inner Table -> Row 1: |  |  | tell | じゃ、大川さんに言います。 |
+  Col 1 Inner Table -> Row 2: | 言葉 | ことば | word; language | その言葉を知っていますか。 |
+  Col 1 Inner Table -> Row 3: | 伝言 | でんごん | message | 伝言をおねがいします。 |
+--- Main Table 109 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 110   思     Kun: おも(います)
+  Col 1 Inner Table -> Row 0: | 思います | おもいます | think | 日本の食べ物はおいしいと思います。 |
+  Col 1 Inner Table -> Row 1: | 思い出します | おもいだします | recall; remember | あっ、思い出しました。 |
+--- Main Table 110 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 111   歩     Kun: ある(きます)     On: ホ
+  Col 1 Inner Table -> Row 0: | 歩きます | あるきます | walk | きのう会社まで歩いて行きました。 |
+  Col 1 Inner Table -> Row 1: | 散歩します | さんぽします | take a walk | 毎朝、この近くを三十分散歩します。 |
+--- Main Table 111 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 112   走     Kun: はし(ります)
+  Col 1 Inner Table -> Row 0: | 走ります | はしります | run | 時間がありませんから、走りましょう。 |
+--- Main Table 112 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 113   住     Kun: す(みます)     On: ジュウ
+  Col 1 Inner Table -> Row 0: | 住みます | すみます | live; inhabit | 私は会社の近くに住んでいます。 |
+  Col 1 Inner Table -> Row 1: | 住所 | じゅうしょ | address | ここに、住所と名前を書いてください。 |
+--- Main Table 113 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 114   空     Kun: そら、あ(きます)     On: クウ
+  Col 1 Inner Table -> Row 0: | 空 | そら | sky | 今日は空がきれいですね。 |
+  Col 1 Inner Table -> Row 1: | 空きます | あきます | be vacant; be unoccupied | 今お手洗いは空いていますか。 |
+  Col 1 Inner Table -> Row 2: | 空気 | くうき | air | 山の空気はおいしいです。 |
+  Col 1 Inner Table -> Row 3: | 空港 | くうこう | airport | その空港は、広くて新しいです。 |
+--- Main Table 114 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 115   週     On: シュウ
+  Col 1 Inner Table -> Row 0: | 週 | しゅう | week | その週は、日本にいませんでした。 |
+  Col 1 Inner Table -> Row 1: | 来週 | らいしゅう | next week | 来週私の家に来てください。 |
+  Col 1 Inner Table -> Row 2: | 今週 | こんしゅう | this week | 今週は雨が多かったです。 |
+  Col 1 Inner Table -> Row 3: | 二週間 | にしゅうかん | two weeks | 二週間会社を休みました。 |
+--- Main Table 115 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 116   魚     Kun: さかな   Meaning of the kanji: fish
+  Col 1 Inner Table -> Row 0: | 魚 | さかな | fish | 魚料理を食べました。 |
+  Col 1 Inner Table -> Row 1: | 魚屋 | さかなや | fish store | 魚屋は花屋のとなりです。 |
+--- Main Table 116 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 117   耳     Kun: みみ   Meaning of the kanji: ear
+  Col 1 Inner Table -> Row 0: | 耳 | みみ | ear | うさぎ(rabbit)は耳が長いです。 |
+--- Main Table 117 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 118   銀     On: ギン   Meaning of the kanji: silver
+  Col 1 Inner Table -> Row 0: | 銀 | ぎん | silver | 銀のスプーンを買いました。 |
+  Col 1 Inner Table -> Row 1: | 銀行 | ぎんこう | bank | 銀行は三時までです。 |
+--- Main Table 118 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 119   道     Kun: みち     On: ドウ
+  Col 1 Inner Table -> Row 0: | 道 | みち | road; street | 家の前の道は広いです。 |
+  Col 1 Inner Table -> Row 1: | 水道 | すいどう | waterworks; tap water | 水道の水はおいしくないです。 |
+--- Main Table 119 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 120   駅     On: エキ
+  Col 1 Inner Table -> Row 0: | 駅 | えき | station | 私の家は駅から歩いて十分です。 |
+--- Main Table 120 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 121   曜     On: ヨウ   Meaning of the kanji: day of the week
+  Col 1 Inner Table -> Row 0: | 土曜日 | どようび | Saturday | 土曜日は休みです。 |
+--- Main Table 121 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 122   作     Kun: つく(ります)     On: サク
+  Col 1 Inner Table -> Row 0: | 作ります | つくります | make; produce | ここで車を作っています。 |
+  Col 1 Inner Table -> Row 1: | 作文 | さくぶん | composition | 日曜日の夜、作文を書きました。 |
+--- Main Table 122 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 123   使     Kun: つか(います)     On: シ
+  Col 1 Inner Table -> Row 0: | 使います | つかいます | use | このペンを使ってもいいですか。 |
+  Col 1 Inner Table -> Row 1: | 大使館 | たいしかん | embassy | 土曜日に、大使館に行きました。 |
+--- Main Table 123 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 124   待     Kun: ま(ちます)
+  Col 1 Inner Table -> Row 0: | 待ちます | まちます | wait | 友だちを二時間待ちました。 |
+--- Main Table 124 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 125   力     Kun: ちから     On: リョク
+  Col 1 Inner Table -> Row 0: | 力 | ちから | power; strength | 男は女より力があります。 |
+  Col 1 Inner Table -> Row 1: | 能力 | のうりょく | ability | 今年の日本語能力試験はいつですか。 |
+--- Main Table 125 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 126   不     On: フ   Meaning of the kanji: not; un-
+  Col 1 Inner Table -> Row 0: | 不便 | ふべん | inconvenient | ここは電気がなくて、とても不便です。 |
+--- Main Table 126 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 127   心     Kun: こころ     On: シン
+  Col 1 Inner Table -> Row 0: | 心 | こころ | heart; mind | 父は心が広いです。 |
+  Col 1 Inner Table -> Row 1: | 心配します | しんぱいします | worry | 心配しないでください。 |
+  Col 1 Inner Table -> Row 2: | 安心します | あんしんします | be relieved | もうだいじょうぶですから、安心してください。 |
+  Col 1 Inner Table -> Row 3: | 熱心 | ねっしん | eager; enthusiastic | あの先生は、とても熱心です。 |
+--- Main Table 127 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 128   文     On: ブン
+  Col 1 Inner Table -> Row 0: | 文 | ぶん | sentence | この文を読んでください。 |
+  Col 1 Inner Table -> Row 1: | 文学 | ぶんがく | literature | 大学で文学を勉強しました。 |
+  Col 1 Inner Table -> Row 2: | 文化 | ぶんか | culture | 日本の文化はおもしろいです。 |
+  Col 1 Inner Table -> Row 3: | 文法 | ぶんぽう | grammar | 日本語の文法はやさしいです。 |
+--- Main Table 128 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 129   元     On: ゲン   Meaning of the kanji: origin; foundation
+  Col 1 Inner Table -> Row 0: | 元気 | げんき | healthy; well | お元気ですか。 |
+--- Main Table 129 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 130   音     Kun: おと     On: オン
+  Col 1 Inner Table -> Row 0: | 音 | おと | sound | 車の音が聞こえます。 |
+  Col 1 Inner Table -> Row 1: | 発音 | はつおん | pronunciation | 日本語の発音はやさしいです。 |
+--- Main Table 130 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 131   楽     Kun: たの(しい)     On: ガク、ラク
+  Col 1 Inner Table -> Row 0: | 楽しい | たのしい | pleasant; enjoyable | パーティーはとても楽しかったです。 |
+  Col 1 Inner Table -> Row 1: | 楽しみ | たのしみ | pleasure | 明日のデートが楽しみです。(look forward to・・・) |
+  Col 1 Inner Table -> Row 2: | 音楽 | おんがく | music | 毎日、電車の中で音楽を聞きます。 |
+  Col 1 Inner Table -> Row 3: | 楽 | らく | easy | 私の仕事は楽です。 |
+  Col 1 Inner Table -> Row 4: |  |  | comfortable | このソファは楽です。 |
+--- Main Table 131 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 132   持     Kun: も(ちます)
+  Col 1 Inner Table -> Row 0: | 持ちます | もちます | have | 車を持っていますか。 |
+  Col 1 Inner Table -> Row 1: | お金持ち | おかねもち | a rich person | 山本さんはお金持ちです。 |
+--- Main Table 132 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 133   映     On: エイ   Meaning of the kanji: reflect; project
+--- Main Table 133 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 134   画     On: ガ、カク   Meaning of the kanji: picture
+  Col 1 Inner Table -> Row 0: | 映画 | えいが | movie; film | 日曜日、映画を見に行きませんか。 |
+  Col 1 Inner Table -> Row 1: | 計画 | けいかく | plan | 社長はその計画を知っていますか。 |
+--- Main Table 134 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 135   料     On: リョウ   Meaning of the kanji: material; fee
+  Col 1 Inner Table -> Row 0: | 料理 | りょうり | cooking | 母は料理が上手です。 |
+  Col 1 Inner Table -> Row 1: | 授業料 | じゅぎょうりょう | tuition | 授業料はいくらですか。 |
+--- Main Table 135 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 136   理     On: リ   Meaning of the kanji: reason; logic; principle
+  Col 1 Inner Table -> Row 0: | 理由 | りゆう | reason | 理由を話してください。 |
+  Col 1 Inner Table -> Row 1: | 無理 | むり | impossible | それは無理です。 |
+--- Main Table 136 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 137   方     Kun: かた     On: ホウ
+  Col 1 Inner Table -> Row 0: | 方 | かた | person (respect) | この方を知っていますか。 |
+  Col 1 Inner Table -> Row 1: | ～方 | ～かた | how to ... ; way of ... | 書き方を教えてください。 |
+  Col 1 Inner Table -> Row 2: | 夕方 | ゆうがた | evening | 明日の夕方五時に電話します。 |
+  Col 1 Inner Table -> Row 3: | 方 | ほう | direction; side | 右の方に行ってください。 |
+--- Main Table 137 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 138   台     On: ダイ、タイ   Meaning of the kanji: stand; pedestal; base
+  Col 1 Inner Table -> Row 0: | ～台 | ～だい | counter for machinery | 私は車を二台持っています。 |
+  Col 1 Inner Table -> Row 1: | 台所 | だいどころ | kitchen | 母は今、台所で料理をしています。 |
+  Col 1 Inner Table -> Row 2: | 台風 | たいふう | typhoon | 来週、台風が来ます。 |
+--- Main Table 138 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 139   字     On: ジ
+  Col 1 Inner Table -> Row 0: | 字 | じ | letter | この字の読み方を知っていますか。 |
+  Col 1 Inner Table -> Row 1: | ローマ字 | ローマじ | romaji; roman letters | ローマ字の文は読みにくいです。 |
+  Col 1 Inner Table -> Row 2: | 漢字 | かんじ | kanji; Chinese character | 漢字はおもしろいです。 |
+--- Main Table 139 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 140   主     On: シュ   Meaning of the kanji: main
+  Col 1 Inner Table -> Row 0: | 主人 | しゅじん | husband | 主人はアメリカにいます。 |
+--- Main Table 140 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 141   以     On: イ   Meaning of the kanji: prefix
+  Col 1 Inner Table -> Row 0: | 以外 | いがい | except (for) | 金曜以外は時間があります。 |
+  Col 1 Inner Table -> Row 1: | 以内 | いない | within | 千字以内の作文を書いてください。 |
+  Col 1 Inner Table -> Row 2: | 以上 | いじょう | ... or more than | 三十分以上待ちました。 |
+  Col 1 Inner Table -> Row 3: | 以下 | いか | ... or less than | 十二歳以下は千円です。 |
+--- Main Table 141 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 142   去     On: キョ   Meaning of the kanji: leave; go away
+  Col 1 Inner Table -> Row 0: | 去年 | きょねん | last year | 去年の夏に日本に来ました。 |
+--- Main Table 142 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 143   正     Kun: ただ(しい)     On: ショウ
+  Col 1 Inner Table -> Row 0: | 正しい | ただしい | right; correct | この漢字は正しいですか。 |
+  Col 1 Inner Table -> Row 1: | 正月 | しょうがつ | the New Year | 毎年、正月にハワイに行きます。 |
+--- Main Table 143 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 144   田     Kun: た   Meaning of the kanji: rice field
+  Col 1 Inner Table -> Row 0: | 山田 | やまだ | Yamada (surname) | こちらは山田さんです。 |
+  Col 1 Inner Table -> Row 1: | 田中 | たなか | Tanaka (surname) | あちらは田中さんです。 |
+--- Main Table 144 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 145   同     Kun: おな(じ)
+  Col 1 Inner Table -> Row 0: | 同じ | おなじ | same | 私の車は田中さんのと同じです。 |
+--- Main Table 145 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 146   早     Kun: はや(い)
+  Col 1 Inner Table -> Row 0: | 早い | はやい | early (adj.) | 「朝６時に来てください」、「早いですね」 |
+  Col 1 Inner Table -> Row 1: | 早く | はやく | early (adv.) | 私は毎朝早く起きます。 |
+--- Main Table 146 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 147   明     Kun: あか(るい)     On: メイ
+  Col 1 Inner Table -> Row 0: | 明るい | あかるい | bright | この店は明るいですね。 |
+  Col 1 Inner Table -> Row 1: | 明日 | あした/あす | tomorrow | 明日の朝早く出かけます。 |
+  Col 1 Inner Table -> Row 2: | 説明します | せつめいします | explain | 日本語で説明してください。 |
+--- Main Table 147 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 148   牛     Kun: うし     On: ギュウ
+  Col 1 Inner Table -> Row 0: | 牛 | うし | cow; bull; cattle | あそこに牛がたくさんいます。 |
+  Col 1 Inner Table -> Row 1: | 牛乳 | ぎゅうにゅう | milk | 毎朝、牛乳を飲みます。 |
+--- Main Table 148 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 149   肉     On: ニク
+  Col 1 Inner Table -> Row 0: | 肉 | にく | meat | 肉より魚の方が好きです。 |
+  Col 1 Inner Table -> Row 1: | 牛肉 | ぎゅうにく | beef | スーパーで牛肉を買いました。 |
+  Col 1 Inner Table -> Row 2: | 豚肉 | ぶたにく | pork | 豚肉の料理が好きです。 |
+--- Main Table 149 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 150   世     On: セ   Meaning of the kanji: world
+  Col 1 Inner Table -> Row 0: | 世話 | せわ | care | いつもお世話になっています。  (We are under the care of you/your company.) |
+--- Main Table 150 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 151   界     On: カイ   Meaning of the kanji: world
+  Col 1 Inner Table -> Row 0: | 世界 | せかい | world | あれは世界一高いビルです。 |
+--- Main Table 151 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 152   仕     On: シ   Meaning of the kanji: serve a person; work under somebody
+  Col 1 Inner Table -> Row 0: | 仕方がない | しかたがない | It can’t be helped. / There’s no help for it. | 仕方がありませんね。 |
+--- Main Table 152 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 153   事     Kun: こと     On: ジ
+  Col 1 Inner Table -> Row 0: | 事 | こと | thing; matter | その事を知っていましたか。 |
+  Col 1 Inner Table -> Row 1: | 仕事 | しごと | work | 今日は仕事がたくさんあります。 |
+  Col 1 Inner Table -> Row 2: | 火事 | かじ | fire | 火事です！１１９番に電話してください。 |
+  Col 1 Inner Table -> Row 3: | 食事 | しょくじ | meal | 明日、食事に行きませんか。 |
+  Col 1 Inner Table -> Row 4: | 大事 | だいじ | important | 明日、大事な会議があります。 |
+--- Main Table 153 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 154   工     On: コウ   Meaning of the kanji: manufacturing; construction
+  Col 1 Inner Table -> Row 0: | 工事 | こうじ | construction | ガスの工事はいつからですか。 |
+  Col 1 Inner Table -> Row 1: | 工事中 | こうじちゅう | under construction | ここは今工事中です。 |
+--- Main Table 154 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 155   場     Kun: ば     On: ジョウ
+  Col 1 Inner Table -> Row 0: | 場所 | ばしょ | place | 場所と時間は後でメールします。 |
+  Col 1 Inner Table -> Row 1: | 工場 | こうじょう | factory | あれはビール工場です。 |
+  Col 1 Inner Table -> Row 2: | ゴルフ場 | ゴルフじょう | golf course | 広いゴルフ場ですね。 |
+  Col 1 Inner Table -> Row 3: | ボーリング場 | ボーリングじょう | bowling alley | きれいなボーリング場ですね。 |
+  Col 1 Inner Table -> Row 4: | 駐車場 | ちゅうしゃじょう | car park; parking lot | この近くに駐車場がありますか。 |
+  Col 1 Inner Table -> Row 5: | 会場 | かいじょう | meeting place; hall | パーティーの会場はどこですか。 |
+--- Main Table 155 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 156   屋     Kun: や     On: オク
+  Col 1 Inner Table -> Row 0: | ～屋 | ～や | ... store/shop | 本屋で新聞を買いました。 |
+  Col 1 Inner Table -> Row 1: | 八百屋 | やおや | vegetable store | 八百屋でりんごを三つ買いました。 |
+  Col 1 Inner Table -> Row 2: | 屋上 | おくじょう | the roof top | 屋上でバーベキューをしましょう。 |
+--- Main Table 156 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 157   旅     On: リョ   Meaning of the kanji: trip, travel
+  Col 1 Inner Table -> Row 0: | 旅行 | りょこう | travel | ヨーロッパを旅行したいです。 |
+  Col 1 Inner Table -> Row 1: | 旅館 | りょかん | Japanese inn | 旅館で日本料理を食べました。 |
+--- Main Table 157 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 158   動     Kun: うご(きます)     On: ドウ
+  Col 1 Inner Table -> Row 0: | 動きます | うごきます | move | 動かないでください。 |
+  Col 1 Inner Table -> Row 1: | 自動車 | じどうしゃ | car | 子どもは自動車のおもちゃ(toy)が好きです。 |
+--- Main Table 158 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 159   勉     On: ベン   Meaning of the kanji: effort, hard work
+--- Main Table 159 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 160   強     Kun: つよ(い)     On: キョウ
+  Col 1 Inner Table -> Row 0: | 強い | つよい | strong | あの人は力が強いです。 |
+  Col 1 Inner Table -> Row 1: | 勉強します | べんきょうします | study | 毎日一時間以上勉強します。 |
+--- Main Table 160 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 161   考     Kun: かんが(えます)
+  Col 1 Inner Table -> Row 0: | 考えます | かんがえます | think; consider | よく考えてから電話します。 |
+--- Main Table 161 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 162   送     Kun: おく(ります)
+  Col 1 Inner Table -> Row 0: | 送ります | おくります | send | 今朝、会社にＦＡＸを送りました。 |
+--- Main Table 162 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 163   売     Kun: う(ります)、う(れます)
+  Col 1 Inner Table -> Row 0: | 売ります | うります | sell (vt.) | どこで新聞を売っていますか。 |
+  Col 1 Inner Table -> Row 1: | 売り場 | うりば | lit. selling place | カメラ売り場はどこですか。 |
+  Col 1 Inner Table -> Row 2: | 売れます | うれます | sell (vi.) | 今年はビールが売れませんでした。 |
+--- Main Table 163 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 164   始     Kun: はじ(めます)、はじ(まります)
+  Col 1 Inner Table -> Row 0: | 始めます | はじめます | start; begin (vt.) | 九時に仕事を始めます。 |
+  Col 1 Inner Table -> Row 1: | 始まります | はじまります | start; begin (vi.) | パーティーはもう始まりましたか。 |
+--- Main Table 164 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 165   終     Kun: お(わります)
+  Col 1 Inner Table -> Row 0: | 終わります | おわります | finish; end | 今、レッスンが終わりました。 |
+  Col 1 Inner Table -> Row 1: | 終わり | おわり | the end | 八月の終わりに旅行に行きます。 |
+--- Main Table 165 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 166   計     On: ケイ   Meaning of the kanji: measure; arrange
+  Col 1 Inner Table -> Row 0: | 時計 | とけい | watch; clock | ハワイに行った時、この時計を買いました。 |
+  Col 1 Inner Table -> Row 1: | 計画 | けいかく | plan | この計画についてどう思いますか。 |
+--- Main Table 166 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 167   兄     Kun: あに     On: キョウ
+  Col 1 Inner Table -> Row 0: | 兄 | あに | (my) elder brother | 兄は中学校の先生です。 |
+  Col 1 Inner Table -> Row 1: | お兄さん | おにいさん | (someone’s) elder brother | お兄さんはいますか。 |
+--- Main Table 167 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 168   弟     Kun: おとうと     On: ダイ
+  Col 1 Inner Table -> Row 0: | 弟 | おとうと | (my) younger brother | 弟が二人います。 |
+  Col 1 Inner Table -> Row 1: | 弟さん | おとうとさん | (someone’s) younger brother | 弟さんは何歳ですか。 |
+  Col 1 Inner Table -> Row 2: | 兄弟 | きょうだい | brothers | 兄弟は何人いますか。 |
+--- Main Table 168 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 169   姉     Kun: あね
+  Col 1 Inner Table -> Row 0: | 姉 | あね | (my) elder sister | 日曜日、姉と映画を見に行きました。 |
+  Col 1 Inner Table -> Row 1: | お姉さん | おねえさん | (someone’s) elder sister | お姉さんはお元気ですか。 |
+--- Main Table 169 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 170   妹     Kun: いもうと
+  Col 1 Inner Table -> Row 0: | 妹 | いもうと | (my) younger sister | 妹は料理が上手です。 |
+  Col 1 Inner Table -> Row 1: | 妹さん | いもうとさん | (someone’s) younger sister | 妹さんのお仕事は何ですか。 |
+--- Main Table 170 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 171   代     Kun: か(わります)     On: ダイ   Meaning of the kanji: age; generation; price
+  Col 1 Inner Table -> Row 0: | 代わりに | かわりに | on behalf of ... | 私の代わりに中山さんが行きます。 |
+  Col 1 Inner Table -> Row 1: | 時代 | じだい | time; period | 学生時代、よく旅行しました。 |
+  Col 1 Inner Table -> Row 2: | 六十年代 | ろくじゅうねんだい | the 60’s | 六十年代の音楽をよく聞きます。 |
+  Col 1 Inner Table -> Row 3: | ～代 | ～だい | charge; fee | 今月の電気代は高かったです。 |
+--- Main Table 171 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 172   用     On: ヨウ
+  Col 1 Inner Table -> Row 0: | 用 | よう | business; something to do | 用があるので、早く帰ります。 |
+  Col 1 Inner Table -> Row 1: | 用事 | ようじ | business; something to do | 明日は、用事があります。 |
+--- Main Table 172 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 173   自     On: ジ   Meaning of the kanji: self
+  Col 1 Inner Table -> Row 0: | 自分 | じぶん | oneself | この時計は自分で買いました。 |
+  Col 1 Inner Table -> Row 1: | 自動車 | じどうしゃ | car | 子どもに自動車のおもちゃ(toy)を買いました。 |
+--- Main Table 173 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 174   地     On: チ、ジ   Meaning of the kanji: earth; land
+  Col 1 Inner Table -> Row 0: | 地下 | ちか | underground; basement | 肉売り場は地下です。 |
+  Col 1 Inner Table -> Row 1: | 地震 | じしん | earthquake | 今朝、大きい地震がありました。 |
+--- Main Table 174 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 175   図     On: ズ、ト
+  Col 1 Inner Table -> Row 0: | 図 | ず | drawing; diagram; chart; figure | 図を見て考えてください。 |
+  Col 1 Inner Table -> Row 1: | 地図 | ちず | map | 地図を見て友だちの家に行きました。 |
+--- Main Table 175 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 176   館     On: カン   Meaning of the kanji: building; hall
+  Col 1 Inner Table -> Row 0: | 旅館 | りょかん | Japanese inn | 旅館までの地図をFAXしてください。 |
+  Col 1 Inner Table -> Row 1: | 大使館 | たいしかん | embassy | 来週、大使館に行かなければなりません。 |
+  Col 1 Inner Table -> Row 2: | 図書館 | としょかん | library | その図書館には日本語のテキストもあります。 |
+  Col 1 Inner Table -> Row 3: | 映画館 | えいがかん | movie theater | 妹と六本木の映画館に行きました。 |
+  Col 1 Inner Table -> Row 4: | 美術館 | びじゅつかん | art gallery; museum of art | 美術館に行きませんか。 |
+--- Main Table 176 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 177   英     On: エイ   Meaning of the kanji: Great Britain/the U.K.
+  Col 1 Inner Table -> Row 0: | 英語 | えいご | English (language) | 英語が話せますか。 |
+  Col 1 Inner Table -> Row 1: | 英会話 | えいかいわ | English conversation | 週に一回、英会話学校に行きます。 |
+--- Main Table 177 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 178   鉄     On: テツ
+  Col 1 Inner Table -> Row 0: | 鉄 | てつ | iron | これは鉄ですか。プラスチックですか。 |
+  Col 1 Inner Table -> Row 1: | 地下鉄 | ちかてつ | subway; underground | 毎日、地下鉄で会社に行きます。 |
+--- Main Table 178 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 179   町     Kun: まち
+  Col 1 Inner Table -> Row 0: | 町 | まち | town | 私はカリフォルニアの小さい町で生まれました。 |
+--- Main Table 179 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 180   京     On: キョウ   Meaning of the kanji: the capital
+  Col 1 Inner Table -> Row 0: | 東京 | とうきょう | Tokyo | 東京は人も車も多いです。 |
+--- Main Table 180 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 181   味     Kun: あじ     On: ミ
+  Col 1 Inner Table -> Row 0: | 味 | あじ | taste; flavor | どんな味がしますか。 |
+  Col 1 Inner Table -> Row 1: | 意味 | いみ | meaning | 「工事中」ってどういう意味ですか。 |
+--- Main Table 181 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 182   度     On: ド   Meaning of the kanji: times; degree
+  Col 1 Inner Table -> Row 0: | 一度 | いちど | once | もう一度言ってください。 |
+  Col 1 Inner Table -> Row 1: | 今度 | こんど | next time | 今度の日曜日、食事に行きませんか。 |
+  Col 1 Inner Table -> Row 2: |  |  | some time | 今度、私の家に来ませんか。 |
+  Col 1 Inner Table -> Row 3: |  |  | this time | 今度のテストはよくできました。 |
+  Col 1 Inner Table -> Row 4: | 二十五度 | にじゅうごど | 25 degrees | 今日は二十五度ぐらいです。 |
+--- Main Table 182 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 183   風     Kun: かぜ     On: フウ
+  Col 1 Inner Table -> Row 0: | 風 | かぜ | wind | 今日は風が強いですね。 |
+  Col 1 Inner Table -> Row 1: | 台風 | たいふう | typhoon | 夏は台風が多いです。 |
+--- Main Table 183 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 184   洋     On: ヨウ   Meaning of the kanji: ocean
+  Col 1 Inner Table -> Row 0: | 洋服 | ようふく | clothes | 姉は洋服をたくさん持っています。 |
+  Col 1 Inner Table -> Row 1: | 洋食 | ようしょく | Western food | 妹は洋食が好きです。 |
+  Col 1 Inner Table -> Row 2: | 西洋 | せいよう | the West; Western | 西洋の文学を勉強しています。 |
+--- Main Table 184 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 185   茶     On: チャ
+  Col 1 Inner Table -> Row 0: | お茶 | おちゃ | tea | お茶を飲みませんか。 |
+  Col 1 Inner Table -> Row 1: | 茶わん | ちゃわん | (rice) bowl | この古い茶わんは三万円で買いました。 |
+--- Main Table 185 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 186   鳥     Kun: とり
+  Col 1 Inner Table -> Row 0: | 鳥 | とり | bird | 木の上に鳥がたくさんいます。 |
+  Col 1 Inner Table -> Row 1: | 小鳥 | ことり | small bird | 友だちの家に白い小鳥がいます。 |
+--- Main Table 186 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 187   堂     On: ドウ   Meaning of the kanji: hall
+  Col 1 Inner Table -> Row 0: | 食堂 | しょくどう | dining room | 毎日、会社の食堂で昼ごはんを食べます。 |
+--- Main Table 187 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 188   室     On: シツ   Meaning of the kanji: room
+  Col 1 Inner Table -> Row 0: | 教室 | きょうしつ | classroom | この学校の教室は広くてきれいです。 |
+  Col 1 Inner Table -> Row 1: | 会議室 | かいぎしつ | meeting room | 今、この会議室は空いていますか。 |
+  Col 1 Inner Table -> Row 2: | 洋室 | ようしつ | Western-style room | その旅館に洋室がありますか。 |
+--- Main Table 188 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 189   色     Kun: いろ
+  Col 1 Inner Table -> Row 0: | 色 | いろ | color | 明るい色のカーテンがほしいです。 |
+  Col 1 Inner Table -> Row 1: | 茶色 | ちゃいろ | brown | 茶色のブーツを買いました。 |
+--- Main Table 189 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 190   青     Kun: あお(い)、あお
+  Col 1 Inner Table -> Row 0: | 青い | あおい | blue (adj.) | 目が青いねこを見ました。 |
+  Col 1 Inner Table -> Row 1: | 青 | あお | blue (noun) | 信号(traffic light)が青になりました。 |
+--- Main Table 190 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 191   黒     Kun: くろ(い)、くろ
+  Col 1 Inner Table -> Row 0: | 黒い | くろい | black (adj.) | 黒いペンで書いてください。 |
+  Col 1 Inner Table -> Row 1: | 黒 | くろ | black (noun) | 私は色は黒が好きです。 |
+--- Main Table 191 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 192   品     Kun: しな     On: ヒン   Meaning of the kanji: article; goods
+  Col 1 Inner Table -> Row 0: | 品川 | しながわ | Shinagawa (a name of town) | 兄は品川に住んでいます。 |
+  Col 1 Inner Table -> Row 1: | 食料品 | しょくりょうひん | foodstuffs; groceries | 一週間に一回、食料品を買います。 |
+--- Main Table 192 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 193   物     Kun: もの     On: ブツ
+  Col 1 Inner Table -> Row 0: | 物 | もの | object; article | 今一番ほしい物は何ですか。 |
+  Col 1 Inner Table -> Row 1: | 品物 | しなもの | goods; selling item | この店は品物が多いです。 |
+  Col 1 Inner Table -> Row 2: | 買い物 | かいもの | shopping | 外国に行くと、いつもたくさん買い物します。 |
+  Col 1 Inner Table -> Row 3: | 食べ物 | たべもの | food | 何か食べ物を買って来てください。 |
+  Col 1 Inner Table -> Row 4: | 飲み物 | のみもの | drink; beverage | 飲み物は何がいいですか。 |
+  Col 1 Inner Table -> Row 5: | 動物 | どうぶつ | animal | くじら(whale)は魚じゃなくて、動物です。 |
+--- Main Table 193 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 194   注     On: チュウ   Meaning of the kanji: pour; flow
+  Col 1 Inner Table -> Row 0: | 注射 | ちゅうしゃ | injection | 明日、注射をしなければなりません。 |
+--- Main Table 194 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 195   意     On: イ   Meaning of the kanji: will; mind; meaning
+  Col 1 Inner Table -> Row 0: | 用意 | ようい | preparation | 旅行の用意はできましたか。 |
+  Col 1 Inner Table -> Row 1: | 意見 | いけん | opinion | 何も意見がなければ、これで終わります。 |
+  Col 1 Inner Table -> Row 2: | 注意します | ちゅういします | pay attention; take care | 車に注意してください。 |
+  Col 1 Inner Table -> Row 3: |  |  | advise; warn | たばこを吸っている人に注意しました。 |
+  Col 1 Inner Table -> Row 4: | 意味 | いみ | meaning | 「ひさしぶり」ってどういう意味ですか。 |
+--- Main Table 195 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 196   医     On: イ   Meaning of the kanji: medicine
+  Col 1 Inner Table -> Row 0: | 医学 | いがく | medical science; medicine | 大学で西洋医学を勉強しました。 |
+--- Main Table 196 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 197   者     Kun: もの     On: シャ
+  Col 1 Inner Table -> Row 0: | 者 | もの | person (humble) | 会社の者がそちらにお電話します。 |
+  Col 1 Inner Table -> Row 1: | 医者 | いしゃ | doctor | 子どもの時、医者になりたかったです。 |
+--- Main Table 197 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 198   病     On: ビョウ   Meaning of the kanji: sickness; illness
+  Col 1 Inner Table -> Row 0: | 病気 | びょうき | sickness; illness; disease | 先週、病気で会社を休みました。 |
+--- Main Table 198 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 199   院     On: イン   Meaning of the kanji: institution
+  Col 1 Inner Table -> Row 0: | 病院 | びょういん | hospital | 病院に行くので、早く帰ります。 |
+  Col 1 Inner Table -> Row 1: | 入院します | にゅういんします | be hospitalized | 妹は今、入院しています。 |
+  Col 1 Inner Table -> Row 2: | 退院します | たいいんします | leave hospital | 妹は来週、退院できると思います。 |
+--- Main Table 199 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 200   急     Kun: いそ(ぎます)     On: キュウ
+  Col 1 Inner Table -> Row 0: | 急ぎます | いそぎます | hurry | 時間がないので急いでください。 |
+  Col 1 Inner Table -> Row 1: | 急行 | きゅうこう | express | 今度の電車は品川行き(bound for～)の急行です。 |
+  Col 1 Inner Table -> Row 2: | 急に | きゅうに | suddenly | 急に円が高くなりました。 |
+--- Main Table 200 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 201   春     Kun: はる
+  Col 1 Inner Table -> Row 0: | 春 | はる | spring | 毎年、春に花見をします。 |
+--- Main Table 201 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 202   夏     Kun: なつ
+  Col 1 Inner Table -> Row 0: | 夏 | なつ | summer | 今年の夏に会社でハワイに行きます。 |
+  Col 1 Inner Table -> Row 1: | 夏休み | なつやすみ | summer vacation | 来週から夏休みが始まります。 |
+--- Main Table 202 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 203   秋     Kun: あき
+  Col 1 Inner Table -> Row 0: | 秋 | あき | fall; autumn | 去年の秋に友だちとキャンプをしました。 |
+--- Main Table 203 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 204   冬     Kun: ふゆ
+  Col 1 Inner Table -> Row 0: | 冬 | ふゆ | winter | 毎年、冬にカナダにスキーに行きます。 |
+--- Main Table 204 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 205   親     Kun: おや     On: シン   Meaning of the kanji: parent; close
+  Col 1 Inner Table -> Row 0: | 親 | おや | parent | 私の親は医者です。 |
+--- Main Table 205 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 206   切     Kun: き(ります)     On: セツ
+  Col 1 Inner Table -> Row 0: | 切ります | きります | cut | 料理をしている時、手を切りました。 |
+  Col 1 Inner Table -> Row 1: | 切手 | きって | stamp | 手紙を送りたいので、切手を買って来てください。 |
+  Col 1 Inner Table -> Row 2: | 親切 | しんせつ | kind | その店の人たちはとても親切です。 |
+  Col 1 Inner Table -> Row 3: | 大切 | たいせつ | important | 毎日、勉強することが大切です。 |
+--- Main Table 206 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 207   特     On: トク   Meaning of the kanji: special
+  Col 1 Inner Table -> Row 0: | 特に | とくに | specially | この映画は特におもしろいですよ。 |
+  Col 1 Inner Table -> Row 1: | 特急 | とっきゅう | special express | 急行より特急の方が早いです。 |
+--- Main Table 207 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 208   別     Kun: わか(れます)     On: ベツ
+  Col 1 Inner Table -> Row 0: | 別れます | わかれます | part; separate | 三日前にボーイフレンドと別れました。 |
+  Col 1 Inner Table -> Row 1: | 別 | べつ | another; different | 今日は雨ですから別の日にしましょう。 |
+  Col 1 Inner Table -> Row 2: |  |  | separately | 食べ物と飲み物は別に入れてください。 |
+  Col 1 Inner Table -> Row 3: | 特別 | とくべつ | special | 今日は特別な日ですから、ケーキを買いました。 |
+--- Main Table 208 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 209   写     Kun: うつ(します)     On: シャ
+  Col 1 Inner Table -> Row 0: | 写します | うつします | take; photograph | これはデジカメで写しました。 |
+--- Main Table 209 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 210   真     Kun: ま     On: シン   Meaning of the kanji: truth; exactly; reality
+  Col 1 Inner Table -> Row 0: | 真ん中 | まんなか | middle; center | テーブルの真ん中に花があります。 |
+  Col 1 Inner Table -> Row 1: | 写真 | しゃしん | photograph | 今度、兄弟の写真を見せてください。 |
+--- Main Table 210 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 211   運     Kun: はこ(びます)     On: ウン
+  Col 1 Inner Table -> Row 0: | 運びます | はこびます | carry; transport | 買った物を車まで運んでください。 |
+  Col 1 Inner Table -> Row 1: | 運 | うん | luck | 中山さんは運がいい人だと思います。 |
+  Col 1 Inner Table -> Row 2: | 運動します | うんどうします | exercise | 毎朝、運動してから会社に行きます。 |
+--- Main Table 211 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 212   転     Kun: ころ(びます)     On: テン   Meaning of the kanji: roll; fall down
+  Col 1 Inner Table -> Row 0: | 転びます | ころびます | fall down | 道で転んで、足にけがをしました。 |
+  Col 1 Inner Table -> Row 1: | 自転車 | じてんしゃ | bicycle | 新しい自転車がほしいです。 |
+  Col 1 Inner Table -> Row 2: | 運転します | うんてんします | drive | 父も母も車を運転します。 |
+  Col 1 Inner Table -> Row 3: | 運転手 | うんてんしゅ | driver | 兄の仕事はタクシーの運転手です。 |
+--- Main Table 212 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 213   質     On: シツ   Meaning of the kanji: asking
+--- Main Table 213 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 214   問     On: モン   Meaning of the kanji: question
+  Col 1 Inner Table -> Row 0: | 質問 | しつもん | question | 何か質問がありますか。 |
+--- Main Table 214 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 215   題     On: ダイ   Meaning of the kanji: topic; theme
+  Col 1 Inner Table -> Row 0: | 問題 | もんだい | question | テストの問題は三つあります。 |
+  Col 1 Inner Table -> Row 1: |  |  | problem | 問題があったらメールをください。 |
+  Col 1 Inner Table -> Row 2: | 宿題 | しゅくだい | homework | 宿題をする時間がありませんでした。 |
+--- Main Table 215 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 216   答     Kun: こた(えます)、こた(え)   Meaning of the kanji: answer
+  Col 1 Inner Table -> Row 0: | 答えます | こた(えます) | answer (verb) | 私の質問に答えてください。 |
+  Col 1 Inner Table -> Row 1: | 答え | こた(え) | answer (noun) | その問題の答えがわかりますか。 |
+--- Main Table 216 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 217   教     Kun: おし(えます)     On: キョウ
+  Col 1 Inner Table -> Row 0: | 教えます | おしえます | teach | 姉は高校で英語を教えています。 |
+  Col 1 Inner Table -> Row 1: | 教室 | きょうしつ | classroom | 今、この教室は空いていますか。 |
+  Col 1 Inner Table -> Row 2: | 教育 | きょういく | education | 子どもの教育は大切です。 |
+  Col 1 Inner Table -> Row 3: | 教会 | きょうかい | church | 毎週日曜日、近くの教会に行きます。 |
+--- Main Table 217 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 218   習     Kun: なら(います)     On: シュウ
+  Col 1 Inner Table -> Row 0: | 習います | ならいます | learn | 週に一回、料理を習っています。 |
+  Col 1 Inner Table -> Row 1: | 予習します | よしゅうします | prepare for the lesson | 毎日予習しています。 |
+  Col 1 Inner Table -> Row 2: | 復習します | ふくしゅうします | review | 来週テストがあるので復習しようと思います。 |
+--- Main Table 218 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 219   起     Kun: お(きます)、お(こします)
+  Col 1 Inner Table -> Row 0: | 起きます | おきます | get/wake up (vi.) | 今朝、何時に起きましたか。 |
+  Col 1 Inner Table -> Row 1: | 起こします | おこします | get/wake somebody up (vt.) | 七時に起こしてください。 |
+--- Main Table 219 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 220   死     Kun: し(にます)
+  Col 1 Inner Table -> Row 0: | 死にます | しにます | die | 去年、ペットの鳥が死んでしまいました。 |
+--- Main Table 220 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 221   悪     Kun: わる(い)
+  Col 1 Inner Table -> Row 0: | 悪い | わるい | bad | 私は目が悪いです。 |
+--- Main Table 221 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 222   重     Kun: おも(い)
+  Col 1 Inner Table -> Row 0: | 重い | おもい | heavy | これは重くて一人で運べません。 |
+--- Main Table 222 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 223   発     On: ハツ   Meaning of the kanji: emit; depart
+  Col 1 Inner Table -> Row 0: | 発音 | はつおん | pronunciation | 「ら」の発音に注意してください。 |
+  Col 1 Inner Table -> Row 1: | 出発します | しゅっぱつします | depart | 明日、何時に出発しますか。 |
+--- Main Table 223 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 224   帰     Kun: かえ(ります)
+  Col 1 Inner Table -> Row 0: | 帰ります | かえります | return | ご主人が帰ったら電話をください。 |
+--- Main Table 224 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 225   通     Kun: とお(ります)、かよ(います)
+  Col 1 Inner Table -> Row 0: | 通ります | とおります | go through; pass | この道を通ったことがあります。 |
+  Col 1 Inner Table -> Row 1: | 通り | とおり | road; street | この通りにはいい店がたくさんあります。 |
+  Col 1 Inner Table -> Row 2: | 通います | かよいます | go to (school/work); commute | 車で会社に通っています。 |
+--- Main Table 225 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 226   開     Kun: あ(けます)、あ(きます)
+  Col 1 Inner Table -> Row 0: | 開けます | あけます | open (vt.) | 風が強いので、ドアを開けないでください。 |
+  Col 1 Inner Table -> Row 1: | 開きます | あきます | open (vi.) | その店は何時に開きますか。 |
+--- Main Table 226 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 227   集     Kun: あつ(めます)、あつ(まります)
+  Col 1 Inner Table -> Row 0: | 集めます | あつめます | gather (vt.); collect | 外国の切手を集めています。 |
+  Col 1 Inner Table -> Row 1: | 集まります | あつまります | gather (vi.) | 店の前に人が集まっています。 |
+--- Main Table 227 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 228   歌     Kun: うた(います)、うた
+  Col 1 Inner Table -> Row 0: | 歌います | うたいます | sing | カラオケで日本語の歌を歌いました。 |
+  Col 1 Inner Table -> Row 1: | 歌 | うた | song | この歌を聞いたことがありますか。 |
+--- Main Table 228 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 229   着     Kun: き(ます)、つ(きます)
+  Col 1 Inner Table -> Row 0: | 着ます | きます | put on; wear | このスーツを着てみてもいいですか。 |
+  Col 1 Inner Table -> Row 1: | 下着 | したぎ | underwear | 下着売り場はどこですか。 |
+  Col 1 Inner Table -> Row 2: | 着きます | つきます | arrive; reach | この電車は何時に東京に着きますか。 |
+--- Main Table 229 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 230   貸     Kun: か(します)
+  Col 1 Inner Table -> Row 0: | 貸します | かします | lend | お金が足りないので、少し貸してください。 |
+--- Main Table 230 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 231   借     Kun: か(ります)
+  Col 1 Inner Table -> Row 0: | 借ります | かります | borrow | 銀行で五百万円借りました。 |
+--- Main Table 231 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 232   犬     Kun: いぬ
+  Col 1 Inner Table -> Row 0: | 犬 | いぬ | dog | 子どもの時、家に大きい犬がいました。 |
+--- Main Table 232 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 233   服     On: フク
+  Col 1 Inner Table -> Row 0: | 服 | ふく | clothes | その服、どこで買ったんですか。 |
+  Col 1 Inner Table -> Row 1: | 洋服 | ようふく | (western) clothes | 姉に借りた洋服を着て行きました。 |
+--- Main Table 233 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 234   建     Kun: た(てます)、た(ちます)
+  Col 1 Inner Table -> Row 0: | 建てます | たてます | build | 五年後に東京に家を建てたいです。 |
+  Col 1 Inner Table -> Row 1: | 建ちます | たちます | be built | 駅の前に大きいビルが建ちました。 |
+  Col 1 Inner Table -> Row 2: | 建物 | たてもの | building | 品川は高い建物が多いです。 |
+--- Main Table 234 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 235   海     Kun: うみ     On: カイ
+  Col 1 Inner Table -> Row 0: | 海 | うみ | sea; ocean | 夏休みに海に行くつもりです。 |
+  Col 1 Inner Table -> Row 1: | 海岸 | かいがん | seashore | いい天気だったので、犬と海岸を走りました。 |
+  Col 1 Inner Table -> Row 2: | 海外 | かいがい | overseas | お正月に海外旅行したいです。 |
+--- Main Table 235 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 236   員     On: イン   Meaning of the kanji: member
+  Col 1 Inner Table -> Row 0: | 店員 | てんいん | salesclerk | その店の店員はとても親切です。 |
+  Col 1 Inner Table -> Row 1: | 会社員 | かいしゃいん | office worker | 父は会社員です。 |
+  Col 1 Inner Table -> Row 2: | 銀行員 | ぎんこういん | bank clerk | ATMの使い方を銀行員に聞きました。 |
+  Col 1 Inner Table -> Row 3: | 駅員 | えきいん | station employee | 行き方を駅員に教えてもらいました。 |
+--- Main Table 236 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 237   族     On: ゾク   Meaning of the kanji: family
+  Col 1 Inner Table -> Row 0: | 家族 | かぞく | family | いつも家族の写真を持っています。 |
+  Col 1 Inner Table -> Row 1: | 水族館 | すいぞくかん | aquarium | 日曜日、家族と水族館に行きました。 |
+--- Main Table 237 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 238   飯     On: ハン   Meaning of the kanji: coked rice; meal; food
+  Col 1 Inner Table -> Row 0: | ご飯 | ごはん | cooked rice | パンとご飯とどちらをよく食べますか。 |
+  Col 1 Inner Table -> Row 1: | 夕飯 | ゆうはん | dinner; supper | 毎日、夕飯の前に一時間勉強します。 |
+--- Main Table 238 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 239   野     On: ヤ   Meaning of the kanji: field; plain
+--- Main Table 239 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 240   菜     On: サイ   Meaning of the kanji: vegetable
+  Col 1 Inner Table -> Row 0: | 野菜 | やさい | vegetable | あの八百屋は野菜が安いです。 |
+--- Main Table 240 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 241   止     Kun: と(めます)、と(まります)     On: シ
+  Col 1 Inner Table -> Row 0: | 止めます | とめます | stop (vt.) | 運転手さん、駅の前で止めてください。 |
+  Col 1 Inner Table -> Row 1: | 止まります | とまります | stop (vi.) | 台風で電車が止まりました。 |
+  Col 1 Inner Table -> Row 2: | 中止 | ちゅうし | cancellation | 明日のパーティーは中止です。 |
+--- Main Table 241 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 242   漢     On: カン   Meaning of the kanji: China
+  Col 1 Inner Table -> Row 0: | 漢字 | かんじ | kanji; Chinese character | この漢字はどう読みますか。 |
+--- Main Table 242 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 243   研     On: ケン   Meaning of the kanji: whet; sharpen
+--- Main Table 243 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 244   究     On: キュウ   Meaning of the kanji: investigate
+  Col 1 Inner Table -> Row 0: | 研究します | けんきゅうします | research; study | 兄は大学で動物の研究をしています。 |
+  Col 1 Inner Table -> Row 1: | 研究室 | けんきゅうしつ | study room | 三時まで研究室で待っていてください。 |
+--- Main Table 244 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 245   試     On: シ   Meaning of the kanji: try; attempt
+--- Main Table 245 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 246   験     On: ケン   Meaning of the kanji: testing
+  Col 1 Inner Table -> Row 0: | 試験 | しけん | examination; test | 日本語能力試験は十二月です。 |
+--- Main Table 246 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 247   内     On: ナイ   Meaning of the kanji: inside
+  Col 1 Inner Table -> Row 0: | 以内 | いない | within | 田中さんは五分以内に来ると思います。 |
+  Col 1 Inner Table -> Row 1: | 国内 | こくない | domestic | 海外旅行は高いので、国内旅行にしましょう。 |
+  Col 1 Inner Table -> Row 2: | 家内 | かない | (my) wife | 家内は車の運転が上手です。 |
+--- Main Table 247 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 248   体     Kun: からだ
+  Col 1 Inner Table -> Row 0: | 体 | からだ | body | あの体が大きい人はだれですか。 |
+  Col 1 Inner Table -> Row 1: | 体にいい | からだにいい | good for health | スポーツは体にいいです。 |
+--- Main Table 248 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 249   全     On: ゼン   Meaning of the kanji: all; whole
+  Col 1 Inner Table -> Row 0: | 全員 | ぜんいん | all the members | 私の会社の人は、全員英語が話せます。 |
+  Col 1 Inner Table -> Row 1: | 安全 | あんぜん | safe | 日本は安全な国だと思いますか。 |
+--- Main Table 249 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 250   回     Kun: まわ(ります)     On: カイ
+  Col 1 Inner Table -> Row 0: | 回ります | まわります | turn; go round | レバーを上げると、モーターが回ります。 |
+  Col 1 Inner Table -> Row 1: | 三回 | さんかい | three times | その水族館に三回行ったことがあります。 |
+--- Main Table 250 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 251   所     Kun: ところ     On: ショ
+  Col 1 Inner Table -> Row 0: | 所 | ところ | place | 山田さんの生まれた町はどんな所ですか。 |
+  Col 1 Inner Table -> Row 1: | 台所 | だいどころ | kitchen | 中田さんの家の台所はとても広いです。 |
+  Col 1 Inner Table -> Row 2: | 住所 | じゅうしょ | address | 社長の住所を知っていますか。 |
+  Col 1 Inner Table -> Row 3: | 近所 | きんじょ | neighborhood | 近所の子どもたちが集まっています。 |
+  Col 1 Inner Table -> Row 4: | 事務所 | じむしょ | office | 事務所までの行き方を教えてください。 |
+--- Main Table 251 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 252   公     On: コウ   Meaning of the kanji: public; official
+--- Main Table 252 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 253   園     On: エン   Meaning of the kanji: garden
+  Col 1 Inner Table -> Row 0: | 公園 | こうえん | park | 公園を通って家に帰ります。 |
+  Col 1 Inner Table -> Row 1: | 動物園 | どうぶつえん | zoo | 動物園でパンダの赤ちゃんを見ました。 |
+--- Main Table 253 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 254   利     On: リ   Meaning of the kanji: benefit; advantage
+  Col 1 Inner Table -> Row 0: | 利用します | りようします | make use of | この公園は夕方五時まで利用できます。 |
+--- Main Table 254 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 255   便     On: ベン   Meaning of the kanji: convenience
+  Col 1 Inner Table -> Row 0: | 便利 | べんり | convenient; useful | ここは駅から近くて便利ですね。 |
+  Col 1 Inner Table -> Row 1: | 不便 | ふべん | inconvenient | ここは電気も水道もなくてとても不便です。 |
+--- Main Table 255 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 256   頭     Kun: あたま
+  Col 1 Inner Table -> Row 0: | 頭 | あたま | head | 頭が痛かったので、会社を休みました。 |
+--- Main Table 256 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 257   部     On: ブ   Meaning of the kanji: part; section; department; copy of a publication
+  Col 1 Inner Table -> Row 0: | 全部 | ぜんぶ | all | この本は全部読みました。 |
+  Col 1 Inner Table -> Row 1: | 部長 | ぶちょう | the head/chief of a department | 部長と夕飯を食べました。 |
+  Col 1 Inner Table -> Row 2: | 学部 | がくぶ | faculty; department | 学部はどちらですか。 |
+  Col 1 Inner Table -> Row 3: | ～部 | ～ぶ | copy | これを二十部コピーしてください。 |
+  Col 1 Inner Table -> Row 4: | 部屋 | へや | room | 私の家は部屋が四つあります。 |
+--- Main Table 257 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 258   祖     On: ソ   Meaning of the kanji: ancestor
+  Col 1 Inner Table -> Row 0: | 祖父 | そふ | grandfather | 祖父に旅行の写真を送りました。 |
+  Col 1 Inner Table -> Row 1: | 祖母 | そぼ | grandmother | 祖母は今、入院しています。 |
+--- Main Table 258 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 259   業     On: ギョウ   Meaning of the kanji: occupation; business; work
+  Col 1 Inner Table -> Row 0: | 工業 | こうぎょう | industry | 妹はイギリスの工業について勉強しています。 |
+  Col 1 Inner Table -> Row 1: | 授業 | じゅぎょう | class; lesson | 病気で、授業を休みました。 |
+  Col 1 Inner Table -> Row 2: | 卒業します | そつぎょうします | graduate | 弟は去年大学を卒業しました。 |
+--- Main Table 259 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 260   太     Kun: ふと(い)、ふと(ります)
+  Col 1 Inner Table -> Row 0: | 太い | ふとい | thick | ぞう(elephant)の足は太いです。 |
+  Col 1 Inner Table -> Row 1: | 太ります | ふとります | gain weight | 食べすぎて、太ってしまいました。 |
+--- Main Table 260 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 261   低     Kun: ひく(い)
+  Col 1 Inner Table -> Row 0: | 低い | ひくい | low | このテーブルは低いです。 |
+--- Main Table 261 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 262   短     Kun: みじか(い)
+  Col 1 Inner Table -> Row 0: | 短い | みじかい | short | 一時間のレッスンは短いです。 |
+--- Main Table 262 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 263   好     Kun: す(き)
+  Col 1 Inner Table -> Row 0: | 好き | すき | like; be fond of | どんな歌が好きですか。 |
+  Col 1 Inner Table -> Row 1: | 大好き | だいすき | be very fond of | 家内は買い物が大好きです。 |
+--- Main Table 263 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 264   若     Kun: わか(い)
+  Col 1 Inner Table -> Row 0: | 若い | わかい | young | 若い時、よく映画を見ました。 |
+--- Main Table 264 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 265   弱     Kun: よわ(い)
+  Col 1 Inner Table -> Row 0: | 弱い | よわい | weak | 女性は男性より力が弱いです。 |
+--- Main Table 265 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 266   軽     Kun: かる(い)
+  Col 1 Inner Table -> Row 0: | 軽い | かるい | light | これは軽いので、一人で持てます。 |
+--- Main Table 266 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 267   遠     Kun: とお(い)
+  Col 1 Inner Table -> Row 0: | 遠い | とおい | far | 私の家は、駅から遠いので不便です。 |
+  Col 1 Inner Table -> Row 1: | 遠く | とおく | distant place | 山田さんは遠くから会社に通っています。 |
+--- Main Table 267 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 268   暑     Kun: あつ(い)
+  Col 1 Inner Table -> Row 0: | 暑い | あつい | hot (weather) | 今日は暑いですね。 |
+--- Main Table 268 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 269   寒     Kun: さむ(い)
+  Col 1 Inner Table -> Row 0: | 寒い | さむい | cold (weather) | 今日、外は寒いですか。 |
+--- Main Table 269 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 270   合     Kun: あ(います)
+  Col 1 Inner Table -> Row 0: | 合います | あいます | fit; suit; match | この服とこのくつは、よく合います。 |
+  Col 1 Inner Table -> Row 1: | 間に合います | まにあいます | be in time | 出発の時間に間に合わないかもしれません。 |
+  Col 1 Inner Table -> Row 2: | 場合 | ばあい | case | 行けない場合は電話してください。 |
+  Col 1 Inner Table -> Row 3: | 試合 | しあい | match; game | 日曜日、サッカーの試合があります。 |
+--- Main Table 270 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 271   伝     Kun: つた(えます)     On: デン
+  Col 1 Inner Table -> Row 0: | 伝えます | つたえます | tell; inform | 部長に明日の会議の時間を伝えてください。 |
+  Col 1 Inner Table -> Row 1: | 伝言 | でんごん | message | 伝言をおねがいします。 |
+  Col 1 Inner Table -> Row 2: | 手伝います | てつだいます | help | 今日は仕事が多いので、手伝ってもらえませんか。 |
+--- Main Table 271 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 272   決     Kun: き(めます)、き(まります)
+  Col 1 Inner Table -> Row 0: | 決めます | きめます | decide | いつ国に帰るか、まだ決めていません。 |
+  Col 1 Inner Table -> Row 1: | 決まります | きまります | be decided | 来週のスケジュールは決まりましたか。 |
+--- Main Table 272 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 273   困     Kun: こま(ります)
+  Col 1 Inner Table -> Row 0: | 困ります | こまります | have difficulty; be in trouble | お金がなくて困っています。 |
+--- Main Table 273 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 274   返     Kun: かえ(します)     On: ヘン
+  Col 1 Inner Table -> Row 0: | 返します | かえします | return; give something back | 図書館に本を返しましたか。 |
+  Col 1 Inner Table -> Row 1: | 返事 | へんじ | reply; answer | できるだけ早く返事をください。 |
+--- Main Table 274 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 275   泳     Kun: およ(ぎます)     On: エイ
+  Col 1 Inner Table -> Row 0: | 泳ぎます | およぎます | swim | 週に一回スポーツクラブで泳いでいます。 |
+  Col 1 Inner Table -> Row 1: | 水泳 | すいえい | swimming | 私の子どもは水泳を習っています。 |
+--- Main Table 275 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 276   消     Kun: け(します)、き(えます)
+  Col 1 Inner Table -> Row 0: | 消します | けします | put out | 火を消してください。 |
+  Col 1 Inner Table -> Row 1: |  |  | turn off | テレビを消しましょうか。 |
+  Col 1 Inner Table -> Row 2: |  |  | erase | 消しゴム(eraser)で、字を消します。 |
+  Col 1 Inner Table -> Row 3: | 消えます | きえます | go out | 風が強くて、火が消えました。 |
+  Col 1 Inner Table -> Row 4: |  |  | go off | 会議室の電気が消えていますね。 |
+--- Main Table 276 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 277   忘     Kun: わす(れます)
+  Col 1 Inner Table -> Row 0: | 忘れます | わすれます | forget | この漢字は、勉強したのに忘れてしまいました。 |
+  Col 1 Inner Table -> Row 1: |  |  | forget to take, leave | 家にかぎを忘れました。 |
+--- Main Table 277 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 278   呼     Kun: よ(びます)
+  Col 1 Inner Table -> Row 0: | 呼びます | よびます | call | 病院に行くので、タクシーを呼んでください。 |
+  Col 1 Inner Table -> Row 1: |  |  | invite | 友だちをパーティーに呼びました。 |
+--- Main Table 278 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 279   閉     Kun: し(めます)、し(まります)
+  Col 1 Inner Table -> Row 0: | 閉めます | しめます | close (vt.) | 夜になったら、カーテンを閉めてください。 |
+  Col 1 Inner Table -> Row 1: | 閉まります | しまります | close (vi.) | ドアが閉まりますから注意してください。 |
+--- Main Table 279 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 280   引     Kun: ひ(きます)
+  Col 1 Inner Table -> Row 0: | 引きます | ひきます | pull | レバーを引くと、ドアが開きます。 |
+--- Main Table 280 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 281   押     Kun: お(します)
+  Col 1 Inner Table -> Row 0: | 押します | おします | push | このスイッチを押すと電気がつきます。 |
+--- Main Table 281 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 282   拾     Kun: ひろ(います)
+  Col 1 Inner Table -> Row 0: | 拾います | ひろいます | pick up | 道で一万円拾いました。 |
+--- Main Table 282 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 283   捨     Kun: す(てます)
+  Col 1 Inner Table -> Row 0: | 捨てます | すてます | throw away | ここにごみを捨てないでください。 |
+--- Main Table 283 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 284   説     On: セツ   Meaning of the kanji: opinion; theory
+  Col 1 Inner Table -> Row 0: | 説明します | せつめいします | explain | もう一度、説明してください。 |
+  Col 1 Inner Table -> Row 1: | 小説 | しょうせつ | novel | 大学生の時、よく小説を読みました。 |
+--- Main Table 284 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 285   受     Kun: う(けます)、う(かります)
+  Col 1 Inner Table -> Row 0: | 受けます | うけます | receive | 会社でトレーニングを受けました。 |
+  Col 1 Inner Table -> Row 1: |  |  | take (an exam) | 日本語能力試験三級を受けます。 |
+  Col 1 Inner Table -> Row 2: | 受かります | うかります | pass (an exam) | 日本語能力試験三級に受かりました。 |
+  Col 1 Inner Table -> Row 3: | 受付 | うけつけ | reception | この病院の受付の人は親切です。 |
+--- Main Table 285 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 286   取     Kun: と(ります)
+  Col 1 Inner Table -> Row 0: | 取ります | とります | take | 好きなのを一つ取ってください。 |
+--- Main Table 286 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 287   席     On: セキ   Meaning of the kanji: seat
+  Col 1 Inner Table -> Row 0: | 席 | せき | seat | この席は空いていますか。 |
+  Col 1 Inner Table -> Row 1: | 出席します | しゅっせきします | attend | 今日の会議に出席する人は何人ですか。 |
+--- Main Table 287 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 288   連     Kun: つ(れます)
+  Col 1 Inner Table -> Row 0: | 連れて行きます | つれていきます | take (someone) | 友だちを病院に連れて行きました。 |
+  Col 1 Inner Table -> Row 1: | 連れて来ます | つれてきます | bring (someone) | 今度、主人を連れて来ます。 |
+--- Main Table 288 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 289   座     Kun: すわ(ります)
+  Col 1 Inner Table -> Row 0: | 座ります | すわります | sit down | このいすは低くて座りにくいです。 |
+--- Main Table 289 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 290   変     Kun: か(えます)、か(わります)     On: ヘン
+  Col 1 Inner Table -> Row 0: | 変えます | かえます | change (vt.) | 部屋のカーテンの色を変えました。 |
+  Col 1 Inner Table -> Row 1: | 変わります | かわります | change (vi.) | パーティーの場所が変わりました。 |
+  Col 1 Inner Table -> Row 2: | 変 | へん | odd; strange | あの人は変な服を着ています。 |
+  Col 1 Inner Table -> Row 3: | 大変 | たいへん | hard; serious | 今日は仕事が多くて大変です。 |
+--- Main Table 290 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 291   乗     Kun: の(ります)
+  Col 1 Inner Table -> Row 0: | 乗ります | のります | get on | 駅前でタクシーに乗りました。 |
+  Col 1 Inner Table -> Row 1: | 乗り物 | のりもの | vehicle; vessel | 駅からどんな乗り物がありますか。 |
+--- Main Table 291 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 292   降     Kun: お(ります)、ふ(ります)
+  Col 1 Inner Table -> Row 0: | 降ります | おります | get off | バスを降りてから十分ぐらい歩きます。 |
+  Col 1 Inner Table -> Row 1: | 降ります | ふります | fall (rain; snow) | 今、雨が降っていますか。 |
+--- Main Table 292 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 293   働     Kun: はたら(きます)
+  Col 1 Inner Table -> Row 0: | 働きます | はたらきます | work | 外国で働きたいです。 |
+--- Main Table 293 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 294   残     Kun: のこ(します)、のこ(ります)     On: ザン
+  Col 1 Inner Table -> Row 0: | 残します | のこします | leave | 残さないで全部食べてください。 |
+  Col 1 Inner Table -> Row 1: | 残ります | のこります | remain; be left | 食べ物がたくさん残りました。 |
+  Col 1 Inner Table -> Row 2: | 残念 | ざんねん | unfortunate; regrettable; disappointing | 残念ですね。 |
+  Col 1 Inner Table -> Row 3: | 残業します | ざんぎょうします | work overtime | 今日も残業しなければなりません。 |
+--- Main Table 294 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 295   調     Kun: しら(べます)
+  Col 1 Inner Table -> Row 0: | 調べます | しらべます | investigate; check | インターネットで場所を調べてください。 |
+--- Main Table 295 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 296   続     Kun: つづ(けます)、つづ(きます)
+  Col 1 Inner Table -> Row 0: | 続けます | つづけます | continue (vt.) | 試験の後も、日本語の勉強を続けたいです。 |
+  Col 1 Inner Table -> Row 1: | 続きます | つづきます | continue (vi.) | 会議は夜まで続きました。 |
+--- Main Table 296 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 297   練     On: レン   Meaning of the kanji: knead, polish, elaborate
+  Col 1 Inner Table -> Row 0: | 練習します | れんしゅうします | practice | カジュアルな会話を練習したいです。 |
+--- Main Table 297 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 298   落     Kun: お(とします)、お(ちます)
+  Col 1 Inner Table -> Row 0: | 落とします | おとします | drop (vt.) | ハンカチを落としましたよ。 |
+  Col 1 Inner Table -> Row 1: | 落ちます | おちます | fall; drop (vi.) | 地震で、テレビの上から時計が落ちました。 |
+--- Main Table 298 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 299   寝     Kun: ね(ます)
+  Col 1 Inner Table -> Row 0: | 寝ます | ねます | go to bed; sleep | 明日から旅行なので、今日は早く寝ます。 |
+--- Main Table 299 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 300   遅     Kun: おそ(い)、おく(れます)
+  Col 1 Inner Table -> Row 0: | 遅い | おそい | late | もう遅いですから、帰りましょう。 |
+  Col 1 Inner Table -> Row 1: |  |  | slow | 私は歩くのが遅いです。 |
+  Col 1 Inner Table -> Row 2: | 遅れます | おくれます | be late | 今朝、会社に十分遅れてしまいました。 |
+--- Main Table 300 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 301   顔     Kun: かお
+  Col 1 Inner Table -> Row 0: | 顔 | かお | face | その人の顔を忘れてしまいました。 |
+--- Main Table 301 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 302   首     Kun: くび
+  Col 1 Inner Table -> Row 0: | 首 | くび | neck | あの鳥、首が長いですね。 |
+--- Main Table 302 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 303   声     Kun: こえ
+  Col 1 Inner Table -> Row 0: | 声 | こえ | voice | すみませんが、もっと大きい声で話してください。 |
+--- Main Table 303 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 304   都     On: ト   Meaning of the kanji: Metropolis
+  Col 1 Inner Table -> Row 0: | 東京都 | とうきょうと | the Tokyo metropolitan area | 東京都のホームページを見ました。 |
+--- Main Table 304 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 305   県     On: ケン   Meaning of the kanji: prefecture
+  Col 1 Inner Table -> Row 0: | 山口県 | やまぐちけん | Yamaguchi Prefecture | 山口県では、ふぐ(globefish)が有名です。 |
+--- Main Table 305 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 306   区     On: ク   Meaning of the kanji: ward
+  Col 1 Inner Table -> Row 0: | 目黒区 | めぐろく | Meguro Ward | 私は目黒区に住んでいます。 |
+--- Main Table 306 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 307   市     On: シ   Meaning of the kanji: city; municipality
+  Col 1 Inner Table -> Row 0: | 町田市 | まちだし | Machida City | 町田市に、大きい図書館があります。 |
+--- Main Table 307 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 308   村     Kun: むら
+  Col 1 Inner Table -> Row 0: | 村 | むら | village | ここは村でしたが、去年市に変わりました。 |
+--- Main Table 308 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 309   民     On: ミン   Meaning of the kanji: people
+  Col 1 Inner Table -> Row 0: | 市民 | しみん | citizen | 月に一回、市民が集まって会議をします。 |
+--- Main Table 309 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 310   産     On: サン   Meaning of the kanji: product
+  Col 1 Inner Table -> Row 0: | 生産します | せいさんします | produce | この会社では、一年間に車を一千万台生産しています。 |
+  Col 1 Inner Table -> Row 1: | 産業 | さんぎょう | industry | 中国の社会と産業について学びたいです。 |
+--- Main Table 310 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 311   林     Kun: はやし
+  Col 1 Inner Table -> Row 0: | 林 | はやし | grove | その小学校は、林の中に建っています。 |
+--- Main Table 311 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 312   森     Kun: もり
+  Col 1 Inner Table -> Row 0: | 森 | もり | forest | 森の中にある小さなホテルに泊まりました。 |
+--- Main Table 312 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 313   池     Kun: いけ
+  Col 1 Inner Table -> Row 0: | 池 | いけ | pond | 公園の池で、子どもとボートに乗りました。 |
+--- Main Table 313 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 314   門     On: モン
+  Col 1 Inner Table -> Row 0: | 門 | もん | gate | 門を開けたら、大きな犬がいました。 |
+--- Main Table 314 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 315   薬     Kun: くすり
+  Col 1 Inner Table -> Row 0: | 薬 | くすり | medicine | 頭が痛かったので、薬を飲んで寝ました。 |
+--- Main Table 315 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 316   洗     Kun: あら(います)     On: セン
+  Col 1 Inner Table -> Row 0: | 洗います | あらいます | wash | 朝起きて、顔を洗って、それから朝ごはんを食べます。 |
+  Col 1 Inner Table -> Row 1: | 洗濯します | せんたくします | wash; launder | 一週間に三回ぐらい洗濯します。 |
+--- Main Table 316 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 317   進     Kun: すす(めます)、すす(みます)
+  Col 1 Inner Table -> Row 0: | 進めます | すすめます | advance; put forward | 時間がないから、早く進めましょう。 |
+  Col 1 Inner Table -> Row 1: | 進みます | すすみます | advance; go forward | もう少し前に進んでください。 |
+--- Main Table 317 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 318   暗     Kun: くら(い)
+  Col 1 Inner Table -> Row 0: | 暗い | くらい | dark | 空が急に暗くなって、雨が降りそうです。 |
+--- Main Table 318 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 319   光     Kun: ひかり
+  Col 1 Inner Table -> Row 0: | 光 | ひかり | light | 月の光が部屋の中に入ってきました。 |
+--- Main Table 319 ---
+Row 0:
+  Col 0 text: 
+  Col 1 text: 320   線     On: セン
+  Col 1 Inner Table -> Row 0: | 線 | せん | line | 危ないですから、線の外に出ないでください。 |
+  Col 1 Inner Table -> Row 1: | 山手線 | やまのてせん | Yamanote Line | 山手線に乗って、田町駅で降りてください。 |

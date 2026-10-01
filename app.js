@@ -2,6 +2,8 @@ let VOCAB = {},
   KAIWA = {};
 let LISTENING = [];
 let MOCK_TESTS = [];
+let GRAMMAR = [];
+let KANJI = [];
 let focusWords = JSON.parse(localStorage.getItem("minna_focus_words")) || {};
 function saveFocusWords() { localStorage.setItem("minna_focus_words", JSON.stringify(focusWords)); }
 let lessonSelection = new Set();
@@ -106,11 +108,13 @@ const lessonNames = {
   25: "Conditions & moving",
 };
 async function loadData() {
-  [VOCAB, KAIWA, LISTENING, MOCK_TESTS] = await Promise.all([
+  [VOCAB, KAIWA, LISTENING, MOCK_TESTS, GRAMMAR, KANJI] = await Promise.all([
     fetch("vocab.json").then((r) => r.json()),
     fetch("kaiwa.json").then((r) => r.json()),
     fetch("listening-n5.json").then((r) => r.json()).catch(() => []),
-    fetch("mock-tests-n5.json").then((r) => r.json()).catch(() => [])
+    fetch("mock-tests-n5.json").then((r) => r.json()).catch(() => []),
+    fetch("data/grammar/lessons-01-25.json").then((r) => r.json()).catch(() => []),
+    fetch("data/kanji/kanji-320.json").then((r) => r.json()).catch(() => [])
   ]);
   initAmbiguousSet();
   init();
@@ -159,6 +163,8 @@ function init() {
   $("themeBtn").onclick = toggleTheme;
   renderLessons();
   renderKaiwa();
+  renderGrammar();
+  renderKanji();
   updatePoolCount();
   updateReviewPoolCount();
   initListening();
@@ -317,6 +323,7 @@ function shuffle(a) {
   return [...a].sort(() => Math.random() - 0.5);
 }
 function startPractice() {
+  state.testMode = "vocab";
   state.pool = poolForScope();
   if ($("direction").value === "en-jp") {
     state.pool = state.pool.filter(v => !ambiguousEnJpIds.has(v.id));
@@ -349,7 +356,24 @@ function nextQuestion() {
     finishQuiz();
     return;
   }
-  state.current = state.queue[state.index];
+  
+  if (state.testMode === "kanji" || state.testMode === "grammar") {
+      state.current = state.queue[state.index];
+      $("question").textContent = state.current.questionText;
+      state.currentOptions = state.current.options;
+      state.answered = false;
+      $("mcqGrid").innerHTML = state.currentOptions.map((opt, i) => {
+          return `<button class="mcq-option" id="opt${i}" onclick="selectOptionGeneric(${i})">${escapeHtml(opt.text)}</button>`;
+      }).join("");
+      $("mcqGrid").classList.remove("hidden");
+      $("nextAction").classList.add("hidden");
+      $("lessonTag").textContent = state.current.lesson;
+      $("quizDirection").textContent = state.current.dir;
+      $("quizProgress").textContent = `${state.index + 1} / ${state.queue.length}`;
+      $("progressBar").style.width = `${(state.index / state.queue.length) * 100}%`;
+      return;
+  }
+state.current = state.queue[state.index];
   const requestedDir = $("direction").value;
   let dir = requestedDir;
   if (requestedDir === "mixed") {
@@ -464,6 +488,8 @@ function selectOption(idx) {
   $("nextAction").classList.remove("hidden");
 }
 function grade() {
+  if (state.testMode === "kanji" || state.testMode === "grammar") return gradeGeneric();
+
   if (state.lastCorrect) {
     state.score++;
     markCorrect(state.current.id);
@@ -570,6 +596,37 @@ function renderLessons() {
     </button>`,
     )
     .join("");
+}
+
+function renderGrammar() {
+  if (!$("grammarLessonGrid") || !GRAMMAR.length) return;
+  $("grammarLessonGrid").innerHTML = GRAMMAR.map(g => {
+    let pts = g.grammarPoints.length;
+    return `<button class="lesson-card" onclick="openGrammarLesson(${g.lessonId})">
+      <span class="lesson-no">LESSON ${String(g.lessonId).padStart(2, '0')}</span>
+      <h3>${lessonNames[g.lessonId]}</h3><p>${pts} grammar points</p>
+    </button>`;
+  }).join("");
+}
+
+function renderKanji() {
+  if (!$("kanjiUnitGrid") || !KANJI.length) return;
+  let units = [];
+  for(let i=0; i<KANJI.length; i+=40) {
+    let end = Math.min(i+40, KANJI.length);
+    units.push({
+      unitId: Math.floor(i/40)+1,
+      start: i+1,
+      end: end,
+      count: end-i
+    });
+  }
+  $("kanjiUnitGrid").innerHTML = units.map(u => {
+    return `<button class="lesson-card" onclick="openKanjiUnit(${u.unitId})">
+      <span class="lesson-no">UNIT ${String(u.unitId).padStart(2, '0')}</span>
+      <h3>Kanji ${u.start}–${u.end}</h3><p>${u.count} characters</p>
+    </button>`;
+  }).join("");
 }
 let currentLessonWords = [];
 function openLesson(n) {
@@ -1618,4 +1675,141 @@ ${pass ? 'PASS' : 'FAIL'}
 }
 
 window.toggleOmamoriNav = toggleOmamoriNav;
+
+
+
+function startKanjiTest(type) {
+  state.testMode = "kanji";
+  let kanjiItems = KANJI;
+  if (type === 'quick') kanjiItems = shuffle(KANJI).slice(0, 10);
+  else if (type === 'n5') kanjiItems = KANJI;
+  else kanjiItems = shuffle(KANJI).slice(0, 20); // mixed
+  
+  let qQueue = [];
+  kanjiItems.forEach(k => {
+     let isKtoR = Math.random() < 0.5;
+     let correctOpt = isKtoR ? (k.kunReadings[0] || k.onReadings[0] || k.meanings[0]) : k.character;
+     let qText = isKtoR ? k.character : (k.kunReadings[0] || k.onReadings[0] || k.meanings[0]);
+     
+     let distractors = [];
+     let attempts = 0;
+     while(distractors.length < 3 && attempts < 100) {
+         attempts++;
+         let r = KANJI[Math.floor(Math.random() * KANJI.length)];
+         if (r.kanjiNumber === k.kanjiNumber) continue;
+         let opt = isKtoR ? (r.kunReadings[0] || r.onReadings[0] || r.meanings[0]) : r.character;
+         if (opt && !distractors.includes(opt) && opt !== correctOpt) distractors.push(opt);
+     }
+     let options = shuffle([correctOpt, ...distractors]);
+     
+     qQueue.push({
+         id: 'k' + k.kanjiNumber,
+         lesson: 'Kanji ' + k.kanjiNumber,
+         dir: isKtoR ? 'Kanji → Reading/Meaning' : 'Reading/Meaning → Kanji',
+         questionText: qText,
+         options: options.map(o => ({ text: o, isCorrect: o === correctOpt })),
+         correctText: correctOpt,
+     });
+  });
+  
+  state.queue = shuffle(qQueue).slice(0, (type === 'quick' ? 10 : (type === 'mixed' ? 20 : qQueue.length)));
+  state.index = 0;
+  state.score = 0;
+  state.history = [];
+  $("quizScope").textContent = type === 'quick' ? "Quick Kanji" : (type === 'n5' ? "N5 Challenge" : "Mixed Kanji");
+  showView("quiz");
+  nextQuestion();
+}
+
+function startGrammarTest(type) {
+  state.testMode = "grammar";
+  let grammarPoints = [];
+  GRAMMAR.forEach(lesson => {
+      lesson.grammarPoints.forEach(p => {
+          grammarPoints.push({ ...p, lessonId: lesson.lessonId });
+      });
+  });
+  let selected = grammarPoints;
+  if (type === 'quick') selected = shuffle(grammarPoints).slice(0, 10);
+  else if (type === 'mixed') selected = shuffle(grammarPoints).slice(0, 20);
+  
+  let qQueue = [];
+  selected.forEach(g => {
+      // Create a fill-in-the-blank question using the example sentence
+      if (!g.exampleSentence) return;
+      let qText = g.exampleSentence;
+      // Mask out a particle or part of the pattern if possible, else just ask for meaning
+      let correctOpt = g.pattern.split(" ")[0] || "です"; // Fallback dummy logic
+      
+      // Since generating perfect grammar MCQs dynamically is hard, we'll ask for English meaning!
+      qText = g.exampleSentence;
+      correctOpt = g.meaning;
+      let distractors = [];
+      while(distractors.length < 3) {
+          let r = grammarPoints[Math.floor(Math.random() * grammarPoints.length)];
+          if (r.id === g.id) continue;
+          if (!distractors.includes(r.meaning) && r.meaning !== correctOpt) distractors.push(r.meaning);
+      }
+      let options = shuffle([correctOpt, ...distractors]);
+      
+      qQueue.push({
+         id: 'g' + g.id,
+         lesson: 'Lesson ' + g.lessonId,
+         dir: 'Grammar Context',
+         questionText: qText,
+         options: options.map(o => ({ text: o, isCorrect: o === correctOpt })),
+         correctText: correctOpt,
+      });
+  });
+  
+  state.queue = shuffle(qQueue).slice(0, (type === 'quick' ? 10 : (type === 'mixed' ? 20 : qQueue.length)));
+  if (state.queue.length === 0) {
+      alert("Not enough grammar data!");
+      return;
+  }
+  state.index = 0;
+  state.score = 0;
+  state.history = [];
+  $("quizScope").textContent = type === 'quick' ? "Quick Grammar" : "Mixed Grammar";
+  showView("quiz");
+  nextQuestion();
+}
+
+function selectOptionGeneric(idx) {
+  if (state.answered) return;
+  state.answered = true;
+  const selected = state.currentOptions[idx];
+  state.lastSelectedObj = selected;
+  const isCorrect = selected.isCorrect;
+  state.lastCorrect = isCorrect;
+  state.currentOptions.forEach((opt, i) => {
+    const btn = $("opt" + i);
+    btn.disabled = true;
+    if (opt.isCorrect) btn.classList.add("correct");
+    else if (i === idx && !isCorrect) btn.classList.add("incorrect");
+  });
+  $("nextAction").classList.remove("hidden");
+}
+
+function gradeGeneric() {
+  if (state.lastCorrect) {
+    state.score++;
+    markCorrect(state.current.id);
+  } else {
+    markWrong(state.current.id);
+  }
+  
+  state.history.push({
+    id: state.current.id,
+    lesson: state.current.lesson,
+    dir: state.current.dir,
+    questionText: state.current.questionText,
+    selectedAnswer: state.lastSelectedObj ? state.lastSelectedObj.text : "Timeout",
+    correctAnswer: state.current.correctText,
+    known: state.lastCorrect,
+  });
+
+  state.index++;
+  nextQuestion();
+}
 
