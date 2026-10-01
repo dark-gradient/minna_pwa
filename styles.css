@@ -1359,7 +1359,8 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
 
 /* Progress Card */
 .progress-card {
-    background: url('bg_home.jpg') center/cover no-repeat;
+    background: rgba(253, 251, 247, 0.45);
+    backdrop-filter: blur(4px);
     border: 3px solid var(--text-primary);
     border-radius: 16px;
     padding: 24px;
@@ -1373,20 +1374,14 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
     transform: translateY(-4px) rotate(-1deg);
     box-shadow: 8px 8px 0px var(--text-primary);
 }
-.progress-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(243, 217, 155, 0.85); /* retro yellow tint */
-    z-index: 0;
-}
+
 .progress-row {
     position: relative;
     z-index: 1;
     display: flex;
     align-items: center;
     gap: 16px;
-    background: rgba(253, 251, 247, 0.7);
+    background: rgba(253, 251, 247, 0.9);
     padding: 16px;
     border-radius: 12px;
     border: 2px dashed var(--text-primary);
