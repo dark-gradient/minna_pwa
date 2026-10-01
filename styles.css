@@ -2585,3 +2585,9 @@ body.listening-active main {
 }
 
 @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-4px); } 100% { transform: translateY(0px); } }
+
+.omamori-menu li:not(:last-child) {
+    border-bottom: 2px dashed rgba(23, 37, 42, 0.4);
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+}
