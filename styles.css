@@ -1392,12 +1392,11 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
     border: 2px dashed var(--text-primary);
 }
 .progress-percent {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 900;
     color: var(--pink);
-    font-family: 'DotGothic16', sans-serif;
-    -webkit-text-stroke: 1px var(--text-primary);
-    text-shadow: 3px 3px 0 var(--text-primary);
+    font-family: 'Noto Sans JP', sans-serif;
+    text-shadow: 2px 2px 0 var(--text-primary);
     min-width: 70px;
 }
 .progress-bar-large {
@@ -1424,12 +1423,12 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
 }
 .progress-topics {
     font-size: 14px;
-    font-weight: 900;
+    font-weight: 800;
     color: var(--text-primary);
     text-align: right;
     line-height: 1.2;
     text-transform: uppercase;
-    font-family: 'DotGothic16', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 /* Hide global topbar when in home */
