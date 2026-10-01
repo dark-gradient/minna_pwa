@@ -1928,8 +1928,8 @@ option:checked {
 }
 
 .omamori-icon {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
   image-rendering: pixelated;
   flex-shrink: 0;
