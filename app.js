@@ -576,7 +576,7 @@ function openLesson(n) {
   currentLessonId = n;
   
   // Set custom background image for the lesson, or fallback to the learn background
-  const imgUrl = (n >= 1 && n <= 16) ? 'bg_lesson_' + n + '.jpg' : 'bg_learn.jpg';
+  const imgUrl = (n >= 1 && n <= 25) ? 'bg_lesson_' + n + '.jpg' : 'bg_learn.jpg';
   document.body.style.setProperty('background-image', 'url(' + imgUrl + ')', 'important');
   
   lessonSelection.clear();
