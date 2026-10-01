@@ -1,0 +1,1718 @@
+[
+  {
+    "lessonId": 1,
+    "grammarPoints": [
+      {
+        "id": "L1-G1",
+        "lesson": 1,
+        "pointNumber": 1,
+        "title": "N₁ は N₂ です",
+        "subPoints": [
+          "Particle は",
+          "です"
+        ],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L1-G2",
+        "lesson": 1,
+        "pointNumber": 2,
+        "title": "N₁ は N₂ じゃ ありません",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L1-G3",
+        "lesson": 1,
+        "pointNumber": 3,
+        "title": "S か",
+        "subPoints": [
+          "questions with か",
+          "yes/no questions",
+          "interrogative questions"
+        ],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L1-G4",
+        "lesson": 1,
+        "pointNumber": 4,
+        "title": "N も",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L1-G5",
+        "lesson": 1,
+        "pointNumber": 5,
+        "title": "N₁ の N₂",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L1-G6",
+        "lesson": 1,
+        "pointNumber": 6,
+        "title": "～さん",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 2,
+    "grammarPoints": [
+      {
+        "id": "L2-G1",
+        "lesson": 2,
+        "pointNumber": 1,
+        "title": "これ／それ／あれ",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L2-G2",
+        "lesson": 2,
+        "pointNumber": 2,
+        "title": "この N／その N／あの N",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L2-G3",
+        "lesson": 2,
+        "pointNumber": 3,
+        "title": "そうです／そうじゃ ありません",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L2-G4",
+        "lesson": 2,
+        "pointNumber": 4,
+        "title": "S₁ か、S₂ か",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L2-G5",
+        "lesson": 2,
+        "pointNumber": 5,
+        "title": "N₁ の N₂",
+        "subPoints": [
+          "what a noun is about",
+          "ownership"
+        ],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L2-G6",
+        "lesson": 2,
+        "pointNumber": 6,
+        "title": "そうですか",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 3,
+    "grammarPoints": [
+      {
+        "id": "L3-G1",
+        "lesson": 3,
+        "pointNumber": 1,
+        "title": "ここ／そこ／あそこ／こちら／そちら／あちら",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L3-G2",
+        "lesson": 3,
+        "pointNumber": 2,
+        "title": "N₁ は N₂(place) です",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L3-G3",
+        "lesson": 3,
+        "pointNumber": 3,
+        "title": "どこ／どちら",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L3-G4",
+        "lesson": 3,
+        "pointNumber": 4,
+        "title": "N₁ の N₂",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L3-G5",
+        "lesson": 3,
+        "pointNumber": 5,
+        "title": "The こ／そ／あ／ど demonstrative system",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L3-G6",
+        "lesson": 3,
+        "pointNumber": 6,
+        "title": "お国",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 4,
+    "grammarPoints": [
+      {
+        "id": "L4-G1",
+        "lesson": 4,
+        "pointNumber": 1,
+        "title": "今 －時－分です",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L4-G2",
+        "lesson": 4,
+        "pointNumber": 2,
+        "title": "Vます",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L4-G3",
+        "lesson": 4,
+        "pointNumber": 3,
+        "title": "Vます／Vません／Vました／Vませんでした",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L4-G4",
+        "lesson": 4,
+        "pointNumber": 4,
+        "title": "N(time) に V",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L4-G5",
+        "lesson": 4,
+        "pointNumber": 5,
+        "title": "N₁ から N₂ まで",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L4-G6",
+        "lesson": 4,
+        "pointNumber": 6,
+        "title": "N₁ と N₂",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L4-G7",
+        "lesson": 4,
+        "pointNumber": 7,
+        "title": "S ね",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 5,
+    "grammarPoints": [
+      {
+        "id": "L5-G1",
+        "lesson": 5,
+        "pointNumber": 1,
+        "title": "N(place) へ 行きます／来ます／帰ります",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L5-G2",
+        "lesson": 5,
+        "pointNumber": 2,
+        "title": "どこ[へ]も 行きません／行きませんでした",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L5-G3",
+        "lesson": 5,
+        "pointNumber": 3,
+        "title": "N(vehicle) で 行きます／来ます／帰ります",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L5-G4",
+        "lesson": 5,
+        "pointNumber": 4,
+        "title": "N(person/animal) と V",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L5-G5",
+        "lesson": 5,
+        "pointNumber": 5,
+        "title": "いつ",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L5-G6",
+        "lesson": 5,
+        "pointNumber": 6,
+        "title": "S よ",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 6,
+    "grammarPoints": [
+      {
+        "id": "L6-G1",
+        "lesson": 6,
+        "pointNumber": 1,
+        "title": "N を V(transitive)",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L6-G2",
+        "lesson": 6,
+        "pointNumber": 2,
+        "title": "N を します",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L6-G3",
+        "lesson": 6,
+        "pointNumber": 3,
+        "title": "何を しますか",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L6-G4",
+        "lesson": 6,
+        "pointNumber": 4,
+        "title": "なん and なに",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L6-G5",
+        "lesson": 6,
+        "pointNumber": 5,
+        "title": "N(place) で V",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L6-G6",
+        "lesson": 6,
+        "pointNumber": 6,
+        "title": "Vませんか",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L6-G7",
+        "lesson": 6,
+        "pointNumber": 7,
+        "title": "Vましょう",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L6-G8",
+        "lesson": 6,
+        "pointNumber": 8,
+        "title": "お～",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 7,
+    "grammarPoints": [
+      {
+        "id": "L7-G1",
+        "lesson": 7,
+        "pointNumber": 1,
+        "title": "N(tool/means) で V",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L7-G2",
+        "lesson": 7,
+        "pointNumber": 2,
+        "title": "\"Word/Sentence\" は ～語で 何ですか",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L7-G3",
+        "lesson": 7,
+        "pointNumber": 3,
+        "title": "N(person) に あげます, etc.",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L7-G4",
+        "lesson": 7,
+        "pointNumber": 4,
+        "title": "N(person) に もらいます, etc.",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L7-G5",
+        "lesson": 7,
+        "pointNumber": 5,
+        "title": "もう Vました",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 8,
+    "grammarPoints": [
+      {
+        "id": "L8-G1",
+        "lesson": 8,
+        "pointNumber": 1,
+        "title": "Adjectives",
+        "subPoints": [
+          "い-adjectives",
+          "な-adjectives"
+        ],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L8-G2",
+        "lesson": 8,
+        "pointNumber": 2,
+        "title": "N は な-adj[な]です",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L8-G3",
+        "lesson": 8,
+        "pointNumber": 3,
+        "title": "な-adj な N",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L8-G4",
+        "lesson": 8,
+        "pointNumber": 4,
+        "title": "とても／あまり",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L8-G5",
+        "lesson": 8,
+        "pointNumber": 5,
+        "title": "N は どうですか",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L8-G6",
+        "lesson": 8,
+        "pointNumber": 6,
+        "title": "N₁ は どんな N₂ ですか",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L8-G7",
+        "lesson": 8,
+        "pointNumber": 7,
+        "title": "S₁ が、S₂",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L8-G8",
+        "lesson": 8,
+        "pointNumber": 8,
+        "title": "どれ",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 9,
+    "grammarPoints": [
+      {
+        "id": "L9-G1",
+        "lesson": 9,
+        "pointNumber": 1,
+        "title": "N が あります／わかります",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L9-G2",
+        "lesson": 9,
+        "pointNumber": 2,
+        "title": "どんな N",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L9-G3",
+        "lesson": 9,
+        "pointNumber": 3,
+        "title": "よく／だいたい／たくさん／少し／あまり／全然",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L9-G4",
+        "lesson": 9,
+        "pointNumber": 4,
+        "title": "S₁ から、S₂",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L9-G5",
+        "lesson": 9,
+        "pointNumber": 5,
+        "title": "どうして",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 10,
+    "grammarPoints": [
+      {
+        "id": "L10-G1",
+        "lesson": 10,
+        "pointNumber": 1,
+        "title": "N が あります／います",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L10-G2",
+        "lesson": 10,
+        "pointNumber": 2,
+        "title": "N₁(place) に N₂ が あります／います",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L10-G3",
+        "lesson": 10,
+        "pointNumber": 3,
+        "title": "N₁ は N₂(place) に あります／います",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L10-G4",
+        "lesson": 10,
+        "pointNumber": 4,
+        "title": "N₁(thing/person/place) の N₂(position)",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L10-G5",
+        "lesson": 10,
+        "pointNumber": 5,
+        "title": "N₁ や N₂",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L10-G6",
+        "lesson": 10,
+        "pointNumber": 6,
+        "title": "Word(s) ですか",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L10-G7",
+        "lesson": 10,
+        "pointNumber": 7,
+        "title": "チリソースは ありませんか",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 11,
+    "grammarPoints": [
+      {
+        "id": "L11-G1",
+        "lesson": 11,
+        "pointNumber": 1,
+        "title": "Saying numbers",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L11-G2",
+        "lesson": 11,
+        "pointNumber": 2,
+        "title": "Quantifier(period) に ～回 V",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L11-G3",
+        "lesson": 11,
+        "pointNumber": 3,
+        "title": "Quantifier だけ／Nだけ",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 12,
+    "grammarPoints": [
+      {
+        "id": "L12-G1",
+        "lesson": 12,
+        "pointNumber": 1,
+        "title": "Past tense of noun sentences",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L12-G2",
+        "lesson": 12,
+        "pointNumber": 2,
+        "title": "Past tense of い-adjective sentences",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L12-G3",
+        "lesson": 12,
+        "pointNumber": 3,
+        "title": "N₁ は N₂ より adjective です",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L12-G4",
+        "lesson": 12,
+        "pointNumber": 4,
+        "title": "N₁ と N₂ と どちらが adjective ですか",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L12-G5",
+        "lesson": 12,
+        "pointNumber": 5,
+        "title": "N₁ [の 中]で",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 13,
+    "grammarPoints": [
+      {
+        "id": "L13-G1",
+        "lesson": 13,
+        "pointNumber": 1,
+        "title": "N が 欲しいです",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L13-G2",
+        "lesson": 13,
+        "pointNumber": 2,
+        "title": "Vます-form たいです",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L13-G3",
+        "lesson": 13,
+        "pointNumber": 3,
+        "title": "N(place) へ Vます-form",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L13-G4",
+        "lesson": 13,
+        "pointNumber": 4,
+        "title": "N に V／N を V",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L13-G5",
+        "lesson": 13,
+        "pointNumber": 5,
+        "title": "どこか／何か",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L13-G6",
+        "lesson": 13,
+        "pointNumber": 6,
+        "title": "ご注文",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 14,
+    "grammarPoints": [
+      {
+        "id": "L14-G1",
+        "lesson": 14,
+        "pointNumber": 1,
+        "title": "Verb conjugation",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L14-G2",
+        "lesson": 14,
+        "pointNumber": 2,
+        "title": "Verb groups",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L14-G3",
+        "lesson": 14,
+        "pointNumber": 3,
+        "title": "Verb て-form",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L14-G4",
+        "lesson": 14,
+        "pointNumber": 4,
+        "title": "Vて-form ください",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L14-G5",
+        "lesson": 14,
+        "pointNumber": 5,
+        "title": "Vて-form います",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L14-G6",
+        "lesson": 14,
+        "pointNumber": 6,
+        "title": "Vます-form ましょうか",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L14-G7",
+        "lesson": 14,
+        "pointNumber": 7,
+        "title": "S₁ が、S₂",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L14-G8",
+        "lesson": 14,
+        "pointNumber": 8,
+        "title": "N が V",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 15,
+    "grammarPoints": [
+      {
+        "id": "L15-G1",
+        "lesson": 15,
+        "pointNumber": 1,
+        "title": "Vて-form も いいです",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L15-G2",
+        "lesson": 15,
+        "pointNumber": 2,
+        "title": "Vて-form は いけません",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L15-G3",
+        "lesson": 15,
+        "pointNumber": 3,
+        "title": "Vて-form います",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L15-G4",
+        "lesson": 15,
+        "pointNumber": 4,
+        "title": "Vて-form います",
+        "subPoints": [
+          "ongoing states/actions",
+          "contextual usage"
+        ],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L15-G5",
+        "lesson": 15,
+        "pointNumber": 5,
+        "title": "知りません",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 16,
+    "grammarPoints": [
+      {
+        "id": "L16-G1",
+        "lesson": 16,
+        "pointNumber": 1,
+        "title": "Vて-form、[Vて-form]、～",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L16-G2",
+        "lesson": 16,
+        "pointNumber": 2,
+        "title": "い-adj(～い) → ～くて、～",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L16-G3",
+        "lesson": 16,
+        "pointNumber": 3,
+        "title": "N／な-adj[な] で、～",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L16-G4",
+        "lesson": 16,
+        "pointNumber": 4,
+        "title": "V₁て-form から、V₂",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L16-G5",
+        "lesson": 16,
+        "pointNumber": 5,
+        "title": "N₁ は N₂ が adjective",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L16-G6",
+        "lesson": 16,
+        "pointNumber": 6,
+        "title": "どうやって",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L16-G7",
+        "lesson": 16,
+        "pointNumber": 7,
+        "title": "どの N",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 17,
+    "grammarPoints": [
+      {
+        "id": "L17-G1",
+        "lesson": 17,
+        "pointNumber": 1,
+        "title": "Verb ない-form",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L17-G2",
+        "lesson": 17,
+        "pointNumber": 2,
+        "title": "Vない-form ないでください",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L17-G3",
+        "lesson": 17,
+        "pointNumber": 3,
+        "title": "Vない-form なければ なりません",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L17-G4",
+        "lesson": 17,
+        "pointNumber": 4,
+        "title": "Vない-form なくても いいです",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L17-G5",
+        "lesson": 17,
+        "pointNumber": 5,
+        "title": "N(object) は",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L17-G6",
+        "lesson": 17,
+        "pointNumber": 6,
+        "title": "N(time) までに V",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 18,
+    "grammarPoints": [
+      {
+        "id": "L18-G1",
+        "lesson": 18,
+        "pointNumber": 1,
+        "title": "Verb dictionary form",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L18-G2",
+        "lesson": 18,
+        "pointNumber": 2,
+        "title": "N／Vdictionary form こと が できます",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L18-G3",
+        "lesson": 18,
+        "pointNumber": 3,
+        "title": "わたしの 趣味は",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L18-G4",
+        "lesson": 18,
+        "pointNumber": 4,
+        "title": "V₁dictionary form／Nの／Quantifier(period)",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L18-G5",
+        "lesson": 18,
+        "pointNumber": 5,
+        "title": "なかなか",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L18-G6",
+        "lesson": 18,
+        "pointNumber": 6,
+        "title": "ぜひ",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 19,
+    "grammarPoints": [
+      {
+        "id": "L19-G1",
+        "lesson": 19,
+        "pointNumber": 1,
+        "title": "Verb た-form",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L19-G2",
+        "lesson": 19,
+        "pointNumber": 2,
+        "title": "Vた-form ことが あります",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L19-G3",
+        "lesson": 19,
+        "pointNumber": 3,
+        "title": "Vた-form り、Vた-form り します",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L19-G4",
+        "lesson": 19,
+        "pointNumber": 4,
+        "title": "い-adj(～い) → ～く",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L19-G5",
+        "lesson": 19,
+        "pointNumber": 5,
+        "title": "そうですね",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 20,
+    "grammarPoints": [
+      {
+        "id": "L20-G1",
+        "lesson": 20,
+        "pointNumber": 1,
+        "title": "Polite style and plain style",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L20-G2",
+        "lesson": 20,
+        "pointNumber": 2,
+        "title": "Proper use of polite style",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L20-G3",
+        "lesson": 20,
+        "pointNumber": 3,
+        "title": "Conversation in the plain style",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 21,
+    "grammarPoints": [
+      {
+        "id": "L21-G1",
+        "lesson": 21,
+        "pointNumber": 1,
+        "title": "plain form と 思います",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L21-G2",
+        "lesson": 21,
+        "pointNumber": 2,
+        "title": "\"S\"／plain form と 言います",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L21-G3",
+        "lesson": 21,
+        "pointNumber": 3,
+        "title": "V／い-adj／な-adj plain form",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L21-G4",
+        "lesson": 21,
+        "pointNumber": 4,
+        "title": "N₁(place) で N₂ が あります",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L21-G5",
+        "lesson": 21,
+        "pointNumber": 5,
+        "title": "N(occasion) で",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L21-G6",
+        "lesson": 21,
+        "pointNumber": 6,
+        "title": "N でも V",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L21-G7",
+        "lesson": 21,
+        "pointNumber": 7,
+        "title": "Vない-form ないと……",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 22,
+    "grammarPoints": [
+      {
+        "id": "L22-G1",
+        "lesson": 22,
+        "pointNumber": 1,
+        "title": "Noun modification",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L22-G2",
+        "lesson": 22,
+        "pointNumber": 2,
+        "title": "Noun modification by sentences",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L22-G3",
+        "lesson": 22,
+        "pointNumber": 3,
+        "title": "N が",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L22-G4",
+        "lesson": 22,
+        "pointNumber": 4,
+        "title": "Vdictionary form",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 23,
+    "grammarPoints": [
+      {
+        "id": "L23-G1",
+        "lesson": 23,
+        "pointNumber": 1,
+        "title": "Vdictionary form",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L23-G2",
+        "lesson": 23,
+        "pointNumber": 2,
+        "title": "Vdictionary form／Vた-form とき、～",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L23-G3",
+        "lesson": 23,
+        "pointNumber": 3,
+        "title": "Vdictionary form と、～",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L23-G4",
+        "lesson": 23,
+        "pointNumber": 4,
+        "title": "N が adjective／V",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L23-G5",
+        "lesson": 23,
+        "pointNumber": 5,
+        "title": "N(place) を V(verb of movement)",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 24,
+    "grammarPoints": [
+      {
+        "id": "L24-G1",
+        "lesson": 24,
+        "pointNumber": 1,
+        "title": "くれます",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L24-G2",
+        "lesson": 24,
+        "pointNumber": 2,
+        "title": "Vて-form あげます／もらいます／くれます",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L24-G3",
+        "lesson": 24,
+        "pointNumber": 3,
+        "title": "N(person) が V",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L24-G4",
+        "lesson": 24,
+        "pointNumber": 4,
+        "title": "Interrogative が V",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "lessonId": 25,
+    "grammarPoints": [
+      {
+        "id": "L25-G1",
+        "lesson": 25,
+        "pointNumber": 1,
+        "title": "plain past form ら、～",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L25-G2",
+        "lesson": 25,
+        "pointNumber": 2,
+        "title": "Vた-form ら、～",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L25-G3",
+        "lesson": 25,
+        "pointNumber": 3,
+        "title": "Vて-form",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L25-G4",
+        "lesson": 25,
+        "pointNumber": 4,
+        "title": "もし and いくら",
+        "subPoints": [],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      },
+      {
+        "id": "L25-G5",
+        "lesson": 25,
+        "pointNumber": 5,
+        "title": "N が",
+        "subPoints": [
+          "---"
+        ],
+        "meaning": "",
+        "pattern": "",
+        "exampleSentence": "",
+        "notes": ""
+      }
+    ]
+  }
+]
