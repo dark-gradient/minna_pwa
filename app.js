@@ -247,8 +247,8 @@ function _showView(view) {
     focus: "focusView",
     practiceSetup: "practiceSetupView",
     vocabulary: "practiceSetupView",
-    grammar: "practiceSetupView",
-    kanji: "practiceSetupView",
+    grammar: "grammarView",
+    kanji: "kanjiView",
     listening: "listeningView",
     mockTest: "mockTestView",
     more: "moreView"
