@@ -1359,11 +1359,11 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
 
 /* Progress Card */
 .progress-card {
-    background: rgba(253, 251, 247, 0.45);
+    background: rgba(253, 251, 247, 0.2);
     backdrop-filter: blur(4px);
     border: 3px solid var(--text-primary);
     border-radius: 16px;
-    padding: 24px;
+    padding: 12px 20px;
     box-shadow: 6px 6px 0px var(--text-primary);
     position: relative;
     overflow: hidden;
@@ -1381,10 +1381,7 @@ footer .footer-dot { margin: 0 6px; color: var(--yellow); }
     display: flex;
     align-items: center;
     gap: 16px;
-    background: rgba(253, 251, 247, 0.9);
-    padding: 16px;
-    border-radius: 12px;
-    border: 2px dashed var(--text-primary);
+    padding: 4px;
 }
 .progress-percent {
     font-size: 32px;
