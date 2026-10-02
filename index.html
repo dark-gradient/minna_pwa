@@ -4,12 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#b74336">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Minna Kotoba">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="assets/pwa-icons/icon-180.png">
 <title>みんなのことば — Minna Vocabulary Trainer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,25 +22,6 @@
   <link rel="preload" as="image" href="assets/images/backgrounds/bg_more_new.jpg">
 </head>
 <body>
-
-  <div class="mobile-global-topbar" style="display: none;">
-    <button class="topbar-icon" onclick="showView('moreView')">
-      <div style="width:20px; height:2px; background:#D13030; margin-bottom:4px;"></div>
-      <div style="width:20px; height:2px; background:#D13030; margin-bottom:4px;"></div>
-      <div style="width:20px; height:2px; background:#D13030;"></div>
-    </button>
-    <div class="topbar-title">
-      <span class="title-jp" style="font-weight:700; font-size:14px; display:block;">みんなのことば</span>
-      <span class="title-en" style="font-size:8px; color:#8C98A4; letter-spacing:1px; text-transform:uppercase;">MINNA KOTOBA</span>
-    </div>
-    <button class="topbar-icon">
-      <div style="width:20px; height:20px; border:2px solid #22313C; border-radius:50%; position:relative; overflow:hidden;">
-        <div style="width:8px; height:8px; background:#22313C; border-radius:50%; position:absolute; top:2px; left:4px;"></div>
-        <div style="width:16px; height:10px; background:#22313C; border-radius:8px 8px 0 0; position:absolute; bottom:0; left:0;"></div>
-      </div>
-    </button>
-  </div>
-
 <div class="app-shell">
   <header class="topbar">
     <div class="brand" onclick="showView('home')">
@@ -225,14 +200,7 @@
         </div>
       </div>
       <div id="vocabTable" class="vocab-table" style="padding-bottom: 80px;"></div>
-      <div id="mobileFocusActionBar" class="focus-action-bar hidden">
-        <div><strong class="sel-count">0</strong> selected</div>
-        <div style="display:flex; gap:8px;">
-          <button id="mobileRemoveFocusBtn" type="button" class="secondary-btn compact" style="color:var(--red); border-color:var(--red);" onclick="removeSelectionFromFocus()">- Remove</button>
-          <button id="mobileAddFocusBtn" type="button" class="primary-btn compact" onclick="addSelectionToFocus()">+ Add to Focus</button>
-        </div>
-      </div>
-    </section>
+          </section>
 
     <section id="kaiwaView" class="view">
       <div class="page-head"><div><div class="eyebrow">会話 • CONVERSATION</div><h1>Kaiwa library</h1><p>Kept separate from the regular vocabulary pool.</p></div></div>
@@ -626,11 +594,5 @@
 
 </div>
 <script src="js/app.js"></script>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
-}
-</script>
 </body>
 </html>
-

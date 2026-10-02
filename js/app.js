@@ -308,12 +308,6 @@ function _showView(view) {
     mockTest: "mockTestView",
     more: "moreView"
   };
-  
-  // Pause YouTube player if leaving listeningView
-  if (view !== 'listening' && typeof player !== 'undefined' && player && typeof player.pauseVideo === 'function') {
-    player.pauseVideo();
-  }
-
   Object.values(map).forEach((id) => {
     const el = $(id);
     if (el) el.classList.remove("active");
@@ -788,7 +782,6 @@ function clearLessonSelection() {
 function updateFocusSelectionUI() {
   let count = lessonSelection.size;
   document.querySelectorAll('.sel-count').forEach(el => el.textContent = count);
-  let mobileBar = $('mobileFocusActionBar');
   let desktopBar = $('desktopFocusAction');
   
   if (count > 0) {
@@ -803,14 +796,10 @@ function updateFocusSelectionUI() {
     let displayRemove = hasFocus ? 'inline-block' : 'none';
 
     if ($('desktopAddFocusBtn')) $('desktopAddFocusBtn').style.display = displayAdd;
-    if ($('mobileAddFocusBtn')) $('mobileAddFocusBtn').style.display = displayAdd;
     if ($('desktopRemoveFocusBtn')) $('desktopRemoveFocusBtn').style.display = displayRemove;
-    if ($('mobileRemoveFocusBtn')) $('mobileRemoveFocusBtn').style.display = displayRemove;
 
-    if (mobileBar) { mobileBar.classList.remove('hidden'); setTimeout(() => mobileBar.classList.add('visible'), 10); }
     if (desktopBar) desktopBar.classList.remove('hidden');
   } else {
-    if (mobileBar) { mobileBar.classList.remove('visible'); setTimeout(() => mobileBar.classList.add('hidden'), 300); }
     if (desktopBar) desktopBar.classList.add('hidden');
   }
 }
