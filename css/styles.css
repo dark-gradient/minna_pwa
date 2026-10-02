@@ -2653,3 +2653,165 @@ body.resultsView-active { background-image: url('../assets/images/backgrounds/bg
 
 body.review-active { background-image: url('../assets/images/backgrounds/bg_review.jpg') !important; background-position: center !important; background-size: cover !important; }
 body.resultsView-active { background-image: url('../assets/images/backgrounds/bg_test_complete.jpg') !important; background-position: center !important; background-size: cover !important; }
+
+
+
+/* =========================================================
+   MOBILE RESPONSIVE OVERRIDES (<= 767px)
+   ========================================================= */
+@media (max-width: 767px) {
+    body, html {
+        overflow-x: hidden !important;
+    }
+    .app-shell {
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left) !important;
+    }
+    .view, main, #homeView {
+        padding-left: max(16px, env(safe-area-inset-left)) !important;
+        padding-right: max(16px, env(safe-area-inset-right)) !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .omamori-nav {
+        right: max(16px, env(safe-area-inset-right)) !important;
+    }
+    .omamori-nav.open .omamori-container {
+        width: 280px !important;
+        max-width: calc(100vw - 32px) !important;
+    }
+
+    .practice-grid, .lesson-grid, #grammarLessonGrid, #kanjiUnitGrid, .mock-test-grid, .controls-grid, #reviewControls {
+        grid-template-columns: 1fr !important;
+    }
+
+    .lesson-card, .panel, .mock-card-v2 {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .vocab-row, .grammar-row, .kanji-card {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .vocab-row .vocab-jp {
+        font-size: 24px !important;
+    }
+    .vocab-row .vocab-en, .grammar-row > div {
+        text-align: left !important;
+    }
+
+    .kanji-left, .kanji-right {
+        width: 100% !important;
+        border-right: none !important;
+        padding-right: 0 !important;
+    }
+
+    .mock-filters {
+        flex-wrap: wrap !important;
+    }
+    .scroll-paper {
+        padding: 24px 12px !important;
+    }
+
+    /* Listening Cinema */
+    #listeningView {
+        overflow-y: auto !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        padding-top: env(safe-area-inset-top) !important;
+        padding-bottom: max(80px, env(safe-area-inset-bottom)) !important;
+    }
+    .theater-background-container {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+        background: none !important; 
+        padding-bottom: 20px !important;
+    }
+    .theater-scale-box {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        height: auto !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        background-image: url('../assets/images/backgrounds/bg_pixel_cinema.jpg') !important;
+        background-size: cover !important;
+        background-position: top center !important;
+        padding: 24px 12px !important;
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
+        border: 2px solid var(--border) !important;
+    }
+    .cinema-screen-overlay {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important;
+        box-shadow: none !important;
+    }
+    .video-placeholder, #cinemaScreen iframe {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .playlist-nav {
+        position: relative !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        pointer-events: auto !important;
+    }
+    .playlist-tag, .playlist-overlay, .playlist-string-horizontal {
+        display: none !important;
+    }
+    .playlist-container {
+        position: relative !important;
+        width: 100% !important;
+        transform: none !important;
+        transition: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .playlist-tray {
+        height: auto !important;
+        max-height: none !important;
+        width: 100% !important;
+        background: rgba(253, 251, 247, 0.65) !important;
+        border: 2px solid var(--border) !important;
+        border-radius: 12px !important;
+        box-shadow: none !important;
+        box-sizing: border-box !important;
+        padding: 16px !important;
+    }
+    .playlist-header {
+        color: var(--text-primary) !important;
+    }
+    
+    button, .mock-filter-btn {
+        min-height: 44px !important;
+    }
+    .primary-btn, .nav-btn {
+        min-height: 48px !important;
+    }
+    select, input[type="text"] {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    label {
+        width: 100% !important;
+    }
+}
