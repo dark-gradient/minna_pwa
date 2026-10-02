@@ -88,12 +88,11 @@
         <!-- Today's Practice Section -->
         <div class="section-header">
           <h2>Today's Practice</h2>
-          <span class="chevron">›</span>
-        </div>
+          </div>
         
         <div class="practice-grid">
           <div class="practice-card bg-green">
-            <div class="card-icon">📖</div>
+            <div class="card-icon"><img src="assets/images/icons/icon_vocabulary.png" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;" alt="Vocabulary"></div>
             <div class="card-jp">語彙</div>
             <div class="card-en">Vocabulary</div>
             <div class="card-progress">
@@ -102,7 +101,7 @@
             </div>
           </div>
           <div class="practice-card bg-pink">
-            <div class="card-icon">📄</div>
+            <div class="card-icon"><img src="assets/images/icons/icon_grammar.png" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;" alt="Grammar"></div>
             <div class="card-jp">文法</div>
             <div class="card-en">Grammar</div>
             <div class="card-progress">
@@ -111,7 +110,7 @@
             </div>
           </div>
           <div class="practice-card bg-blue">
-            <div class="card-icon">🎧</div>
+            <div class="card-icon"><img src="assets/images/icons/icon_listening.png" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;" alt="Listening"></div>
             <div class="card-jp">聴解</div>
             <div class="card-en">Listening</div>
             <div class="card-progress">
@@ -120,7 +119,7 @@
             </div>
           </div>
           <div class="practice-card bg-yellow">
-            <div class="card-icon">💬</div>
+            <div class="card-icon"><img src="assets/images/icons/icon_kanji.png" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;" alt="Kanji"></div>
             <div class="card-jp">漢字</div>
             <div class="card-en">Kanji</div>
             <div class="card-progress">
@@ -133,8 +132,7 @@
         <!-- N5 Progress -->
         <div class="section-header" style="margin-top: 24px;">
           <h2>N5 Progress</h2>
-          <span class="chevron">›</span>
-        </div>
+          </div>
         <div class="progress-card" style="cursor:pointer;" onclick="showView('lessons')">
           <div class="progress-row">
             <span class="progress-percent" id="n5Percent">0%</span>
@@ -531,16 +529,14 @@
 
         <div class="section-header">
           <h2>Grammar Lessons</h2>
-          <span class="chevron">›</span>
-        </div>
+          </div>
         <div class="practice-grid" id="grammarLessonGrid">
           <!-- Populated by JS -->
         </div>
 
         <div class="section-header" style="margin-top:24px;">
           <h2>Grammar Practice</h2>
-          <span class="chevron">›</span>
-        </div>
+          </div>
         <div class="practice-grid">
           <div class="practice-card" style="background: var(--yellow);" onclick="startGrammarTest('quick')">
             <div class="card-icon">⚡</div>
@@ -577,16 +573,14 @@
 
         <div class="section-header">
           <h2>Units</h2>
-          <span class="chevron">›</span>
-        </div>
+          </div>
         <div class="practice-grid" id="kanjiUnitGrid">
           <!-- Populated by JS -->
         </div>
 
         <div class="section-header" style="margin-top:24px;">
           <h2>Kanji Practice</h2>
-          <span class="chevron">›</span>
-        </div>
+          </div>
         <div class="practice-grid">
           <div class="practice-card" style="background: var(--yellow);" onclick="startKanjiTest('quick')">
             <div class="card-icon">⚡</div>
