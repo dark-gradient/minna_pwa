@@ -28,6 +28,25 @@
   <link rel="preload" as="image" href="assets/images/backgrounds/bg_more_new.jpg">
 </head>
 <body>
+
+  <div class="mobile-global-topbar" style="display: none;">
+    <button class="topbar-icon" onclick="showView('moreView')">
+      <div style="width:20px; height:2px; background:#D13030; margin-bottom:4px;"></div>
+      <div style="width:20px; height:2px; background:#D13030; margin-bottom:4px;"></div>
+      <div style="width:20px; height:2px; background:#D13030;"></div>
+    </button>
+    <div class="topbar-title">
+      <span class="title-jp" style="font-weight:700; font-size:14px; display:block;">みんなのことば</span>
+      <span class="title-en" style="font-size:8px; color:#8C98A4; letter-spacing:1px; text-transform:uppercase;">MINNA KOTOBA</span>
+    </div>
+    <button class="topbar-icon">
+      <div style="width:20px; height:20px; border:2px solid #22313C; border-radius:50%; position:relative; overflow:hidden;">
+        <div style="width:8px; height:8px; background:#22313C; border-radius:50%; position:absolute; top:2px; left:4px;"></div>
+        <div style="width:16px; height:10px; background:#22313C; border-radius:8px 8px 0 0; position:absolute; bottom:0; left:0;"></div>
+      </div>
+    </button>
+  </div>
+
 <div class="app-shell">
   <header class="topbar">
     <div class="brand" onclick="showView('home')">

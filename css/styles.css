@@ -2815,3 +2815,519 @@ body.resultsView-active { background-image: url('../assets/images/backgrounds/bg
         width: 100% !important;
     }
 }
+
+/* ========================================================
+   MOBILE REMEDIATION LAYER
+   Overrides all desktop layouts to match the mobile design
+   ======================================================== */
+@media (max-width: 1024px) {
+  /* 1. Global Reset & Backgrounds */
+  body {
+    background-image: none !important;
+    background-color: #FDFBF7 !important; /* Warm cream */
+  }
+  
+  /* Hide desktop-only UI */
+  .theater-scale-box, .cinema-screen-overlay {
+    box-shadow: none !important;
+    border: none !important;
+    background: none !important;
+  }
+  
+  .theater-background-container {
+    background: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    display: block !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  
+  .theater-scale-box {
+    transform: none !important;
+    width: 100vw !important;
+    height: 56.25vw !important; /* 16:9 aspect ratio */
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 0 !important;
+  }
+  
+  .cinema-screen-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  /* Reset Mock Test scroll artwork */
+  .mock-scroll-container {
+    background: none !important;
+    box-shadow: none !important;
+    padding: 16px !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+  
+  .scroll-roller {
+    display: none !important; /* Hide giant scrolls */
+  }
+  
+  .scroll-paper {
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  /* 2. Top Navigation (App Bar) */
+  .topbar-home {
+    background-color: #FDFBF7 !important;
+    padding: env(safe-area-inset-top, 16px) 16px 16px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important; /* Center the title */
+    border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+    margin-bottom: 0 !important;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .home-title h1 {
+    font-size: 18px !important;
+    color: #22313C !important;
+    text-shadow: none !important;
+    font-family: 'Noto Sans JP', sans-serif !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+  }
+  
+  .home-title .subtitle {
+    font-size: 10px !important;
+    color: #8C98A4 !important;
+    text-shadow: none !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+  }
+
+  .eyebrow {
+    color: #8C98A4 !important;
+    text-shadow: none !important;
+  }
+
+  /* Hide huge header banners */
+  .page-head {
+    background: none !important;
+    padding: 16px !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-align: left !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .page-head h1 {
+    color: #22313C !important;
+    text-shadow: none !important;
+    font-size: 24px !important;
+  }
+  
+  .page-head p {
+    color: #555 !important;
+    text-shadow: none !important;
+  }
+
+  /* 3. Dashboard/Content Area */
+  .dashboard-scroll, .view {
+    padding: 16px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+
+  /* Reset cards */
+  .streak-card, .practice-card, .mock-filter-btn {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+    background: #FFFFFF !important;
+  }
+  
+  /* Text coloring inside cards */
+  .practice-card .card-en, .practice-card .card-jp, .streak-card h2, .streak-card p {
+    color: #22313C !important;
+    text-shadow: none !important;
+  }
+  
+  .card-icon {
+    color: #D13030 !important; /* Red branding */
+  }
+
+  /* 4. Bottom Navigation */
+  /* If the app uses a bottom nav, reset it here. 
+     Currently, the app uses 'omamori-nav' and 'playlist-nav'.
+     Let's style omamori-nav to be a clean bottom nav */
+  #omamori-nav {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    height: 70px !important;
+    background: #FFFFFF !important;
+    border-top: 1px solid rgba(0,0,0,0.05) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    padding: env(safe-area-inset-bottom, 0) 0 0 0 !important;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.03) !important;
+    z-index: 2000 !important;
+    transform: none !important;
+  }
+  
+  .omamori {
+    width: auto !important;
+    height: 50px !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    border: none !important;
+  }
+  
+  .omamori::before, .omamori::after, .omamori-knot, .omamori-top {
+    display: none !important; /* Hide Omamori string/knot graphics */
+  }
+  
+  .omamori-label {
+    position: static !important;
+    font-size: 10px !important;
+    color: #8C98A4 !important;
+    text-shadow: none !important;
+    transform: none !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    writing-mode: horizontal-tb !important;
+    padding: 0 !important;
+  }
+  
+  .omamori.active .omamori-label {
+    color: #D13030 !important;
+    font-weight: 700 !important;
+  }
+  
+  /* Use simple icons instead of omamori */
+  .omamori img {
+    display: block !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin: 0 auto !important;
+    filter: invert(0.5) !important;
+  }
+  
+  .omamori.active img {
+    filter: invert(0.2) sepia(1) saturate(5) hue-rotate(-50deg) !important; /* Red tint */
+  }
+
+  /* Provide padding to views so content doesn't hide behind bottom nav */
+  .view {
+    padding-bottom: 90px !important;
+  }
+
+  /* 5. Typography */
+  h1, h2, h3, p, span, div {
+    font-family: 'Noto Sans JP', 'Inter', sans-serif;
+  }
+
+  /* 6. YouTube Player Fix */
+  /* Make sure video player is contained in its section */
+  #youtubeContainer {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+  }
+  
+  .video-viewport {
+    background: #000;
+  }
+  
+  /* Playlist Ribbon */
+  #playlist-nav {
+    top: 56.25vw !important; /* Place below 16:9 video */
+    background: #FDFBF7 !important;
+    width: 100% !important;
+    position: static !important;
+    transform: none !important;
+    height: auto !important;
+  }
+  
+  .playlist-tag {
+    display: none !important; /* Hide string pull-tab */
+  }
+  
+  .playlist-tray {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  .sidebar-list {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+  
+  .sidebar-item {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+    border-radius: 12px !important;
+    padding: 12px !important;
+  }
+  
+  .sidebar-item .video-thumb {
+    width: 120px !important;
+    height: 68px !important;
+    border-radius: 8px !important;
+  }
+  
+  /* 7. Grammar/Kanji grids */
+  .grammar-grid, .kanji-grid {
+    grid-template-columns: 1fr !important; /* Stack vertically */
+  }
+}
+@media (max-width: 1024px) {
+  /* Hide specific nav items on mobile to fit 5 items */
+  /* Keep Home(1), Lessons(2), Vocabulary(3), Grammar(4), Kanji(5), Listening(6), Mock Tests(7), More(8) */
+  /* Wait, let's keep Home, Lessons, Vocabulary, Listening, More */
+  /* Let's just use CSS nth-child to hide the ones we don't want */
+  #omamori-nav ul li:nth-child(4), /* Grammar */
+  #omamori-nav ul li:nth-child(5), /* Kanji */
+  #omamori-nav ul li:nth-child(7)  /* Mock Tests */
+  {
+    display: none !important;
+  }
+  
+  /* Reset the ul to be a row */
+  #omamori-nav ul {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    justify-content: space-around !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* The overlay should be hidden */
+  .omamori-overlay, .omamori-header {
+    display: none !important;
+  }
+}
+
+/* Desktop override */
+@media (min-width: 1025px) {
+  .mobile-only-nav {
+    display: none !important;
+  }
+}
+
+/* Mobile override */
+@media (max-width: 1024px) {
+  /* We want: Home(1), Lessons(2), MockTest(7), Review(8), More(9) */
+  #omamori-nav ul li:nth-child(3), /* Vocabulary */
+  #omamori-nav ul li:nth-child(4), /* Grammar */
+  #omamori-nav ul li:nth-child(5), /* Kanji */
+  #omamori-nav ul li:nth-child(6)  /* Listening */
+  {
+    display: none !important;
+  }
+  
+  .mobile-only-nav {
+    display: block !important;
+  }
+  
+  #omamori-nav ul li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .omamori-btn {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 8px 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    transform: none !important;
+  }
+  
+  .omamori-icon-wrapper {
+    margin-bottom: 4px !important;
+  }
+  
+  .omamori-icon {
+    width: 24px !important;
+    height: 24px !important;
+    filter: grayscale(1) opacity(0.5) !important;
+  }
+  
+  .omamori-label {
+    writing-mode: horizontal-tb !important;
+    position: static !important;
+    transform: none !important;
+    background: none !important;
+    color: #8C98A4 !important;
+    font-size: 10px !important;
+    text-shadow: none !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .omamori-label .jp {
+    display: none !important;
+  }
+  
+  .omamori-label .en {
+    font-size: 10px !important;
+    color: #8C98A4 !important;
+  }
+  
+  /* Active states */
+  #omamori-nav ul li button:active .omamori-icon,
+  #omamori-nav ul li button:focus .omamori-icon {
+    filter: none !important;
+  }
+  
+  #omamori-nav ul li button:active .omamori-label .en,
+  #omamori-nav ul li button:focus .omamori-label .en {
+    color: #D13030 !important;
+    font-weight: 700 !important;
+  }
+
+  /* Reset omamori tray styles completely */
+  .omamori-tray {
+    transform: none !important;
+    position: static !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  .omamori-menu {
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Make sure the hamburger menu button in the top left doesn't trigger the omamori nav on mobile */
+  /* Actually, omamori-nav is always visible, so no need to toggle */
+  .omamori-tag {
+    display: none !important;
+  }
+}
+@media (max-width: 1024px) {
+  .mobile-global-topbar {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: env(safe-area-inset-top, 16px) 16px 12px 16px;
+    background: #FDFBF7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+  }
+  
+  .topbar-icon {
+    background: #FFEBEB;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .topbar-title {
+    text-align: center;
+    color: #22313C;
+  }
+  
+  /* Hide the old topbars and page-heads since we have a global one */
+  .topbar-home {
+    display: none !important;
+  }
+  
+  .page-head {
+    display: none !important;
+  }
+  
+  /* Add padding to the top of views to account for the fixed topbar */
+  .view {
+    padding-top: max(80px, env(safe-area-inset-top, 20px) + 60px) !important;
+  }
+}
+@media (max-width: 1024px) {
+  .lesson-card, .grammar-item, .vocab-item, .playlist-item, .sidebar-item {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+    background: #FFFFFF !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .lesson-card h3, .grammar-item h3, .vocab-item h3 {
+    color: #22313C !important;
+    text-shadow: none !important;
+  }
+  
+  .lesson-card .meta {
+    background: #FDFBF7 !important;
+    color: #8C98A4 !important;
+    text-shadow: none !important;
+  }
+  
+  /* Remove old background colors for categories */
+  .bg-pink, .bg-green, .bg-yellow, .bg-blue, .bg-purple {
+    background-color: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+  }
+  
+  /* Reset specific section headers */
+  .section-header h2 {
+    color: #22313C !important;
+    font-size: 16px !important;
+    text-shadow: none !important;
+  }
+  
+  .section-header {
+    border-bottom: none !important;
+    margin-bottom: 12px !important;
+  }
+}

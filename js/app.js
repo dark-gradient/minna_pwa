@@ -308,6 +308,12 @@ function _showView(view) {
     mockTest: "mockTestView",
     more: "moreView"
   };
+  
+  // Pause YouTube player if leaving listeningView
+  if (view !== 'listening' && typeof player !== 'undefined' && player && typeof player.pauseVideo === 'function') {
+    player.pauseVideo();
+  }
+
   Object.values(map).forEach((id) => {
     const el = $(id);
     if (el) el.classList.remove("active");
