@@ -1590,7 +1590,7 @@ option:checked {
 /* Omamori Navigation */
 .omamori-nav {
   position: fixed;
-  top: env(safe-area-inset-top, 80px);
+  top: env(safe-area-inset-top, 30px);
   right: 0;
   z-index: 2000;
   pointer-events: none;
@@ -1642,7 +1642,7 @@ option:checked {
   border: 3px solid #21483D;
   border-right: none;
   border-radius: 16px 0 0 16px;
-  padding: 32px 16px 32px 24px;
+  padding: 24px 16px 24px 24px;
   box-shadow: -4px 4px 0 rgba(244, 166, 166, 0.4), -4px 4px 0 2px rgba(33, 72, 61, 0.2) inset;
   overflow-y: auto;
   -ms-overflow-style: none;
@@ -1653,7 +1653,7 @@ option:checked {
 }
 
 .omamori-header {
-  padding-bottom: 24px;
+  padding-bottom: 12px;
   text-align: center;
   flex-shrink: 0;
   display: flex;
@@ -1778,7 +1778,7 @@ option:checked {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
   flex: 1;
 }
 
@@ -1786,12 +1786,12 @@ option:checked {
   width: 100%;
   background: transparent;
   border: none;
-  padding: 12px 12px;
+  padding: 6px 12px;
   border-radius: 8px;
   display: grid;
-  grid-template-columns: 72px 1fr;
+  grid-template-columns: 48px 1fr;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   font-family: 'DotGothic16', sans-serif;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -1821,8 +1821,8 @@ option:checked {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 72px;
-  height: 72px;
+  width: 48px;
+  height: 48px;
 }
 
 .omamori-icon {
@@ -2508,8 +2508,8 @@ body.listening-active main {
 
 .omamori-menu li:not(:last-child) {
     border-bottom: 2px dashed rgba(23, 37, 42, 0.4);
-    margin-bottom: 8px;
-    padding-bottom: 8px;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
 }
 
 body.review-active { background-image: url('../assets/images/backgrounds/bg_review.jpg') !important; background-position: center !important; background-size: cover !important; }
