@@ -1344,34 +1344,7 @@ function startMockTest() {
 }
 
 
-function updateDashboardStats() {
-  let streak = parseInt(localStorage.getItem('minna_streak') || '0', 10);
-  let streakText = document.getElementById('streakText');
-  if (streakText) streakText.innerHTML = '🔥 You\'re on a ' + streak + ' day streak';
-  
-  // Calculate vocab stats
-  let totalVocab = allVocab.length || 800; // fallback if not loaded
-  
-  // We don't have grammar/listening/kanji data yet, so we just show 0
-  let statVocab = document.getElementById('statVocab');
-  if (statVocab) statVocab.innerText = '0/' + totalVocab;
-  
-  let statGrammar = document.getElementById('statGrammar');
-  if (statGrammar) statGrammar.innerText = '0/0';
-  
-  let statListening = document.getElementById('statListening');
-  if (statListening) statListening.innerText = '0/0';
-  
-  let statKanji = document.getElementById('statKanji');
-  if (statKanji) statKanji.innerText = '0/0';
-  
-  let n5Percent = document.getElementById('n5Percent');
-  let n5Topics = document.getElementById('n5Topics');
-  let n5ProgressBar = document.getElementById('n5ProgressBar');
-  if (n5Percent) n5Percent.innerText = '0%';
-  if (n5Topics) n5Topics.innerHTML = '0/' + totalVocab + '<br>Words';
-  if (n5ProgressBar) n5ProgressBar.style.width = '0%';
-}
+
 
 
 // Omamori Nav logic
@@ -1889,3 +1862,47 @@ function gradeGeneric() {
   nextQuestion();
 }
 
+
+
+function updateDashboardStats() {
+    const vocabTotal = 25;
+    const grammarTotal = 25;
+    const kanjiTotal = 8;
+    const listeningTotal = 10;
+    
+    let currentVocab = completedLessons.vocab ? completedLessons.vocab.length : 0;
+    let currentGrammar = completedLessons.grammar ? completedLessons.grammar.length : 0;
+    let currentKanji = completedLessons.kanji ? completedLessons.kanji.length : 0;
+    let currentListening = completedLessons.listening ? completedLessons.listening.length : 0;
+    
+    const updateBar = (id, current, total) => {
+        const bar = document.getElementById(id);
+        const text = document.getElementById(id.replace('bar', 'stat'));
+        if (bar && text) {
+            let pct = total > 0 ? Math.round((current / total) * 100) : 0;
+            if (pct > 100) pct = 100;
+            bar.style.width = pct + '%';
+            text.innerText = current + '/' + total;
+        }
+    };
+    
+    updateBar('barVocab', currentVocab, vocabTotal);
+    updateBar('barGrammar', currentGrammar, grammarTotal);
+    updateBar('barKanji', currentKanji, kanjiTotal);
+    updateBar('barListening', currentListening, listeningTotal);
+    
+    const totalN5 = vocabTotal + grammarTotal + kanjiTotal + listeningTotal;
+    const currentN5 = currentVocab + currentGrammar + currentKanji + currentListening;
+    let n5Pct = totalN5 > 0 ? Math.round((currentN5 / totalN5) * 100) : 0;
+    
+    let n5Bar = document.getElementById('n5ProgressBar');
+    let n5PercentText = document.getElementById('n5Percent');
+    let n5TopicsText = document.getElementById('n5Topics');
+    if (n5Bar) n5Bar.style.width = n5Pct + '%';
+    if (n5PercentText) n5PercentText.innerText = n5Pct + '%';
+    if (n5TopicsText) n5TopicsText.innerHTML = currentN5 + '/' + totalN5 + '<br>Lessons';
+    
+    let streak = parseInt(localStorage.getItem('minna_streak') || '0', 10);
+    let streakText = document.getElementById('streakText');
+    if (streakText) streakText.innerHTML = '🔥 You\'re on a ' + streak + ' day streak';
+}
