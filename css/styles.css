@@ -1727,7 +1727,7 @@ option:checked {
 /* Omamori Navigation */
 .omamori-nav {
   position: fixed;
-  top: 80px;
+  top: env(safe-area-inset-top, 80px);
   right: 0;
   z-index: 2000;
   pointer-events: none;
@@ -1740,7 +1740,7 @@ option:checked {
 .omamori-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.2);
   z-index: 1999;
   display: none;
   opacity: 0;
@@ -1757,9 +1757,9 @@ option:checked {
   position: absolute;
   top: 0;
   right: 0;
-  width: 140px;
+  width: min(320px, calc(100vw - 24px));
   transform: translateX(100%);
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   z-index: 2001;
   pointer-events: auto;
 }
@@ -1770,19 +1770,42 @@ option:checked {
 
 .omamori-tray {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   background-color: var(--pink);
-  background-image: radial-gradient(var(--yellow) 15%, transparent 16%), radial-gradient(var(--yellow) 15%, transparent 16%);
+  background-image: radial-gradient(rgba(243, 217, 155, 0.6) 15%, transparent 16%), radial-gradient(rgba(243, 217, 155, 0.6) 15%, transparent 16%);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
   border: 3px solid #17252A;
   border-right: none;
   border-radius: 16px 0 0 16px;
-  padding: 40px 16px 20px 16px;
+  padding: 24px 16px;
   box-shadow: -6px 6px 0 rgba(243, 217, 155, 1), -6px 6px 0 3px #17252A inset;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.omamori-tray::-webkit-scrollbar {
+  display: none;
+}
+
+.omamori-header {
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 2px dashed rgba(23, 37, 42, 0.2);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.omamori-header-title {
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #17252A;
+  font-weight: bold;
 }
 
 .omamori-string-horizontal {
@@ -1890,31 +1913,24 @@ option:checked {
   flex-direction: column;
   gap: 8px;
   flex: 1;
-  max-height: none;
-  overflow-y: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.omamori-menu::-webkit-scrollbar {
-  display: none;
 }
 
 .omamori-btn {
   width: 100%;
   background: transparent;
   border: 2px solid transparent;
-  border-bottom: 2px dashed rgba(23, 37, 42, 0.3);
+  border-bottom: 2px dashed rgba(23, 37, 42, 0.15);
   border-radius: 8px;
-  padding: 16px 12px;
+  padding: 8px 12px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 16px;
   font-family: 'DotGothic16', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
   color: #17252A;
   cursor: pointer;
   transition: all 0.2s;
+  text-align: left;
 }
 
 .omamori-btn:hover, .omamori-btn:focus-visible {
@@ -1933,14 +1949,40 @@ option:checked {
   color: #17252A;
 }
 
+.omamori-icon-wrapper {
+  flex: 0 0 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .omamori-icon {
-  width: 140px;
-  height: 80px;
-  object-fit: none;
-  object-position: center bottom;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
   image-rendering: pixelated;
-  flex-shrink: 0;
-  filter: drop-shadow(3px 3px 0px rgba(0,0,0,0.2));
+  filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.15));
+}
+
+.omamori-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.omamori-label .jp {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.omamori-label .en {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(23, 37, 42, 0.7);
+  line-height: 1.2;
 }
 
 
