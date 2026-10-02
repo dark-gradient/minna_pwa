@@ -2647,3 +2647,9 @@ body.listening-active main {
     margin-bottom: 8px;
     padding-bottom: 8px;
 }
+
+body.review-active { background-image: url('../assets/images/backgrounds/bg_review.jpg') !important; background-position: center !important; background-size: cover !important; }
+body.resultsView-active { background-image: url('../assets/images/backgrounds/bg_test_complete.jpg') !important; background-position: center !important; background-size: cover !important; }
+
+body.review-active { background-image: url('../assets/images/backgrounds/bg_review.jpg') !important; background-position: center !important; background-size: cover !important; }
+body.resultsView-active { background-image: url('../assets/images/backgrounds/bg_test_complete.jpg') !important; background-position: center !important; background-size: cover !important; }
