@@ -183,45 +183,73 @@ function reviewWrongAnswers() {
   showView("review");
 }
 
-function updateDashboardStats() {
-    const vocabTotal = 855;
-    const grammarTotal = 120;
-    const listeningTotal = 50;
-    const kanjiTotal = 110;
-    
-    let completedVocab = 0;
-    try {
-        let fw = JSON.parse(localStorage.getItem("minna_focus_words")) || {};
-        completedVocab = Object.keys(fw).length;
-    } catch(e) {}
-    
-    const updateBar = (id, current, total) => {
-        const bar = document.getElementById(id);
-        const text = document.getElementById(id.replace('bar', 'stat'));
-        if (bar && text) {
-            let pct = total > 0 ? Math.round((current / total) * 100) : 0;
-            if (pct > 100) pct = 100;
-            bar.style.width = pct + '%';
-            text.innerText = current + '/' + total;
-        }
-    };
-    
-    updateBar('barVocab', completedVocab, vocabTotal);
-    updateBar('barGrammar', 0, grammarTotal);
-    updateBar('barListening', 0, listeningTotal);
-    updateBar('barKanji', 0, kanjiTotal);
-    
-    const totalN5 = vocabTotal + grammarTotal + listeningTotal + kanjiTotal;
-    const currentN5 = completedVocab;
-    let n5Pct = totalN5 > 0 ? Math.round((currentN5 / totalN5) * 100) : 0;
-    
-    let n5Bar = document.getElementById('n5ProgressBar');
-    let n5PercentText = document.getElementById('n5Percent');
-    let n5TopicsText = document.getElementById('n5Topics');
-    if (n5Bar) n5Bar.style.width = n5Pct + '%';
-    if (n5PercentText) n5PercentText.innerText = n5Pct + '%';
-    if (n5TopicsText) n5TopicsText.innerHTML = currentN5 + '/' + totalN5 + '<br>Items';
+
+let completedLessons = {
+    vocab: JSON.parse(localStorage.getItem('minna_completed_vocab') || '[]'),
+    grammar: JSON.parse(localStorage.getItem('minna_completed_grammar') || '[]'),
+    kanji: JSON.parse(localStorage.getItem('minna_completed_kanji') || '[]'),
+    listening: JSON.parse(localStorage.getItem('minna_completed_listening') || '[]')
+};
+
+function toggleLessonCompleted(e, type, id) {
+    e.stopPropagation();
+    let index = completedLessons[type].indexOf(id);
+    if (index === -1) {
+        completedLessons[type].push(id);
+    } else {
+        completedLessons[type].splice(index, 1);
+    }
+    localStorage.setItem(`minna_completed_${type}`, JSON.stringify(completedLessons[type]));
+    updateDashboardStats();
+    if (type === 'vocab') renderLessonsGrid();
+    if (type === 'grammar') renderGrammar();
+    if (type === 'kanji') renderKanji();
 }
+
+function openCategory(type) {
+    let firstIncomplete = 1;
+    let max = 25;
+    if (type === 'vocab' || type === 'grammar') {
+        max = 25;
+        for (let i = 1; i <= max; i++) {
+            if (!completedLessons[type].includes(i)) {
+                firstIncomplete = i;
+                break;
+            }
+        }
+    } else if (type === 'kanji') {
+        let kanjiMax = Math.ceil((KANJI.length || 320) / 40);
+        for (let i = 1; i <= kanjiMax; i++) {
+            if (!completedLessons.kanji.includes(i)) {
+                firstIncomplete = i;
+                break;
+            }
+        }
+    }
+
+    if (type === 'vocab') {
+        let elFrom = document.getElementById('lessonFrom');
+        let elTo = document.getElementById('lessonTo');
+        if (elFrom) elFrom.value = firstIncomplete;
+        if (elTo) elTo.value = firstIncomplete;
+        showView('practiceSetup');
+    } else if (type === 'grammar') {
+        showView('grammar');
+        setTimeout(() => {
+            let el = document.getElementById(`grammar-card-${firstIncomplete}`);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300);
+    } else if (type === 'kanji') {
+        showView('kanji');
+        setTimeout(() => {
+            let el = document.getElementById(`kanji-card-${firstIncomplete}`);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300);
+    } else if (type === 'listening') {
+        showView('listening');
+    }
+}
+
 
 let viewHistory = [];
 let currentViewId = null;
@@ -629,10 +657,16 @@ function renderGrammar() {
   if (!$("grammarLessonGrid") || !GRAMMAR.length) return;
   $("grammarLessonGrid").innerHTML = GRAMMAR.map(g => {
     let pts = g.grammarPoints.length;
-    return `<button class="lesson-card" onclick="openGrammarLesson(${g.lessonId})">
-      <span class="lesson-no">LESSON ${String(g.lessonId).padStart(2, '0')}</span>
-      <h3>${lessonNames[g.lessonId]}</h3><p>${pts} grammar points</p>
-    </button>`;
+    let isChecked = completedLessons.grammar.includes(g.lessonId) ? "checked" : "";
+    return `<div style="position:relative;" id="grammar-card-${g.lessonId}">
+      <button class="lesson-card" onclick="openGrammarLesson(${g.lessonId})" style="width:100%;">
+        <span class="lesson-no">LESSON ${String(g.lessonId).padStart(2, '0')}</span>
+        <h3 style="margin-right:24px;">${lessonNames[g.lessonId]}</h3><p>${pts} grammar points</p>
+      </button>
+      <div style="position:absolute; top:12px; right:12px; z-index:10; background:rgba(255,255,255,0.2); border-radius:50%; padding:4px; display:flex;" onclick="event.stopPropagation();">
+        <input type="checkbox" ${isChecked} onchange="toggleLessonCompleted(event, 'grammar', ${g.lessonId})" style="width:24px; height:24px; cursor:pointer; accent-color:var(--text-primary);" title="Mark as Completed">
+      </div>
+    </div>`;
   }).join("");
 }
 
