@@ -1770,6 +1770,10 @@ option:checked {
 
 .omamori-tray {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   background-color: var(--pink);
   background-image: radial-gradient(var(--yellow) 15%, transparent 16%), radial-gradient(var(--yellow) 15%, transparent 16%);
   background-size: 20px 20px;
