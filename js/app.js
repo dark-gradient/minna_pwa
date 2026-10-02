@@ -691,10 +691,16 @@ function renderKanji() {
     });
   }
   $("kanjiUnitGrid").innerHTML = units.map(u => {
-    return `<button class="lesson-card" onclick="openKanjiUnit(${u.unitId})">
-      <span class="lesson-no">UNIT ${String(u.unitId).padStart(2, '0')}</span>
-      <h3>Kanji ${u.start}–${u.end}</h3><p>${u.count} characters</p>
-    </button>`;
+    let isChecked = completedLessons.kanji.includes(u.unitId) ? "checked" : "";
+    return `<div style="position:relative;" id="kanji-card-${u.unitId}">
+      <button class="lesson-card" onclick="openKanjiUnit(${u.unitId})" style="width:100%;">
+        <span class="lesson-no">UNIT ${String(u.unitId).padStart(2, '0')}</span>
+        <h3 style="margin-right:24px;">Kanji ${u.start}-${u.end}</h3><p>${u.count} characters</p>
+      </button>
+      <div style="position:absolute; top:12px; right:12px; z-index:10; background:rgba(255,255,255,0.2); border-radius:50%; padding:4px; display:flex;" onclick="event.stopPropagation();">
+        <input type="checkbox" ${isChecked} onchange="toggleLessonCompleted(event, 'kanji', ${u.unitId})" style="width:24px; height:24px; cursor:pointer; accent-color:var(--text-primary);" title="Mark as Completed">
+      </div>
+    </div>`;
   }).join("");
 }
 
@@ -1914,3 +1920,4 @@ function updateDashboardStats() {
     let streakText = document.getElementById('streakText');
     if (streakText) streakText.innerHTML = '🔥 You\'re on a ' + streak + ' day streak';
 }
+
