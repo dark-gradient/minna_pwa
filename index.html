@@ -9,23 +9,23 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Minna Kotoba">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="apple-touch-icon" href="assets/pwa-icons/icon-180.png">
 <title>みんなのことば — Minna Vocabulary Trainer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/styles.css">
 
-  <link rel="preload" as="image" href="fuji_wide.jpg">
-  <link rel="preload" as="image" href="bg_home.jpg">
-  <link rel="preload" as="image" href="bg_learn.jpg">
-  <link rel="preload" as="image" href="bg_practice.jpg">
-  <link rel="preload" as="image" href="bg_practice_new.jpg">
-  <link rel="preload" as="image" href="bg_lesson_1.jpg">
-  <link rel="preload" as="image" href="bg_lesson_2.jpg">
-  <link rel="preload" as="image" href="bg_lesson_3.jpg">
-  <link rel="preload" as="image" href="bg_more.jpg">
-  <link rel="preload" as="image" href="bg_more_new.jpg">
+  <link rel="preload" as="image" href="assets/images/backgrounds/fuji_wide.jpg">
+  <link rel="preload" as="image" href="assets/images/backgrounds/bg_home.jpg">
+  <link rel="preload" as="image" href="assets/images/backgrounds/bg_learn.jpg">
+  <link rel="preload" as="image" href="assets/images/backgrounds/bg_practice.jpg">
+  <link rel="preload" as="image" href="assets/images/backgrounds/bg_practice_new.jpg">
+  <link rel="preload" as="image" href="assets/images/backgrounds/bg_lesson_1.jpg">
+  <link rel="preload" as="image" href="assets/images/backgrounds/bg_lesson_2.jpg">
+  <link rel="preload" as="image" href="assets/images/backgrounds/bg_lesson_3.jpg">
+  <link rel="preload" as="image" href="assets/images/backgrounds/bg_more.jpg">
+  <link rel="preload" as="image" href="assets/images/backgrounds/bg_more_new.jpg">
 </head>
 <body>
 <div class="app-shell">
@@ -387,7 +387,7 @@
         <div class="theater-scale-box">
           <div class="cinema-screen-overlay" id="cinemaScreen">
              <div class="video-placeholder" id="videoPlaceholder">
-                <img src="nav_icon_listening.png" alt="Listening" style="width:48px; height:48px; image-rendering:pixelated; margin-bottom: 12px;">
+                <img src="assets/images/icons/nav_icon_listening.png" alt="Listening" style="width:48px; height:48px; image-rendering:pixelated; margin-bottom: 12px;">
                 <h2 style="font-family:'DotGothic16'; color:#F7F1E7; font-size: 20px; margin-bottom: 4px; text-shadow: 2px 2px 0 #000;">Minna Kotoba</h2>
                 <p style="font-family:'DotGothic16'; color:#F3D99B; font-size: 14px; text-shadow: 1px 1px 0 #000;" id="videoLoadingText">Loading Player...</p>
              </div>
@@ -442,13 +442,13 @@
       </button>
       <nav id="omamori-tray" class="omamori-tray" aria-hidden="true">
         <ul class="omamori-menu">
-          <li><button class="omamori-btn" data-view="home" onclick="showView('home'); toggleOmamoriNav();"><img src="icon_home.png" class="omamori-icon" alt="Home"> <span>Home</span></button></li>
-          <li><button class="omamori-btn" data-view="lessons" onclick="showView('lessons'); toggleOmamoriNav();"><img src="icon_lessons.png" class="omamori-icon" alt="Lessons"> <span>Lessons</span></button></li>
-          <li><button class="omamori-btn" data-view="vocabulary" onclick="showView('vocabulary'); toggleOmamoriNav();"><img src="icon_vocabulary.png" class="omamori-icon" alt="Vocabulary"> <span>Vocabulary</span></button></li>
-          <li><button class="omamori-btn" data-view="grammar" onclick="showView('grammar'); toggleOmamoriNav();"><img src="icon_grammar.png" class="omamori-icon" alt="Grammar"> <span>Grammar</span></button></li>
-          <li><button class="omamori-btn" data-view="kanji" onclick="showView('kanji'); toggleOmamoriNav();"><img src="icon_kanji.png" class="omamori-icon" alt="Kanji"> <span>Kanji</span></button></li>
-          <li><button class="omamori-btn" data-view="listening" onclick="showView('listening'); toggleOmamoriNav();"><img src="icon_listening.png" class="omamori-icon" alt="Listening"> <span>Listening</span></button></li>
-          <li><button class="omamori-btn" data-view="mockTest" onclick="showView('mockTest'); toggleOmamoriNav();"><img src="icon_mocktest.png" class="omamori-icon" alt="Mock Tests"> <span>Mock Tests</span></button></li>
+          <li><button class="omamori-btn" data-view="home" onclick="showView('home'); toggleOmamoriNav();"><img src="assets/images/icons/icon_home.png" class="omamori-icon" alt="Home"></button></li>
+          <li><button class="omamori-btn" data-view="lessons" onclick="showView('lessons'); toggleOmamoriNav();"><img src="assets/images/icons/icon_lessons.png" class="omamori-icon" alt="Lessons"></button></li>
+          <li><button class="omamori-btn" data-view="vocabulary" onclick="showView('vocabulary'); toggleOmamoriNav();"><img src="assets/images/icons/icon_vocabulary.png" class="omamori-icon" alt="Vocabulary"></button></li>
+          <li><button class="omamori-btn" data-view="grammar" onclick="showView('grammar'); toggleOmamoriNav();"><img src="assets/images/icons/icon_grammar.png" class="omamori-icon" alt="Grammar"></button></li>
+          <li><button class="omamori-btn" data-view="kanji" onclick="showView('kanji'); toggleOmamoriNav();"><img src="assets/images/icons/icon_kanji.png" class="omamori-icon" alt="Kanji"></button></li>
+          <li><button class="omamori-btn" data-view="listening" onclick="showView('listening'); toggleOmamoriNav();"><img src="assets/images/icons/icon_listening.png" class="omamori-icon" alt="Listening"></button></li>
+          <li><button class="omamori-btn" data-view="mockTest" onclick="showView('mockTest'); toggleOmamoriNav();"><img src="assets/images/icons/icon_mocktest.png" class="omamori-icon" alt="Mock Tests"></button></li>
           
         </ul>
       </nav>
@@ -554,7 +554,7 @@
     
 
 </div>
-<script src="app.js"></script>
+<script src="js/app.js"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));

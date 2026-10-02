@@ -109,10 +109,10 @@ const lessonNames = {
 };
 async function loadData() {
   [VOCAB, KAIWA, LISTENING, MOCK_TESTS, GRAMMAR, KANJI] = await Promise.all([
-    fetch("vocab.json").then((r) => r.json()),
-    fetch("kaiwa.json").then((r) => r.json()),
-    fetch("listening-n5.json").then((r) => r.json()).catch(() => []),
-    fetch("mock-tests-n5.json").then((r) => r.json()).catch(() => []),
+    fetch("data/vocab.json").then((r) => r.json()),
+    fetch("data/kaiwa.json").then((r) => r.json()),
+    fetch("data/listening-n5.json").then((r) => r.json()).catch(() => []),
+    fetch("data/mock-tests-n5.json").then((r) => r.json()).catch(() => []),
     fetch("data/grammar/lessons-01-25.json").then((r) => r.json()).catch(() => []),
     fetch("data/kanji/kanji-320.json").then((r) => r.json()).catch(() => [])
   ]);
@@ -641,7 +641,7 @@ function openLesson(n) {
   currentLessonId = n;
   
   // Set custom background image for the lesson, or fallback to the learn background
-  const imgUrl = (n >= 1 && n <= 25) ? 'bg_lesson_' + n + '.jpg' : 'bg_learn.jpg';
+  const imgUrl = (n >= 1 && n <= 25) ? 'assets/images/backgrounds/bg_lesson_' + n + '.jpg' : 'assets/images/backgrounds/bg_learn.jpg';
   document.body.style.setProperty('background-image', 'url(' + imgUrl + ')', 'important');
   
   lessonSelection.clear();

@@ -60,18 +60,18 @@ body {
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
 }
-body.welcome-active { background-image: url('fuji_wide.jpg') !important; }
+body.welcome-active { background-image: url('../assets/images/backgrounds/fuji_wide.jpg') !important; }
 body.welcome-active #omamori-nav { display: none !important; }
-body.home-active { background-image: url('bg_home.jpg') !important; }
-body.lessons-active { background-image: url('bg_learn.jpg') !important; }
-body.practiceSetup-active { background-image: url('bg_practice_new.jpg') !important; }
-body.vocabulary-active { background-image: url('bg_practice_new.jpg') !important; }
-body.grammar-active { background-image: url('bg_grammar.jpg') !important; background-position: bottom center !important; background-size: cover !important; }
-body.kanji-active { background-image: url('bg_kanji.jpg') !important; background-position: bottom center !important; background-size: cover !important; }
+body.home-active { background-image: url('../assets/images/backgrounds/bg_home.jpg') !important; }
+body.lessons-active { background-image: url('../assets/images/backgrounds/bg_learn.jpg') !important; }
+body.practiceSetup-active { background-image: url('../assets/images/backgrounds/bg_practice_new.jpg') !important; }
+body.vocabulary-active { background-image: url('../assets/images/backgrounds/bg_practice_new.jpg') !important; }
+body.grammar-active { background-image: url('../assets/images/backgrounds/bg_grammar.jpg') !important; background-position: bottom center !important; background-size: cover !important; }
+body.kanji-active { background-image: url('../assets/images/backgrounds/bg_kanji.jpg') !important; background-position: bottom center !important; background-size: cover !important; }
 body.listening-active { background: #17252A !important; }
-body.mockTest-active { background-image: url('bg_practice.jpg') !important; }
-body.more-active { background-image: url('bg_more_new.jpg') !important; background-position: bottom right !important; background-size: cover !important; }
-body.quiz-active { background-image: url('bg_practice_new.jpg') !important; }
+body.mockTest-active { background-image: url('../assets/images/backgrounds/bg_practice.jpg') !important; }
+body.more-active { background-image: url('../assets/images/backgrounds/bg_more_new.jpg') !important; background-position: bottom right !important; background-size: cover !important; }
+body.quiz-active { background-image: url('../assets/images/backgrounds/bg_practice_new.jpg') !important; }
 
 /* Make App Shell completely transparent to show body background */
 .app-shell { background: transparent !important; }
@@ -1757,7 +1757,7 @@ option:checked {
   position: absolute;
   top: 0;
   right: 0;
-  width: 240px;
+  width: 140px;
   transform: translateX(100%);
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   z-index: 2001;
@@ -1885,6 +1885,14 @@ option:checked {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex: 1;
+  max-height: none;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.omamori-menu::-webkit-scrollbar {
+  display: none;
 }
 
 .omamori-btn {
@@ -1896,13 +1904,12 @@ option:checked {
   padding: 16px 12px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
   font-family: 'DotGothic16', sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: #17252A;
   cursor: pointer;
-  text-align: left;
   transition: all 0.2s;
 }
 
@@ -1923,9 +1930,10 @@ option:checked {
 }
 
 .omamori-icon {
-  width: 80px;
+  width: 140px;
   height: 80px;
-  object-fit: contain;
+  object-fit: none;
+  object-position: center bottom;
   image-rendering: pixelated;
   flex-shrink: 0;
   filter: drop-shadow(3px 3px 0px rgba(0,0,0,0.2));
@@ -1967,7 +1975,7 @@ body.listening-active main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url('bg_pixel_cinema.jpg');
+  background-image: url('../assets/images/backgrounds/bg_pixel_cinema.jpg');
   background-size: 100% 100%;
   width: 100vw;
   min-width: calc(100vh * (16 / 9));
