@@ -223,7 +223,20 @@ function updateDashboardStats() {
     if (n5TopicsText) n5TopicsText.innerHTML = currentN5 + '/' + totalN5 + '<br>Items';
 }
 
-function showView(view) {
+let viewHistory = [];
+let currentViewId = null;
+
+function showView(view, isBack = false) {
+  if (!isBack && currentViewId && currentViewId !== view) {
+    // Only keep the last 20 views to prevent infinite growth
+    if (viewHistory.length > 20) viewHistory.shift();
+    // Avoid consecutive duplicates
+    if (viewHistory.length === 0 || viewHistory[viewHistory.length - 1] !== currentViewId) {
+      viewHistory.push(currentViewId);
+    }
+  }
+  currentViewId = view;
+  
   if (!document.startViewTransition) {
     _showView(view);
     return;
@@ -232,6 +245,20 @@ function showView(view) {
   document.startViewTransition(() => {
     _showView(view);
   });
+}
+
+function goBack(fallback = 'home') {
+  if (viewHistory.length > 0) {
+    let prev = viewHistory.pop();
+    while (prev === currentViewId && viewHistory.length > 0) {
+      prev = viewHistory.pop();
+    }
+    if (prev && prev !== currentViewId) {
+      showView(prev, true);
+      return;
+    }
+  }
+  showView(fallback, true);
 }
 
 function _showView(view) {
@@ -766,7 +793,7 @@ function renderFocusView() {
       <div class="panel" style="min-height:auto; padding:30px; text-align:center;">
         <p style="color:var(--text-primary); font-family:'Noto Serif JP',serif; font-weight:800; margin-bottom:16px;">No Focus Words yet!</p>
         <p style="color:var(--text-secondary); margin-bottom:20px;">Select words from any lesson and add them here.</p>
-        <button class="secondary-btn" onclick="showView('lessons')">Go to Lessons</button>
+        <button class="secondary-btn" onclick="goBack('lessons')">Go to Lessons</button>
       </div>`;
     return;
   }
@@ -917,7 +944,7 @@ function renderReview() {
       `<div class="panel" style="min-height:auto; padding:30px; text-align:center;">
         <p style="color:var(--text-primary); font-family:'Noto Serif JP',serif; font-weight:800; margin-bottom:16px;">No wrong answers yet!</p>
         <p style="color:var(--text-secondary); margin-bottom:20px;">Words you answer incorrectly will appear here.</p>
-        <button class="secondary-btn" onclick="showView('home')">Back to Practice</button>
+        <button class="secondary-btn" onclick="goBack('home')">Back to Practice</button>
       </div>`;
     $("reviewSetupPanel").style.display = "none";
     return;

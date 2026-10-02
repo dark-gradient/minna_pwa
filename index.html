@@ -145,7 +145,7 @@
 
     <section id="quizView" class="view">
       <div class="quiz-top">
-        <button class="back-btn" onclick="showView('home')">← Setup</button>
+        <button class="back-btn" onclick="goBack('home')">← Setup</button>
         <div class="quiz-meta"><span id="quizScope"></span><span id="quizProgress"></span></div>
       </div>
       <div class="progress"><div id="progressBar"></div></div>
@@ -166,7 +166,7 @@
       <div class="quiz-card" style="min-height: auto;">
         <div id="resultsSummary" style="font-size: 16px; line-height: 1.8;"></div>
         <div class="answer-actions" style="justify-content:center; gap: 16px; margin-top: 30px;">
-          <button class="secondary-btn" onclick="showView('home')">Back to Practice</button>
+          <button class="secondary-btn" onclick="goBack('home')">Back to Practice</button>
           <button class="secondary-btn" onclick="startPractice()">Practice Again</button>
           <button id="btnReviewWrong" class="primary-btn" onclick="reviewWrongAnswers()">Review Wrong Answers</button>
         </div>
@@ -179,7 +179,7 @@
     </section>
 
     <section id="lessonDetailView" class="view">
-      <div class="quiz-top"><button class="back-btn" onclick="showView('lessons')">← Lessons</button><button id="detailPractice" class="primary-btn compact">Practice lesson →</button></div>
+      <div class="quiz-top"><button class="back-btn" onclick="goBack('lessons')">← Lessons</button><button id="detailPractice" class="primary-btn compact">Practice lesson →</button></div>
       <div class="controls-grid" style="margin-top:0; grid-template-columns: auto 1fr;">
         <label>Pronunciation
           <select id="speechRate" onchange="saveSpeechRate()">
