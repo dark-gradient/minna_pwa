@@ -201,7 +201,7 @@ function toggleLessonCompleted(e, type, id) {
     }
     localStorage.setItem(`minna_completed_${type}`, JSON.stringify(completedLessons[type]));
     updateDashboardStats();
-    if (type === 'vocab') renderLessonsGrid();
+    if (type === 'vocab') renderLessons();
     if (type === 'grammar') renderGrammar();
     if (type === 'kanji') renderKanji();
 }
@@ -644,11 +644,19 @@ function renderLessons() {
   $("totalVocab").textContent = `${total} entries`;
   $("lessonGrid").innerHTML = lessons
     .map(
-      (n) => `
-    <button class="lesson-card" onclick="openLesson(${n})">
-      <span class="lesson-no">LESSON ${String(n).padStart(2, "0")}</span>
-      <h3>${lessonNames[n]}</h3><p>${VOCAB[n].length} vocabulary entries</p>
-    </button>`,
+      (n) => {
+        let isChecked = completedLessons.vocab.includes(n) ? "checked" : "";
+        return `
+    <div style="position:relative;" id="vocab-card-${n}">
+      <button class="lesson-card" onclick="openLesson(${n})" style="width:100%;">
+        <span class="lesson-no">LESSON ${String(n).padStart(2, "0")}</span>
+        <h3 style="margin-right:24px;">${lessonNames[n]}</h3><p>${VOCAB[n].length} vocabulary entries</p>
+      </button>
+      <div style="position:absolute; top:12px; right:12px; z-index:10; background:rgba(255,255,255,0.2); border-radius:50%; padding:4px; display:flex;" onclick="event.stopPropagation();">
+        <input type="checkbox" ${isChecked} onchange="toggleLessonCompleted(event, 'vocab', ${n})" style="width:24px; height:24px; cursor:pointer; accent-color:var(--text-primary);" title="Mark as Completed">
+      </div>
+    </div>`;
+      }
     )
     .join("");
 }
