@@ -875,6 +875,74 @@ footer span {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Single Revealed Option for Hidden MCQ / Active Recall */
+.mcq-grid.single-revealed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.mcq-revealed-container {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    animation: fadeInOption 0.2s ease-out;
+}
+
+@keyframes fadeInOption {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mcq-revealed-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #137333;
+    background: #e6f4ea;
+    border: 1.5px solid #137333;
+    padding: 4px 16px;
+    border-radius: 20px;
+}
+
+[data-theme=dark] .mcq-revealed-pill {
+    color: #81c995;
+    background: #1e4620;
+    border-color: #81c995;
+}
+
+.mcq-option.mcq-single-option {
+    width: 100%;
+    font-size: 24px;
+    padding: 20px 28px;
+    font-weight: 700;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.mcq-option.mcq-single-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
 /* Quiz Top Toggle Button */
 .quiz-toggle-btn {
     background: var(--surface-soft);

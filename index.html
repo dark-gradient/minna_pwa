@@ -155,7 +155,7 @@
             <div class="reveal-badge">Active Recall</div>
             <p class="reveal-desc">Options are hidden for this quiz. Think of the answer first!</p>
             <button id="revealOptionsBtn" class="primary-btn reveal-btn" onclick="revealOptions()">
-              <span>👁️ Show Options</span>
+              <span>👁️ Reveal Answer</span>
               <kbd class="reveal-kbd">Space</kbd>
             </button>
           </div>
@@ -165,7 +165,8 @@
           <input type="text" id="fillInput" class="fill-input" placeholder="Type your answer…" autocomplete="off" spellcheck="false">
           <div id="fillFeedback" class="fill-feedback hidden"></div>
         </div>
-        <div class="answer-actions hidden" id="nextAction" style="justify-content:center">
+        <div class="answer-actions hidden" id="nextAction" style="justify-content:center; display:flex; gap:12px;">
+          <button id="wrongBtn" class="secondary-btn hidden" style="color: var(--error, #C96B63); border-color: var(--error, #C96B63);" onclick="confirmRevealedAnswer(false)">✗ Missed</button>
           <button id="nextBtn" class="primary-btn">Next →</button>
         </div>
         <div id="lessonTag" class="lesson-tag"></div>

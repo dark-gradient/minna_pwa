@@ -433,15 +433,16 @@ function nextQuestion() {
       state.answered = false;
       state.kbIndex = -1;
       $("fillArea").classList.add("hidden");
-      $("mcqGrid").innerHTML = state.currentOptions.map((opt, i) => {
-          return `<button class="mcq-option" id="opt${i}" onclick="selectOptionGeneric(${i})">${escapeHtml(opt.text)}</button>`;
-      }).join("");
+      if ($("wrongBtn")) $("wrongBtn").classList.add("hidden");
+      $("mcqGrid").classList.remove("single-revealed");
       if (state.hideOptions) {
         state.optionsRevealed = false;
         $("mcqGrid").classList.add("hidden");
+        $("mcqGrid").innerHTML = "";
         $("mcqRevealArea").classList.remove("hidden");
       } else {
         state.optionsRevealed = true;
+        renderAllMcqOptions();
         $("mcqGrid").classList.remove("hidden");
         $("mcqRevealArea").classList.add("hidden");
       }
@@ -550,28 +551,23 @@ state.current = state.queue[state.index];
   } else {
     // MCQ mode
     $("fillArea").classList.add("hidden");
-    $("mcqGrid").innerHTML = options
-      .map((opt, i) => {
-        let text = isJpEn
-          ? opt.en
-          : opt.kanji && opt.kanji !== "—"
-            ? opt.kanji + " (" + opt.jp + ")"
-            : opt.jp;
-        return `<button class="mcq-option" id="opt${i}" onclick="selectOption(${i})">${escapeHtml(text)}</button>`;
-      })
-      .join("");
+    if ($("wrongBtn")) $("wrongBtn").classList.add("hidden");
+    $("mcqGrid").classList.remove("single-revealed");
     if (state.hideOptions) {
       state.optionsRevealed = false;
       $("mcqGrid").classList.add("hidden");
+      $("mcqGrid").innerHTML = "";
       $("mcqRevealArea").classList.remove("hidden");
+      $("nextAction").classList.add("hidden");
     } else {
       state.optionsRevealed = true;
+      renderAllMcqOptions();
       $("mcqGrid").classList.remove("hidden");
       $("mcqRevealArea").classList.add("hidden");
+      $("nextAction").classList.add("hidden");
+      $("nextBtn").textContent = "Next →";
+      $("nextBtn").onclick = grade;
     }
-    $("nextAction").classList.add("hidden");
-    $("nextBtn").textContent = "Next →";
-    $("nextBtn").onclick = grade;
   }
 
   $("lessonTag").textContent =
@@ -583,6 +579,7 @@ state.current = state.queue[state.index];
   $("progressBar").style.width = `${(state.index / state.queue.length) * 100}%`;
   updateQuizTip();
 }
+
 function selectOption(idx) {
   if (state.answered) return;
   state.answered = true;
@@ -592,13 +589,60 @@ function selectOption(idx) {
   state.lastCorrect = isCorrect;
   state.currentOptions.forEach((opt, i) => {
     const btn = $("opt" + i);
+    if (!btn) return;
     btn.disabled = true;
     if (opt.id === state.current.id) btn.classList.add("correct");
     else if (i === idx && !isCorrect) btn.classList.add("incorrect");
   });
+  if ($("wrongBtn")) $("wrongBtn").classList.add("hidden");
+  if ($("nextBtn")) {
+    $("nextBtn").textContent = "Next →";
+    $("nextBtn").onclick = grade;
+  }
   $("nextAction").classList.remove("hidden");
+  updateQuizTip();
 }
 
+function renderAllMcqOptions() {
+  const grid = $("mcqGrid");
+  if (!grid) return;
+  grid.classList.remove("single-revealed");
+  
+  if (state.testMode === "kanji" || state.testMode === "grammar") {
+    grid.innerHTML = (state.currentOptions || []).map((opt, i) => {
+      return `<button class="mcq-option" id="opt${i}" onclick="selectOptionGeneric(${i})">${escapeHtml(opt.text)}</button>`;
+    }).join("");
+    return;
+  }
+  
+  const isJpEn = state.current.dir === "jp-en";
+  grid.innerHTML = (state.currentOptions || [])
+    .map((opt, i) => {
+      let text = isJpEn
+        ? opt.en
+        : opt.kanji && opt.kanji !== "—"
+          ? opt.kanji + " (" + opt.jp + ")"
+          : opt.jp;
+      return `<button class="mcq-option" id="opt${i}" onclick="selectOption(${i})">${escapeHtml(text)}</button>`;
+    })
+    .join("");
+}
+
+function getCorrectOptionInfo() {
+  if (state.testMode === "kanji" || state.testMode === "grammar") {
+    const correctOpt = (state.currentOptions || []).find(o => o.isCorrect) || (state.currentOptions && state.currentOptions[0]);
+    const text = (state.current && state.current.correctText) || (correctOpt ? correctOpt.text : "");
+    return { obj: correctOpt, text: text };
+  }
+  const isJpEn = state.current.dir === "jp-en";
+  const correctOpt = (state.currentOptions || []).find(o => o.id === state.current.id) || state.current;
+  const text = isJpEn
+    ? correctOpt.en
+    : correctOpt.kanji && correctOpt.kanji !== "—"
+      ? correctOpt.kanji + " (" + correctOpt.jp + ")"
+      : correctOpt.jp;
+  return { obj: correctOpt, text: text };
+}
 
 function updateQuizHideOptionsUI() {
   const toggleBtn = $("quizHideOptionsToggle");
@@ -640,7 +684,21 @@ function toggleQuizHideOptions() {
     if (state.hideOptions) {
       hideOptionsForCurrentQuestion();
     } else {
-      revealOptions();
+      // Switched to visible options mode: show all 4 options!
+      state.optionsRevealed = true;
+      const revealArea = $("mcqRevealArea");
+      if (revealArea) revealArea.classList.add("hidden");
+      const grid = $("mcqGrid");
+      if (grid) {
+        grid.classList.remove("hidden");
+        renderAllMcqOptions();
+      }
+      const opts = document.querySelectorAll("#mcqGrid .mcq-option");
+      if (opts.length && state.kbIndex < 0) {
+        state.kbIndex = 0;
+        opts.forEach((o, i) => o.classList.toggle("kb-focus", i === 0));
+      }
+      updateQuizTip();
     }
   }
 }
@@ -650,24 +708,58 @@ function hideOptionsForCurrentQuestion() {
   state.kbIndex = -1;
   const grid = $("mcqGrid");
   const revealArea = $("mcqRevealArea");
-  if (grid) grid.classList.add("hidden");
+  if (grid) {
+    grid.classList.add("hidden");
+    grid.classList.remove("single-revealed");
+    grid.innerHTML = "";
+  }
   if (revealArea) revealArea.classList.remove("hidden");
+  if ($("wrongBtn")) $("wrongBtn").classList.add("hidden");
+  if ($("nextAction")) $("nextAction").classList.add("hidden");
   updateQuizTip();
 }
 
 function revealOptions() {
   state.optionsRevealed = true;
-  const grid = $("mcqGrid");
+  state.answered = true;
+  state.lastCorrect = true;
+  
+  const info = getCorrectOptionInfo();
+  state.lastSelectedObj = info.obj;
+  
   const revealArea = $("mcqRevealArea");
-  if (grid) grid.classList.remove("hidden");
   if (revealArea) revealArea.classList.add("hidden");
   
-  const opts = document.querySelectorAll("#mcqGrid .mcq-option");
-  if (opts.length && state.kbIndex < 0) {
-    state.kbIndex = 0;
-    opts.forEach((o, i) => o.classList.toggle("kb-focus", i === 0));
+  const grid = $("mcqGrid");
+  if (grid) {
+    grid.classList.remove("hidden");
+    grid.classList.add("single-revealed");
+    grid.innerHTML = `
+      <div class="mcq-revealed-container">
+        <div class="mcq-revealed-pill">✓ Right Answer</div>
+        <button class="mcq-option correct mcq-single-option" id="optCorrect" onclick="confirmRevealedAnswer(true)" title="Click or press Space/Enter for next">
+          ${escapeHtml(info.text)}
+        </button>
+      </div>
+    `;
   }
+  
+  if ($("wrongBtn")) $("wrongBtn").classList.remove("hidden");
+  if ($("nextBtn")) {
+    $("nextBtn").textContent = "Next →";
+    $("nextBtn").onclick = () => confirmRevealedAnswer(true);
+  }
+  if ($("nextAction")) $("nextAction").classList.remove("hidden");
+  
   updateQuizTip();
+}
+
+function confirmRevealedAnswer(isCorrect) {
+  state.lastCorrect = isCorrect;
+  if (!isCorrect) {
+    state.lastSelectedObj = null;
+  }
+  grade();
 }
 
 function updateQuizTip() {
@@ -675,8 +767,12 @@ function updateQuizTip() {
   if (!tip) return;
   if (state.quizType === "fill") {
     tip.innerHTML = 'Type your answer · Press <kbd>Enter</kbd> to check / next';
-  } else if (state.hideOptions && !state.optionsRevealed && !state.answered) {
-    tip.innerHTML = 'Press <kbd>Space</kbd> or <kbd>Enter</kbd> to reveal options · Press <kbd>H</kbd> to toggle hide';
+  } else if (state.hideOptions) {
+    if (!state.optionsRevealed) {
+      tip.innerHTML = 'Press <kbd>Space</kbd> or <kbd>Enter</kbd> to reveal answer · Press <kbd>H</kbd> to toggle hide';
+    } else {
+      tip.innerHTML = 'Press <kbd>Space</kbd> or <kbd>Enter</kbd> for next · <kbd>X</kbd> if missed · <kbd>H</kbd> to toggle hide';
+    }
   } else {
     tip.innerHTML = 'Use <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> to navigate · <kbd>Enter</kbd> to select · <kbd>Space</kbd> for next · <kbd>H</kbd> to toggle hide';
   }
@@ -2041,11 +2137,18 @@ function selectOptionGeneric(idx) {
   state.lastCorrect = isCorrect;
   state.currentOptions.forEach((opt, i) => {
     const btn = $("opt" + i);
+    if (!btn) return;
     btn.disabled = true;
     if (opt.isCorrect) btn.classList.add("correct");
     else if (i === idx && !isCorrect) btn.classList.add("incorrect");
   });
+  if ($("wrongBtn")) $("wrongBtn").classList.add("hidden");
+  if ($("nextBtn")) {
+    $("nextBtn").textContent = "Next →";
+    $("nextBtn").onclick = grade;
+  }
   $("nextAction").classList.remove("hidden");
+  updateQuizTip();
 }
 
 function gradeGeneric() {
@@ -2061,8 +2164,8 @@ function gradeGeneric() {
     lesson: state.current.lesson,
     dir: state.current.dir,
     questionText: state.current.questionText,
-    selectedAnswer: state.lastSelectedObj ? state.lastSelectedObj.text : "Timeout",
-    correctAnswer: state.current.correctText,
+    selectedAnswer: state.lastSelectedObj ? (state.lastSelectedObj.text || "Selected") : "Missed",
+    correctAnswer: state.current.correctText || (getCorrectOptionInfo().text),
     known: state.lastCorrect,
   });
 
@@ -2144,6 +2247,20 @@ function updateDashboardStats() {
       if (e.key === ' ' || e.key === 'Enter' || e.key.startsWith('Arrow') || ['1','2','3','4'].includes(e.key)) {
         e.preventDefault();
         revealOptions();
+        return;
+      }
+    }
+    
+    // If options were hidden and answer is revealed: Space/Enter = next (Got it), X = mark as missed
+    if (state.hideOptions && state.answered) {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        confirmRevealedAnswer(true);
+        return;
+      }
+      if (e.key === 'x' || e.key === 'X') {
+        e.preventDefault();
+        confirmRevealedAnswer(false);
         return;
       }
     }
