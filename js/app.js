@@ -379,6 +379,7 @@ function shuffle(a) {
 }
 function startPractice() {
   state.testMode = "vocab";
+  state.quizType = $("quizType") ? $("quizType").value : "mcq";
   state.pool = poolForScope();
   if ($("direction").value === "en-jp") {
     state.pool = state.pool.filter(v => !ambiguousEnJpIds.has(v.id));
@@ -395,6 +396,7 @@ function startPractice() {
   state.index = 0;
   state.score = 0;
   state.history = [];
+  state.kbIndex = -1;
   $("quizScope").textContent = scopeLabel();
   showView("quiz");
   nextQuestion();
@@ -417,6 +419,8 @@ function nextQuestion() {
       $("question").textContent = state.current.questionText;
       state.currentOptions = state.current.options;
       state.answered = false;
+      state.kbIndex = -1;
+      $("fillArea").classList.add("hidden");
       $("mcqGrid").innerHTML = state.currentOptions.map((opt, i) => {
           return `<button class="mcq-option" id="opt${i}" onclick="selectOptionGeneric(${i})">${escapeHtml(opt.text)}</button>`;
       }).join("");
@@ -504,20 +508,41 @@ state.current = state.queue[state.index];
   options = shuffle(finalOptions);
   state.currentOptions = options;
   state.answered = false;
+  state.kbIndex = -1;
 
-  $("mcqGrid").innerHTML = options
-    .map((opt, i) => {
-      let text = isJpEn
-        ? opt.en
-        : opt.kanji && opt.kanji !== "—"
-          ? opt.kanji + " (" + opt.jp + ")"
-          : opt.jp;
-      return `<button class="mcq-option" id="opt${i}" onclick="selectOption(${i})">${escapeHtml(text)}</button>`;
-    })
-    .join("");
+  const isFill = state.quizType === "fill";
 
-  $("mcqGrid").classList.remove("hidden");
-  $("nextAction").classList.add("hidden");
+  if (isFill) {
+    // Fill in the blank mode
+    $("mcqGrid").classList.add("hidden");
+    $("fillArea").classList.remove("hidden");
+    $("fillInput").value = "";
+    $("fillInput").disabled = false;
+    $("fillFeedback").classList.add("hidden");
+    $("fillFeedback").className = "fill-feedback hidden";
+    $("fillFeedback").textContent = "";
+    $("nextAction").classList.remove("hidden");
+    $("nextBtn").textContent = "Check ✓";
+    $("nextBtn").onclick = checkFillAnswer;
+    setTimeout(() => $("fillInput").focus(), 50);
+  } else {
+    // MCQ mode
+    $("fillArea").classList.add("hidden");
+    $("mcqGrid").classList.remove("hidden");
+    $("mcqGrid").innerHTML = options
+      .map((opt, i) => {
+        let text = isJpEn
+          ? opt.en
+          : opt.kanji && opt.kanji !== "—"
+            ? opt.kanji + " (" + opt.jp + ")"
+            : opt.jp;
+        return `<button class="mcq-option" id="opt${i}" onclick="selectOption(${i})">${escapeHtml(text)}</button>`;
+      })
+      .join("");
+    $("nextAction").classList.add("hidden");
+    $("nextBtn").textContent = "Next →";
+    $("nextBtn").onclick = grade;
+  }
 
   $("lessonTag").textContent =
     `Lesson ${state.current.lesson} · ${lessonNames[state.current.lesson]}`;
@@ -542,6 +567,52 @@ function selectOption(idx) {
   });
   $("nextAction").classList.remove("hidden");
 }
+
+function checkFillAnswer() {
+  if (state.answered) {
+    // Already checked — act as "Next"
+    grade();
+    return;
+  }
+  state.answered = true;
+  const userAnswer = $("fillInput").value.trim();
+  const isJpEn = state.current.dir === "jp-en";
+  
+  // Build acceptable answers
+  const correctAnswers = [];
+  if (isJpEn) {
+    correctAnswers.push(state.current.en.toLowerCase());
+  } else {
+    if (state.current.jp) correctAnswers.push(state.current.jp);
+    if (state.current.kanji && state.current.kanji !== "\u2014") correctAnswers.push(state.current.kanji);
+  }
+  
+  const isCorrect = correctAnswers.some(ans => {
+    const a = ans.toLowerCase().trim();
+    const u = userAnswer.toLowerCase().trim();
+    return a === u;
+  });
+  
+  state.lastCorrect = isCorrect;
+  state.lastSelectedObj = { id: state.current.id, en: userAnswer, jp: userAnswer, kanji: "" };
+  
+  $("fillInput").disabled = true;
+  const feedback = $("fillFeedback");
+  feedback.classList.remove("hidden");
+  
+  if (isCorrect) {
+    feedback.className = "fill-feedback correct";
+    feedback.textContent = "\u2713 Correct!";
+  } else {
+    const correctDisplay = isJpEn ? state.current.en : (state.current.kanji && state.current.kanji !== "\u2014" ? state.current.kanji + " (" + state.current.jp + ")" : state.current.jp);
+    feedback.className = "fill-feedback incorrect";
+    feedback.textContent = "\u2717 Correct answer: " + correctDisplay;
+  }
+  
+  $("nextBtn").textContent = "Next \u2192";
+  $("nextBtn").onclick = grade;
+}
+
 function grade() {
   if (state.testMode === "kanji" || state.testMode === "grammar") return gradeGeneric();
 
@@ -1916,3 +1987,69 @@ function updateDashboardStats() {
     if (streakText) streakText.innerHTML = '🔥 You\'re on a ' + streak + ' day streak';
 }
 
+/* ========= Keyboard Navigation for Quiz ========= */
+(function() {
+  document.addEventListener('keydown', function(e) {
+    // Only act when quiz view is active
+    const quizView = document.getElementById('quizView');
+    if (!quizView || !quizView.classList.contains('active')) return;
+    
+    // Fill-in-the-blank mode: Enter = check/next
+    if (state.quizType === 'fill') {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        var nextBtn = document.getElementById('nextBtn');
+        if (nextBtn) nextBtn.click();
+      }
+      return;
+    }
+    
+    // MCQ mode keyboard navigation
+    var opts = document.querySelectorAll('#mcqGrid .mcq-option');
+    if (!opts.length) return;
+    
+    var maxIdx = opts.length - 1;
+    
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (state.answered) return;
+      state.kbIndex = Math.min((state.kbIndex < 0 ? -1 : state.kbIndex) + 1, maxIdx);
+      updateKbFocus(opts);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (state.answered) return;
+      state.kbIndex = Math.max((state.kbIndex < 0 ? maxIdx + 1 : state.kbIndex) - 1, 0);
+      updateKbFocus(opts);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (!state.answered && state.kbIndex >= 0 && state.kbIndex <= maxIdx) {
+        opts[state.kbIndex].click();
+      } else if (state.answered) {
+        var nextBtn = document.getElementById('nextBtn');
+        if (nextBtn) nextBtn.click();
+      }
+    } else if (e.key === ' ') {
+      e.preventDefault();
+      if (state.answered) {
+        var nextBtn = document.getElementById('nextBtn');
+        if (nextBtn) nextBtn.click();
+      } else if (state.kbIndex >= 0 && state.kbIndex <= maxIdx) {
+        opts[state.kbIndex].click();
+      }
+    } else if (e.key === '1' || e.key === '2' || e.key === '3' || e.key === '4') {
+      if (state.answered) return;
+      var numIdx = parseInt(e.key) - 1;
+      if (numIdx <= maxIdx) {
+        state.kbIndex = numIdx;
+        updateKbFocus(opts);
+        opts[numIdx].click();
+      }
+    }
+  });
+  
+  function updateKbFocus(opts) {
+    opts.forEach(function(o, i) {
+      o.classList.toggle('kb-focus', i === state.kbIndex);
+    });
+  }
+})();

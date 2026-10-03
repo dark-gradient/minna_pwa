@@ -147,12 +147,16 @@
         <div class="quiz-label" id="quizDirection"></div>
         <div id="question" class="question"></div>
         <div id="mcqGrid" class="mcq-grid"></div>
+        <div id="fillArea" class="fill-area hidden">
+          <input type="text" id="fillInput" class="fill-input" placeholder="Type your answer…" autocomplete="off" spellcheck="false">
+          <div id="fillFeedback" class="fill-feedback hidden"></div>
+        </div>
         <div class="answer-actions hidden" id="nextAction" style="justify-content:center">
           <button id="nextBtn" class="primary-btn">Next →</button>
         </div>
         <div id="lessonTag" class="lesson-tag"></div>
       </div>
-      <div class="quiz-tip">Tip: say the answer aloud before revealing it.</div>
+      <div class="quiz-tip">Use <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> to navigate · <kbd>Enter</kbd> to select · <kbd>Space</kbd> for next</div>
     </section>
 
     <section id="resultsView" class="view">
@@ -296,6 +300,12 @@
               <option value="20" selected>20 questions</option>
               <option value="30">30 questions</option>
               <option value="all">All in pool</option>
+            </select>
+          </label>
+          <label>Quiz type
+            <select id="quizType">
+              <option value="mcq" selected>Multiple Choice</option>
+              <option value="fill">Fill in the Blank</option>
             </select>
           </label>
         </div>

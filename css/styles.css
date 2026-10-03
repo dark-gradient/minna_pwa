@@ -717,6 +717,87 @@ footer span {
     opacity: 1;
 }
 
+/* Keyboard focus for MCQ */
+.mcq-option.kb-focus {
+    border-color: var(--pink) !important;
+    box-shadow: 0 0 0 3px rgba(244, 166, 166, 0.5);
+    transform: translateY(-2px);
+}
+[data-theme=dark] .mcq-option.kb-focus {
+    box-shadow: 0 0 0 3px rgba(244, 166, 166, 0.3);
+}
+
+/* Fill in the Blank */
+.fill-area {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.fill-input {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 22px;
+    font-family: "Noto Sans JP", sans-serif;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface-soft);
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    text-align: center;
+}
+.fill-input:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 3px rgba(244, 166, 166, 0.3);
+}
+.fill-feedback {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    font-family: "Noto Sans JP", sans-serif;
+}
+.fill-feedback.correct {
+    background: #e6f4ea;
+    color: #137333;
+    border: 2px solid #137333;
+}
+.fill-feedback.incorrect {
+    background: #fce8e6;
+    color: #c5221f;
+    border: 2px solid #c5221f;
+}
+[data-theme=dark] .fill-feedback.correct {
+    background: #1e4620;
+    color: #81c995;
+    border-color: #81c995;
+}
+[data-theme=dark] .fill-feedback.incorrect {
+    background: #4d2020;
+    color: #f28b82;
+    border-color: #f28b82;
+}
+
+/* Keyboard hint */
+.quiz-tip kbd {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 12px;
+    font-family: monospace;
+    background: rgba(23, 37, 42, 0.1);
+    border: 1px solid rgba(23, 37, 42, 0.25);
+    border-radius: 4px;
+    margin: 0 1px;
+}
+[data-theme=dark] .quiz-tip kbd {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
 .active-row {
     border-color: var(--pink) !important;
     box-shadow: var(--shadow) !important;
