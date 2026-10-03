@@ -156,6 +156,15 @@ function init() {
     $(id).addEventListener("change", updateReviewPoolCount),
   );
 
+  const quizTypeEl = $("quizType");
+  if (quizTypeEl) {
+    quizTypeEl.addEventListener("change", () => {
+      const isFill = quizTypeEl.value === "fill";
+      const mcqWrap = $("mcqOptionsWrap");
+      if (mcqWrap) mcqWrap.classList.toggle("hidden", isFill);
+    });
+  }
+
   $("startBtn").onclick = startPractice;
   $("startReviewBtn").onclick = startReviewPractice;
   $("clearWrongBtn").onclick = clearWrongData;
@@ -380,6 +389,8 @@ function shuffle(a) {
 function startPractice() {
   state.testMode = "vocab";
   state.quizType = $("quizType") ? $("quizType").value : "mcq";
+  state.hideOptions = ($("mcqHideOptions") && $("mcqHideOptions").value === "hide" && state.quizType !== "fill");
+  state.optionsRevealed = !state.hideOptions;
   state.pool = poolForScope();
   if ($("direction").value === "en-jp") {
     state.pool = state.pool.filter(v => !ambiguousEnJpIds.has(v.id));
@@ -398,6 +409,7 @@ function startPractice() {
   state.history = [];
   state.kbIndex = -1;
   $("quizScope").textContent = scopeLabel();
+  updateQuizHideOptionsUI();
   showView("quiz");
   nextQuestion();
 }
@@ -424,12 +436,21 @@ function nextQuestion() {
       $("mcqGrid").innerHTML = state.currentOptions.map((opt, i) => {
           return `<button class="mcq-option" id="opt${i}" onclick="selectOptionGeneric(${i})">${escapeHtml(opt.text)}</button>`;
       }).join("");
-      $("mcqGrid").classList.remove("hidden");
+      if (state.hideOptions) {
+        state.optionsRevealed = false;
+        $("mcqGrid").classList.add("hidden");
+        $("mcqRevealArea").classList.remove("hidden");
+      } else {
+        state.optionsRevealed = true;
+        $("mcqGrid").classList.remove("hidden");
+        $("mcqRevealArea").classList.add("hidden");
+      }
       $("nextAction").classList.add("hidden");
       $("lessonTag").textContent = state.current.lesson;
       $("quizDirection").textContent = state.current.dir;
       $("quizProgress").textContent = `${state.index + 1} / ${state.queue.length}`;
       $("progressBar").style.width = `${(state.index / state.queue.length) * 100}%`;
+      updateQuizTip();
       return;
   }
 state.current = state.queue[state.index];
@@ -514,6 +535,7 @@ state.current = state.queue[state.index];
 
   if (isFill) {
     // Fill in the blank mode
+    if ($("mcqRevealArea")) $("mcqRevealArea").classList.add("hidden");
     $("mcqGrid").classList.add("hidden");
     $("fillArea").classList.remove("hidden");
     $("fillInput").value = "";
@@ -528,7 +550,6 @@ state.current = state.queue[state.index];
   } else {
     // MCQ mode
     $("fillArea").classList.add("hidden");
-    $("mcqGrid").classList.remove("hidden");
     $("mcqGrid").innerHTML = options
       .map((opt, i) => {
         let text = isJpEn
@@ -539,6 +560,15 @@ state.current = state.queue[state.index];
         return `<button class="mcq-option" id="opt${i}" onclick="selectOption(${i})">${escapeHtml(text)}</button>`;
       })
       .join("");
+    if (state.hideOptions) {
+      state.optionsRevealed = false;
+      $("mcqGrid").classList.add("hidden");
+      $("mcqRevealArea").classList.remove("hidden");
+    } else {
+      state.optionsRevealed = true;
+      $("mcqGrid").classList.remove("hidden");
+      $("mcqRevealArea").classList.add("hidden");
+    }
     $("nextAction").classList.add("hidden");
     $("nextBtn").textContent = "Next →";
     $("nextBtn").onclick = grade;
@@ -551,6 +581,7 @@ state.current = state.queue[state.index];
     : "English → Japanese";
   $("quizProgress").textContent = `${state.index + 1} / ${state.queue.length}`;
   $("progressBar").style.width = `${(state.index / state.queue.length) * 100}%`;
+  updateQuizTip();
 }
 function selectOption(idx) {
   if (state.answered) return;
@@ -566,6 +597,89 @@ function selectOption(idx) {
     else if (i === idx && !isCorrect) btn.classList.add("incorrect");
   });
   $("nextAction").classList.remove("hidden");
+}
+
+
+function updateQuizHideOptionsUI() {
+  const toggleBtn = $("quizHideOptionsToggle");
+  const icon = $("hideOptionsIcon");
+  const text = $("hideOptionsText");
+  if (!toggleBtn) return;
+  
+  if (state.quizType === "fill") {
+    toggleBtn.classList.add("hidden");
+    return;
+  }
+  toggleBtn.classList.remove("hidden");
+  
+  if (state.hideOptions) {
+    toggleBtn.classList.add("active");
+    if (icon) icon.textContent = "🙈";
+    if (text) text.textContent = "Hide options: ON";
+    toggleBtn.title = "Options are hidden for this entire quiz. Click to show.";
+  } else {
+    toggleBtn.classList.remove("active");
+    if (icon) icon.textContent = "👁️";
+    if (text) text.textContent = "Hide options: OFF";
+    toggleBtn.title = "Options are visible. Click to hide options for this entire quiz.";
+  }
+}
+
+function toggleQuizHideOptions() {
+  if (state.quizType === "fill") return;
+  state.hideOptions = !state.hideOptions;
+  
+  const setupSelect = $("mcqHideOptions");
+  if (setupSelect) {
+    setupSelect.value = state.hideOptions ? "hide" : "show";
+  }
+  
+  updateQuizHideOptionsUI();
+  
+  if (!state.answered) {
+    if (state.hideOptions) {
+      hideOptionsForCurrentQuestion();
+    } else {
+      revealOptions();
+    }
+  }
+}
+
+function hideOptionsForCurrentQuestion() {
+  state.optionsRevealed = false;
+  state.kbIndex = -1;
+  const grid = $("mcqGrid");
+  const revealArea = $("mcqRevealArea");
+  if (grid) grid.classList.add("hidden");
+  if (revealArea) revealArea.classList.remove("hidden");
+  updateQuizTip();
+}
+
+function revealOptions() {
+  state.optionsRevealed = true;
+  const grid = $("mcqGrid");
+  const revealArea = $("mcqRevealArea");
+  if (grid) grid.classList.remove("hidden");
+  if (revealArea) revealArea.classList.add("hidden");
+  
+  const opts = document.querySelectorAll("#mcqGrid .mcq-option");
+  if (opts.length && state.kbIndex < 0) {
+    state.kbIndex = 0;
+    opts.forEach((o, i) => o.classList.toggle("kb-focus", i === 0));
+  }
+  updateQuizTip();
+}
+
+function updateQuizTip() {
+  const tip = $("quizTip");
+  if (!tip) return;
+  if (state.quizType === "fill") {
+    tip.innerHTML = 'Type your answer · Press <kbd>Enter</kbd> to check / next';
+  } else if (state.hideOptions && !state.optionsRevealed && !state.answered) {
+    tip.innerHTML = 'Press <kbd>Space</kbd> or <kbd>Enter</kbd> to reveal options · Press <kbd>H</kbd> to toggle hide';
+  } else {
+    tip.innerHTML = 'Use <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> to navigate · <kbd>Enter</kbd> to select · <kbd>Space</kbd> for next · <kbd>H</kbd> to toggle hide';
+  }
 }
 
 function checkFillAnswer() {
@@ -1027,6 +1141,10 @@ function updateReviewPoolCount() {
   $("wrongPoolCount").textContent = `${poolForReviewScope().length} words`;
 }
 function startReviewPractice() {
+  state.testMode = "vocab";
+  state.quizType = $("quizType") ? $("quizType").value : "mcq";
+  state.hideOptions = ($("mcqHideOptions") && $("mcqHideOptions").value === "hide" && state.quizType !== "fill");
+  state.optionsRevealed = !state.hideOptions;
   state.pool = poolForReviewScope();
   if ($("direction").value === "en-jp") {
     state.pool = state.pool.filter(v => !ambiguousEnJpIds.has(v.id));
@@ -1043,7 +1161,9 @@ function startReviewPractice() {
   state.index = 0;
   state.score = 0;
   state.history = [];
+  state.kbIndex = -1;
   $("quizScope").textContent = "Reviewing Wrong Answers";
+  updateQuizHideOptionsUI();
   showView("quiz");
   nextQuestion();
 }
@@ -1843,6 +1963,10 @@ function startKanjiTest(type, n) {
   state.score = 0;
   state.history = [];
   $("quizScope").textContent = type === 'quick' ? "Quick Kanji" : (type === 'n5' ? "N5 Challenge" : "Mixed Kanji");
+  state.quizType = "mcq";
+  state.hideOptions = ($("mcqHideOptions") && $("mcqHideOptions").value === "hide");
+  state.optionsRevealed = !state.hideOptions;
+  updateQuizHideOptionsUI();
   showView("quiz");
   nextQuestion();
 }
@@ -1900,6 +2024,10 @@ function startGrammarTest(type, n) {
   state.score = 0;
   state.history = [];
   $("quizScope").textContent = type === 'quick' ? "Quick Grammar" : "Mixed Grammar";
+  state.quizType = "mcq";
+  state.hideOptions = ($("mcqHideOptions") && $("mcqHideOptions").value === "hide");
+  state.optionsRevealed = !state.hideOptions;
+  updateQuizHideOptionsUI();
   showView("quiz");
   nextQuestion();
 }
@@ -1994,6 +2122,13 @@ function updateDashboardStats() {
     const quizView = document.getElementById('quizView');
     if (!quizView || !quizView.classList.contains('active')) return;
     
+    // Toggle hide options shortcut 'h' / 'H' (if not typing in fill input)
+    if ((e.key === 'h' || e.key === 'H') && document.activeElement !== document.getElementById('fillInput')) {
+      e.preventDefault();
+      toggleQuizHideOptions();
+      return;
+    }
+    
     // Fill-in-the-blank mode: Enter = check/next
     if (state.quizType === 'fill') {
       if (e.key === 'Enter') {
@@ -2002,6 +2137,15 @@ function updateDashboardStats() {
         if (nextBtn) nextBtn.click();
       }
       return;
+    }
+    
+    // If options are hidden and question is not answered: reveal with Space, Enter, Arrows, or 1-4
+    if (state.hideOptions && !state.optionsRevealed && !state.answered) {
+      if (e.key === ' ' || e.key === 'Enter' || e.key.startsWith('Arrow') || ['1','2','3','4'].includes(e.key)) {
+        e.preventDefault();
+        revealOptions();
+        return;
+      }
     }
     
     // MCQ mode keyboard navigation

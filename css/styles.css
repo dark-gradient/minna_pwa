@@ -798,6 +798,117 @@ footer span {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Reveal Area for Hidden MCQ Options */
+.mcq-reveal-area {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reveal-card {
+    background: var(--surface-soft);
+    border: 2px dashed var(--border-strong);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.reveal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    background: var(--pink);
+    color: var(--text-primary);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.reveal-desc {
+    margin: 0;
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.reveal-btn {
+    margin-top: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.reveal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.reveal-kbd {
+    background: rgba(0, 0, 0, 0.15);
+    color: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-size: 11px;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+[data-theme=dark] .reveal-kbd {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Quiz Top Toggle Button */
+.quiz-toggle-btn {
+    background: var(--surface-soft);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.quiz-toggle-btn:hover {
+    border-color: var(--pink);
+    color: var(--text-primary);
+}
+
+.quiz-toggle-btn.active {
+    background: var(--pink);
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+    box-shadow: 2px 2px 0 var(--text-primary);
+}
+
+[data-theme=dark] .quiz-toggle-btn.active {
+    background: var(--pink);
+    color: #17252A;
+    border-color: #17252A;
+}
+
 .active-row {
     border-color: var(--pink) !important;
     box-shadow: var(--shadow) !important;
