@@ -987,7 +987,7 @@ function renderReview() {
       `<div class="panel" style="min-height:auto; padding:30px; text-align:center;">
         <p style="color:var(--text-primary); font-family:'Noto Serif JP',serif; font-weight:800; margin-bottom:16px;">No wrong answers yet!</p>
         <p style="color:var(--text-secondary); margin-bottom:20px;">Words you answer incorrectly will appear here.</p>
-        <button class="secondary-btn" onclick="goBack('home')">Back to Practice</button>
+        <button class="secondary-btn" onclick="showView('vocabulary')">Back to Vocabulary</button>
       </div>`;
     $("reviewSetupPanel").style.display = "none";
     return;
