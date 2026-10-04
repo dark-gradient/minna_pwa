@@ -141,7 +141,7 @@ function saveTimerSetting() {
 
 function getTimerDuration() {
   const timerSelect = $("questionTimer");
-  return timerSelect ? parseInt(timerSelect.value, 10) : 5;
+  return timerSelect ? parseInt(timerSelect.value, 10) : 10;
 }
 
 let questionTimerId = null;
@@ -305,9 +305,9 @@ function handleQuestionTimeout() {
 
 function toggleQuizTimerMode() {
   const el = $("questionTimer");
-  let val = el ? parseInt(el.value, 10) : 5;
-  if (val === 0) val = 5;
-  else if (val === 5) val = 10;
+  let val = el ? parseInt(el.value, 10) : 10;
+  if (val === 0) val = 10;
+  else if (val === 10) val = 5;
   else val = 0;
   if (el) el.value = val;
   saveTimerSetting();
@@ -368,7 +368,7 @@ function init() {
   if (savedTimer !== null && $("questionTimer")) {
     $("questionTimer").value = savedTimer;
   } else if ($("questionTimer")) {
-    $("questionTimer").value = "5";
+    $("questionTimer").value = "10";
   }
 
   let currentStreak = parseInt(localStorage.getItem('minna_streak') || '0', 10);

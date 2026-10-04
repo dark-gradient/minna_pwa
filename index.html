@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=2.2">
+<link rel="stylesheet" href="css/styles.css?v=2.3">
 
   <link rel="preload" as="image" href="assets/images/backgrounds/fuji_wide.jpg">
   <link rel="preload" as="image" href="assets/images/backgrounds/bg_home.jpg">
@@ -153,9 +153,9 @@
         </div>
         <div class="quiz-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%; align-self: stretch; margin-bottom: 12px;">
           <div class="quiz-label" id="quizDirection" style="margin: 0; text-align: left;"></div>
-          <div id="quizTimerBadge" class="quiz-timer-badge" onclick="toggleQuizTimerMode()" style="cursor: pointer; margin-left: auto;" title="Question timer (click to cycle 5s / 10s / Off)">
+          <div id="quizTimerBadge" class="quiz-timer-badge" onclick="toggleQuizTimerMode()" style="cursor: pointer; margin-left: auto;" title="Question timer (click to cycle 10s / 5s / Off)">
             <span class="timer-icon">⏱️</span>
-            <span id="quizTimerText">5s</span>
+            <span id="quizTimerText">10s</span>
           </div>
         </div>
         <div id="question" class="question"></div>
@@ -346,8 +346,8 @@
           </label>
           <label id="timerWrap">Question Timer
             <select id="questionTimer" onchange="saveTimerSetting()">
-              <option value="5" selected>5 seconds</option>
-              <option value="10">10 seconds</option>
+              <option value="10" selected>10 seconds</option>
+              <option value="5">5 seconds</option>
               <option value="0">Off (No timer)</option>
             </select>
           </label>
@@ -646,6 +646,6 @@
     
 
 </div>
-<script src="js/app.js?v=2.2"></script>
+<script src="js/app.js?v=2.3"></script>
 </body>
 </html>
