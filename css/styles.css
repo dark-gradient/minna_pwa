@@ -978,20 +978,37 @@ footer span {
 }
 
 /* Question Timer */
+.quiz-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.quiz-card-header .quiz-label {
+    margin: 0 !important;
+}
+
 .quiz-timer-badge {
-    background: var(--surface-soft);
-    border: 1.5px solid var(--border);
-    border-radius: 8px;
+    background: var(--surface2, #fff);
+    border: 1.5px solid var(--line, #cbd5e1);
+    border-radius: 999px;
     color: var(--text-primary);
     font-size: 13px;
     font-weight: 800;
-    padding: 6px 12px;
+    padding: 4px 12px;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-family: monospace, sans-serif;
+    font-family: 'SF Mono', Monaco, Consolas, monospace, sans-serif;
     transition: all 0.2s ease;
     user-select: none;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-timer-badge.off {
+    opacity: 0.55;
+    border-style: dashed;
 }
 
 .quiz-timer-badge:hover {

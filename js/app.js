@@ -139,48 +139,69 @@ function saveTimerSetting() {
   }
 }
 
+function getTimerDuration() {
+  const timerSelect = $("questionTimer");
+  return timerSelect ? parseInt(timerSelect.value, 10) : 5;
+}
+
 let questionTimerId = null;
 let questionTimerSecondsLeft = 0;
 let questionTimerTotalDuration = 0;
 
-function clearQuestionTimer() {
+function clearQuestionTimer(resetUI = false) {
   if (questionTimerId) {
     clearInterval(questionTimerId);
     questionTimerId = null;
   }
-  const badge = $("quizTimerBadge");
-  const barWrap = $("questionTimerBarWrap");
-  const bar = $("questionTimerBar");
-  if (badge) {
-    badge.classList.add("hidden");
-    badge.classList.remove("urgent");
-  }
-  if (barWrap) barWrap.classList.add("hidden");
-  if (bar) {
-    bar.style.width = "100%";
-    bar.classList.remove("urgent");
+  if (resetUI) {
+    const badge = $("quizTimerBadge");
+    const barWrap = $("questionTimerBarWrap");
+    const bar = $("questionTimerBar");
+    const duration = getTimerDuration();
+    if (badge) {
+      badge.classList.remove("urgent", "timeout");
+      if (duration > 0) {
+        badge.classList.remove("hidden", "off");
+        if ($("quizTimerText")) $("quizTimerText").textContent = `${duration}s`;
+      } else {
+        badge.classList.remove("hidden");
+        badge.classList.add("off");
+        if ($("quizTimerText")) $("quizTimerText").textContent = "Off";
+      }
+    }
+    if (barWrap) barWrap.classList.add("hidden");
+    if (bar) {
+      bar.style.width = "100%";
+      bar.classList.remove("urgent");
+    }
   }
 }
 
 function startQuestionTimer() {
-  clearQuestionTimer();
-  const timerSelect = $("questionTimer");
-  const duration = timerSelect ? parseInt(timerSelect.value, 10) : 0;
-  if (!duration || duration <= 0) return;
-
-  questionTimerTotalDuration = duration;
-  questionTimerSecondsLeft = duration;
-
+  clearQuestionTimer(false);
+  const duration = getTimerDuration();
   const badge = $("quizTimerBadge");
   const timerText = $("quizTimerText");
   const barWrap = $("questionTimerBarWrap");
   const bar = $("questionTimerBar");
 
-  if (badge) {
-    badge.classList.remove("hidden");
-    badge.classList.remove("urgent");
+  if (!duration || duration <= 0) {
+    if (badge) {
+      badge.classList.remove("hidden", "urgent", "timeout");
+      badge.classList.add("off");
+      if (timerText) timerText.textContent = "Off";
+    }
+    if (barWrap) barWrap.classList.add("hidden");
+    return;
   }
-  if (timerText) timerText.textContent = `${questionTimerSecondsLeft}s`;
+
+  questionTimerTotalDuration = duration;
+  questionTimerSecondsLeft = duration;
+
+  if (badge) {
+    badge.classList.remove("hidden", "off", "urgent", "timeout");
+  }
+  if (timerText) timerText.textContent = `${duration}s`;
   if (barWrap) barWrap.classList.remove("hidden");
   if (bar) {
     bar.style.width = "100%";
@@ -191,6 +212,10 @@ function startQuestionTimer() {
   const totalMs = duration * 1000;
 
   questionTimerId = setInterval(() => {
+    if (state.answered) {
+      clearQuestionTimer(false);
+      return;
+    }
     const elapsed = Date.now() - startTime;
     const remainingMs = Math.max(0, totalMs - elapsed);
     const secondsRemaining = Math.ceil(remainingMs / 1000);
@@ -207,7 +232,7 @@ function startQuestionTimer() {
     }
 
     if (remainingMs <= 0) {
-      clearQuestionTimer();
+      clearQuestionTimer(false);
       handleQuestionTimeout();
     }
   }, 100);
@@ -218,22 +243,78 @@ function handleQuestionTimeout() {
   state.answered = true;
   state.lastCorrect = false;
   state.lastSelectedObj = null;
-  grade();
+
+  const badge = $("quizTimerBadge");
+  const timerText = $("quizTimerText");
+  if (badge) {
+    badge.classList.remove("urgent");
+    badge.classList.add("timeout");
+  }
+  if (timerText) timerText.textContent = "Time's Up!";
+
+  const bar = $("questionTimerBar");
+  if (bar) bar.style.width = "0%";
+
+  if (state.quizType === "fill") {
+    const input = $("fillInput");
+    if (input) input.disabled = true;
+    const feedback = $("fillFeedback");
+    if (feedback) {
+      feedback.classList.remove("hidden");
+      const isJpEn = state.current.dir === "jp-en";
+      const correctDisplay = isJpEn
+        ? state.current.en
+        : state.current.kanji && state.current.kanji !== "—"
+          ? state.current.kanji + " (" + state.current.jp + ")"
+          : state.current.jp;
+      feedback.className = "fill-feedback incorrect";
+      feedback.textContent = "⏰ Time's up! Correct answer: " + correctDisplay;
+    }
+    if ($("nextBtn")) {
+      $("nextBtn").textContent = "Next →";
+      $("nextBtn").onclick = grade;
+    }
+    if ($("nextAction")) $("nextAction").classList.remove("hidden");
+  } else if (state.hideOptions) {
+    revealOptions();
+    state.lastCorrect = false;
+    state.lastSelectedObj = null;
+    const pill = document.querySelector(".mcq-revealed-pill");
+    if (pill) {
+      pill.textContent = "⏰ Time's Up!";
+      pill.style.background = "var(--red, #e53e3e)";
+    }
+  } else {
+    // Standard MCQ mode: highlight correct option in green
+    (state.currentOptions || []).forEach((opt, i) => {
+      const btn = $("opt" + i);
+      if (!btn) return;
+      btn.disabled = true;
+      if (opt.id === state.current.id || (state.testMode && opt.isCorrect)) {
+        btn.classList.add("correct");
+      }
+    });
+    if ($("nextBtn")) {
+      $("nextBtn").textContent = "Next →";
+      $("nextBtn").onclick = grade;
+    }
+    if ($("nextAction")) $("nextAction").classList.remove("hidden");
+  }
+  updateQuizTip();
 }
 
 function toggleQuizTimerMode() {
   const el = $("questionTimer");
-  if (!el) return;
-  let val = parseInt(el.value, 10);
+  let val = el ? parseInt(el.value, 10) : 5;
   if (val === 0) val = 5;
   else if (val === 5) val = 10;
   else val = 0;
-  el.value = val;
+  if (el) el.value = val;
   saveTimerSetting();
   if (val > 0) {
     startQuestionTimer();
   } else {
-    clearQuestionTimer();
+    clearQuestionTimer(true);
   }
 }
 
@@ -284,7 +365,11 @@ function init() {
   const saved = localStorage.getItem("mnn-theme");
   if (saved) document.documentElement.dataset.theme = saved;
   const savedTimer = localStorage.getItem("minna_question_timer");
-  if (savedTimer && $("questionTimer")) $("questionTimer").value = savedTimer;
+  if (savedTimer !== null && $("questionTimer")) {
+    $("questionTimer").value = savedTimer;
+  } else if ($("questionTimer")) {
+    $("questionTimer").value = "5";
+  }
 
   let currentStreak = parseInt(localStorage.getItem('minna_streak') || '0', 10);
   if (currentStreak === 0 && !localStorage.getItem('minna_last_active')) {
