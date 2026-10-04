@@ -1119,6 +1119,7 @@ function grade() {
     lesson: state.current.lesson,
     dir: state.current.dir,
     questionText: isJpEn ? qJp : qEn,
+    jpWord: state.current.jp || "",
     selectedAnswer: state.lastSelectedObj
       ? isJpEn
         ? selEn
@@ -1131,6 +1132,24 @@ function grade() {
   state.index++;
   nextQuestion();
 }
+
+function filterResultsMistakes(lesson, btn) {
+  const container = $("resultsMistakesGrid");
+  if (!container) return;
+  const cards = container.querySelectorAll(".mistake-card");
+  cards.forEach((card) => {
+    if (lesson === "all" || card.getAttribute("data-lesson") === String(lesson)) {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
+  });
+  if (btn && btn.parentElement) {
+    btn.parentElement.querySelectorAll(".filter-pill").forEach((p) => p.classList.remove("active"));
+    btn.classList.add("active");
+  }
+}
+
 function finishQuiz() {
   recordActivity();
 
@@ -1140,43 +1159,89 @@ function finishQuiz() {
   const wrongList = state.history.filter((h) => !h.known);
   const wrongCount = wrongList.length;
   const acc = Math.round((state.score / state.queue.length) * 100);
+  const accClass = acc >= 80 ? "good" : acc >= 50 ? "avg" : "low";
+
+  const uniqueLessons = [...new Set(wrongList.map((w) => w.lesson).filter(Boolean))].sort((a, b) => a - b);
+  const lessonCount = uniqueLessons.length;
 
   let html = `
-    <div class="results-desktop-split">
-      <div style="background:var(--surface); border:1px solid var(--line); border-radius:22px; padding:30px; text-align:center; box-shadow:var(--shadow);">
-        <div class="big-number">${state.score} / ${state.queue.length}</div>
-        <div style="font-size: 24px; font-weight: 800; color: var(--muted); margin-bottom: 20px;">${acc}%</div>
-        <div style="display:flex; justify-content:center; gap:20px; font-weight:700; font-size:14px;">
-          <span style="color: var(--green);">✓ Correct &nbsp; ${state.score}</span>
-          <span style="color: var(--red);">✕ Wrong &nbsp; ${wrongCount}</span>
-        </div>
+    <div class="results-score-banner">
+      <div class="results-score-primary">
+        <div class="results-score-digits">${state.score} <span class="results-score-total">/ ${state.queue.length}</span></div>
+        <div class="results-score-pct ${accClass}">${acc}% Accuracy</div>
       </div>
+      <div class="results-score-stats">
+        <div class="results-stat-chip chip-correct">
+          <span class="chip-icon">✓</span>
+          <span class="chip-label">Correct</span>
+          <span class="chip-val">${state.score}</span>
+        </div>
+        <div class="results-stat-chip ${wrongCount > 0 ? 'chip-wrong' : ''}">
+          <span class="chip-icon">✕</span>
+          <span class="chip-label">${wrongCount > 0 ? 'Mistakes' : 'Wrong'}</span>
+          <span class="chip-val">${wrongCount}</span>
+        </div>
+        ${lessonCount > 1 ? `
+        <div class="results-stat-chip chip-lessons">
+          <span class="chip-icon">📚</span>
+          <span class="chip-label">Scope</span>
+          <span class="chip-val">${lessonCount} Lessons</span>
+        </div>` : ''}
+      </div>
+    </div>
   `;
 
   if (wrongCount === 0) {
     html += `
-      <div style="flex:1; display:flex; align-items:center; justify-content:center;">
-        <div style="color: var(--green); font-weight: 800; font-size:18px; text-align:center;">Perfect!<br><span style="font-size:14px; color: var(--muted);">All questions correct.</span></div>
+      <div style="padding: 40px 20px; text-align: center;">
+        <div style="font-size: 42px; margin-bottom: 12px;">🎉</div>
+        <div style="color: var(--green); font-weight: 800; font-size: 22px; margin-bottom: 6px;">Perfect Session!</div>
+        <div style="font-size: 15px; color: var(--muted);">All ${state.queue.length} questions answered correctly.</div>
       </div>
-    </div>`;
+    `;
     $("btnReviewWrong").style.display = "none";
   } else {
     html += `
-      <div>
-        <div class="eyebrow" style="margin-bottom: 15px; text-align:center;">WHAT YOU GOT WRONG</div>
-        <div style="display:flex; flex-direction:column; gap:12px;">
-    `;
-    wrongList.forEach((w) => {
-      html += `
-        <div style="background:var(--surface2); border-radius:12px; padding:16px; border:1px solid var(--line); text-align:left;">
-          <div style="font-size:18px; font-weight:800; font-family:'Noto Sans JP'; margin-bottom:8px;">${escapeHtml(w.questionText)}</div>
-          <div style="font-size:13px; color:var(--red); font-weight:600; margin-bottom:4px;">Your: ${escapeHtml(w.selectedAnswer)}</div>
-          <div style="font-size:13px; color:var(--green); font-weight:600; margin-bottom:8px;">Correct: ${escapeHtml(w.correctAnswer)}</div>
-          <div class="lesson-tag" style="display:inline-block; padding: 4px 8px; font-size:10px;">Lesson ${w.lesson}</div>
+      <div class="results-mistakes-section">
+        <div class="results-mistakes-header">
+          <div class="eyebrow" style="margin: 0; font-weight: 900; letter-spacing: 0.12em;">WHAT YOU GOT WRONG (${wrongCount})</div>
+          ${lessonCount > 1 ? `
+          <div class="results-lesson-filters" id="resultsLessonFilters">
+            <button type="button" class="filter-pill active" onclick="filterResultsMistakes('all', this)">All (${wrongCount})</button>
+            ${uniqueLessons.map(l => {
+              const count = wrongList.filter(w => w.lesson === l).length;
+              return `<button type="button" class="filter-pill" onclick="filterResultsMistakes(${l}, this)">L${l} (${count})</button>`;
+            }).join('')}
+          </div>` : ''}
         </div>
-      `;
-    });
-    html += `</div></div></div>`;
+        
+        <div class="results-mistakes-grid" id="resultsMistakesGrid">
+          ${wrongList.map(w => {
+            const speakTxt = w.jpWord || (w.dir === "jp-en" ? w.questionText.split(" ")[0] : w.correctAnswer.split(" ")[0]);
+            return `
+            <div class="mistake-card" data-lesson="${w.lesson}">
+              <div class="mistake-card-header">
+                <div class="mistake-question-wrap">
+                  <span class="mistake-question" title="${escapeHtml(w.questionText)}">${escapeHtml(w.questionText)}</span>
+                  ${speakTxt ? `<button type="button" class="mistake-speaker-btn" title="Pronounce" onclick="event.stopPropagation(); pronounceWord('${escapeHtml(speakTxt.replace(/'/g, "\\'"))}', this)">🔊</button>` : ''}
+                </div>
+                <span class="mistake-lesson-badge">Lesson ${w.lesson}</span>
+              </div>
+              <div class="mistake-card-body">
+                <div class="mistake-line wrong" title="Your answer">
+                  <span class="mistake-icon">✕</span>
+                  <span class="mistake-ans">${escapeHtml(w.selectedAnswer || "Timeout")}</span>
+                </div>
+                <div class="mistake-line correct" title="Correct answer">
+                  <span class="mistake-icon">✓</span>
+                  <span class="mistake-ans">${escapeHtml(w.correctAnswer)}</span>
+                </div>
+              </div>
+            </div>
+          `;}).join('')}
+        </div>
+      </div>
+    `;
     $("btnReviewWrong").style.display = "block";
   }
 
@@ -2432,6 +2497,7 @@ function gradeGeneric() {
     lesson: state.current.lesson,
     dir: state.current.dir,
     questionText: state.current.questionText,
+    jpWord: state.current.jp || state.current.questionText || "",
     selectedAnswer: state.lastSelectedObj ? (state.lastSelectedObj.text || "Selected") : "Missed",
     correctAnswer: state.current.correctText || (getCorrectOptionInfo().text),
     known: state.lastCorrect,
