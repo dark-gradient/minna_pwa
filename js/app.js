@@ -344,12 +344,28 @@ function init() {
     .join("");
   $("lessonFrom").innerHTML = opts;
   $("lessonTo").innerHTML = opts;
-  $("lessonFrom").value = 1;
-  $("lessonTo").value = 5;
+
+  let firstIncompleteVocab = 1;
+  for (let i = 1; i <= 25; i++) {
+    if (!completedLessons.vocab.includes(i)) {
+      firstIncompleteVocab = i;
+      break;
+    }
+  }
+
+  $("lessonFrom").value = firstIncompleteVocab;
+  $("lessonTo").value = firstIncompleteVocab;
   $("reviewLessonFrom").innerHTML = opts;
   $("reviewLessonTo").innerHTML = opts;
   $("reviewLessonFrom").value = 1;
   $("reviewLessonTo").value = 5;
+
+  if ($("scopeMode")) $("scopeMode").value = "lesson";
+  if ($("direction")) $("direction").value = "jp-en";
+  if ($("sessionSize")) $("sessionSize").value = "all";
+  if ($("quizType")) $("quizType").value = "mcq";
+  if ($("mcqHideOptions")) $("mcqHideOptions").value = "hide";
+  if ($("questionTimer")) $("questionTimer").value = "10";
 
   document
     .querySelectorAll("[data-view]")
