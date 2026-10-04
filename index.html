@@ -144,10 +144,17 @@
           <span id="hideOptionsIcon">👁️</span>
           <span id="hideOptionsText">Hide options: OFF</span>
         </button>
+        <div id="quizTimerBadge" class="quiz-timer-badge hidden" onclick="toggleQuizTimerMode()" style="cursor: pointer;" title="Time remaining (click to cycle 5s / 10s / Off)">
+          <span class="timer-icon">⏱️</span>
+          <span id="quizTimerText">5s</span>
+        </div>
         <div class="quiz-meta"><span id="quizScope"></span><span id="quizProgress"></span></div>
       </div>
       <div class="progress"><div id="progressBar"></div></div>
       <div class="quiz-card">
+        <div id="questionTimerBarWrap" class="question-timer-bar-wrap hidden">
+          <div id="questionTimerBar" class="question-timer-bar"></div>
+        </div>
         <div class="quiz-label" id="quizDirection"></div>
         <div id="question" class="question"></div>
         <div id="mcqRevealArea" class="mcq-reveal-area hidden">
@@ -285,7 +292,13 @@
     <section id="practiceSetupView" class="view">
       <div class="page-head"><div><div class="eyebrow">CUSTOM PRACTICE</div><h1>Practice Setup</h1></div></div>
       <div class="panel setup">
-        <div class="section-head"><div><span class="kicker">01</span><h2>Choose your practice</h2></div><span id="poolCount" class="count-pill"></span></div>
+        <div class="section-head">
+          <div><span class="kicker">01</span><h2>Choose your practice</h2></div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span id="poolCount" class="count-pill"></span>
+            <button id="clearScopeBtn" class="secondary-btn compact hidden" style="font-size:12px; padding:4px 8px; color:var(--red); border-color:var(--red2);" type="button"></button>
+          </div>
+        </div>
         <div class="controls-grid">
           <label>Scope
             <select id="scopeMode">
@@ -293,7 +306,7 @@
               <option value="range">Lesson range</option>
               <option value="all">All available lessons</option>
               <option value="focus">Focus Words</option>
-<option value="review">Review</option>
+              <option value="review">Review</option>
             </select>
           </label>
           <label id="lessonFromWrap">Lesson
@@ -327,6 +340,13 @@
             <select id="mcqHideOptions">
               <option value="show" selected>Show options</option>
               <option value="hide">Hide options (entire quiz)</option>
+            </select>
+          </label>
+          <label id="timerWrap">Question Timer
+            <select id="questionTimer" onchange="saveTimerSetting()">
+              <option value="0" selected>Off (No timer)</option>
+              <option value="5">5 seconds</option>
+              <option value="10">10 seconds</option>
             </select>
           </label>
         </div>
@@ -386,10 +406,10 @@
     <section id="moreView" class="view">
       <div class="page-head"><div><h1>More</h1></div></div>
       <div style="display:flex; flex-direction:column; gap:10px; max-width:320px;">
-        <button class="practice-card bg-pink" onclick="showView('review')" style="cursor:pointer; border:none; padding:12px 20px; border-radius:12px; justify-content:center;">
-          <div class="card-en" style="font-size:14px;">Wrong Answers</div>
+        <button class="practice-card bg-pink" onclick="reviewWrongAnswers()" style="cursor:pointer; border:none; padding:12px 20px; border-radius:12px; justify-content:center;">
+          <div class="card-en" style="font-size:14px;">Review Wrong Answers</div>
         </button>
-        <button class="practice-card bg-green" onclick="showView('focus')" style="cursor:pointer; border:none; padding:12px 20px; border-radius:12px; justify-content:center;">
+        <button class="practice-card bg-green" onclick="openFocusPractice()" style="cursor:pointer; border:none; padding:12px 20px; border-radius:12px; justify-content:center;">
           <div class="card-en" style="font-size:14px;">Focus Words</div>
         </button>
         <button class="practice-card bg-yellow" onclick="toggleTheme()" style="cursor:pointer; border:none; padding:12px 20px; border-radius:12px; justify-content:center;">

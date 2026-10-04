@@ -128,8 +128,7 @@ function saveWrongData(data) {
 function clearWrongData() {
   if (confirm("Clear all saved wrong answers?")) {
     localStorage.removeItem("mnn-wrong-v2");
-    renderReview();
-    updateReviewPoolCount();
+    if ($("scopeMode")) updatePoolCount();
   }
 }
 
@@ -179,6 +178,8 @@ function init() {
   initListening();
   const saved = localStorage.getItem("mnn-theme");
   if (saved) document.documentElement.dataset.theme = saved;
+  const savedTimer = localStorage.getItem("minna_question_timer");
+  if (savedTimer && $("questionTimer")) $("questionTimer").value = savedTimer;
 
   let currentStreak = parseInt(localStorage.getItem('minna_streak') || '0', 10);
   if (currentStreak === 0 && !localStorage.getItem('minna_last_active')) {
@@ -189,7 +190,19 @@ function init() {
 }
 
 function reviewWrongAnswers() {
-  showView("review");
+  if ($("scopeMode")) {
+    $("scopeMode").value = "review";
+    updatePoolCount();
+  }
+  showView("vocabulary");
+}
+
+function openFocusPractice() {
+  if ($("scopeMode")) {
+    $("scopeMode").value = "focus";
+    updatePoolCount();
+  }
+  showView("vocabulary");
 }
 
 
@@ -237,10 +250,15 @@ function openCategory(type) {
     }
 
     if (type === 'vocab') {
+        let elScope = document.getElementById('scopeMode');
+        if (elScope && (elScope.value === 'review' || elScope.value === 'focus')) {
+            elScope.value = 'lesson';
+        }
         let elFrom = document.getElementById('lessonFrom');
         let elTo = document.getElementById('lessonTo');
         if (elFrom) elFrom.value = firstIncomplete;
         if (elTo) elTo.value = firstIncomplete;
+        updatePoolCount();
         showView('practiceSetup');
     } else if (type === 'grammar') {
         showView('grammar');
@@ -299,6 +317,15 @@ function goBack(fallback = 'home') {
 }
 
 function _showView(view) {
+  if (view === "review") {
+    reviewWrongAnswers();
+    return;
+  }
+  if (view === "focus") {
+    openFocusPractice();
+    return;
+  }
+
   const map = {
     welcomeView: "welcomeView",
     home: "homeView",
@@ -323,6 +350,7 @@ function _showView(view) {
   });
   const target = $(map[view]);
   if (target) target.classList.add("active");
+  if (view !== 'quiz') clearQuestionTimer();
   
   if (view === 'vocabulary' || view === 'grammar' || view === 'kanji' || view === 'practiceSetup') {
     let title = 'Practice Setup';
@@ -348,8 +376,7 @@ function _showView(view) {
       document.body.classList.add('welcome-active');
   }
   if (view === "home") updateDashboardStats();
-  if (view === "review") renderReview();
-  if (view === "focus") renderFocusView();
+  if (view === "vocabulary" || view === "practiceSetup") updatePoolCount();
   if (view === "mockTest") renderMockTests();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -358,9 +385,20 @@ function poolForScope() {
   if (mode === "focus") {
     let all = [];
     for (let l in VOCAB) {
-      VOCAB[l].forEach((v, i) => {
+      (VOCAB[l] || []).forEach((v, i) => {
         let id = +l + "-" + i;
         if (focusWords[id]) all.push({ ...v, lesson: +l, id });
+      });
+    }
+    return all;
+  }
+  if (mode === "review") {
+    const wrongData = getWrongData();
+    let all = [];
+    for (let l in VOCAB) {
+      (VOCAB[l] || []).forEach((v, i) => {
+        let id = +l + "-" + i;
+        if (wrongData[id]) all.push({ ...v, lesson: +l, id });
       });
     }
     return all;
@@ -381,7 +419,34 @@ function updatePoolCount() {
   const mode = $("scopeMode").value;
   $("lessonFromWrap").classList.toggle("hidden", mode === "all" || mode === "focus" || mode === "review");
   $("lessonToWrap").classList.toggle("hidden", mode !== "range");
-  $("poolCount").textContent = `${poolForScope().length} words`;
+  const pool = poolForScope();
+  $("poolCount").textContent = `${pool.length} words`;
+
+  const clearBtn = $("clearScopeBtn");
+  if (clearBtn) {
+    if (mode === "review" && pool.length > 0) {
+      clearBtn.textContent = "Clear Wrong Answers";
+      clearBtn.classList.remove("hidden");
+      clearBtn.onclick = () => {
+        if (confirm("Clear all saved wrong answers?")) {
+          localStorage.removeItem("mnn-wrong-v2");
+          updatePoolCount();
+        }
+      };
+    } else if (mode === "focus" && pool.length > 0) {
+      clearBtn.textContent = "Clear Focus Words";
+      clearBtn.classList.remove("hidden");
+      clearBtn.onclick = () => {
+        if (confirm("Clear all Focus Words?")) {
+          focusWords = {};
+          saveFocusWords();
+          updatePoolCount();
+        }
+      };
+    } else {
+      clearBtn.classList.add("hidden");
+    }
+  }
 }
 function shuffle(a) {
   return [...a].sort(() => Math.random() - 0.5);
@@ -396,7 +461,13 @@ function startPractice() {
     state.pool = state.pool.filter(v => !ambiguousEnJpIds.has(v.id));
   }
   if (!state.pool.length) {
-    alert("No valid words for this selection.");
+    if ($("scopeMode").value === "review") {
+      alert("No wrong answers to review! Great job!");
+    } else if ($("scopeMode").value === "focus") {
+      alert("No focus words selected! Star words in lessons to practice them here.");
+    } else {
+      alert("No valid words for this selection.");
+    }
     return;
   }
   const size =
@@ -418,6 +489,8 @@ function scopeLabel() {
   if (mode === "lesson") return `Lesson ${$("lessonFrom").value}`;
   if (mode === "range")
     return `Lessons ${Math.min($("lessonFrom").value, $("lessonTo").value)}–${Math.max($("lessonFrom").value, $("lessonTo").value)}`;
+  if (mode === "focus") return "Focus Words";
+  if (mode === "review") return "Review Wrong Answers";
   return "Lessons 1–25";
 }
 function nextQuestion() {
