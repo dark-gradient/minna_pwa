@@ -132,6 +132,111 @@ function clearWrongData() {
   }
 }
 
+function saveTimerSetting() {
+  const el = $("questionTimer");
+  if (el) {
+    localStorage.setItem("minna_question_timer", el.value);
+  }
+}
+
+let questionTimerId = null;
+let questionTimerSecondsLeft = 0;
+let questionTimerTotalDuration = 0;
+
+function clearQuestionTimer() {
+  if (questionTimerId) {
+    clearInterval(questionTimerId);
+    questionTimerId = null;
+  }
+  const badge = $("quizTimerBadge");
+  const barWrap = $("questionTimerBarWrap");
+  const bar = $("questionTimerBar");
+  if (badge) {
+    badge.classList.add("hidden");
+    badge.classList.remove("urgent");
+  }
+  if (barWrap) barWrap.classList.add("hidden");
+  if (bar) {
+    bar.style.width = "100%";
+    bar.classList.remove("urgent");
+  }
+}
+
+function startQuestionTimer() {
+  clearQuestionTimer();
+  const timerSelect = $("questionTimer");
+  const duration = timerSelect ? parseInt(timerSelect.value, 10) : 0;
+  if (!duration || duration <= 0) return;
+
+  questionTimerTotalDuration = duration;
+  questionTimerSecondsLeft = duration;
+
+  const badge = $("quizTimerBadge");
+  const timerText = $("quizTimerText");
+  const barWrap = $("questionTimerBarWrap");
+  const bar = $("questionTimerBar");
+
+  if (badge) {
+    badge.classList.remove("hidden");
+    badge.classList.remove("urgent");
+  }
+  if (timerText) timerText.textContent = `${questionTimerSecondsLeft}s`;
+  if (barWrap) barWrap.classList.remove("hidden");
+  if (bar) {
+    bar.style.width = "100%";
+    bar.classList.remove("urgent");
+  }
+
+  const startTime = Date.now();
+  const totalMs = duration * 1000;
+
+  questionTimerId = setInterval(() => {
+    const elapsed = Date.now() - startTime;
+    const remainingMs = Math.max(0, totalMs - elapsed);
+    const secondsRemaining = Math.ceil(remainingMs / 1000);
+
+    if (timerText) timerText.textContent = `${secondsRemaining}s`;
+
+    if (bar) {
+      const pct = (remainingMs / totalMs) * 100;
+      bar.style.width = `${pct}%`;
+      if (secondsRemaining <= 2) {
+        bar.classList.add("urgent");
+        if (badge) badge.classList.add("urgent");
+      }
+    }
+
+    if (remainingMs <= 0) {
+      clearQuestionTimer();
+      handleQuestionTimeout();
+    }
+  }, 100);
+}
+
+function handleQuestionTimeout() {
+  if (state.answered) return;
+  state.answered = true;
+  state.lastCorrect = false;
+  state.lastSelectedObj = null;
+  grade();
+}
+
+function toggleQuizTimerMode() {
+  const el = $("questionTimer");
+  if (!el) return;
+  let val = parseInt(el.value, 10);
+  if (val === 0) val = 5;
+  else if (val === 5) val = 10;
+  else val = 0;
+  el.value = val;
+  saveTimerSetting();
+  if (val > 0) {
+    startQuestionTimer();
+  } else {
+    clearQuestionTimer();
+  }
+}
+
 function init() {
   const opts = lessons
     .map((n) => `<option value="${n}">Lesson ${n}</option>`)
@@ -525,6 +630,7 @@ function nextQuestion() {
       $("quizProgress").textContent = `${state.index + 1} / ${state.queue.length}`;
       $("progressBar").style.width = `${(state.index / state.queue.length) * 100}%`;
       updateQuizTip();
+      startQuestionTimer();
       return;
   }
 state.current = state.queue[state.index];
@@ -651,10 +757,12 @@ state.current = state.queue[state.index];
   $("quizProgress").textContent = `${state.index + 1} / ${state.queue.length}`;
   $("progressBar").style.width = `${(state.index / state.queue.length) * 100}%`;
   updateQuizTip();
+  startQuestionTimer();
 }
 
 function selectOption(idx) {
   if (state.answered) return;
+  clearQuestionTimer();
   state.answered = true;
   const selected = state.currentOptions[idx];
   state.lastSelectedObj = selected;
@@ -793,6 +901,7 @@ function hideOptionsForCurrentQuestion() {
 }
 
 function revealOptions() {
+  clearQuestionTimer();
   state.optionsRevealed = true;
   state.answered = true;
   state.lastCorrect = true;
@@ -857,6 +966,7 @@ function checkFillAnswer() {
     grade();
     return;
   }
+  clearQuestionTimer();
   state.answered = true;
   const userAnswer = $("fillInput").value.trim();
   const isJpEn = state.current.dir === "jp-en";
