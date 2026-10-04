@@ -159,7 +159,7 @@ function clearQuestionTimer(resetUI = false) {
     const bar = $("questionTimerBar");
     const duration = getTimerDuration();
     if (badge) {
-      badge.classList.remove("urgent", "timeout");
+      badge.classList.remove("safe", "warning", "urgent", "timeout");
       if (duration > 0) {
         badge.classList.remove("hidden", "off");
         if ($("quizTimerText")) $("quizTimerText").textContent = `${duration}s`;
@@ -172,7 +172,7 @@ function clearQuestionTimer(resetUI = false) {
     if (barWrap) barWrap.classList.add("hidden");
     if (bar) {
       bar.style.width = "100%";
-      bar.classList.remove("urgent");
+      bar.className = "question-timer-bar timer-safe";
     }
   }
 }
@@ -187,7 +187,7 @@ function startQuestionTimer() {
 
   if (!duration || duration <= 0) {
     if (badge) {
-      badge.classList.remove("hidden", "urgent", "timeout");
+      badge.classList.remove("hidden", "safe", "warning", "urgent", "timeout");
       badge.classList.add("off");
       if (timerText) timerText.textContent = "Off";
     }
@@ -199,13 +199,14 @@ function startQuestionTimer() {
   questionTimerSecondsLeft = duration;
 
   if (badge) {
-    badge.classList.remove("hidden", "off", "urgent", "timeout");
+    badge.classList.remove("hidden", "off", "warning", "urgent", "timeout");
+    badge.classList.add("safe");
   }
   if (timerText) timerText.textContent = `${duration}s`;
   if (barWrap) barWrap.classList.remove("hidden");
   if (bar) {
     bar.style.width = "100%";
-    bar.classList.remove("urgent");
+    bar.className = "question-timer-bar timer-safe";
   }
 
   const startTime = Date.now();
@@ -225,9 +226,25 @@ function startQuestionTimer() {
     if (bar) {
       const pct = (remainingMs / totalMs) * 100;
       bar.style.width = `${pct}%`;
-      if (secondsRemaining <= 2) {
-        bar.classList.add("urgent");
-        if (badge) badge.classList.add("urgent");
+
+      if (pct > 50) {
+        bar.className = "question-timer-bar timer-safe";
+        if (badge) {
+          badge.classList.remove("warning", "urgent");
+          badge.classList.add("safe");
+        }
+      } else if (pct > 25) {
+        bar.className = "question-timer-bar timer-warning";
+        if (badge) {
+          badge.classList.remove("safe", "urgent");
+          badge.classList.add("warning");
+        }
+      } else {
+        bar.className = "question-timer-bar timer-danger urgent";
+        if (badge) {
+          badge.classList.remove("safe", "warning");
+          badge.classList.add("urgent");
+        }
       }
     }
 
@@ -247,13 +264,16 @@ function handleQuestionTimeout() {
   const badge = $("quizTimerBadge");
   const timerText = $("quizTimerText");
   if (badge) {
-    badge.classList.remove("urgent");
+    badge.classList.remove("safe", "warning", "urgent");
     badge.classList.add("timeout");
   }
   if (timerText) timerText.textContent = "Time's Up!";
 
   const bar = $("questionTimerBar");
-  if (bar) bar.style.width = "0%";
+  if (bar) {
+    bar.style.width = "0%";
+    bar.className = "question-timer-bar timer-danger urgent";
+  }
 
   if (state.quizType === "fill") {
     const input = $("fillInput");

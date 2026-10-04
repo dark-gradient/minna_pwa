@@ -451,23 +451,99 @@ select option {
 }
 .quiz-meta {
     display: flex;
+    align-items: center;
     gap: 10px;
+    margin-left: auto;
+}
+
+#quizProgress {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(253, 251, 247, 0.95);
+    color: var(--text-primary);
+    font-size: 13.5px;
+    font-weight: 800;
+    font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 2px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 2px 2px 0px rgba(0, 0, 0, 0.08);
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+#quizProgress::before {
+    content: "QUESTION ";
+    font-size: 10.5px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    color: var(--pink);
+    margin-right: 2px;
+}
+
+[data-theme=dark] #quizProgress {
+    background: rgba(30, 30, 30, 0.95);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme=dark] #quizProgress::before {
+    color: #F472B6;
+}
+
+#quizScope {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(253, 251, 247, 0.92);
     color: var(--text-secondary);
     font-size: 12px;
-    font-weight: 800
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1.5px solid var(--line);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    backdrop-filter: blur(6px);
 }
+
+[data-theme=dark] #quizScope {
+    background: rgba(30, 30, 30, 0.88);
+    border-color: rgba(255, 255, 255, 0.18);
+    color: #ccc;
+}
+
 .progress {
-    height: 5px;
-    background: var(--surface-soft);
-    border-radius: 9px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.16);
+    border: 1.5px solid rgba(0, 0, 0, 0.22);
+    border-radius: 999px;
     overflow: hidden;
-    margin-bottom: 28px
+    margin-bottom: 24px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
 }
+
+[data-theme=dark] .progress {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
 .progress div {
     height: 100%;
     width: 0;
-    background: var(--pink);
-    transition: .25s
+    background: linear-gradient(90deg, #E87A90, #C53D57);
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(232, 122, 144, 0.7);
+    transition: width .25s ease;
+}
+
+[data-theme=dark] .progress div {
+    background: linear-gradient(90deg, #F472B6, #DB2777);
+    box-shadow: 0 0 10px rgba(244, 114, 182, 0.7);
 }
 .quiz-card {
     max-width: 820px;
@@ -1016,6 +1092,30 @@ footer span {
     transform: translateY(-1px);
 }
 
+.quiz-timer-badge.safe {
+    border-color: #10B981;
+    color: #047857;
+    background: rgba(16, 185, 129, 0.1);
+}
+
+[data-theme=dark] .quiz-timer-badge.safe {
+    border-color: #34D399;
+    color: #34D399;
+    background: rgba(16, 185, 129, 0.2);
+}
+
+.quiz-timer-badge.warning {
+    border-color: #F59E0B;
+    color: #B45309;
+    background: rgba(245, 158, 11, 0.12);
+}
+
+[data-theme=dark] .quiz-timer-badge.warning {
+    border-color: #FBBF24;
+    color: #FBBF24;
+    background: rgba(245, 158, 11, 0.22);
+}
+
 .quiz-timer-badge.urgent {
     background: #fce8e6 !important;
     border-color: #c5221f !important;
@@ -1051,43 +1151,69 @@ footer span {
 
 .question-timer-bar-wrap {
     width: 100%;
-    height: 10px;
-    background: rgba(0, 0, 0, 0.12);
-    border: 1.5px solid rgba(0, 0, 0, 0.18);
+    height: 12px;
+    background: rgba(0, 0, 0, 0.14);
+    border: 2px solid rgba(0, 0, 0, 0.22);
     border-radius: 999px;
     overflow: hidden;
     margin-bottom: 20px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 [data-theme=dark] .question-timer-bar-wrap {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.25);
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.28);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .question-timer-bar {
     height: 100%;
     width: 100%;
-    background: linear-gradient(90deg, #E87A90, #D05A70);
     border-radius: 999px;
-    transition: width 0.1s linear, background 0.2s ease;
-    box-shadow: 0 0 8px rgba(232, 122, 144, 0.6);
+    transition: width 0.1s linear, background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* 1. Safe phase (>50% remaining): Vibrant emerald green */
+.question-timer-bar,
+.question-timer-bar.timer-safe {
+    background: linear-gradient(90deg, #10B981, #059669) !important;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.75) !important;
+}
+
+/* 2. Warning phase (25% - 50% remaining): Warm golden amber */
+.question-timer-bar.timer-warning {
+    background: linear-gradient(90deg, #F59E0B, #D97706) !important;
+    box-shadow: 0 0 14px rgba(245, 158, 11, 0.85) !important;
+}
+
+/* 3. Danger / Urgent phase (<=25% remaining): Intense vivid crimson red */
+.question-timer-bar.timer-danger,
 .question-timer-bar.urgent {
-    background: linear-gradient(90deg, #EF4444, #DC2626) !important;
-    box-shadow: 0 0 12px rgba(239, 68, 68, 0.8) !important;
+    background: linear-gradient(90deg, #EF4444, #B91C1C) !important;
+    box-shadow: 0 0 16px rgba(239, 68, 68, 0.95) !important;
+    animation: urgentPulse 0.4s infinite alternate;
 }
 
-[data-theme=dark] .question-timer-bar {
-    background: linear-gradient(90deg, #F472B6, #EC4899);
-    box-shadow: 0 0 8px rgba(244, 114, 182, 0.6);
+@keyframes urgentPulse {
+    from { opacity: 0.85; filter: brightness(1); }
+    to { opacity: 1; filter: brightness(1.2); }
 }
 
+[data-theme=dark] .question-timer-bar,
+[data-theme=dark] .question-timer-bar.timer-safe {
+    background: linear-gradient(90deg, #34D399, #10B981) !important;
+    box-shadow: 0 0 12px rgba(52, 211, 153, 0.75) !important;
+}
+
+[data-theme=dark] .question-timer-bar.timer-warning {
+    background: linear-gradient(90deg, #FBBF24, #F59E0B) !important;
+    box-shadow: 0 0 14px rgba(251, 191, 36, 0.85) !important;
+}
+
+[data-theme=dark] .question-timer-bar.timer-danger,
 [data-theme=dark] .question-timer-bar.urgent {
     background: linear-gradient(90deg, #F87171, #EF4444) !important;
-    box-shadow: 0 0 12px rgba(248, 113, 113, 0.8) !important;
+    box-shadow: 0 0 16px rgba(248, 113, 113, 0.95) !important;
 }
 
 
